@@ -15,16 +15,16 @@ int main(int argc, char **argv)
     uint32_t compressionMethod;
     uint32_t processNum;
     uint64_t ExchunkSize = -1;
-
+    bool isDisk = false;
     string dirName;
     string myName = "Ftcg";
 
     vector<string> readfileList;
 
-    const char optString[] = "i:m:c:n:s:";
-    if (argc < sizeof(optString) - 2)
+    const char optString[] = "i:m:c:n:s:d:";
+    if (argc < sizeof(optString) - 4)
     {
-        cout << "Usage: " << argv[0] << " -i <input file> -m <chunking method> -c <compression method> -n <process number>" << endl;
+        cout << "Usage: " << argv[0] << " -i <input file> -m <chunking method> -c <compression method> -n <process number> -d <isDisk>" << endl;
         cout << "Chunking Methods: " << "0 for fixed size chunking, 1 for FastCDC chunking" << endl;
         cout << "Compression Methods: " << "0 for lz4, 1 lz4-cluster-basline" << endl;
         return 0;
@@ -49,6 +49,9 @@ int main(int argc, char **argv)
             break;
         case 's':
             ExchunkSize = atoi(optarg);
+            break;
+        case 'd':
+            isDisk = atoi(optarg);
             break;
         default:
             break;
@@ -104,7 +107,11 @@ int main(int argc, char **argv)
     default:
         break;
     }
+    /*      absMethodObj init     */
     absMethodObj->dataWrite_ = new dataWrite();
+    if (isDisk)
+        absMethodObj->SetIsDisk(isDisk);
+
     tool::traverse_dir(dirName, readfileList, nofilter);
     sort(readfileList.begin(), readfileList.end(), tool::compareNat);
 
