@@ -5,52 +5,11 @@
 #include "../../include/method.h"
 #include "../../include/messageQueue.h"
 #include "../../include/datawrite.h"
-
 using namespace std;
-// 信号处理函数
-void signalHandler(int signum)
-{
-    cout << "Interrupt signal (" << signum << ") received.\n";
-    // 退出程序
-    exit(signum);
-}
-// 自然排序
-bool compareNat(const std::string &a, const std::string &b)
-{
-    if (a.empty())
-        return true;
-    if (b.empty())
-        return false;
-    if (std::isdigit(a[0]) && !std::isdigit(b[0]))
-        return true;
-    if (!std::isdigit(a[0]) && std::isdigit(b[0]))
-        return false;
-    if (!std::isdigit(a[0]) && !std::isdigit(b[0]))
-    {
-        if (std::toupper(a[0]) == std::toupper(b[0]))
-            return compareNat(a.substr(1), b.substr(1));
-        return (std::toupper(a[0]) < std::toupper(b[0]));
-    }
-
-    // Both strings begin with digit --> parse both numbers
-    std::istringstream issa(a);
-    std::istringstream issb(b);
-    int ia, ib;
-    issa >> ia;
-    issb >> ib;
-    if (ia != ib)
-        return ia < ib;
-
-    // Numbers are the same --> remove numbers and recurse
-    std::string anew, bnew;
-    std::getline(issa, anew);
-    std::getline(issb, bnew);
-    return (compareNat(anew, bnew));
-}
 
 int main(int argc, char **argv)
 {
-    signal(SIGINT, signalHandler);
+    signal(SIGINT, tool::signalHandler);
 
     uint32_t chunkingType;
     uint32_t compressionMethod;
@@ -150,7 +109,7 @@ int main(int argc, char **argv)
     }
     absMethodObj->dataWrite_ = new dataWrite();
     tool::traverse_dir(dirName, readfileList, nofilter);
-    sort(readfileList.begin(), readfileList.end(), compareNat);
+    sort(readfileList.begin(), readfileList.end(), tool::compareNat);
 
     boost::thread *thTmp;
     boost::thread::attributes attrs;
@@ -163,7 +122,6 @@ int main(int argc, char **argv)
     {
         chunkerObj->LoadChunkFile(readfileList[i]);
         thTmp = new boost::thread(attrs, boost::bind(&Chunker::Chunking, chunkerObj));
-        // chunkerObj->Chunking();
         if (i == processNum - 1)
         {
             absMethodObj->isLastFile = true;
@@ -174,18 +132,7 @@ int main(int argc, char **argv)
         delete thTmp;
     }
 
-    // ofstream out("/home/public/SXL/LZ4Cluster/frequencyTable.txt", ios::app);
-
     tool::Logging(myName.c_str(), " processNum %d \n", processNum);
-    // tool::Logging(myName.c_str(), "total feature num is %d\n", absMethodObj->totalFeature);
-    // tool::Logging(myName.c_str(), "total original feature num is %d\n", absMethodObj->totalOriginalFeature);
-    // tool::Logging(myName.c_str(), "one chunk feature num is %d\n", absMethodObj->singeFeature);
-    // tool::Logging(myName.c_str(), "corelation is 1 feature num is %d and total matrix size is %d\n", absMethodObj->corelationIsOne, absMethodObj->totalMatrixSize);
-    // tool::Logging(myName.c_str(), "feature less than 16 num is %d\n", absMethodObj->feature_less_than_16);
-    // tool::Logging(myName.c_str(), "Chunk Num is %d\n", absMethodObj->ChunkNum);
-    // tool::Logging(myName.c_str(), "Cluster Num is %d\n", absMethodObj->clusterNum);
-    // tool::Logging(myName.c_str(), "Not Full Group Num is %d\n", absMethodObj->notFullGroupNum);
-    // tool::Logging(myName.c_str(), "Still Not Full Group Num is %d\n", absMethodObj->stillNotFullGroupNum);
     tool::Logging(myName.c_str(), "Group Num is %d\n", absMethodObj->groupNum);
     tool::Logging(myName.c_str(), "Total logical size is %lu\n", absMethodObj->totalLogicalSize);
     tool::Logging(myName.c_str(), "Total compressed size is %lu\n", absMethodObj->totalCompressedSize);

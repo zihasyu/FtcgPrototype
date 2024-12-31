@@ -13,6 +13,7 @@ using namespace std;
 
 class absMethod
 {
+private:
 protected:
 public:
     // util
