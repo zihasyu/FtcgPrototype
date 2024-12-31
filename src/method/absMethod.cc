@@ -205,9 +205,3 @@ void absMethod::ThirdCutPointHashMin_remove(const uint8_t *src, const uint64_t l
         cout << "error:start is 0" << endl;
     }
 }
-
-void absMethod::SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq)
-{
-    recieveQueue = mq;
-    return;
-}
