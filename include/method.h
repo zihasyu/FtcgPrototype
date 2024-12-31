@@ -10,7 +10,6 @@
 #include "FP-SF-BIB.h"
 #include "FP-only.h"
 #include "bruteforce.h"
-#include "LSH.h"
 #include "characterFrequency.h"
 
 #endif

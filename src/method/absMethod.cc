@@ -205,3 +205,57 @@ void absMethod::ThirdCutPointHashMin_remove(const uint8_t *src, const uint64_t l
         cout << "error:start is 0" << endl;
     }
 }
+
+void absMethod::groupmerge(vector<set<string>> &sets, int t)
+{
+    while (true)
+    {
+        int n = sets.size();
+        int min_diff = INT_MAX;
+        int min_total_size = INT_MAX;
+        pair<int, int> best_pair(-1, -1);
+
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = i + 1; j < n; ++j)
+            {
+                set<string> temp(sets[i].begin(), sets[i].end());
+                temp.insert(sets[j].begin(), sets[j].end());
+                int new_size = temp.size();
+
+                if (new_size <= t)
+                {
+                    int diff = t - new_size;
+                    if (diff < min_diff)
+                    {
+                        min_diff = diff;
+                        best_pair = make_pair(i, j);
+                    }
+                }
+            }
+        }
+        if (best_pair.first == -1 || best_pair.second == -1)
+            break; // No more pairs can be merged.
+        // Merge the two sets.
+        sets[best_pair.first].insert(sets[best_pair.second].begin(), sets[best_pair.second].end());
+
+        // Remove the second set from the list as it has been merged into the first one.
+        sets.erase(sets.begin() + best_pair.second);
+    }
+}
+
+void absMethod::Chunk_Insert(const Chunk_t &chunk)
+{
+    if (isDisk)
+        dataWrite_->Chunk_Insert(chunk);
+    else
+        chunkSet.push_back(chunk);
+}
+
+Chunk_t absMethod::Get_Chunk_Info(int id)
+{
+    if (isDisk)
+        return dataWrite_->Get_Chunk_Info(id);
+    else
+        return chunkSet[id];
+};

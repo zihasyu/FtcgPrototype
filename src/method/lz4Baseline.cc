@@ -48,8 +48,7 @@ void lz4Baseline::ProcessOneTrace()
             featureExtractTime += end - start;
             // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
 
-            // chunkSet.push_back(tmpChunk);
-            dataWrite_->Chunk_Insert(tmpChunk);
+            Chunk_Insert(tmpChunk);
             totalChunkNum++;
         }
     }
@@ -175,11 +174,8 @@ void lz4Baseline::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            // memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
-
-            Chunk_t GroupTmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-
             if (GroupTmpChunk.loadFromDisk)
             {
                 free(GroupTmpChunk.chunkContent);
@@ -261,7 +257,7 @@ void lz4Baseline::ProcessOneTraceOrigin()
             featureExtractTime += end - start;
             // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
 
-            chunkSet.push_back(tmpChunk);
+            Chunk_Insert(tmpChunk);
         }
     }
 
@@ -293,7 +289,12 @@ void lz4Baseline::ProcessOneTraceOrigin()
             if (clusterCnt < MAX_GROUP_SIZE)
             {
                 auto start = std::chrono::high_resolution_clock::now();
-                memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
+                Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+                memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
+                if (GroupTmpChunk.loadFromDisk)
+                {
+                    free(GroupTmpChunk.chunkContent);
+                }
                 auto end = std::chrono::high_resolution_clock::now();
                 clustringTime += end - start;
             }
@@ -312,7 +313,12 @@ void lz4Baseline::ProcessOneTraceOrigin()
                 clusterSize = 0;
 
                 // copy new chunk
-                memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
+                Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+                memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
+                if (GroupTmpChunk.loadFromDisk)
+                {
+                    free(GroupTmpChunk.chunkContent);
+                }
             }
             clusterCnt++;
             ChunkNum++;

@@ -22,9 +22,6 @@ private:
 
     int experimentChunkCount = 1000;
 
-    // chunk set
-    vector<Chunk_t> chunkSet;
-
     // time static
     std::chrono::duration<double> featureExtractTime;
     std::chrono::duration<double> clustringTime;
@@ -35,8 +32,5 @@ public:
     ~bruteforce();
 
     void ProcessOneTrace();
-
-    // void second_group(map<feature_t, set<string>> unFullGroups, vector<set<string>> &group);
-    void groupmerge(vector<set<string>> &hierarchicalGroups, int targetGroupSize, int k);
 };
 #endif

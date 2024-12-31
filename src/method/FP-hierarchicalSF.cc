@@ -29,45 +29,6 @@ FPHierarchicalSF::~FPHierarchicalSF()
     free(hashBuf);
 }
 
-void FPHierarchicalSF::groupmerge(vector<set<string>> &sets, int t, int k)
-{
-    while (true)
-    {
-        int n = sets.size();
-        int min_diff = INT_MAX;
-        int min_total_size = INT_MAX;
-        pair<int, int> best_pair(-1, -1);
-        bool found_k = false;
-
-        for (int i = 0; i < n; ++i)
-        {
-            for (int j = i + 1; j < n; ++j)
-            {
-                set<string> temp(sets[i].begin(), sets[i].end());
-                temp.insert(sets[j].begin(), sets[j].end());
-                int new_size = temp.size();
-
-                if (new_size <= t)
-                {
-                    int diff = t - new_size;
-                    if (diff < min_diff)
-                    {
-
-                        min_diff = diff;
-                        best_pair = make_pair(i, j);
-                    }
-                }
-            }
-        }
-        if (best_pair.first == -1 || best_pair.second == -1)
-            break; // No more pairs can be merged.
-        // Merge the two sets.
-        sets[best_pair.first].insert(sets[best_pair.second].begin(), sets[best_pair.second].end());
-
-        // Remove the second set from the list as it has been merged into the first one.
-        sets.erase(sets.begin() + best_pair.second);
-    }
-}
 void FPHierarchicalSF::ProcessOneTrace()
 {
     while (true)
@@ -96,9 +57,7 @@ void FPHierarchicalSF::ProcessOneTrace()
             hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
             FP_Insert(hashStr, tmpChunk.chunkID);
 
-            chunkSet.push_back(tmpChunk);
-            // dataWrite_->Chunk_Insert(tmpChunk);
-
+            Chunk_Insert(tmpChunk);
             totalChunkNum++;
         }
     }
@@ -179,17 +138,7 @@ void FPHierarchicalSF::ProcessOneTrace()
     }
     tool::Logging(myName_.c_str(), "FP finished chunk num is %d\n", finishedChunks.size());
     tool::Logging(myName_.c_str(), "FP unfinished chunk num is %d\n", unfinishedChunks.size());
-    // // SFc分组
-    // for (auto it = hierarchicalSFC_unfinished_group.begin(); it != hierarchicalSFC_unfinished_group.end(); it++)
-    // {
-    //     auto &groups = it->second;
-    //     if (it->first == "0" || groups.size() > 200)
-    //     {
-    //         continue;
-    //     }
-    //     groupmerge(groups, 16, 1);
-    // }
-    // 将SFb对应的所有SFc下面的分组进行合并
+
     for (auto it : table.hierarchicalSFB_C_table)
     {
         for (auto sf_c : it.second)
@@ -197,17 +146,7 @@ void FPHierarchicalSF::ProcessOneTrace()
             hierarchicalSFB_unfinished_group[it.first].insert(hierarchicalSFB_unfinished_group[it.first].end(), hierarchicalSFC_unfinished_group[sf_c].begin(), hierarchicalSFC_unfinished_group[sf_c].end());
         }
     }
-    // // SFb分组
-    // for (auto it = hierarchicalSFB_unfinished_group.begin(); it != hierarchicalSFB_unfinished_group.end(); it++)
-    // {
-    //     auto &groups = it->second;
-    //     if (it->first == "0" || groups.size() > 200)
-    //     {
-    //         continue;
-    //     }
-    //     groupmerge(groups, 16, 1);
-    // }
-    // 合并SFb对应的所有SFc下面的分组
+
     for (auto it : table.hierarchicalSFA_B_table)
     {
         for (auto sf_b : it.second)
@@ -257,7 +196,7 @@ void FPHierarchicalSF::ProcessOneTrace()
             continue;
         }
 
-        groupmerge(groups, MAX_GROUP_SIZE, 1);
+        groupmerge(groups, MAX_GROUP_SIZE);
         for (auto group : groups)
         {
             if (group.size() < 2)
@@ -350,15 +289,12 @@ void FPHierarchicalSF::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
-
-            // Chunk_t GroupTmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
-            // memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-
-            // if (GroupTmpChunk.loadFromDisk)
-            // {
-            //     free(GroupTmpChunk.chunkContent);
-            // }
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
+            if (GroupTmpChunk.loadFromDisk)
+            {
+                free(GroupTmpChunk.chunkContent);
+            }
             auto end = std::chrono::high_resolution_clock::now();
             clustringTime += end - start;
 

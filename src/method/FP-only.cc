@@ -34,20 +34,11 @@ void FPOnly::ProcessOneTrace()
             // calculate feature
             stringstream ss;
             ss << tmpChunk.chunkID;
-            // auto start = std::chrono::high_resolution_clock::now();
-            // table.PutOrignals(ss.str(), (char *)tmpChunk.chunkContent);
-            // // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            // //  nTransTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            // // finesseTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            // auto end = std::chrono::high_resolution_clock::now();
-            // featureExtractTime += end - start;
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
             GenerateHash(mdCtx, tmpChunk.chunkContent, tmpChunk.chunkSize, hashBuf);
             hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
             FP_Insert(hashStr, tmpChunk.chunkID);
 
-            // chunkSet.push_back(tmpChunk);
-            dataWrite_->Chunk_Insert(tmpChunk);
+            Chunk_Insert(tmpChunk);
 
             totalChunkNum++;
         }
@@ -180,11 +171,8 @@ void FPOnly::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            // memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
-
-            Chunk_t GroupTmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-
             if (GroupTmpChunk.loadFromDisk)
             {
                 free(GroupTmpChunk.chunkContent);

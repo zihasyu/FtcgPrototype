@@ -29,44 +29,6 @@ characterFrequency::~characterFrequency()
     free(hashBuf);
 }
 
-void characterFrequency::groupmerge(vector<set<string>> &sets, int t)
-{
-    while (true)
-    {
-        int n = sets.size();
-        int min_diff = INT_MAX;
-        int min_total_size = INT_MAX;
-        pair<int, int> best_pair(-1, -1);
-
-        for (int i = 0; i < n; ++i)
-        {
-            for (int j = i + 1; j < n; ++j)
-            {
-                set<string> temp(sets[i].begin(), sets[i].end());
-                temp.insert(sets[j].begin(), sets[j].end());
-                int new_size = temp.size();
-
-                if (new_size <= t)
-                {
-                    int diff = t - new_size;
-                    if (diff < min_diff)
-                    {
-                        min_diff = diff;
-                        best_pair = make_pair(i, j);
-                    }
-                }
-            }
-        }
-        if (best_pair.first == -1 || best_pair.second == -1)
-            break; // No more pairs can be merged.
-        // Merge the two sets.
-        sets[best_pair.first].insert(sets[best_pair.second].begin(), sets[best_pair.second].end());
-
-        // Remove the second set from the list as it has been merged into the first one.
-        sets.erase(sets.begin() + best_pair.second);
-    }
-}
-
 std::array<double, 256> characterFrequency::calculateFrequency(const Chunk_t &chunk)
 {
     std::array<double, 256> frequency{0.0};
@@ -155,8 +117,7 @@ void characterFrequency::ProcessOneTrace()
             featureExtractTime += end - start;
             hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
             FP_Insert(hashStr, tmpChunk.chunkID);
-
-            chunkSet.push_back(tmpChunk);
+            Chunk_Insert(tmpChunk);
             // dataWrite_->Chunk_Insert(tmpChunk);
 
             totalChunkNum++;
@@ -383,15 +344,12 @@ void characterFrequency::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
-
-            // Chunk_t GroupTmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
-            // memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-
-            // if (GroupTmpChunk.loadFromDisk)
-            // {
-            //     free(GroupTmpChunk.chunkContent);
-            // }
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
+            if (GroupTmpChunk.loadFromDisk)
+            {
+                free(GroupTmpChunk.chunkContent);
+            }
             auto end = std::chrono::high_resolution_clock::now();
             clustringTime += end - start;
 

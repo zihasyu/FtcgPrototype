@@ -23,9 +23,6 @@ private:
     int clusterCnt = 0;
     uint64_t clusterSize = 0;
 
-    // chunk set
-    vector<Chunk_t> chunkSet;
-
     // time static
     std::chrono::duration<double> featureExtractTime;
     std::chrono::duration<double> clustringTime;
@@ -56,12 +53,5 @@ public:
     // 生成哈希签名
     HashSignature hashBlock(const std::vector<float> &feature, const std::vector<std::vector<float>> &projection);
     // void second_group(map<feature_t, set<string>> unFullGroups, vector<set<string>> &group);
-
-    /**
-     * @description: Group the chunks by hierarchical super features.
-     * @param hierarchicalGroups: The hierarchical super features groups.
-     * @param minGroupSize: The minimum size of a group.
-     */
-    void groupmerge(vector<set<string>> &Groups, int targetGroupSize);
 };
 #endif

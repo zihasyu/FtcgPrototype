@@ -26,9 +26,6 @@ private:
     int clusterCnt = 0;
     uint64_t clusterSize = 0;
 
-    // chunk set
-    vector<Chunk_t> chunkSet;
-
     // time static
     std::chrono::duration<double> featureExtractTime;
     std::chrono::duration<double> clustringTime;
@@ -48,6 +45,5 @@ public:
      * @param minGroupSize: The minimum size of a group.
      * @param k: the group whose size is k should be considered first.
      */
-    void groupmerge(vector<set<string>> &hierarchicalGroups, int targetGroupSize, int k);
 };
 #endif

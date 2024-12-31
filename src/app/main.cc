@@ -99,9 +99,6 @@ int main(int argc, char **argv)
         absMethodObj = new bruteforce();
         break;
     case 8:
-        absMethodObj = new LocalitySensitiveHash();
-        break;
-    case 9:
         absMethodObj = new characterFrequency();
         break;
     default:

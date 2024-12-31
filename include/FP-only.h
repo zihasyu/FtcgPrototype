@@ -22,7 +22,6 @@ private:
   uint64_t clusterSize = 0;
 
   // chunk set
-  vector<Chunk_t> chunkSet;
 
   // time static
   std::chrono::duration<double> featureExtractTime;

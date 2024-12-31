@@ -14,10 +14,12 @@ using namespace std;
 class absMethod
 {
 private:
+protected:
     string myName_ = "absMethod";
     string fileName;
+    bool isDisk = false;
+    vector<Chunk_t> chunkSet;
 
-protected:
 public:
     // util
     uint8_t *readFileBuffer;
@@ -77,5 +79,10 @@ public:
     void ThirdCutPointHashMin_remove(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);
 
     void setFileName(string &fileName_) { fileName = fileName_; }
+    void groupmerge(vector<set<string>> &sets, int t);
+
+    void SetIsDisk(bool isDisk_) { isDisk = isDisk_; }
+    void Chunk_Insert(const Chunk_t &chunk);
+    Chunk_t Get_Chunk_Info(int id);
 };
 #endif

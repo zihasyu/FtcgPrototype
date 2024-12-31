@@ -94,8 +94,7 @@ void FPLz4Baseline::ProcessOneTrace()
             hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
             FP_Insert(hashStr, tmpChunk.chunkID);
 
-            // chunkSet.push_back(tmpChunk);
-            dataWrite_->Chunk_Insert(tmpChunk);
+            Chunk_Insert(tmpChunk);
 
             totalChunkNum++;
         }
@@ -274,15 +273,13 @@ void FPLz4Baseline::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            // memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
-
-            Chunk_t GroupTmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-
             if (GroupTmpChunk.loadFromDisk)
             {
                 free(GroupTmpChunk.chunkContent);
             }
+
             auto end = std::chrono::high_resolution_clock::now();
             clustringTime += end - start;
 
