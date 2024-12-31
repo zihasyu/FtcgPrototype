@@ -559,9 +559,3 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
     recieveQueue->done_ = false;
     return;
 }
-
-void FPLz4SFBlockinBlock::SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq)
-{
-    recieveQueue = mq;
-    return;
-}

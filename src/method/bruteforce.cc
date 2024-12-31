@@ -395,9 +395,3 @@ void bruteforce::ProcessOneTrace()
     recieveQueue->done_ = false;
     return;
 }
-
-void bruteforce::SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq)
-{
-    recieveQueue = mq;
-    return;
-}

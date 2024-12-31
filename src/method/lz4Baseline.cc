@@ -439,12 +439,6 @@ void lz4Baseline::ProcessOneTraceOrigin()
     return;
 }
 
-void lz4Baseline::SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq)
-{
-    recieveQueue = mq;
-    return;
-}
-
 // 通过频率进行二次分组
 // totalFeature += table.original_feature_key_table.size();
 //     vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();

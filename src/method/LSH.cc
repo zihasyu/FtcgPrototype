@@ -360,9 +360,3 @@ void LocalitySensitiveHash::ProcessOneTrace()
     recieveQueue->done_ = false;
     return;
 }
-
-void LocalitySensitiveHash::SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq)
-{
-    recieveQueue = mq;
-    return;
-}

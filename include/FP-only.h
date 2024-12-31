@@ -34,9 +34,7 @@ public:
 
     void ProcessOneTrace();
 
-    void SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq);
-
-    void setFileName(string &fileName_) { fileName = fileName_; }
+      void setFileName(string &fileName_) { fileName = fileName_; }
 
     // 从chunks中找出出现次数最多的特征
     feature_t find_most_freq_feature(const set<string> chunks, set<feature_t> usedFeature);

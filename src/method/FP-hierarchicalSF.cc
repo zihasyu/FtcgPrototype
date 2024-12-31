@@ -650,9 +650,3 @@ void FPHierarchicalSF::ProcessOneTrace()
     recieveQueue->done_ = false;
     return;
 }
-
-void FPHierarchicalSF::SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq)
-{
-    recieveQueue = mq;
-    return;
-}

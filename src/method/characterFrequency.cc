@@ -446,9 +446,3 @@ void characterFrequency::ProcessOneTrace()
     recieveQueue->done_ = false;
     return;
 }
-
-void characterFrequency::SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq)
-{
-    recieveQueue = mq;
-    return;
-}

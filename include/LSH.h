@@ -40,8 +40,6 @@ public:
 
     void ProcessOneTrace();
 
-    void SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq);
-
     void setFileName(string &fileName_) { fileName = fileName_; }
 
     // 特征提取：将数据块转换为浮点向量

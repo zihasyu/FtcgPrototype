@@ -36,8 +36,6 @@ public:
 
     void ProcessOneTraceOrigin();
 
-    void SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq);
-
     void setFileName(string &fileName_) { fileName = fileName_; }
 
     // 从chunks中找出出现次数最多的特征
