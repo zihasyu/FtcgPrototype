@@ -1,15 +1,15 @@
 #set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_BUILD_TYPE "Debug")
 cmake_minimum_required(VERSION 3.1)
-project(LZ4Cluster)
+project(Ftcg)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 set(CMAKE_MODULE_PATH /usr/share/cmake-3.10/Modules/)
 
-set(EXECUTABLE_OUTPUT_PATH ${LZ4Cluster_SOURCE_DIR}/bin)
-set(LIBRARY_OUTPUT_PATH ${LZ4Cluster_SOURCE_DIR}/lib)
+set(EXECUTABLE_OUTPUT_PATH ${Ftcg_SOURCE_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${Ftcg_SOURCE_DIR}/lib)
 
 set(CMAKE_C_FLAGS_DEBUG "-O0 -Wall -g -ggdb3")
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -fno-omit-frame-pointer -g -ggdb3") 

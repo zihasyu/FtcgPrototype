@@ -3,7 +3,6 @@
 #include <csignal>
 
 #include "../../include/method.h"
-
 #include "../../include/messageQueue.h"
 #include "../../include/datawrite.h"
 
@@ -59,7 +58,7 @@ int main(int argc, char **argv)
     uint64_t ExchunkSize = -1;
 
     string dirName;
-    string myName = "LZ4Cluster";
+    string myName = "Ftcg";
 
     vector<string> readfileList;
 

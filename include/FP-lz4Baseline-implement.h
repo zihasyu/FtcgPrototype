@@ -35,8 +35,6 @@ public:
 
     void ProcessOneTrace();
 
-    void ProcessOneTraceOrigin() {};
-
     void SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq);
 
     void setFileName(string &fileName_) { fileName = fileName_; }

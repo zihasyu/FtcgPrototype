@@ -57,7 +57,7 @@ public:
     absMethod(uint64_t ExchunkSize);
     ~absMethod();
     virtual void ProcessOneTrace() = 0;
-    virtual void ProcessOneTraceOrigin() = 0;
+
     void SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq) { recieveQueue = mq; }
     void GenerateHash(EVP_MD_CTX *mdCtx, uint8_t *dataBuffer, const int dataSize, uint8_t *hash);
     /**

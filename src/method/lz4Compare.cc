@@ -45,8 +45,3 @@ void lz4Compare::ProcessOneTrace()
     recieveQueue->done_ = false;
     return;
 }
-
-void lz4Compare::ProcessOneTraceOrigin()
-{
-    return;
-}
