@@ -14,12 +14,16 @@ using namespace std;
 class absMethod
 {
 private:
+    string myName_ = "absMethod";
+    string fileName;
+
 protected:
 public:
     // util
     uint8_t *readFileBuffer;
     uint8_t *lz4ChunkBuffer;
     Chunker chunker_;
+
     // statics
     uint64_t totalLogicalSize = 0; // 总逻辑大小
     uint64_t totalCompressedSize = 0;
@@ -71,5 +75,7 @@ public:
     void ThirdCutPointHashMin(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);
     void ThirdCutPointSizeMax_remove(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);
     void ThirdCutPointHashMin_remove(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);
+
+    void setFileName(string &fileName_) { fileName = fileName_; }
 };
 #endif

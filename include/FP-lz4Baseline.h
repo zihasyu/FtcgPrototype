@@ -34,13 +34,6 @@ public:
 
     void ProcessOneTrace();
 
-    void setFileName(string &fileName_) { fileName = fileName_; }
-
-    // 从chunks中找出出现次数最多的特征
-    feature_t find_most_freq_feature(const set<string> chunks, set<feature_t> usedFeature);
-
-    feature_t find_most_correlated_feature(feature_t feature, set<feature_t> usedFeature);
-
     // void second_group(map<feature_t, set<string>> unFullGroups, vector<set<string>> &group);
 };
 #endif

@@ -28,54 +28,6 @@ bruteforce::~bruteforce()
     free(hashBuf);
 }
 
-// 找到一个group中频率最高的feature，排除掉当前feature
-feature_t bruteforce::find_most_freq_feature(const set<string> chunks, set<feature_t> usedFeatures)
-{
-    map<feature_t, int> freq;
-    for (auto chunk : chunks)
-    {
-        for (auto it = table.original_key_features_table_[chunk].begin(); it != table.original_key_features_table_[chunk].end(); it++)
-        {
-            freq[*it]++;
-        }
-    }
-    for (auto it : usedFeatures)
-    {
-        freq.erase(it);
-    }
-    if (freq.size() == 0)
-    {
-        return 0;
-    }
-    int max_freq = 0;
-    feature_t most_freq_feature = 0;
-    for (auto it : freq)
-    {
-        if (it.second > max_freq)
-        {
-            max_freq = it.second;
-            most_freq_feature = it.first;
-        }
-    }
-    return most_freq_feature;
-}
-
-// 找到一个group中最相关的feature，排除掉当前feature
-feature_t bruteforce::find_most_correlated_feature(feature_t feature, set<feature_t> usedFeature)
-{
-    int max_correlation = 0;
-    feature_t most_correlated_feature = 1;
-    for (auto it : table.original_features_corelation_matrix[feature])
-    {
-        if (it.second > max_correlation && usedFeature.find(it.first) == usedFeature.end())
-        {
-            max_correlation = it.second;
-            most_correlated_feature = it.first;
-        }
-    }
-    return most_correlated_feature;
-}
-
 void bruteforce::groupmerge(vector<set<string>> &sets, int t, int k)
 {
     while (true)

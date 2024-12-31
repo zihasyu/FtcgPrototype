@@ -40,8 +40,6 @@ public:
 
     void ProcessOneTrace();
 
-    void setFileName(string &fileName_) { fileName = fileName_; }
-
     // 特征提取：将数据块转换为浮点向量
     std::vector<float> extractFeature(const Chunk_t &chunk);
     // 生成投影向量

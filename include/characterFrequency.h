@@ -40,10 +40,6 @@ public:
 
     void ProcessOneTrace();
 
-    void SetInputMQ(ProduceConsumerQueue<Chunk_t> *mq);
-
-    void setFileName(string &fileName_) { fileName = fileName_; }
-
     // 计算字节频率
     std::array<double, 256> calculateFrequency(const Chunk_t &chunk);
 

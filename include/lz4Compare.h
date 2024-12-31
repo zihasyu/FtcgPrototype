@@ -15,7 +15,5 @@ public:
     ~lz4Compare();
 
     void ProcessOneTrace();
-
-    void setFileName(string &fileName_) { fileName = fileName_; }
 };
 #endif
