@@ -1,0 +1,135 @@
+Running LZ4Cluster on /home/public/SXL/data/dataGeneration/multiuser_modifications with size 1024 and m 3
+./LZ4Cluster -i /home/public/SXL/data/dataGeneration/multiuser_modifications -m 3 -c 0 -n 4 -s 1024
+avgChunkSize is 1024
+2024-12-28 19:14:17 <LZ4Cluster>: Start to process 4 files
+2024-12-28 19:15:00 <Chunker>: chunking done.
+2024-12-28 19:15:00 <Chunker>: thread exit.
+2024-12-28 19:15:46 <Chunker>: chunking done.
+2024-12-28 19:15:46 <Chunker>: thread exit.
+2024-12-28 19:16:32 <Chunker>: chunking done.
+2024-12-28 19:16:32 <Chunker>: thread exit.
+2024-12-28 19:17:28 <Chunker>: chunking done.
+2024-12-28 19:17:28 <Chunker>: thread exit.
+2024-12-28 19:17:31 <FPHierarchicalSF>: total chunk num is 4193792
+2024-12-28 19:17:31 <FPHierarchicalSF>: feature num is 58929
+2024-12-28 19:17:45 <FPHierarchicalSF>: FP finished chunk num is 4029105
+2024-12-28 19:17:45 <FPHierarchicalSF>: FP unfinished chunk num is 164687
+2024-12-28 19:18:10 <FPHierarchicalSF>: a Finished chunk num is 4138632
+2024-12-28 19:18:10 <FPHierarchicalSF>: a Unfinished chunk num is 55160
+2024-12-28 19:18:10 <FPHierarchicalSF>: compressed chunk num is 4193794
+2024-12-28 19:18:10 <FPHierarchicalSF>: 3916711 chunk with feature is zero
+2024-12-28 19:18:22 <FPHierarchicalSF>: Throughput is 0.547854 GiB/s
+2024-12-28 19:18:23 <LZ4Cluster>:  processNum 4 
+2024-12-28 19:18:23 <LZ4Cluster>: Group Num is 23188
+2024-12-28 19:18:23 <LZ4Cluster>: Total logical size is 34355560448
+2024-12-28 19:18:23 <LZ4Cluster>: Total compressed size is 799900482
+2024-12-28 19:18:23 <LZ4Cluster>: Compression ratio is 42.9498
+--------------------------------------------------
+Running LZ4Cluster on /mnt/dataset2/LKT with size 1024 and m 3
+./LZ4Cluster -i /mnt/dataset2/LKT -m 3 -c 0 -n 4 -s 1024
+avgChunkSize is 1024
+2024-12-28 19:18:30 <LZ4Cluster>: Start to process 4 files
+2024-12-28 19:18:30 <Chunker>: chunking done.
+2024-12-28 19:18:30 <Chunker>: thread exit.
+2024-12-28 19:18:33 <Chunker>: chunking done.
+2024-12-28 19:18:33 <Chunker>: thread exit.
+2024-12-28 19:18:36 <Chunker>: chunking done.
+2024-12-28 19:18:36 <Chunker>: thread exit.
+2024-12-28 19:18:39 <Chunker>: chunking done.
+2024-12-28 19:18:39 <Chunker>: thread exit.
+2024-12-28 19:18:42 <FPHierarchicalSF>: total chunk num is 105532
+2024-12-28 19:18:42 <FPHierarchicalSF>: feature num is 46302
+2024-12-28 19:18:43 <FPHierarchicalSF>: FP finished chunk num is 2934
+2024-12-28 19:18:43 <FPHierarchicalSF>: FP unfinished chunk num is 102598
+2024-12-28 19:19:05 <FPHierarchicalSF>: a Finished chunk num is 83233
+2024-12-28 19:19:05 <FPHierarchicalSF>: a Unfinished chunk num is 22299
+2024-12-28 19:19:05 <FPHierarchicalSF>: compressed chunk num is 105532
+2024-12-28 19:19:05 <FPHierarchicalSF>: 1983 chunk with feature is zero
+2024-12-28 19:19:12 <FPHierarchicalSF>: Throughput is 0.092722 GiB/s
+2024-12-28 19:19:12 <LZ4Cluster>:  processNum 4 
+2024-12-28 19:19:12 <LZ4Cluster>: Group Num is 27720
+2024-12-28 19:19:12 <LZ4Cluster>: Total logical size is 864518144
+2024-12-28 19:19:12 <LZ4Cluster>: Total compressed size is 234594188
+2024-12-28 19:19:12 <LZ4Cluster>: Compression ratio is 3.6852
+--------------------------------------------------
+Running LZ4Cluster on /mnt/dataset2/WEB with size 1024 and m 3
+./LZ4Cluster -i /mnt/dataset2/WEB -m 3 -c 0 -n 4 -s 1024
+avgChunkSize is 1024
+2024-12-28 19:19:13 <LZ4Cluster>: Start to process 4 files
+2024-12-28 19:19:49 <Chunker>: chunking done.
+2024-12-28 19:19:49 <Chunker>: thread exit.
+2024-12-28 19:20:35 <Chunker>: chunking done.
+2024-12-28 19:20:35 <Chunker>: thread exit.
+2024-12-28 19:21:21 <Chunker>: chunking done.
+2024-12-28 19:21:21 <Chunker>: thread exit.
+2024-12-28 19:22:07 <Chunker>: chunking done.
+2024-12-28 19:22:07 <Chunker>: thread exit.
+2024-12-28 19:22:15 <FPHierarchicalSF>: total chunk num is 1404571
+2024-12-28 19:22:15 <FPHierarchicalSF>: feature num is 64589
+2024-12-28 19:22:26 <FPHierarchicalSF>: FP finished chunk num is 305047
+2024-12-28 19:22:26 <FPHierarchicalSF>: FP unfinished chunk num is 1099524
+2024-12-28 20:45:15 <FPHierarchicalSF>: a Finished chunk num is 1375855
+2024-12-28 20:45:15 <FPHierarchicalSF>: a Unfinished chunk num is 28716
+2024-12-28 20:45:16 <FPHierarchicalSF>: compressed chunk num is 1404571
+2024-12-28 20:45:16 <FPHierarchicalSF>: 5303 chunk with feature is zero
+2024-12-28 20:45:51 <FPHierarchicalSF>: Throughput is 0.075205 GiB/s
+2024-12-28 20:45:53 <LZ4Cluster>:  processNum 4 
+2024-12-28 20:45:53 <LZ4Cluster>: Group Num is 157676
+2024-12-28 20:45:53 <LZ4Cluster>: Total logical size is 11506245632
+2024-12-28 20:45:53 <LZ4Cluster>: Total compressed size is 1352861221
+2024-12-28 20:45:53 <LZ4Cluster>: Compression ratio is 8.5051
+--------------------------------------------------
+Running LZ4Cluster on /mnt/dataset2/vmdk with size 1024 and m 3
+./LZ4Cluster -i /mnt/dataset2/vmdk -m 3 -c 0 -n 4 -s 1024
+avgChunkSize is 1024
+2024-12-28 20:45:55 <LZ4Cluster>: Start to process 4 files
+2024-12-28 20:46:37 <Chunker>: chunking done.
+2024-12-28 20:46:37 <Chunker>: thread exit.
+2024-12-28 20:47:24 <Chunker>: chunking done.
+2024-12-28 20:47:24 <Chunker>: thread exit.
+2024-12-28 20:48:13 <Chunker>: chunking done.
+2024-12-28 20:48:13 <Chunker>: thread exit.
+2024-12-28 20:49:07 <Chunker>: chunking done.
+2024-12-28 20:49:07 <Chunker>: thread exit.
+2024-12-28 20:49:11 <FPHierarchicalSF>: total chunk num is 3414400
+2024-12-28 20:49:11 <FPHierarchicalSF>: feature num is 334012
+2024-12-28 20:49:27 <FPHierarchicalSF>: FP finished chunk num is 2402565
+2024-12-28 20:49:27 <FPHierarchicalSF>: FP unfinished chunk num is 1011835
+2024-12-28 20:59:24 <FPHierarchicalSF>: a Finished chunk num is 3110016
+2024-12-28 20:59:24 <FPHierarchicalSF>: a Unfinished chunk num is 304384
+2024-12-28 20:59:24 <FPHierarchicalSF>: compressed chunk num is 3414400
+2024-12-28 20:59:24 <FPHierarchicalSF>: 1794787 chunk with feature is zero
+2024-12-28 21:00:32 <FPHierarchicalSF>: Throughput is 0.272902 GiB/s
+2024-12-28 21:00:36 <LZ4Cluster>:  processNum 4 
+2024-12-28 21:00:36 <LZ4Cluster>: Group Num is 146163
+2024-12-28 21:00:36 <LZ4Cluster>: Total logical size is 27970764800
+2024-12-28 21:00:36 <LZ4Cluster>: Total compressed size is 4101943626
+2024-12-28 21:00:36 <LZ4Cluster>: Compression ratio is 6.8189
+--------------------------------------------------
+Running LZ4Cluster on /mnt/dataset2/chromium with size 1024 and m 3
+./LZ4Cluster -i /mnt/dataset2/chromium -m 3 -c 0 -n 4 -s 1024
+avgChunkSize is 1024
+2024-12-28 21:00:41 <LZ4Cluster>: Start to process 4 files
+2024-12-28 21:01:16 <Chunker>: chunking done.
+2024-12-28 21:01:16 <Chunker>: thread exit.
+2024-12-28 21:01:55 <Chunker>: chunking done.
+2024-12-28 21:01:55 <Chunker>: thread exit.
+2024-12-28 21:02:34 <Chunker>: chunking done.
+2024-12-28 21:02:34 <Chunker>: thread exit.
+2024-12-28 21:03:15 <Chunker>: chunking done.
+2024-12-28 21:03:15 <Chunker>: thread exit.
+2024-12-28 21:03:20 <FPHierarchicalSF>: total chunk num is 1872235
+2024-12-28 21:03:20 <FPHierarchicalSF>: feature num is 591245
+2024-12-28 21:03:34 <FPHierarchicalSF>: FP finished chunk num is 564236
+2024-12-28 21:03:34 <FPHierarchicalSF>: FP unfinished chunk num is 1307999
+2024-12-28 21:32:01 <FPHierarchicalSF>: a Finished chunk num is 1479453
+2024-12-28 21:32:01 <FPHierarchicalSF>: a Unfinished chunk num is 392782
+2024-12-28 21:32:02 <FPHierarchicalSF>: compressed chunk num is 1872236
+2024-12-28 21:32:02 <FPHierarchicalSF>: 249827 chunk with feature is zero
+2024-12-28 21:32:57 <FPHierarchicalSF>: Throughput is 0.137214 GiB/s
+2024-12-28 21:33:01 <LZ4Cluster>:  processNum 4 
+2024-12-28 21:33:01 <LZ4Cluster>: Group Num is 287773
+2024-12-28 21:33:01 <LZ4Cluster>: Total logical size is 15337357312
+2024-12-28 21:33:01 <LZ4Cluster>: Total compressed size is 4137330566
+2024-12-28 21:33:01 <LZ4Cluster>: Compression ratio is 3.7071
+--------------------------------------------------
