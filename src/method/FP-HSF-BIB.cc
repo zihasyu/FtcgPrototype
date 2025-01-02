@@ -238,31 +238,24 @@ void FPHSFBIB::ProcessOneTrace()
         uint64_t start = 0;
         uint64_t end = 0;
 
-        // 用于dataWrite
-        // tmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
-        // ThirdCutPointHashMin(tmpChunk.chunkContent, tmpChunk.chunkSize, start, end);
-        // representChunk_t representChunk;
-        // representChunk.chunkID = stoull(id);
-        // representChunk.offset_start = start;
-        // representChunk.offset_end = end;
-        // representChunkSet.push_back(representChunk);
-        // string representChunkContent((char *)tmpChunk.chunkContent + start, end - start);
-        // representTable.Put(id, (char *)representChunkContent.c_str());
-        // Rfeature_unfinishedGroup[representTable.original_key_feature_table_[id][0]].push_back({id});
-
         // 用于内存读写
         // ThirdCutPointSizeMax(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        ThirdCutPointHashMin(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
+        Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+        ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, start, end);
         // ThirdCutPointHashMin_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         representChunk_t representChunk;
         representChunk.chunkID = stoull(id);
         representChunk.offset_start = start;
         representChunk.offset_end = end;
         representChunkSet.push_back(representChunk);
-        string representChunkContent((char *)chunkSet[stoull(id)].chunkContent + start, end - start);
+        string representChunkContent((char *)GroupTmpChunk.chunkContent + start, end - start);
         representTable.Put(id, (char *)representChunkContent.c_str());
         Rfeature_unfinishedGroup[representTable.key_feature_table_[id][0]].push_back({id});
+        if (GroupTmpChunk.loadFromDisk)
+        {
+            free(GroupTmpChunk.chunkContent);
+        }
     }
     for (auto group = finishedGroups.begin(); group != finishedGroups.end();)
     {
@@ -275,30 +268,17 @@ void FPHSFBIB::ProcessOneTrace()
         uint64_t start = 0;
         uint64_t end = 0;
 
-        // 用于dataWrite
-        // tmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
-        // ThirdCutPointHashMin(tmpChunk.chunkContent, tmpChunk.chunkSize, start, end);
-        // representChunk_t representChunk;
-        // representChunk.chunkID = stoull(id);
-        // representChunk.offset_start = start;
-        // representChunk.offset_end = end;
-        // representChunkSet.push_back(representChunk);
-        // string representChunkContent((char *)tmpChunk.chunkContent + start, end - start);
-        // representTable.Put(id, (char *)representChunkContent.c_str());
-        // Rfeature_unfinishedGroup[representTable.key_feature_table_[id][0]].push_back(*group);
-        // group = finishedGroups.erase(group);
-
         // 用于内存读写
         // ThirdCutPointSizeMax(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        ThirdCutPointHashMin(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        // ThirdCutPointHashMin_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
+        Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+        ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, start, end);
         representChunk_t representChunk;
         representChunk.chunkID = stoull(id);
         representChunk.offset_start = start;
         representChunk.offset_end = end;
         representChunkSet.push_back(representChunk);
-        string representChunkContent((char *)chunkSet[stoull(id)].chunkContent + start, end - start);
+        string representChunkContent((char *)GroupTmpChunk.chunkContent + start, end - start);
         representTable.Put(id, (char *)representChunkContent.c_str());
         Rfeature_unfinishedGroup[representTable.key_feature_table_[id][0]].push_back(*group);
         for (auto id : *group)
@@ -347,7 +327,7 @@ void FPHSFBIB::ProcessOneTrace()
         // {
         //     firstID.insert(*group->begin());
         // }
-        groupmerge(groups, MAX_GROUP_SIZE, 1);
+        groupmerge(groups, MAX_GROUP_SIZE);
         for (auto group : groups)
         {
             if (tmpGroup.size() + group.size() > MAX_GROUP_SIZE && tmpGroup.size() > 0)
