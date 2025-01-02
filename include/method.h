@@ -11,5 +11,6 @@
 #include "FP-only.h"
 #include "bruteforce.h"
 #include "characterFrequency.h"
+#include "FP-HSF-BIB.h"
 
 #endif

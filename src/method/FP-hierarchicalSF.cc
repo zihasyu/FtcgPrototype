@@ -158,7 +158,7 @@ void FPHierarchicalSF::ProcessOneTrace()
     for (auto it = hierarchicalSFA_unfinished_group.begin(); it != hierarchicalSFA_unfinished_group.end(); it++)
     {
         auto &groups = it->second;
-        if (it->first == "0" || groups.size() > 1000)
+        if (it->first == "0" || groups.size() > 0)
         {
             set<string> tmpGroup;
             for (auto group : it->second)

@@ -1,0 +1,22 @@
+Running LZ4Cluster on LKT with size 1024
+./run.sh: line 44: ./Ftcg: No such file or directory
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+2025-01-02 14:50:27 <Ftcg>: Start to process 1 files
+2025-01-02 14:50:27 <Chunker>: chunking done.
+2025-01-02 14:50:27 <Chunker>: thread exit.
+2025-01-02 14:50:30 <FPLz4Baseline>: feature num is 0
+2025-01-02 14:50:30 <FPLz4Baseline>: FP finished chunk num is 0
+2025-01-02 14:50:30 <FPLz4Baseline>: FP unfinished chunk num is 25422
+2025-01-02 14:50:30 <FPLz4Baseline>: total chunk num is 25422
+2025-01-02 14:50:30 <FPLz4Baseline>: first Finished chunk num is 1282
+2025-01-02 14:50:30 <FPLz4Baseline>: first Unfinished chunk num is 24140
+2025-01-02 14:50:30 <FPLz4Baseline>: tmp chunk num is 25422
+2025-01-02 14:50:30 <FPLz4Baseline>: 0 chunk with feature is zero
+2025-01-02 14:50:32 <FPLz4Baseline>: Throughput is 0.000000 GiB/s
+2025-01-02 14:50:32 <Ftcg>:  processNum 1 
+2025-01-02 14:50:32 <Ftcg>: Group Num is 3318
+2025-01-02 14:50:32 <Ftcg>: Total logical size is 208257024
+2025-01-02 14:50:32 <Ftcg>: Total compressed size is 85104450
+2025-01-02 14:50:32 <Ftcg>: Compression ratio is 2.4471
+--------------------------------------------------

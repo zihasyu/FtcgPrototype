@@ -102,7 +102,10 @@ int main(int argc, char **argv)
         absMethodObj = new bruteforce();
         break;
     case 8:
-        absMethodObj = new characterFrequency();
+        if (ExchunkSize == -1)
+            absMethodObj = new FPHSFBIB();
+        else
+            absMethodObj = new FPHSFBIB(ExchunkSize);
         break;
     default:
         break;
