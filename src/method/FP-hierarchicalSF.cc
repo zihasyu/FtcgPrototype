@@ -147,6 +147,64 @@ void FPHierarchicalSF::ProcessOneTrace()
         }
     }
 
+    // SFb分组
+    for (auto it : hierarchicalSFB_unfinished_group)
+    {
+        auto &groups = it.second;
+        if (it.first == "0" || groups.size() > 1000)
+        {
+            set<string> tmpGroup;
+            for (auto group : it.second)
+            {
+                if (tmpGroup.size() + group.size() > MAX_GROUP_SIZE)
+                {
+                    finishedGroups.push_back(tmpGroup);
+                    for (auto id : tmpGroup)
+                    {
+                        finishedChunks.insert(id);
+                        unfinishedChunks.erase(id);
+                    }
+                    tmpGroup.clear();
+                }
+                tmpGroup.insert(group.begin(), group.end());
+            }
+            if (tmpGroup.size() > 1)
+            {
+                finishedGroups.push_back(tmpGroup);
+                for (auto id : tmpGroup)
+                {
+                    finishedChunks.insert(id);
+                    unfinishedChunks.erase(id);
+                }
+                tmpGroup.clear();
+            }
+            else
+            {
+                for (auto id : tmpGroup)
+                {
+                    unfinishedChunks.insert(id);
+                }
+                tmpGroup.clear();
+            }
+            continue;
+        }
+
+        groupmerge(groups, MAX_GROUP_SIZE);
+        for (auto group : groups)
+        {
+            if (group.size() < 2)
+            {
+                continue;
+            }
+            for (auto id : group)
+            {
+                finishedChunks.insert(id);
+                unfinishedChunks.erase(id);
+            }
+            finishedGroups.push_back(group);
+        }
+    }
+
     for (auto it : table.hierarchicalSFA_B_table)
     {
         for (auto sf_b : it.second)
@@ -158,7 +216,7 @@ void FPHierarchicalSF::ProcessOneTrace()
     for (auto it = hierarchicalSFA_unfinished_group.begin(); it != hierarchicalSFA_unfinished_group.end(); it++)
     {
         auto &groups = it->second;
-        if (it->first == "0" || groups.size() > 0)
+        if (it->first == "0" || groups.size() > 1000)
         {
             set<string> tmpGroup;
             for (auto group : it->second)

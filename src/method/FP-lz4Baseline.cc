@@ -69,6 +69,7 @@ FPLz4Baseline::~FPLz4Baseline()
 
 void FPLz4Baseline::ProcessOneTrace()
 {
+    uint64_t cnt = 0;
     while (true)
     {
         if (recieveQueue->done_ && recieveQueue->IsEmpty())
@@ -79,6 +80,11 @@ void FPLz4Baseline::ProcessOneTrace()
         string hashStr;
         if (recieveQueue->Pop(tmpChunk))
         {
+            if (cnt >= 1000000)
+            {
+                continue;
+            }
+            cnt++;
             // calculate feature
             stringstream ss;
             ss << tmpChunk.chunkID;

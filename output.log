@@ -65,3 +65,25 @@ avgChunkSize is 1024
 2025-01-02 16:40:08 <Ftcg>: Total compressed size is 85116202
 2025-01-02 16:40:08 <Ftcg>: Compression ratio is 2.4467
 --------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-01-03 14:54:31 <Ftcg>: Start to process 1 files
+2025-01-03 14:54:31 <Chunker>: chunking done.
+2025-01-03 14:54:31 <Chunker>: thread exit.
+2025-01-03 14:54:34 <FPHSFBIB>: total chunk num is 25422
+2025-01-03 14:54:34 <FPHSFBIB>: feature num is 22722
+2025-01-03 14:54:34 <FPHSFBIB>: FP finished chunk num is 0
+2025-01-03 14:54:34 <FPHSFBIB>: FP unfinished chunk num is 25422
+2025-01-03 14:54:34 <FPHSFBIB>: a Finished chunk num is 3720
+2025-01-03 14:54:34 <FPHSFBIB>: a Unfinished chunk num is 21702
+2025-01-03 14:54:36 <FPHSFBIB>: third Finished chunk num is 25422
+2025-01-03 14:54:36 <FPHSFBIB>: third Unfinished chunk num is 0
+2025-01-03 14:54:47 <FPHSFBIB>: compressed chunk num is 25422
+2025-01-03 14:54:47 <FPHSFBIB>: 379 chunk with feature is zero
+2025-01-03 14:54:49 <FPHSFBIB>: Throughput is 0.000000 GiB/s
+2025-01-03 14:54:49 <Ftcg>:  processNum 1 
+2025-01-03 14:54:49 <Ftcg>: Group Num is 3920
+2025-01-03 14:54:49 <Ftcg>: Total logical size is 208257024
+2025-01-03 14:54:49 <Ftcg>: Total compressed size is 85100330
+2025-01-03 14:54:49 <Ftcg>: Compression ratio is 2.4472
+--------------------------------------------------

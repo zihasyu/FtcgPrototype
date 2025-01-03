@@ -31,6 +31,8 @@ FPHSFBIB::~FPHSFBIB()
 
 void FPHSFBIB::ProcessOneTrace()
 {
+    uint64_t cnt = 0;
+    auto start = std::chrono::high_resolution_clock::now();
     while (true)
     {
         if (recieveQueue->done_ && recieveQueue->IsEmpty())
@@ -41,17 +43,21 @@ void FPHSFBIB::ProcessOneTrace()
         string hashStr;
         if (recieveQueue->Pop(tmpChunk))
         {
+            if (cnt >= 1000000)
+            {
+                continue;
+            }
+            cnt++;
             // calculate feature
             stringstream ss;
             ss << tmpChunk.chunkID;
-            auto start = std::chrono::high_resolution_clock::now();
+
             // table.PutOrignals(ss.str(), (char *)tmpChunk.chunkContent);
             // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
             //  nTransTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
             // finesseTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
             table.PutHierarchicalSF(ss.str(), (char *)tmpChunk.chunkContent);
-            auto end = std::chrono::high_resolution_clock::now();
-            featureExtractTime += end - start;
+
             // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
             GenerateHash(mdCtx, tmpChunk.chunkContent, tmpChunk.chunkSize, hashBuf);
             hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
@@ -291,7 +297,7 @@ void FPHSFBIB::ProcessOneTrace()
     for (auto it : representTable.feature_key_table_)
     {
         tmpGroup.clear();
-        if (it.first == 0 || Rfeature_unfinishedGroup[it.first].size() > 1000)
+        if (it.first == 0 || Rfeature_unfinishedGroup[it.first].size() > 0)
         {
             for (auto group : Rfeature_unfinishedGroup[it.first])
             {
@@ -307,13 +313,21 @@ void FPHSFBIB::ProcessOneTrace()
                 }
                 tmpGroup.insert(group.begin(), group.end());
             }
-            if (tmpGroup.size() > 0)
+            if (tmpGroup.size() > 1)
             {
                 finishedGroups.push_back(tmpGroup);
                 for (auto id : tmpGroup)
                 {
                     unfinishedChunks.erase(id);
                     finishedChunks.insert(id);
+                }
+                tmpGroup.clear();
+            }
+            else
+            {
+                for (auto id : tmpGroup)
+                {
+                    unfinishedChunks.insert(id);
                 }
                 tmpGroup.clear();
             }
@@ -342,13 +356,21 @@ void FPHSFBIB::ProcessOneTrace()
             }
             tmpGroup.insert(group.begin(), group.end());
         }
-        if (tmpGroup.size() > 0)
+        if (tmpGroup.size() > 1)
         {
             finishedGroups.push_back(tmpGroup);
             for (auto id : tmpGroup)
             {
                 unfinishedChunks.erase(id);
                 finishedChunks.insert(id);
+            }
+            tmpGroup.clear();
+        }
+        else
+        {
+            for (auto id : tmpGroup)
+            {
+                unfinishedChunks.insert(id);
             }
             tmpGroup.clear();
         }
@@ -439,6 +461,10 @@ void FPHSFBIB::ProcessOneTrace()
     {
         compressedChunkNum += it.size();
     }
+
+    auto end = std::chrono::high_resolution_clock::now();
+    featureExtractTime += end - start;
+
     tool::Logging(myName_.c_str(), "compressed chunk num is %d\n", compressedChunkNum);
     tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
     totalLogicalSize = compressedChunkNum * 8 * 1024;
