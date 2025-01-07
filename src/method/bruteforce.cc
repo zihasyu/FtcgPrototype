@@ -1,4 +1,4 @@
-#include "../../include/bruteforce.h"
+#include "../../include/method/bruteforce.h"
 
 bruteforce::bruteforce()
 {

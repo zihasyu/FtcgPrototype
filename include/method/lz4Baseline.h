@@ -1,15 +1,16 @@
-#ifndef FP_LZ4_SF_BIB_H
-#define FP_LZ4_SF_BIB_H
-#include "absMethod.h"
-#include "odess_similarity_detection.h"
-#include "NTransFormSF.h"
-#include "finesse.h"
+#ifndef LZ4_BASELINE_H
+#define LZ4_BASELINE_H
 
-class FPLz4SFBlockinBlock : public absMethod
+#include "absMethod.h"
+#include "../odess_similarity_detection.h"
+#include "../NTransFormSF.h"
+#include "../finesse.h"
+
+class lz4Baseline : public absMethod
 {
 private:
     /* data */
-    string myName_ = "FPLz4SFBIB";
+    string myName_ = "lz4Baseline";
     string fileName;
     // Feature Table
     FeatureIndexTable table;
@@ -25,12 +26,9 @@ private:
     std::chrono::duration<double> clustringTime;
 
 public:
-    FPLz4SFBlockinBlock();
-    FPLz4SFBlockinBlock(uint64_t ExchunkSize);
-    ~FPLz4SFBlockinBlock();
+    lz4Baseline();
+    ~lz4Baseline();
 
     void ProcessOneTrace();
-
-    // void second_group(map<feature_t, set<string>> unFullGroups, vector<set<string>> &group);
 };
 #endif

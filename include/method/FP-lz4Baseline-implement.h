@@ -1,16 +1,16 @@
-#ifndef LZ4_BASELINE_H
-#define LZ4_BASELINE_H
+#ifndef FP_LZ4_BASELINE_IMPLEMENT_H
+#define FP_LZ4_BASELINE_IMPLEMENT_H
 
 #include "absMethod.h"
-#include "odess_similarity_detection.h"
-#include "NTransFormSF.h"
-#include "finesse.h"
+#include "../odess_similarity_detection.h"
+#include "../NTransFormSF.h"
+#include "../finesse.h"
 
-class lz4Baseline : public absMethod
+class FPLz4BaselineImplement : public absMethod
 {
 private:
     /* data */
-    string myName_ = "lz4Baseline";
+    string myName_ = "FPLz4BaselineImplement";
     string fileName;
     // Feature Table
     FeatureIndexTable table;
@@ -26,12 +26,11 @@ private:
     std::chrono::duration<double> clustringTime;
 
 public:
-    lz4Baseline();
-    ~lz4Baseline();
+    FPLz4BaselineImplement();
+    FPLz4BaselineImplement(uint64_t ExchunkSize);
+    ~FPLz4BaselineImplement();
 
     void ProcessOneTrace();
-
-    void ProcessOneTraceOrigin();
 
     // void second_group(map<feature_t, set<string>> unFullGroups, vector<set<string>> &group);
 };

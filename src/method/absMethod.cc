@@ -1,4 +1,4 @@
-#include "../../include/absMethod.h"
+#include "../../include/method/absMethod.h"
 
 absMethod::absMethod() : chunker_(0)
 {

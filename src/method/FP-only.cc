@@ -1,5 +1,5 @@
-#include "../../include/FP-only.h"
-
+#include "../../include/method/FP-only.h"
+// nonDedup
 FPOnly::FPOnly()
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
@@ -32,6 +32,7 @@ void FPOnly::ProcessOneTrace()
         if (recieveQueue->Pop(tmpChunk))
         {
             // calculate feature
+            tmpChunk.chunkID = ChunkID++;
             stringstream ss;
             ss << tmpChunk.chunkID;
             GenerateHash(mdCtx, tmpChunk.chunkContent, tmpChunk.chunkSize, hashBuf);

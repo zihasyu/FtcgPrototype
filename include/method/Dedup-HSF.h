@@ -1,20 +1,20 @@
-#ifndef FP_HSF_BIB_H
-#define FP_HSF_BIB_H
+#ifndef DEDUP_SF_H
+#define DEDUP_SF_H
 
 #include "absMethod.h"
-#include "odess_similarity_detection.h"
-#include "NTransFormSF.h"
-#include "finesse.h"
-#include "xxhash.h"
+#include "../odess_similarity_detection.h"
+#include "../NTransFormSF.h"
+#include "../finesse.h"
+#include "../xxhash.h"
 
 #define HIERARCHICAL_SF_NUM 3
 #define HIERARCHICAL_FEATURE_SIZE 128 // single hierarchical feature size(bit)
 
-class FPHSFBIB : public absMethod
+class Dedup_HSF : public absMethod
 {
 private:
     /* data */
-    string myName_ = "FPHSFBIB";
+    string myName_ = "Dedup_HSF";
     string fileName;
     // Feature Table
     FeatureIndexTable table;
@@ -31,9 +31,9 @@ private:
     std::chrono::duration<double> clustringTime;
 
 public:
-    FPHSFBIB();
-    FPHSFBIB(uint64_t ExchunkSize);
-    ~FPHSFBIB();
+    Dedup_HSF();
+    Dedup_HSF(uint64_t ExchunkSize);
+    ~Dedup_HSF();
 
     void ProcessOneTrace();
 

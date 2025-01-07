@@ -1,16 +1,16 @@
 #ifndef METHOD_H
 #define METHOD_H
 
-#include "absMethod.h"
-#include "lz4Baseline.h"
-#include "lz4Compare.h"
-#include "FP-lz4Baseline.h"
-#include "FP-HierarchicalSF.h"
-#include "FP-lz4Baseline-implement.h"
-#include "FP-SF-BIB.h"
-#include "FP-only.h"
-#include "bruteforce.h"
-#include "characterFrequency.h"
-#include "FP-HSF-BIB.h"
+#include "./method/absMethod.h"
+#include "./method/lz4Baseline.h"
+#include "./method/lz4Compare.h"
+#include "./method/FP-lz4Baseline.h"
+#include "./method/Dedup-HSF.h"
+#include "./method/FP-lz4Baseline-implement.h"
+#include "./method/Dedup-SF-BIB.h"
+#include "./method/FP-only.h"
+#include "./method/bruteforce.h"
+#include "./method/characterFrequency.h"
+#include "./method/Dedup-HSF-BIB.h"
 
 #endif

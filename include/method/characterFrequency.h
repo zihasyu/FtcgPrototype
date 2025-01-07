@@ -2,10 +2,10 @@
 #define CHARACTER_FREQUENCY_H
 
 #include "absMethod.h"
-#include "odess_similarity_detection.h"
-#include "NTransFormSF.h"
-#include "finesse.h"
-#include "xxhash.h"
+#include "../odess_similarity_detection.h"
+#include "../NTransFormSF.h"
+#include "../finesse.h"
+#include "../xxhash.h"
 
 class characterFrequency : public absMethod
 {

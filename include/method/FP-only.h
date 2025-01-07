@@ -2,9 +2,9 @@
 #define FP_ONLY_H
 
 #include "absMethod.h"
-#include "odess_similarity_detection.h"
-#include "NTransFormSF.h"
-#include "finesse.h"
+#include "../odess_similarity_detection.h"
+#include "../NTransFormSF.h"
+#include "../finesse.h"
 
 class FPOnly : public absMethod
 {

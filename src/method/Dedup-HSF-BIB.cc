@@ -1,6 +1,6 @@
-#include "../../include/FP-HSF-BIB.h"
+#include "../../include/method/Dedup-HSF-BIB.h"
 
-FPHSFBIB::FPHSFBIB()
+Dedup_HSH_BIB::Dedup_HSH_BIB()
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
@@ -10,7 +10,7 @@ FPHSFBIB::FPHSFBIB()
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
 }
 
-FPHSFBIB::FPHSFBIB(uint64_t ExchunkSize) : absMethod(ExchunkSize)
+Dedup_HSH_BIB::Dedup_HSH_BIB(uint64_t ExchunkSize) : absMethod(ExchunkSize)
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
@@ -20,7 +20,7 @@ FPHSFBIB::FPHSFBIB(uint64_t ExchunkSize) : absMethod(ExchunkSize)
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
 }
 
-FPHSFBIB::~FPHSFBIB()
+Dedup_HSH_BIB::~Dedup_HSH_BIB()
 {
     free(lz4ChunkBuffer);
     free(readFileBuffer);
@@ -29,7 +29,7 @@ FPHSFBIB::~FPHSFBIB()
     free(hashBuf);
 }
 
-void FPHSFBIB::ProcessOneTrace()
+void Dedup_HSH_BIB::ProcessOneTrace()
 {
     auto start = std::chrono::high_resolution_clock::now();
     while (true)
@@ -83,7 +83,6 @@ void FPHSFBIB::ProcessOneTrace()
 
     totalFeature += table.original_feature_key_table.size();
     vector<set<uint64_t>> finishedGroups;
-    // vector<set<string>> unfinishedGroups;
     unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;

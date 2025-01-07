@@ -1,4 +1,4 @@
-#include "../../include/FP-lz4Baseline-implement.h"
+#include "../../include/method/FP-lz4Baseline-implement.h"
 
 FPLz4BaselineImplement::FPLz4BaselineImplement()
 {

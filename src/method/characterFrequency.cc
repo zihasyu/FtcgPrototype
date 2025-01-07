@@ -1,4 +1,4 @@
-#include "../../include/characterFrequency.h"
+#include "../../include/method/characterFrequency.h"
 
 characterFrequency::characterFrequency()
 {

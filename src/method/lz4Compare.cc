@@ -1,5 +1,5 @@
-#include "../../include/lz4Compare.h"
-
+#include "../../include/method/lz4Compare.h"
+// non Dedup
 lz4Compare::lz4Compare()
 {
     lz4ChunkBuffer = (uint8_t *)malloc(8 * 1024);
@@ -31,6 +31,7 @@ void lz4Compare::ProcessOneTrace()
             // }
             // cnt++;
             // lz4Compress
+            tmpChunk.chunkID = ChunkID++;
             int compressedSize = LZ4_compress_fast((char *)tmpChunk.chunkContent, (char *)lz4ChunkBuffer, tmpChunk.chunkSize, tmpChunk.chunkSize, 3);
             if (compressedSize <= 0)
             {

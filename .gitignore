@@ -1,6 +1,7 @@
 bin/
 build/
 .vscode/
+lib/
 temp.sh
 run.sh
 output.log

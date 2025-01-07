@@ -4,10 +4,10 @@
 #include <string>
 #include <chrono>
 #include <openssl/evp.h>
-#include "define.h"
-#include "chunker.h"
-#include "lz4.h"
-#include "datawrite.h"
+#include "../define.h"
+#include "../chunker.h"
+#include "../lz4.h"
+#include "../datawrite.h"
 #include "opencv2/opencv.hpp"
 using namespace std;
 
@@ -19,6 +19,7 @@ protected:
     string fileName;
     bool isDisk = false;
     vector<Chunk_t> chunkSet;
+    uint64_t ChunkID = 0; // uinque chunk id
 
 public:
     // util

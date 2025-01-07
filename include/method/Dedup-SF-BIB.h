@@ -1,16 +1,15 @@
-#ifndef FP_LZ4_BASELINE_IMPLEMENT_H
-#define FP_LZ4_BASELINE_IMPLEMENT_H
-
+#ifndef Dedup_SF_BIB_H
+#define Dedup_SF_BIB_H
 #include "absMethod.h"
-#include "odess_similarity_detection.h"
-#include "NTransFormSF.h"
-#include "finesse.h"
-
-class FPLz4BaselineImplement : public absMethod
+#include "../odess_similarity_detection.h"
+#include "../NTransFormSF.h"
+#include "../finesse.h"
+// 0+design3
+class Dedup_SF_BIB : public absMethod
 {
 private:
     /* data */
-    string myName_ = "FPLz4BaselineImplement";
+    string myName_ = "FPLz4SFBIB";
     string fileName;
     // Feature Table
     FeatureIndexTable table;
@@ -26,9 +25,9 @@ private:
     std::chrono::duration<double> clustringTime;
 
 public:
-    FPLz4BaselineImplement();
-    FPLz4BaselineImplement(uint64_t ExchunkSize);
-    ~FPLz4BaselineImplement();
+    Dedup_SF_BIB();
+    Dedup_SF_BIB(uint64_t ExchunkSize);
+    ~Dedup_SF_BIB();
 
     void ProcessOneTrace();
 

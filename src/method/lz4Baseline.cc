@@ -1,5 +1,5 @@
-#include "../../include/lz4Baseline.h"
-
+#include "../../include/method/lz4Baseline.h"
+// non Dedup
 lz4Baseline::lz4Baseline()
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
@@ -37,6 +37,7 @@ void lz4Baseline::ProcessOneTrace()
             // }
             // count++;
             // calculate feature
+            tmpChunk.chunkID = ChunkID++;
             stringstream ss;
             ss << tmpChunk.chunkID;
             auto start = std::chrono::high_resolution_clock::now();
@@ -226,120 +227,6 @@ void lz4Baseline::ProcessOneTrace()
     }
 
     // tool::Logging(myName_.c_str(), "%d feature with only one chunk and total feature num is %d\n", singeFeature, table.original_feature_key_table.size());
-
-    // calculate the throughput
-    double totalTimeInSeconds = featureExtractTime.count() + clustringTime.count();
-    double throughput = (double)totalLogicalSize / (double)(totalTimeInSeconds * (1 << 30)); // 转换为GiB/s
-    tool::Logging(myName_.c_str(), "Throughput is %f GiB/s\n", throughput);
-    recieveQueue->done_ = false;
-    return;
-}
-
-// 最初的方法，用于对比
-void lz4Baseline::ProcessOneTraceOrigin()
-{
-
-    while (true)
-    {
-        if (recieveQueue->done_ && recieveQueue->IsEmpty())
-        {
-            break;
-        }
-        Chunk_t tmpChunk;
-        if (recieveQueue->Pop(tmpChunk))
-        {
-            // calculate feature
-            stringstream ss;
-            ss << tmpChunk.chunkID;
-            auto start = std::chrono::high_resolution_clock::now();
-            table.PutOrignal(ss.str(), (char *)tmpChunk.chunkContent);
-            auto end = std::chrono::high_resolution_clock::now();
-            featureExtractTime += end - start;
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-
-            Chunk_Insert(tmpChunk);
-        }
-    }
-
-    // auto start = std::chrono::high_resolution_clock::now();
-    // for (auto it : table.original_feature_key_table)
-    // {
-    //     for (auto id : it.second)
-    //     {
-    //     }
-    // }
-    // auto end = std::chrono::high_resolution_clock::now();
-    // clustringTime += end - start;
-    totalFeature += table.original_feature_key_table.size();
-    for (auto it : table.original_feature_key_table)
-    {
-        if (it.second.size() < MAX_GROUP_SIZE)
-        {
-            feature_less_than_16++;
-        }
-
-        for (auto id : it.second)
-        {
-            // 记录只有一个chunk的feature数量
-            if (it.second.size() == 1)
-            {
-                singeFeature++;
-            }
-
-            if (clusterCnt < MAX_GROUP_SIZE)
-            {
-                auto start = std::chrono::high_resolution_clock::now();
-                Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
-                memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-                if (GroupTmpChunk.loadFromDisk)
-                {
-                    free(GroupTmpChunk.chunkContent);
-                }
-                auto end = std::chrono::high_resolution_clock::now();
-                clustringTime += end - start;
-            }
-            else
-            {
-                // do lz4 compression
-                int compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
-                if (compressedSize <= 0)
-                {
-                    compressedSize = clusterSize;
-                }
-                totalCompressedSize += compressedSize;
-                totalLogicalSize += clusterSize;
-                clusterNum++;
-                clusterCnt = 0;
-                clusterSize = 0;
-
-                // copy new chunk
-                Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
-                memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-                if (GroupTmpChunk.loadFromDisk)
-                {
-                    free(GroupTmpChunk.chunkContent);
-                }
-            }
-            clusterCnt++;
-            ChunkNum++;
-            clusterSize += chunkSet[stoull(id)].chunkSize;
-        }
-    }
-
-    // process last cluster
-    if (clusterCnt > 0)
-    {
-
-        int compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
-        if (compressedSize <= 0)
-        {
-            compressedSize = clusterSize;
-        }
-        totalCompressedSize += compressedSize;
-        totalLogicalSize += (clusterCnt * 8 * 1024);
-        clusterCnt = 0;
-    }
-    tool::Logging(myName_.c_str(), "%d feature with only one chunk and total feature num is %d\n", singeFeature, table.original_feature_key_table.size());
 
     // calculate the throughput
     double totalTimeInSeconds = featureExtractTime.count() + clustringTime.count();

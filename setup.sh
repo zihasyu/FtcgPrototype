@@ -17,7 +17,7 @@ make -j4
 # 清理 ./bin 目录下的 .txt 文件，并确保 Containers 和 restoreFile 目录存在
 cd "$SCRIPT_DIR/bin"
 rm -f *.txt
-mkdir -p Containers restoreFile
+mkdir -p Containers restoreFile CompressionFiles
 
 # 如果 "./bin/Containers" 目录存在，则清理其内容
 if [ -d "Containers" ]; then
