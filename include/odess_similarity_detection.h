@@ -145,9 +145,10 @@ public:
   // 层次SF
   unordered_map<string, set<string>> hierarchicalSFA_key_table;
   unordered_map<string, set<string>> hierarchicalSFB_key_table;
-  unordered_map<string, set<string>> hierarchicalSFC_key_table;
+  vector<string> hierarchicalSFC;
   unordered_map<string, set<string>> hierarchicalSFA_B_table;
   unordered_map<string, set<string>> hierarchicalSFB_C_table;
+  unordered_map<string, set<string>> hierarchicalSFA_C_table;
   unordered_map<string, vector<string>> key_hierarchicalSF_table;
 
   unordered_map<super_feature_t, unordered_set<string>> feature_key_table_;

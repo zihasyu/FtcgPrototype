@@ -54,7 +54,7 @@ double characterFrequency::calculateEntropy(const Chunk_t &chunk)
     entropy = -entropy;
     return entropy;
 }
-std::vector<set<string>> characterFrequency::clusterChunks(const std::vector<Chunk_t> &chunkSet, int clusterNum)
+std::vector<set<uint64_t>> characterFrequency::clusterChunks(const std::vector<Chunk_t> &chunkSet, int clusterNum)
 {
     cv::Mat data(chunkSet.size(), 256, CV_32F);
     for (int i = 0; i < chunkSet.size(); i++)
@@ -68,10 +68,10 @@ std::vector<set<string>> characterFrequency::clusterChunks(const std::vector<Chu
     cv::Mat labels, centers;
     cv::kmeans(data, clusterNum, labels,
                cv::TermCriteria(cv::TermCriteria::EPS + cv::TermCriteria::COUNT, 10000, 0.0001), 3, cv::KMEANS_PP_CENTERS, centers);
-    std::vector<set<string>> groups(clusterNum);
+    std::vector<set<uint64_t>> groups(clusterNum);
     for (int i = 0; i < chunkSet.size(); i++)
     {
-        groups[labels.at<int>(i)].insert(to_string(i));
+        groups[labels.at<int>(i)].insert(i);
     }
     return groups;
 }
@@ -130,15 +130,15 @@ void characterFrequency::ProcessOneTrace()
         return;
     }
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
-    vector<set<string>> finishedGroups;
-    vector<set<string>> unfinishedGroups;
-    unordered_map<string, set<string>> FPunfinishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    set<string> tmpGroup; // 16一组chunkid
+    vector<set<uint64_t>> finishedGroups;
+    vector<set<uint64_t>> unfinishedGroups;
+    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
+    set<uint64_t> finishedChunks;
+    set<uint64_t> unfinishedChunks;
+    set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     map<feature_t, set<string>> feature_FP_Table;
-    vector<set<string>> featureGroups;
+    vector<set<uint64_t>> featureGroups;
     vector<Chunk_t> unfinishedChunkSet;
 
     tool::Logging(myName_.c_str(), "total chunk num is %d\n", totalChunkNum);
@@ -155,8 +155,8 @@ void characterFrequency::ProcessOneTrace()
         {
             for (auto id : it.second)
             {
-                tmpGroup.insert(to_string(id));
-                finishedChunks.insert(to_string(id));
+                tmpGroup.insert(id);
+                finishedChunks.insert(id);
                 if (tmpGroup.size() == 16)
                 {
                     finishedGroups.push_back(tmpGroup);
@@ -178,8 +178,8 @@ void characterFrequency::ProcessOneTrace()
         {
             for (auto id : it.second)
             {
-                tmpGroup.insert(to_string(id));
-                unfinishedChunks.insert(to_string(id));
+                tmpGroup.insert(id);
+                unfinishedChunks.insert(id);
             }
             FPunfinishedGroups[it.first].insert(tmpGroup.begin(), tmpGroup.end());
             tmpGroup.clear();
@@ -198,11 +198,11 @@ void characterFrequency::ProcessOneTrace()
         tmpGroup.clear();
         for (auto id : feature.second)
         {
-            if (finishedChunks.find(id) != finishedChunks.end())
+            if (finishedChunks.find(stoull(id)) != finishedChunks.end())
             {
                 continue;
             }
-            tmpGroup.insert(id);
+            tmpGroup.insert(stoull(id));
         }
         if (tmpGroup.size() > 15)
         {
@@ -218,13 +218,13 @@ void characterFrequency::ProcessOneTrace()
         unfinishedChunkSet.clear();
         for (auto id : group)
         {
-            unfinishedChunkSet.push_back(chunkSet[stoull(id)]);
-            idIndex[unfinishedChunkSet.size() - 1] = stoull(id);
+            unfinishedChunkSet.push_back(chunkSet[id]);
+            idIndex[unfinishedChunkSet.size() - 1] = id;
         }
         unfinishedGroups.clear();
         unfinishedGroups = clusterChunks(unfinishedChunkSet, unfinishedChunkSet.size() / MAX_GROUP_SIZE);
         // 把大于MAX_GROUP_SIZE的group拆开
-        vector<set<string>> tmpUnfinishedGroups;
+        vector<set<uint64_t>> tmpUnfinishedGroups;
         for (auto group = unfinishedGroups.begin(); group != unfinishedGroups.end(); group++)
         {
             tmpGroup.clear();
@@ -256,7 +256,7 @@ void characterFrequency::ProcessOneTrace()
         {
             for (auto id : group)
             {
-                string index = to_string(idIndex[stoull(id)]);
+                uint64_t index = idIndex[id];
                 if (finishedChunks.find(index) != finishedChunks.end())
                 {
                     cout << "chunk " << index << " is in two group" << endl;
@@ -344,7 +344,7 @@ void characterFrequency::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {
@@ -356,7 +356,7 @@ void characterFrequency::ProcessOneTrace()
             clusterCnt++;
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
-            clusterSize += chunkSet[stoull(id)].chunkSize;
+            clusterSize += chunkSet[id].chunkSize;
         }
         groupLogicalSize[group.size()] += clusterSize;
         // do lz4 compression

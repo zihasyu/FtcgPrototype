@@ -60,12 +60,12 @@ void FPOnly::ProcessOneTrace()
 
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
 
-    vector<set<string>> finishedGroups;
-    unordered_map<string, set<string>> FPunfinishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    vector<set<string>> adjGroups;
-    set<string> tmpGroup; // 16一组chunkid
+    vector<set<uint64_t>> finishedGroups;
+    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
+    set<uint64_t> finishedChunks;
+    set<uint64_t> unfinishedChunks;
+    vector<set<uint64_t>> adjGroups;
+    set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     map<feature_t, set<string>> feature_FP_Table;
 
@@ -83,11 +83,11 @@ void FPOnly::ProcessOneTrace()
         {
             if (id == *it.second.begin())
             {
-                unfinishedChunks.insert(to_string(id));
+                unfinishedChunks.insert(id);
                 continue;
             }
-            tmpGroup.insert(to_string(id));
-            finishedChunks.insert(to_string(id));
+            tmpGroup.insert(id);
+            finishedChunks.insert(id);
         }
         if (tmpGroup.size() > 0)
         {
@@ -171,7 +171,7 @@ void FPOnly::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {

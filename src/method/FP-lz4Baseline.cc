@@ -123,12 +123,12 @@ void FPLz4Baseline::ProcessOneTrace()
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
 
     totalFeature += table.original_feature_key_table.size();
-    vector<set<string>> finishedGroups;
-    unordered_map<string, set<string>> FPunfinishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    vector<set<string>> adjGroups;
-    set<string> tmpGroup; // 16一组chunkid
+    vector<set<uint64_t>> finishedGroups;
+    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
+    set<uint64_t> finishedChunks;
+    set<uint64_t> unfinishedChunks;
+    vector<set<uint64_t>> adjGroups;
+    set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     map<feature_t, set<string>> feature_FP_Table;
     // set<string> usedChunks;
@@ -149,11 +149,11 @@ void FPLz4Baseline::ProcessOneTrace()
         {
             if (id == *it.second.begin())
             {
-                unfinishedChunks.insert(to_string(id));
+                unfinishedChunks.insert(id);
                 continue;
             }
-            tmpGroup.insert(to_string(id));
-            finishedChunks.insert(to_string(id));
+            tmpGroup.insert(id);
+            finishedChunks.insert(id);
         }
         if (tmpGroup.size() > 0)
         {
@@ -174,13 +174,13 @@ void FPLz4Baseline::ProcessOneTrace()
         tmpGroup.clear();
         for (auto id : feature.second)
         {
-            if (finishedChunks.find(id) != finishedChunks.end())
+            if (finishedChunks.find(stoull(id)) != finishedChunks.end())
             {
                 continue;
             }
-            tmpGroup.insert(id);
-            unfinishedChunks.erase(id);
-            finishedChunks.insert(id);
+            tmpGroup.insert(stoull(id));
+            unfinishedChunks.erase(stoull(id));
+            finishedChunks.insert(stoull(id));
             if (tmpGroup.size() == MAX_GROUP_SIZE)
             {
                 finishedGroups.push_back(tmpGroup);
@@ -279,7 +279,7 @@ void FPLz4Baseline::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {

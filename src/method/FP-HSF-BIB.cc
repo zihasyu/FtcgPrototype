@@ -31,7 +31,6 @@ FPHSFBIB::~FPHSFBIB()
 
 void FPHSFBIB::ProcessOneTrace()
 {
-    uint64_t cnt = 0;
     auto start = std::chrono::high_resolution_clock::now();
     while (true)
     {
@@ -43,11 +42,6 @@ void FPHSFBIB::ProcessOneTrace()
         string hashStr;
         if (recieveQueue->Pop(tmpChunk))
         {
-            if (cnt >= 1000000)
-            {
-                continue;
-            }
-            cnt++;
             // calculate feature
             stringstream ss;
             ss << tmpChunk.chunkID;
@@ -88,21 +82,21 @@ void FPHSFBIB::ProcessOneTrace()
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
 
     totalFeature += table.original_feature_key_table.size();
-    vector<set<string>> finishedGroups;
+    vector<set<uint64_t>> finishedGroups;
     // vector<set<string>> unfinishedGroups;
-    unordered_map<string, set<string>> FPunfinishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    vector<set<string>> adjGroups;
-    set<string> tmpGroup; // 16一组chunkid
+    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
+    set<uint64_t> finishedChunks;
+    set<uint64_t> unfinishedChunks;
+    vector<set<uint64_t>> adjGroups;
+    set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     map<feature_t, set<string>> feature_FP_Table;
     vector<vector<int>> indices; // 标识特征值下面那些group有相同的FP
 
-    unordered_map<string, vector<set<string>>>
+    unordered_map<string, vector<set<uint64_t>>>
         hierarchicalSFA_unfinished_group;
-    unordered_map<string, vector<set<string>>> hierarchicalSFB_unfinished_group;
-    unordered_map<string, vector<set<string>>> hierarchicalSFC_unfinished_group;
+    unordered_map<string, vector<set<uint64_t>>> hierarchicalSFB_unfinished_group;
+    map<string, vector<uint64_t>> hierarchicalSFC_unfinished_chunk;
     // set<string> usedChunks;
 
     // tool::Logging(myName_.c_str(), "chunk num is %d\n", table.original_feature_key_table.size());
@@ -118,17 +112,17 @@ void FPHSFBIB::ProcessOneTrace()
         {
             if (id == *it.second.begin())
             {
-                tmpGroup.insert(to_string(id));
+                tmpGroup.insert(id);
                 // hierarchicalSFA_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][0]].push_back(group);
                 // hierarchicalSFB_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][1]].push_back(group);
-                hierarchicalSFC_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][2]].push_back(tmpGroup);
+                hierarchicalSFC_unfinished_chunk[table.key_hierarchicalSF_table[to_string(id)][2]].push_back(id);
                 feature_FP_Table[table.original_key_feature_table_[to_string(id)]].insert(it.first);
-                unfinishedChunks.insert(to_string(id));
+                unfinishedChunks.insert(id);
                 tmpGroup.clear();
                 continue;
             }
-            tmpGroup.insert(to_string(id));
-            finishedChunks.insert(to_string(id));
+            tmpGroup.insert(id);
+            finishedChunks.insert(id);
         }
         if (tmpGroup.size() > 0)
         {
@@ -145,31 +139,18 @@ void FPHSFBIB::ProcessOneTrace()
     tool::Logging(myName_.c_str(), "FP finished chunk num is %d\n", finishedChunks.size());
     tool::Logging(myName_.c_str(), "FP unfinished chunk num is %d\n", unfinishedChunks.size());
 
-    for (auto it : table.hierarchicalSFB_C_table)
+    for (auto &it : table.hierarchicalSFA_C_table)
     {
-        for (auto sf_c : it.second)
+        vector<string> SFCs(it.second.begin(), it.second.end());
+        sort(SFCs.begin(), SFCs.end(), [&](const string &a, const string &b)
+             { return a > b; });
+        tmpGroup.clear();
+        for (auto sf_c : SFCs)
         {
-            hierarchicalSFB_unfinished_group[it.first].insert(hierarchicalSFB_unfinished_group[it.first].end(), hierarchicalSFC_unfinished_group[sf_c].begin(), hierarchicalSFC_unfinished_group[sf_c].end());
-        }
-    }
-
-    for (auto it : table.hierarchicalSFA_B_table)
-    {
-        for (auto sf_b : it.second)
-        {
-            hierarchicalSFA_unfinished_group[it.first].insert(hierarchicalSFA_unfinished_group[it.first].end(), hierarchicalSFB_unfinished_group[sf_b].begin(), hierarchicalSFB_unfinished_group[sf_b].end());
-        }
-    }
-    // SFa分组
-    for (auto it = hierarchicalSFA_unfinished_group.begin(); it != hierarchicalSFA_unfinished_group.end(); it++)
-    {
-        auto &groups = it->second;
-        if (it->first == "0" || groups.size() > 0)
-        {
-            set<string> tmpGroup;
-            for (auto group : it->second)
+            for (auto groups : hierarchicalSFC_unfinished_chunk[sf_c])
             {
-                if (tmpGroup.size() + group.size() > MAX_GROUP_SIZE)
+                tmpGroup.insert(groups);
+                if (tmpGroup.size() == MAX_GROUP_SIZE)
                 {
                     finishedGroups.push_back(tmpGroup);
                     for (auto id : tmpGroup)
@@ -179,44 +160,100 @@ void FPHSFBIB::ProcessOneTrace()
                     }
                     tmpGroup.clear();
                 }
-                tmpGroup.insert(group.begin(), group.end());
             }
-            if (tmpGroup.size() > 1)
-            {
-                finishedGroups.push_back(tmpGroup);
-                for (auto id : tmpGroup)
-                {
-                    finishedChunks.insert(id);
-                    unfinishedChunks.erase(id);
-                }
-                tmpGroup.clear();
-            }
-            else
-            {
-                for (auto id : tmpGroup)
-                {
-                    unfinishedChunks.insert(id);
-                }
-                tmpGroup.clear();
-            }
-            continue;
         }
-
-        groupmerge(groups, MAX_GROUP_SIZE);
-        for (auto group : groups)
+        if (tmpGroup.size() > 1)
         {
-            if (group.size() < 2)
-            {
-                continue;
-            }
-            for (auto id : group)
+            finishedGroups.push_back(tmpGroup);
+            for (auto id : tmpGroup)
             {
                 finishedChunks.insert(id);
                 unfinishedChunks.erase(id);
             }
-            finishedGroups.push_back(group);
+            tmpGroup.clear();
+        }
+        else
+        {
+            for (auto id : tmpGroup)
+            {
+                unfinishedChunks.insert(id);
+            }
+            tmpGroup.clear();
         }
     }
+
+    // for (auto it : table.hierarchicalSFB_C_table)
+    // {
+    //     for (auto sf_c : it.second)
+    //     {
+    //         hierarchicalSFB_unfinished_group[it.first].insert(hierarchicalSFB_unfinished_group[it.first].end(), hierarchicalSFC_unfinished_group[sf_c].begin(), hierarchicalSFC_unfinished_group[sf_c].end());
+    //     }
+    // }
+
+    // for (auto it : table.hierarchicalSFA_B_table)
+    // {
+    //     for (auto sf_b : it.second)
+    //     {
+    //         hierarchicalSFA_unfinished_group[it.first].insert(hierarchicalSFA_unfinished_group[it.first].end(), hierarchicalSFB_unfinished_group[sf_b].begin(), hierarchicalSFB_unfinished_group[sf_b].end());
+    //     }
+    // }
+    // // SFa分组
+    // for (auto it = hierarchicalSFA_unfinished_group.begin(); it != hierarchicalSFA_unfinished_group.end(); it++)
+    // {
+    //     auto &groups = it->second;
+    //     if (it->first == "0" || groups.size() > 0)
+    //     {
+    //         set<string> tmpGroup;
+    //         for (auto group : it->second)
+    //         {
+    //             if (tmpGroup.size() + group.size() > MAX_GROUP_SIZE)
+    //             {
+    //                 finishedGroups.push_back(tmpGroup);
+    //                 for (auto id : tmpGroup)
+    //                 {
+    //                     finishedChunks.insert(id);
+    //                     unfinishedChunks.erase(id);
+    //                 }
+    //                 tmpGroup.clear();
+    //             }
+    //             tmpGroup.insert(group.begin(), group.end());
+    //         }
+    //         if (tmpGroup.size() > 1)
+    //         {
+    //             finishedGroups.push_back(tmpGroup);
+    //             for (auto id : tmpGroup)
+    //             {
+    //                 finishedChunks.insert(id);
+    //                 unfinishedChunks.erase(id);
+    //             }
+    //             tmpGroup.clear();
+    //         }
+    //         else
+    //         {
+    //             for (auto id : tmpGroup)
+    //             {
+    //                 unfinishedChunks.insert(id);
+    //             }
+    //             tmpGroup.clear();
+    //         }
+    //         continue;
+    //     }
+
+    //     groupmerge(groups, MAX_GROUP_SIZE);
+    //     for (auto group : groups)
+    //     {
+    //         if (group.size() < 2)
+    //         {
+    //             continue;
+    //         }
+    //         for (auto id : group)
+    //         {
+    //             finishedChunks.insert(id);
+    //             unfinishedChunks.erase(id);
+    //         }
+    //         finishedGroups.push_back(group);
+    //     }
+    // }
     tool::Logging(myName_.c_str(), "a Finished chunk num is %d\n", finishedChunks.size());
     tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunks.size());
 
@@ -237,7 +274,7 @@ void FPHSFBIB::ProcessOneTrace()
     // 对每一个1块进行FastCDC,找到一个代表块,代表块的chunkid为原来块的id
     vector<representChunk_t> representChunkSet;
     FeatureIndexTable representTable;
-    map<super_feature_t, vector<set<string>>> Rfeature_unfinishedGroup;
+    map<super_feature_t, vector<set<uint64_t>>> Rfeature_unfinishedGroup;
 
     for (auto id : unfinishedChunks)
     {
@@ -247,17 +284,17 @@ void FPHSFBIB::ProcessOneTrace()
         // 用于内存读写
         // ThirdCutPointSizeMax(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+        Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
         ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, start, end);
         // ThirdCutPointHashMin_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         representChunk_t representChunk;
-        representChunk.chunkID = stoull(id);
+        representChunk.chunkID = id;
         representChunk.offset_start = start;
         representChunk.offset_end = end;
         representChunkSet.push_back(representChunk);
         string representChunkContent((char *)GroupTmpChunk.chunkContent + start, end - start);
-        representTable.Put(id, (char *)representChunkContent.c_str());
-        Rfeature_unfinishedGroup[representTable.key_feature_table_[id][0]].push_back({id});
+        representTable.Put(to_string(id), (char *)representChunkContent.c_str());
+        Rfeature_unfinishedGroup[representTable.key_feature_table_[to_string(id)][0]].push_back({id});
         if (GroupTmpChunk.loadFromDisk)
         {
             free(GroupTmpChunk.chunkContent);
@@ -277,16 +314,16 @@ void FPHSFBIB::ProcessOneTrace()
         // 用于内存读写
         // ThirdCutPointSizeMax(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+        Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
         ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, start, end);
         representChunk_t representChunk;
-        representChunk.chunkID = stoull(id);
+        representChunk.chunkID = id;
         representChunk.offset_start = start;
         representChunk.offset_end = end;
         representChunkSet.push_back(representChunk);
         string representChunkContent((char *)GroupTmpChunk.chunkContent + start, end - start);
-        representTable.Put(id, (char *)representChunkContent.c_str());
-        Rfeature_unfinishedGroup[representTable.key_feature_table_[id][0]].push_back(*group);
+        representTable.Put(to_string(id), (char *)representChunkContent.c_str());
+        Rfeature_unfinishedGroup[representTable.key_feature_table_[to_string(id)][0]].push_back(*group);
         for (auto id : *group)
         {
             unfinishedChunks.insert(id);
@@ -418,7 +455,7 @@ void FPHSFBIB::ProcessOneTrace()
     }
     // 将剩余的1块进行分组
 
-    vector<set<string>> leftGroups;
+    vector<set<uint64_t>> leftGroups;
     for (auto id : unfinishedChunks)
     {
         tmpGroup.insert(id);
@@ -485,7 +522,7 @@ void FPHSFBIB::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {
@@ -497,7 +534,7 @@ void FPHSFBIB::ProcessOneTrace()
             clusterCnt++;
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
-            clusterSize += chunkSet[stoull(id)].chunkSize;
+            clusterSize += chunkSet[id].chunkSize;
         }
         groupLogicalSize[group.size()] += clusterSize;
         // do lz4 compression

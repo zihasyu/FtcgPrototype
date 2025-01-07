@@ -58,12 +58,12 @@ void lz4Baseline::ProcessOneTrace()
         return;
     }
     totalFeature += table.original_feature_key_table.size();
-    vector<set<string>> finishedGroups;
-    // vector<set<string>> unfinishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    vector<set<string>> adjGroups;
-    set<string> group; // 16一组chunkid
+    vector<set<uint64_t>> finishedGroups;
+    // vector<set<uint64_t>> unfinishedGroups;
+    set<uint64_t> finishedChunks;
+    set<uint64_t> unfinishedChunks;
+    vector<set<uint64_t>> adjGroups;
+    set<uint64_t> group; // 16一组chunkid
     // set<string> usedChunks;
     // 对于每一个feature进行分组
     // tool::Logging(myName_.c_str(), "chunk num is %d\n", table.original_feature_key_table.size());
@@ -74,11 +74,11 @@ void lz4Baseline::ProcessOneTrace()
         {
 
             // 如果这个chunk已经被分组过了
-            if (finishedChunks.find(id) != finishedChunks.end() || unfinishedChunks.find(id) != unfinishedChunks.end())
+            if (finishedChunks.find(stoull(id)) != finishedChunks.end() || unfinishedChunks.find(stoull(id)) != unfinishedChunks.end())
             {
                 continue;
             }
-            group.insert(id);
+            group.insert(stoull(id));
             if (group.size() == MAX_GROUP_SIZE)
             {
                 for (auto id : group)
@@ -174,7 +174,7 @@ void lz4Baseline::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {

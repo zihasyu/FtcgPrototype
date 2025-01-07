@@ -92,6 +92,7 @@ void FeatureIndexTable::PutHierarchicalSF(const string &key, const string &value
     // hierarchicalSFC_key_table[hierarchicalSF[0] + hierarchicalSF[1] + hierarchicalSF[2]].insert(key);
     hierarchicalSFA_B_table[hierarchicalSF[0]].insert(hierarchicalSF[0] + hierarchicalSF[1]);
     hierarchicalSFB_C_table[hierarchicalSF[0] + hierarchicalSF[1]].insert(hierarchicalSF[0] + hierarchicalSF[1] + hierarchicalSF[2]);
+    hierarchicalSFA_C_table[hierarchicalSF[0]].insert(hierarchicalSF[0] + hierarchicalSF[1] + hierarchicalSF[2]);
     key_hierarchicalSF_table[key] = {hierarchicalSF[0], hierarchicalSF[0] + hierarchicalSF[1], hierarchicalSF[0] + hierarchicalSF[1] + hierarchicalSF[2]};
 }
 

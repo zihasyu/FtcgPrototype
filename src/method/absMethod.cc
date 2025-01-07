@@ -206,7 +206,7 @@ void absMethod::ThirdCutPointHashMin_remove(const uint8_t *src, const uint64_t l
     }
 }
 
-void absMethod::groupmerge(vector<set<string>> &sets, int t)
+void absMethod::groupmerge(vector<set<uint64_t>> &sets, int t)
 {
     while (true)
     {
@@ -219,7 +219,7 @@ void absMethod::groupmerge(vector<set<string>> &sets, int t)
         {
             for (int j = i + 1; j < n; ++j)
             {
-                set<string> temp(sets[i].begin(), sets[i].end());
+                set<uint64_t> temp(sets[i].begin(), sets[i].end());
                 temp.insert(sets[j].begin(), sets[j].end());
                 int new_size = temp.size();
 

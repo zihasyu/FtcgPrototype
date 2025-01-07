@@ -86,12 +86,12 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
 
     totalFeature += table.original_feature_key_table.size();
-    vector<set<string>> finishedGroups;
-    unordered_map<string, set<string>> FPunfinishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    vector<set<string>> adjGroups;
-    set<string> tmpGroup; // MAX_GROUP_SIZE一组chunkid
+    vector<set<uint64_t>> finishedGroups;
+    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
+    set<uint64_t> finishedChunks;
+    set<uint64_t> unfinishedChunks;
+    vector<set<uint64_t>> adjGroups;
+    set<uint64_t> tmpGroup; // MAX_GROUP_SIZE一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     if (!out.is_open())
     {
@@ -117,11 +117,11 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
         {
             if (id == *it.second.begin())
             {
-                unfinishedChunks.insert(to_string(id));
+                unfinishedChunks.insert(id);
                 continue;
             }
-            tmpGroup.insert(to_string(id));
-            finishedChunks.insert(to_string(id));
+            tmpGroup.insert(id);
+            finishedChunks.insert(id);
         }
         if (tmpGroup.size() > 0)
         {
@@ -143,13 +143,13 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
         tmpGroup.clear();
         for (auto id : feature.second)
         {
-            if (finishedChunks.find(id) != finishedChunks.end())
+            if (finishedChunks.find(stoull(id)) != finishedChunks.end())
             {
                 continue;
             }
-            tmpGroup.insert(id);
-            unfinishedChunks.erase(id);
-            finishedChunks.insert(id);
+            tmpGroup.insert(stoull(id));
+            unfinishedChunks.erase(stoull(id));
+            finishedChunks.insert(stoull(id));
             if (tmpGroup.size() == MAX_GROUP_SIZE)
             {
                 finishedGroups.push_back(tmpGroup);
@@ -191,7 +191,7 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
     // 对每一个1块进行FastCDC,找到一个代表块,代表块的chunkid为原来块的id
     vector<representChunk_t> representChunkSet;
     FeatureIndexTable representTable;
-    map<super_feature_t, vector<set<string>>> Rfeature_unfinishedGroup;
+    map<super_feature_t, vector<set<uint64_t>>> Rfeature_unfinishedGroup;
 
     for (auto id : unfinishedChunks)
     {
@@ -201,17 +201,17 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
         // 用于内存读写
         // ThirdCutPointSizeMax(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+        Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
         ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, start, end);
         // ThirdCutPointHashMin_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         representChunk_t representChunk;
-        representChunk.chunkID = stoull(id);
+        representChunk.chunkID = id;
         representChunk.offset_start = start;
         representChunk.offset_end = end;
         representChunkSet.push_back(representChunk);
         string representChunkContent((char *)GroupTmpChunk.chunkContent + start, end - start);
-        representTable.Put(id, (char *)representChunkContent.c_str());
-        Rfeature_unfinishedGroup[representTable.key_feature_table_[id][0]].push_back({id});
+        representTable.Put(to_string(id), (char *)representChunkContent.c_str());
+        Rfeature_unfinishedGroup[representTable.key_feature_table_[to_string(id)][0]].push_back({id});
     }
     for (auto group = finishedGroups.begin(); group != finishedGroups.end();)
     {
@@ -227,17 +227,17 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
         // 用于内存读写
         // ThirdCutPointSizeMax(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+        Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
         ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, start, end);
         // ThirdCutPointHashMin_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         representChunk_t representChunk;
-        representChunk.chunkID = stoull(id);
+        representChunk.chunkID = id;
         representChunk.offset_start = start;
         representChunk.offset_end = end;
         representChunkSet.push_back(representChunk);
         string representChunkContent((char *)GroupTmpChunk.chunkContent + start, end - start);
-        representTable.Put(id, (char *)representChunkContent.c_str());
-        Rfeature_unfinishedGroup[representTable.key_feature_table_[id][0]].push_back(*group);
+        representTable.Put(to_string(id), (char *)representChunkContent.c_str());
+        Rfeature_unfinishedGroup[representTable.key_feature_table_[to_string(id)][0]].push_back(*group);
         for (auto id : *group)
         {
             unfinishedChunks.insert(id);
@@ -340,7 +340,7 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
     }
 
     // 将剩余的1块进行分组
-    vector<set<string>> leftGroups;
+    vector<set<uint64_t>> leftGroups;
     for (auto id : unfinishedChunks)
     {
         tmpGroup.insert(id);
@@ -386,7 +386,7 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {
@@ -398,7 +398,7 @@ void FPLz4SFBlockinBlock::ProcessOneTrace()
             clusterCnt++;
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
-            clusterSize += chunkSet[stoull(id)].chunkSize;
+            clusterSize += chunkSet[id].chunkSize;
         }
         groupLogicalSize[group.size()] += clusterSize;
         // do lz4 compression

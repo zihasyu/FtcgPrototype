@@ -43,7 +43,7 @@ public:
     double calculateEntropy(const Chunk_t &chunk);
 
     // 聚类
-    std::vector<set<string>> clusterChunks(const std::vector<Chunk_t> &chunkSet, int clusterSize);
+    std::vector<set<uint64_t>> clusterChunks(const std::vector<Chunk_t> &chunkSet, int clusterSize);
     // 特征提取：将数据块转换为浮点向量
     std::vector<float> extractFeature(const Chunk_t &chunk);
     // 生成投影向量

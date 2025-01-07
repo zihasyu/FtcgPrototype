@@ -82,21 +82,21 @@ void FPHierarchicalSF::ProcessOneTrace()
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
 
     totalFeature += table.original_feature_key_table.size();
-    vector<set<string>> finishedGroups;
+    vector<set<uint64_t>> finishedGroups;
     // vector<set<string>> unfinishedGroups;
-    unordered_map<string, set<string>> FPunfinishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    vector<set<string>> adjGroups;
-    set<string> tmpGroup; // 16一组chunkid
+    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
+    set<uint64_t> finishedChunks;
+    set<uint64_t> unfinishedChunks;
+    vector<set<uint64_t>> adjGroups;
+    set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     map<feature_t, set<string>> feature_FP_Table;
     vector<vector<int>> indices; // 标识特征值下面那些group有相同的FP
 
-    unordered_map<string, vector<set<string>>>
+    unordered_map<string, vector<set<uint64_t>>>
         hierarchicalSFA_unfinished_group;
-    unordered_map<string, vector<set<string>>> hierarchicalSFB_unfinished_group;
-    unordered_map<string, vector<set<string>>> hierarchicalSFC_unfinished_group;
+    unordered_map<string, vector<set<uint64_t>>> hierarchicalSFB_unfinished_group;
+    unordered_map<string, vector<set<uint64_t>>> hierarchicalSFC_unfinished_group;
     // set<string> usedChunks;
 
     // tool::Logging(myName_.c_str(), "chunk num is %d\n", table.original_feature_key_table.size());
@@ -112,17 +112,17 @@ void FPHierarchicalSF::ProcessOneTrace()
         {
             if (id == *it.second.begin())
             {
-                tmpGroup.insert(to_string(id));
+                tmpGroup.insert(id);
                 // hierarchicalSFA_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][0]].push_back(group);
                 // hierarchicalSFB_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][1]].push_back(group);
                 hierarchicalSFC_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][2]].push_back(tmpGroup);
                 feature_FP_Table[table.original_key_feature_table_[to_string(id)]].insert(it.first);
-                unfinishedChunks.insert(to_string(id));
+                unfinishedChunks.insert(id);
                 tmpGroup.clear();
                 continue;
             }
-            tmpGroup.insert(to_string(id));
-            finishedChunks.insert(to_string(id));
+            tmpGroup.insert(id);
+            finishedChunks.insert(id);
         }
         if (tmpGroup.size() > 0)
         {
@@ -150,10 +150,10 @@ void FPHierarchicalSF::ProcessOneTrace()
     // SFb分组
     for (auto it : hierarchicalSFB_unfinished_group)
     {
+        tmpGroup.clear();
         auto &groups = it.second;
         if (it.first == "0" || groups.size() > 1000)
         {
-            set<string> tmpGroup;
             for (auto group : it.second)
             {
                 if (tmpGroup.size() + group.size() > MAX_GROUP_SIZE)
@@ -218,7 +218,7 @@ void FPHierarchicalSF::ProcessOneTrace()
         auto &groups = it->second;
         if (it->first == "0" || groups.size() > 1000)
         {
-            set<string> tmpGroup;
+            tmpGroup.clear();
             for (auto group : it->second)
             {
                 if (tmpGroup.size() + group.size() > MAX_GROUP_SIZE)
@@ -284,7 +284,7 @@ void FPHierarchicalSF::ProcessOneTrace()
         out << it.first << ", " << it.second << endl;
     }
 
-    vector<set<string>> leftGroups;
+    vector<set<uint64_t>> leftGroups;
     for (auto id : unfinishedChunks)
     {
         tmpGroup.insert(id);
@@ -347,7 +347,7 @@ void FPHierarchicalSF::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(stoull(id));
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {
@@ -359,7 +359,7 @@ void FPHierarchicalSF::ProcessOneTrace()
             clusterCnt++;
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
-            clusterSize += chunkSet[stoull(id)].chunkSize;
+            clusterSize += chunkSet[id].chunkSize;
         }
         groupLogicalSize[group.size()] += clusterSize;
         // do lz4 compression

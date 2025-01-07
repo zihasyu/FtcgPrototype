@@ -52,7 +52,7 @@ public:
     uint64_t totalMatrixSize = 0;      // 总矩阵大小
     map<uint, uint> frequency_table;   // 频率表
     uint64_t totalChunkNum = 0;        // 总chunk数
-    map<string, set<string>> FPdeduplicationTable;
+    map<string, set<uint64_t>> FPdeduplicationTable;
     uint64_t compressedChunkNum = 0;
 
     // 消息队列
@@ -79,7 +79,7 @@ public:
     void ThirdCutPointHashMin_remove(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);
 
     void setFileName(string &fileName_) { fileName = fileName_; }
-    void groupmerge(vector<set<string>> &sets, int t);
+    void groupmerge(vector<set<uint64_t>> &sets, int t);
 
     void SetIsDisk(bool isDisk_) { isDisk = isDisk_; }
     void Chunk_Insert(const Chunk_t &chunk);
