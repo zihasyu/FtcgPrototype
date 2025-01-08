@@ -123,14 +123,10 @@ void FPLz4Baseline::ProcessOneTrace()
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
 
     totalFeature += table.original_feature_key_table.size();
-    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;
-    vector<set<uint64_t>> adjGroups;
     set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
-    map<feature_t, set<string>> feature_FP_Table;
-    // set<string> usedChunks;
 
     // tool::Logging(myName_.c_str(), "chunk num is %d\n", table.original_feature_key_table.size());
     tool::Logging(myName_.c_str(), "feature num is %d\n", table.original_feature_key_table.size());
@@ -142,7 +138,7 @@ void FPLz4Baseline::ProcessOneTrace()
         frequency_table[it.second.size()]++;
         auto element = it.second.begin();
         auto id = *element;
-        feature_FP_Table[table.original_key_feature_table_[to_string(id)]].insert(it.first);
+
         tmpGroup.clear();
         for (auto id : it.second)
         {

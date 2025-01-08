@@ -64,21 +64,15 @@ void Dedup_HSF::ProcessOneTrace()
 
     totalFeature += table.original_feature_key_table.size();
     // vector<set<string>> unfinishedGroups;
-    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;
-    vector<set<uint64_t>> adjGroups;
     set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
-    map<feature_t, set<string>> feature_FP_Table;
 
-    unordered_map<string, vector<set<uint64_t>>>
-        hierarchicalSFA_unfinished_group;
+    unordered_map<string, vector<set<uint64_t>>> hierarchicalSFA_unfinished_group;
     unordered_map<string, vector<set<uint64_t>>> hierarchicalSFB_unfinished_group;
     unordered_map<string, vector<set<uint64_t>>> hierarchicalSFC_unfinished_group;
-    // set<string> usedChunks;
 
-    // tool::Logging(myName_.c_str(), "chunk num is %d\n", table.original_feature_key_table.size());
     tool::Logging(myName_.c_str(), "feature num is %d\n", table.original_feature_key_table.size());
 
     // 根据FP进行初次分组
@@ -95,7 +89,6 @@ void Dedup_HSF::ProcessOneTrace()
                 // hierarchicalSFA_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][0]].push_back(group);
                 // hierarchicalSFB_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][1]].push_back(group);
                 hierarchicalSFC_unfinished_group[table.key_hierarchicalSF_table[to_string(id)][2]].push_back(tmpGroup);
-                feature_FP_Table[table.original_key_feature_table_[to_string(id)]].insert(it.first);
                 unfinishedChunks.insert(id);
                 tmpGroup.clear();
                 continue;
@@ -105,7 +98,7 @@ void Dedup_HSF::ProcessOneTrace()
         }
         if (tmpGroup.size() > 0)
         {
-            FPunfinishedGroups[to_string(*it.second.begin())] = tmpGroup;
+            // FPunfinishedGroups[to_string(*it.second.begin())] = tmpGroup;
             compressedChunkNum += tmpGroup.size();
         }
     }

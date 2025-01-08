@@ -59,11 +59,10 @@ void lz4Baseline::ProcessOneTrace()
         return;
     }
     totalFeature += table.original_feature_key_table.size();
-
     // vector<set<uint64_t>> unfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;
-    vector<set<uint64_t>> adjGroups;
+
     set<uint64_t> group; // 16一组chunkid
     // set<string> usedChunks;
     // 对于每一个feature进行分组

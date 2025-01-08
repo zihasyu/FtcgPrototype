@@ -79,7 +79,7 @@ void FPLz4BaselineImplement::ProcessOneTrace()
         unordered_map<string, set<string>> FPunfinishedGroups;
         set<string> finishedChunks;
         set<string> unfinishedChunks;
-        vector<set<string>> adjGroups;
+
         set<string> tmpGroup; // 16一组chunkid
         ofstream out("../frequencyTable.txt", ios::app);
         if (!out.is_open())
@@ -87,8 +87,6 @@ void FPLz4BaselineImplement::ProcessOneTrace()
             tool::Logging(myName_.c_str(), "open file failed\n");
             return;
         }
-        map<feature_t, set<string>> feature_FP_Table;
-        // set<string> usedChunks;
 
         // tool::Logging(myName_.c_str(), "chunk num is %d\n", table.original_feature_key_table.size());
         tool::Logging(myName_.c_str(), "feature num is %d\n", table.original_feature_key_table.size());

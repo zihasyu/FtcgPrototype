@@ -18,9 +18,13 @@ protected:
     string fileName;
     bool isDisk = false;
     vector<Chunk_t> chunkSet;
-    uint64_t ChunkID = 0; // uinque chunk id
-    string hashStr;
-    vector<set<uint64_t>> finishedGroups;
+    uint64_t ChunkID = 0;                 // uinque chunk id
+    string hashStr;                       // for fp hash
+    vector<set<uint64_t>> finishedGroups; // for group
+
+    /* Deprecate variables */
+    unordered_map<string, set<uint64_t>> FPunfinishedGroups;
+    map<uint64_t, set<string>> feature_FP_Table;
 
 public:
     // util
