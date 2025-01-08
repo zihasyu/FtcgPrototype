@@ -4,7 +4,6 @@ Dedup_HSF::Dedup_HSF()
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
-    // 16 * 8KiB per Cluster
     clusterBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     mdCtx = EVP_MD_CTX_new();
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
@@ -14,7 +13,6 @@ Dedup_HSF::Dedup_HSF(uint64_t ExchunkSize) : absMethod(ExchunkSize)
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
-    // 16 * 8KiB per Cluster
     clusterBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     mdCtx = EVP_MD_CTX_new();
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
@@ -42,23 +40,18 @@ void Dedup_HSF::ProcessOneTrace()
         if (recieveQueue->Pop(tmpChunk))
         {
             // calculate feature
-            stringstream ss;
-            ss << tmpChunk.chunkID;
-            auto start = std::chrono::high_resolution_clock::now();
-            // table.PutOrignals(ss.str(), (char *)tmpChunk.chunkContent);
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            //  nTransTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            // finesseTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            table.PutHierarchicalSF(ss.str(), (char *)tmpChunk.chunkContent);
-            auto end = std::chrono::high_resolution_clock::now();
-            featureExtractTime += end - start;
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            GenerateHash(mdCtx, tmpChunk.chunkContent, tmpChunk.chunkSize, hashBuf);
-            hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
-            FP_Insert(hashStr, tmpChunk.chunkID);
-
-            Chunk_Insert(tmpChunk);
-            totalChunkNum++;
+            if (!IsDedup(tmpChunk))
+            {
+                table.PutHierarchicalSF(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
+                Chunk_Insert(tmpChunk);
+                totalChunkNum++;
+                // todo:add to decipe
+            }
+            else
+            {
+                // todo:add to decipe
+                totalChunkNum++;
+            }
         }
     }
 
@@ -69,20 +62,7 @@ void Dedup_HSF::ProcessOneTrace()
     }
     tool::Logging(myName_.c_str(), "total chunk num is %d\n", totalChunkNum);
 
-    // auto start = std::chrono::high_resolution_clock::now();
-    // for (auto it : table.original_feature_key_table)
-    // {
-    //     for (auto id : it.second)
-    //     {
-    //     }
-    // }
-    // auto end = std::chrono::high_resolution_clock::now();
-    // clustringTime += end - start;
-
-    // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
-
     totalFeature += table.original_feature_key_table.size();
-    vector<set<uint64_t>> finishedGroups;
     // vector<set<string>> unfinishedGroups;
     unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
@@ -91,7 +71,6 @@ void Dedup_HSF::ProcessOneTrace()
     set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     map<feature_t, set<string>> feature_FP_Table;
-    vector<vector<int>> indices; // 标识特征值下面那些group有相同的FP
 
     unordered_map<string, vector<set<uint64_t>>>
         hierarchicalSFA_unfinished_group;

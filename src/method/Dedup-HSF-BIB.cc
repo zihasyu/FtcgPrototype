@@ -31,7 +31,6 @@ Dedup_HSH_BIB::~Dedup_HSH_BIB()
 
 void Dedup_HSH_BIB::ProcessOneTrace()
 {
-    auto start = std::chrono::high_resolution_clock::now();
     while (true)
     {
         if (recieveQueue->done_ && recieveQueue->IsEmpty())
@@ -43,22 +42,18 @@ void Dedup_HSH_BIB::ProcessOneTrace()
         if (recieveQueue->Pop(tmpChunk))
         {
             // calculate feature
-            stringstream ss;
-            ss << tmpChunk.chunkID;
-
-            // table.PutOrignals(ss.str(), (char *)tmpChunk.chunkContent);
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            //  nTransTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            // finesseTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            table.PutHierarchicalSF(ss.str(), (char *)tmpChunk.chunkContent);
-
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            GenerateHash(mdCtx, tmpChunk.chunkContent, tmpChunk.chunkSize, hashBuf);
-            hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
-            FP_Insert(hashStr, tmpChunk.chunkID);
-
-            Chunk_Insert(tmpChunk);
-            totalChunkNum++;
+            if (!IsDedup(tmpChunk))
+            {
+                table.PutHierarchicalSF(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
+                Chunk_Insert(tmpChunk);
+                totalChunkNum++;
+                // todo:add to decipe
+            }
+            else
+            {
+                // todo:add to decipe
+                totalChunkNum++;
+            }
         }
     }
 
@@ -69,20 +64,7 @@ void Dedup_HSH_BIB::ProcessOneTrace()
     }
     tool::Logging(myName_.c_str(), "total chunk num is %d\n", totalChunkNum);
 
-    // auto start = std::chrono::high_resolution_clock::now();
-    // for (auto it : table.original_feature_key_table)
-    // {
-    //     for (auto id : it.second)
-    //     {
-    //     }
-    // }
-    // auto end = std::chrono::high_resolution_clock::now();
-    // clustringTime += end - start;
-
-    // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
-
     totalFeature += table.original_feature_key_table.size();
-    vector<set<uint64_t>> finishedGroups;
     unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;
@@ -497,9 +479,6 @@ void Dedup_HSH_BIB::ProcessOneTrace()
     {
         compressedChunkNum += it.size();
     }
-
-    auto end = std::chrono::high_resolution_clock::now();
-    featureExtractTime += end - start;
 
     tool::Logging(myName_.c_str(), "compressed chunk num is %d\n", compressedChunkNum);
     tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());

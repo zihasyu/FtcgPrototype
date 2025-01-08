@@ -123,7 +123,6 @@ void FPLz4Baseline::ProcessOneTrace()
     // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
 
     totalFeature += table.original_feature_key_table.size();
-    vector<set<uint64_t>> finishedGroups;
     unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;

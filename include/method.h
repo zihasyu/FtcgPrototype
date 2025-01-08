@@ -10,7 +10,6 @@
 #include "./method/Dedup-SF-BIB.h"
 #include "./method/FP-only.h"
 #include "./method/bruteforce.h"
-#include "./method/characterFrequency.h"
 #include "./method/Dedup-HSF-BIB.h"
 
 #endif

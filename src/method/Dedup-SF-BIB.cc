@@ -4,7 +4,6 @@ Dedup_SF_BIB::Dedup_SF_BIB()
 {
     lz4ChunkBuffer = (uint8_t *)malloc(MAX_GROUP_SIZE * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
-    // MAX_GROUP_SIZE * 8KiB per Cluster
     clusterBuffer = (uint8_t *)malloc(MAX_GROUP_SIZE * 8 * 1024);
     mdCtx = EVP_MD_CTX_new();
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
@@ -13,7 +12,6 @@ Dedup_SF_BIB::Dedup_SF_BIB(uint64_t ExchunkSize) : absMethod(ExchunkSize)
 {
     lz4ChunkBuffer = (uint8_t *)malloc(MAX_GROUP_SIZE * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
-    // MAX_GROUP_SIZE * 8KiB per Cluster
     clusterBuffer = (uint8_t *)malloc(MAX_GROUP_SIZE * 8 * 1024);
     mdCtx = EVP_MD_CTX_new();
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
@@ -30,41 +28,29 @@ Dedup_SF_BIB::~Dedup_SF_BIB()
 
 void Dedup_SF_BIB::ProcessOneTrace()
 {
-    int count = 0;
     while (true)
     {
         if (recieveQueue->done_ && recieveQueue->IsEmpty())
         {
             break;
         }
-
         Chunk_t tmpChunk;
         string hashStr;
         if (recieveQueue->Pop(tmpChunk))
         {
-            // if (count >= max)
-            // {
-            //     continue;
-            // }
-            // count++;
             // calculate feature
-            stringstream ss;
-            ss << tmpChunk.chunkID;
-            auto start = std::chrono::high_resolution_clock::now();
-            // table.PutOrignals(ss.str(), (char *)tmpChunk.chunkContent);
-            table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            //  nTransTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            // finesseTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            auto end = std::chrono::high_resolution_clock::now();
-            featureExtractTime += end - start;
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            GenerateHash(mdCtx, tmpChunk.chunkContent, tmpChunk.chunkSize, hashBuf);
-            hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
-            FP_Insert(hashStr, tmpChunk.chunkID);
-
-            Chunk_Insert(tmpChunk);
-
-            totalChunkNum++;
+            if (!IsDedup(tmpChunk))
+            {
+                table.Put(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
+                Chunk_Insert(tmpChunk);
+                totalChunkNum++;
+                // todo:add to decipe
+            }
+            else
+            {
+                // todo:add to decipe
+                totalChunkNum++;
+            }
         }
     }
     if (!isLastFile)
@@ -73,20 +59,8 @@ void Dedup_SF_BIB::ProcessOneTrace()
         return;
     }
 
-    // auto start = std::chrono::high_resolution_clock::now();
-    // for (auto it : table.original_feature_key_table)
-    // {
-    //     for (auto id : it.second)
-    //     {
-    //     }
-    // }
-    // auto end = std::chrono::high_resolution_clock::now();
-    // clustringTime += end - start;
-
-    // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
-
     totalFeature += table.original_feature_key_table.size();
-    vector<set<uint64_t>> finishedGroups;
+
     unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;
@@ -197,10 +171,6 @@ void Dedup_SF_BIB::ProcessOneTrace()
     {
         uint64_t start = 0;
         uint64_t end = 0;
-
-        // 用于内存读写
-        // ThirdCutPointSizeMax(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
-        // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
         ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, start, end);
         // ThirdCutPointHashMin_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);

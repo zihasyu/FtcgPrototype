@@ -8,7 +8,6 @@
 #include "../chunker.h"
 #include "../lz4.h"
 #include "../datawrite.h"
-#include "opencv2/opencv.hpp"
 using namespace std;
 
 class absMethod
@@ -20,6 +19,8 @@ protected:
     bool isDisk = false;
     vector<Chunk_t> chunkSet;
     uint64_t ChunkID = 0; // uinque chunk id
+    string hashStr;
+    vector<set<uint64_t>> finishedGroups;
 
 public:
     // util
@@ -35,8 +36,8 @@ public:
     EVP_MD_CTX *mdCtx;
     uint8_t *hashBuf;
 
-    unordered_map<string, set<int>>
-        FPindex; //(fp,chunkid)
+    unordered_map<string, set<int>> FPindex; // For non Dedup
+    unordered_map<string, int> Dedupindex;   // For Dedup
     unordered_map<int, string> chunkid_FP_table;
 
     bool isLastFile = false;
@@ -74,6 +75,7 @@ public:
 
     set<int> FP_Find(string fp);
     bool FP_Insert(string fp, int chunkid);
+    bool IsDedup(Chunk_t &chunk); // Dedup and get chunkid
     void ThirdCutPointSizeMax(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);
     void ThirdCutPointHashMin(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);
     void ThirdCutPointSizeMax_remove(const uint8_t *src, const uint64_t len, uint64_t &start, uint64_t &end);

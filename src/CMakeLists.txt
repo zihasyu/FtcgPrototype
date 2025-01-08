@@ -3,9 +3,9 @@ cmake_policy(SET CMP0079 NEW)
 find_package(OpenSSL REQUIRED)
 find_package(Boost REQUIRED COMPONENTS thread system)
 find_package(ZLIB REQUIRED)
-find_package(OpenCV REQUIRED)
+
 include_directories(${LocalDedupSim_SOURCE_DIR}/include)
-include_directories(${OpenCV_INCLUDE_DIRS})
+
 link_directories(${LocalDedupSim_SOURCE_DIR}/lib)
 
 if(Boost_FOUND)
@@ -42,5 +42,3 @@ add_subdirectory(app)
 add_subdirectory(method)
 add_subdirectory(datawrite)
 add_subdirectory(util)
-
-target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})

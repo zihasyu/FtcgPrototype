@@ -49,19 +49,7 @@ void FPOnly::ProcessOneTrace()
         recieveQueue->done_ = false;
         return;
     }
-    // auto start = std::chrono::high_resolution_clock::now();
-    // for (auto it : table.original_feature_key_table)
-    // {
-    //     for (auto id : it.second)
-    //     {
-    //     }
-    // }
-    // auto end = std::chrono::high_resolution_clock::now();
-    // clustringTime += end - start;
 
-    // vector<feature_t> sorted_original_features = table.sortFeatureBySetSize();
-
-    vector<set<uint64_t>> finishedGroups;
     unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;

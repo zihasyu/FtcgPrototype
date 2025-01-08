@@ -3,9 +3,12 @@
 absMethod::absMethod() : chunker_(0)
 {
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
+    hashStr.assign(CHUNK_HASH_SIZE, 0);
 }
 absMethod::absMethod(uint64_t ExchunkSize) : chunker_(0, ExchunkSize)
 {
+    hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
+    hashStr.assign(CHUNK_HASH_SIZE, 0);
 }
 absMethod::~absMethod()
 {
@@ -259,3 +262,23 @@ Chunk_t absMethod::Get_Chunk_Info(int id)
     else
         return chunkSet[id];
 };
+
+bool absMethod::IsDedup(Chunk_t &chunk)
+{
+    GenerateHash(mdCtx, chunk.chunkContent, chunk.chunkSize, hashBuf);
+    hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
+    auto it = Dedupindex.find(hashStr);
+    // dedup chunk
+    if (it != Dedupindex.end())
+    {
+        chunk.chunkID = it->second;
+        return true;
+    }
+    // unique chunk
+    else
+    {
+        chunk.chunkID = ChunkID++;
+        Dedupindex[hashStr] = chunk.chunkID;
+        return false;
+    }
+}

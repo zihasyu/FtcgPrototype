@@ -59,7 +59,7 @@ void lz4Baseline::ProcessOneTrace()
         return;
     }
     totalFeature += table.original_feature_key_table.size();
-    vector<set<uint64_t>> finishedGroups;
+
     // vector<set<uint64_t>> unfinishedGroups;
     set<uint64_t> finishedChunks;
     set<uint64_t> unfinishedChunks;
