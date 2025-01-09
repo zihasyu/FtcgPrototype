@@ -6,7 +6,7 @@
 #include "../NTransFormSF.h"
 #include "../finesse.h"
 #include "../xxhash.h"
-
+// design1
 #define HIERARCHICAL_SF_NUM 3
 #define HIERARCHICAL_FEATURE_SIZE 128 // single hierarchical feature size(bit)
 

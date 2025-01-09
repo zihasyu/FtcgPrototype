@@ -11,5 +11,5 @@
 #include "./method/FP-only.h"
 #include "./method/bruteforce.h"
 #include "./method/Dedup-HSF-BIB.h"
-
+#include "./method/Dedup-SF.h"
 #endif

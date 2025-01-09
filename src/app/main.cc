@@ -71,13 +71,19 @@ int main(int argc, char **argv)
         // lz4 comapre
         absMethodObj = new lz4Compare(); // perChunk compression
         break;
-    // case 1:
-    //     absMethodObj = new lz4Baseline(); // SFonly non FP
-    //     break;
-    // case 2:
-    //     absMethodObj = new FPLz4Baseline(); // FP + SF
-    //     break;
+        // case 1:
+        //     absMethodObj = new lz4Baseline(); // SFonly non FP
+        //     break;
+        // case 2:
+        //     absMethodObj = new FPLz4Baseline(); // FP + SF
+        //     break;
     case 1:
+        if (ExchunkSize == -1)
+            absMethodObj = new Dedup_SF(); // Dedup + HSF
+        else
+            absMethodObj = new Dedup_SF(ExchunkSize);
+        break;
+    case 2:
         if (ExchunkSize == -1)
             absMethodObj = new Dedup_HSF(); // Dedup + HSF
         else
@@ -89,7 +95,7 @@ int main(int argc, char **argv)
     //     else
     //         absMethodObj = new FPLz4BaselineImplement(ExchunkSize);
     //     break;
-    case 2:
+    case 3:
         if (ExchunkSize == -1)
             absMethodObj = new Dedup_SF_BIB(); // Dedup + SF + BIB
         else
@@ -101,7 +107,7 @@ int main(int argc, char **argv)
     // case 7:
     //     absMethodObj = new bruteforce(); // BF
     //     break;
-    case 3:
+    case 4:
         if (ExchunkSize == -1)
             absMethodObj = new Dedup_HSH_BIB(); // Dedup + HSF + BIB
         else

@@ -482,70 +482,13 @@ void Dedup_HSH_BIB::ProcessOneTrace()
     totalLogicalSize = compressedChunkNum * 8 * 1024;
     totalCompressedSize = 0;
 
-    for (auto group : finishedGroups)
-    {
-        if (!groupLogicalSize[group.size()])
-        {
-            groupLogicalSize[group.size()] = 0;
-        }
-        if (!groupCompressedSize[group.size()])
-        {
-            groupCompressedSize[group.size()] = 0;
-        }
-        for (auto id : group)
-        {
-
-            auto start = std::chrono::high_resolution_clock::now();
-            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
-            memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
-            if (GroupTmpChunk.loadFromDisk)
-            {
-                free(GroupTmpChunk.chunkContent);
-            }
-            auto end = std::chrono::high_resolution_clock::now();
-            clustringTime += end - start;
-
-            clusterCnt++;
-            ChunkNum++;
-            // clusterSize += GroupTmpChunk.chunkSize;
-            clusterSize += chunkSet[id].chunkSize;
-        }
-        groupLogicalSize[group.size()] += clusterSize;
-        // do lz4 compression
-        int compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
-        if (compressedSize <= 0)
-        {
-            compressedSize = clusterSize;
-        }
-        totalCompressedSize += compressedSize;
-        // totalLogicalSize += clusterSize;
-        clusterNum++;
-        clusterCnt = 0;
-        clusterSize = 0;
-
-        groupCompressedSize[group.size()] += compressedSize;
-    }
-
+    CompressionToFinishedGroup();
     out << "group size, logical size, compressed size, ratio" << endl;
     for (auto it : groupLogicalSize)
     {
         out << it.first << ", " << it.second << ", " << groupCompressedSize[it.first] << ", " << (double)it.second / (double)groupCompressedSize[it.first] << endl;
     }
     out.close();
-
-    // process last cluster
-    if (clusterCnt > 0)
-    {
-        int compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
-
-        if (compressedSize <= 0)
-        {
-            compressedSize = clusterSize;
-        }
-        totalCompressedSize += compressedSize;
-        // totalLogicalSize += (clusterCnt * 8 * 1024);
-        clusterCnt = 0;
-    }
 
     // tool::Logging(myName_.c_str(), "%d feature with only one chunk and total feature num is %d\n", singeFeature, table.original_feature_key_table.size());
 

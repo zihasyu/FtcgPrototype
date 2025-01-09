@@ -99,5 +99,6 @@ public:
     void SetIsDisk(bool isDisk_) { isDisk = isDisk_; }
     void Chunk_Insert(const Chunk_t &chunk);
     Chunk_t Get_Chunk_Info(int id);
+    void CompressionToFinishedGroup();
 };
 #endif

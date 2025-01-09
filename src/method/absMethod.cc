@@ -4,14 +4,27 @@ absMethod::absMethod() : chunker_(0)
 {
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
     hashStr.assign(CHUNK_HASH_SIZE, 0);
+    lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
+    readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
+    clusterBuffer = (uint8_t *)malloc(16 * 8 * 1024);
+    mdCtx = EVP_MD_CTX_new();
 }
 absMethod::absMethod(uint64_t ExchunkSize) : chunker_(0, ExchunkSize)
 {
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
     hashStr.assign(CHUNK_HASH_SIZE, 0);
+    lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
+    readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
+    clusterBuffer = (uint8_t *)malloc(16 * 8 * 1024);
+    mdCtx = EVP_MD_CTX_new();
 }
 absMethod::~absMethod()
 {
+    free(lz4ChunkBuffer);
+    free(readFileBuffer);
+    free(clusterBuffer);
+    EVP_MD_CTX_free(mdCtx);
+    free(hashBuf);
 }
 
 void absMethod::GenerateHash(EVP_MD_CTX *mdCtx, uint8_t *dataBuffer, const int dataSize, uint8_t *hash)
@@ -280,5 +293,47 @@ bool absMethod::IsDedup(Chunk_t &chunk)
         chunk.chunkID = ChunkID++;
         Dedupindex[hashStr] = chunk.chunkID;
         return false;
+    }
+}
+
+void absMethod::CompressionToFinishedGroup()
+{
+    for (auto group : finishedGroups)
+    {
+        groupLogicalSize[group.size()] = 0;
+        groupCompressedSize[group.size()] = 0;
+
+        for (auto id : group)
+        {
+
+            auto start = std::chrono::high_resolution_clock::now();
+            Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
+            memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
+            if (GroupTmpChunk.loadFromDisk)
+            {
+                free(GroupTmpChunk.chunkContent);
+            }
+            auto end = std::chrono::high_resolution_clock::now();
+            clustringTime += end - start;
+
+            clusterCnt++;
+            ChunkNum++;
+            // clusterSize += GroupTmpChunk.chunkSize;
+            clusterSize += chunkSet[id].chunkSize;
+        }
+        groupLogicalSize[group.size()] += clusterSize;
+        // do lz4 compression
+        int compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
+        if (compressedSize <= 0)
+        {
+            compressedSize = clusterSize;
+        }
+        totalCompressedSize += compressedSize;
+        // totalLogicalSize += clusterSize;
+        clusterNum++;
+        clusterCnt = 0;
+        clusterSize = 0;
+
+        groupCompressedSize[group.size()] += compressedSize;
     }
 }

@@ -9,3 +9,8 @@ Whether or not to store all data in memory before compression can be set on the 
 - Removed the OpenCV library
 - Removed the eigenfrequency method 
 - The subclass that uses dedup is rewritten in the dedup stage, and the dedupindex is used instead of the previous fpindex, and only one IsDedup is needed to replace the chunkid assignment and deduplication
+
+### 2025.1.8
+- Complements the baseline
+- Maintained design1 and removed the bug caused by SFB outputting multiple outputs to finishedgroup
+- Remove a lot of code redundancy and unclear variable dependencies

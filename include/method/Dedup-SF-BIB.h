@@ -9,7 +9,7 @@ class Dedup_SF_BIB : public absMethod
 {
 private:
     /* data */
-    string myName_ = "FPLz4SFBIB";
+    string myName_ = "Dedup_SF_BIB";
 
     // Feature Table
     FeatureIndexTable table;
