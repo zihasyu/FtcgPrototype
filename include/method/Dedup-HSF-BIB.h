@@ -15,20 +15,11 @@ class Dedup_HSH_BIB : public absMethod
 private:
     /* data */
     string myName_ = "Dedup_HSH_BIB";
-    string fileName;
+
     // Feature Table
     FeatureIndexTable table;
     NTransIndexTable nTransTable;
     FinesseIndexTable finesseTable;
-
-    // cluster
-    uint8_t *clusterBuffer;
-    int clusterCnt = 0;
-    uint64_t clusterSize = 0;
-
-    // time static
-    std::chrono::duration<double> featureExtractTime;
-    std::chrono::duration<double> clustringTime;
 
 public:
     Dedup_HSH_BIB();

@@ -201317,3 +201317,203 @@ group size, logical size, compressed size, ratio
 6, 1032192, 329971, 3.12813
 7, 1261568, 371820, 3.39295
 8, 186640384, 77374151, 2.41218
+FP group size, frequency
+first group size, frequency
+1,0
+group size, logical size, compressed size, ratio
+FP group size, frequency
+first group size, frequency
+1,38821
+2, 4727
+3, 88
+4, 30
+5, 12
+6, 8
+7, 12
+8, 211
+third group size, frequency
+1, 27621
+2, 9174
+3, 253
+4, 95
+5, 26
+6, 19
+7, 21
+8, 380
+group size, logical size, compressed size, ratio
+2, 150306816, 44766978, 3.35754
+3, 6217728, 1588100, 3.9152
+4, 3112960, 686222, 4.53637
+5, 1105920, 293011, 3.77433
+6, 933888, 245183, 3.80894
+7, 1200128, 371979, 3.22633
+8, 251127808, 103162010, 2.43431
+FP group size, frequency
+first group size, frequency
+1,0
+third group size, frequency
+group size, logical size, compressed size, ratio
+FP group size, frequency
+first group size, frequency
+1,0
+group size, logical size, compressed size, ratio
+FP group size, frequency
+first group size, frequency
+1,38821
+2, 4727
+3, 88
+4, 30
+5, 12
+6, 8
+7, 12
+8, 211
+third group size, frequency
+1, 31927
+2, 7351
+3, 196
+4, 53
+5, 26
+6, 9
+7, 18
+8, 350
+group size, logical size, compressed size, ratio
+2, 120438784, 35186545, 3.42286
+3, 4816896, 1207761, 3.98829
+4, 1736704, 380859, 4.55997
+5, 1064960, 267206, 3.98554
+6, 442368, 122596, 3.60834
+7, 1085440, 307979, 3.5244
+8, 284420096, 116635959, 2.43853
+FP group size, frequency
+first group size, frequency
+1,38821
+2, 4727
+3, 88
+4, 30
+5, 12
+6, 8
+7, 12
+8, 211
+FP group size, frequency
+first group size, frequency
+1,0
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,18044
+2, 17325
+3, 545
+4, 464
+5, 91
+6, 72
+7, 44
+8, 615
+group size, logical size, compressed size, ratio
+2, 283852800, 86222188, 3.29211
+3, 13393920, 3866689, 3.46392
+4, 15233024, 3723038, 4.09156
+5, 3727360, 1035364, 3.60005
+6, 3538944, 856885, 4.13001
+7, 2523136, 736607, 3.42535
+8, 188076032, 75734136, 2.48337
+first group size, frequency
+1,21699
+2, 966
+3, 125
+4, 48
+5, 23
+6, 21
+7, 19
+8, 263
+group size, logical size, compressed size, ratio
+2, 15826944, 5794317, 2.73146
+3, 3084288, 1094645, 2.81761
+4, 1572864, 504516, 3.11757
+5, 942080, 277963, 3.38923
+6, 1032192, 301692, 3.42134
+7, 1089536, 328039, 3.32136
+8, 194969600, 79399994, 2.45554
+first group size, frequency
+1,21699
+2, 966
+3, 125
+4, 48
+5, 23
+6, 21
+7, 19
+8, 263
+group size, logical size, compressed size, ratio
+2, 15826944, 5794317, 2.73146
+3, 3084288, 1094645, 2.81761
+4, 1572864, 504516, 3.11757
+5, 942080, 277963, 3.38923
+6, 1032192, 301692, 3.42134
+7, 1089536, 328039, 3.32136
+8, 194969600, 79399994, 2.45554
+first group size, frequency
+1,21702
+2, 803
+3, 113
+4, 45
+5, 20
+6, 17
+7, 15
+8, 161
+group size, logical size, compressed size, ratio
+2, 13156352, 5005704, 2.62827
+3, 2770944, 991289, 2.79529
+4, 1474560, 475073, 3.10386
+5, 819200, 237839, 3.44435
+6, 884736, 268466, 3.29552
+7, 860160, 238270, 3.61002
+8, 188284928, 76753695, 2.45311
+first group size, frequency
+1,18045
+2, 12564
+3, 465
+4, 434
+5, 78
+6, 60
+7, 35
+8, 405
+group size, logical size, compressed size, ratio
+2, 205848576, 64544813, 3.18923
+3, 11427840, 3394680, 3.3664
+4, 14221312, 3506434, 4.05578
+5, 3231744, 909012, 3.55523
+6, 2949120, 730349, 4.03796
+7, 2007040, 522185, 3.84354
+8, 174319616, 70367995, 2.47726
+first group size, frequency
+1,22299
+2, 9726
+3, 6057
+4, 7184
+5, 331
+6, 287
+7, 213
+8, 1134
+group size, logical size, compressed size, ratio
+2, 159350784, 47679081, 3.34215
+3, 148881408, 34570642, 4.30658
+4, 235405312, 47042336, 5.00412
+5, 13557760, 3063287, 4.42589
+6, 14106624, 2607482, 5.41006
+7, 12214272, 2153633, 5.67147
+8, 256956416, 96316043, 2.66785
+first group size, frequency
+1,22299
+2, 9726
+3, 6057
+4, 7184
+5, 331
+6, 287
+7, 213
+8, 1134
+group size, logical size, compressed size, ratio
+2, 16384, 4494, 3.64575
+3, 24576, 7085, 3.46874
+4, 32768, 6690, 4.89806
+5, 40960, 8047, 5.0901
+6, 49152, 24310, 2.02188
+7, 57344, 15337, 3.73893
+8, 65536, 27784, 2.35877

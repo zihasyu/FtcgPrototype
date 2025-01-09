@@ -258,8 +258,7 @@ void FPLz4Baseline::ProcessOneTrace()
     tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
     totalLogicalSize = compressedChunkNum * 8 * 1024;
     totalCompressedSize = 0;
-    map<int, uint64_t> groupLogicalSize;
-    map<int, uint64_t> groupCompressedSize;
+
     for (auto group : finishedGroups)
     {
         if (!groupLogicalSize[group.size()])

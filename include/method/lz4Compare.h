@@ -8,7 +8,6 @@ class lz4Compare : public absMethod
 private:
     /* data */
     string myName_ = "lz4Compare";
-    string fileName;
 
 public:
     lz4Compare();

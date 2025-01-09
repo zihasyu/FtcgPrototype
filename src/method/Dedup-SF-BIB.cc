@@ -337,8 +337,7 @@ void Dedup_SF_BIB::ProcessOneTrace()
     clusterSize = 0;
     totalLogicalSize = compressedChunkNum * 8 * 1024;
     totalCompressedSize = 0;
-    map<int, uint64_t> groupLogicalSize;
-    map<int, uint64_t> groupCompressedSize;
+
     for (auto group : finishedGroups)
     {
         if (!groupLogicalSize[group.size()])

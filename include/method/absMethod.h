@@ -21,10 +21,18 @@ protected:
     uint64_t ChunkID = 0;                 // uinque chunk id
     string hashStr;                       // for fp hash
     vector<set<uint64_t>> finishedGroups; // for group
-
+    // cluster
+    uint8_t *clusterBuffer;
+    int clusterCnt = 0;
+    uint64_t clusterSize = 0;
+    /*time statistic*/
+    std::chrono::duration<double> featureExtractTime;
+    std::chrono::duration<double> clustringTime;
     /* Deprecate variables */
     unordered_map<string, set<uint64_t>> FPunfinishedGroups;
     map<uint64_t, set<string>> feature_FP_Table;
+    map<int, uint64_t> groupLogicalSize;
+    map<int, uint64_t> groupCompressedSize;
 
 public:
     // util

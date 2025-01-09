@@ -15,20 +15,16 @@ class Dedup_HSF : public absMethod
 private:
     /* data */
     string myName_ = "Dedup_HSF";
-    string fileName;
+
     // Feature Table
     FeatureIndexTable table;
     NTransIndexTable nTransTable;
     FinesseIndexTable finesseTable;
-
-    // cluster
-    uint8_t *clusterBuffer;
-    int clusterCnt = 0;
-    uint64_t clusterSize = 0;
-
-    // time static
-    std::chrono::duration<double> featureExtractTime;
-    std::chrono::duration<double> clustringTime;
+    unordered_map<string, vector<set<uint64_t>>> hierarchicalSFA_unfinished_group;
+    unordered_map<string, vector<set<uint64_t>>> hierarchicalSFB_unfinished_group;
+    unordered_map<string, vector<set<uint64_t>>> hierarchicalSFC_unfinished_group;
+    map<string, vector<uint64_t>> hierarchicalSFC_unfinished_chunk;
+    set<uint64_t> unfinishedChunks;
 
 public:
     Dedup_HSF();
@@ -36,14 +32,5 @@ public:
     ~Dedup_HSF();
 
     void ProcessOneTrace();
-
-    // void second_group(map<feature_t, set<string>> unFullGroups, vector<set<string>> &group);
-
-    /**
-     * @description: Group the chunks by hierarchical super features.
-     * @param hierarchicalGroups: The hierarchical super features groups.
-     * @param minGroupSize: The minimum size of a group.
-     * @param k: the group whose size is k should be considered first.
-     */
 };
 #endif

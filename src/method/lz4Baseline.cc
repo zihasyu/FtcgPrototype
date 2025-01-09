@@ -157,8 +157,6 @@ void lz4Baseline::ProcessOneTrace()
 
     totalLogicalSize = 0;
     totalCompressedSize = 0;
-    map<int, uint64_t> groupLogicalSize;
-    map<int, uint64_t> groupCompressedSize;
 
     for (auto group : finishedGroups)
     {

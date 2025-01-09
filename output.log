@@ -87,3 +87,74 @@ avgChunkSize is 1024
 2025-01-03 14:54:49 <Ftcg>: Total compressed size is 85100330
 2025-01-03 14:54:49 <Ftcg>: Compression ratio is 2.4472
 --------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-01-08 17:19:31 <Ftcg>: Start to process 2 files
+2025-01-08 17:19:32 <Chunker>: chunking done.
+2025-01-08 17:19:32 <Chunker>: thread exit.
+2025-01-08 17:19:34 <Chunker>: chunking done.
+2025-01-08 17:19:34 <Chunker>: thread exit.
+2025-01-08 17:19:34 <Dedup_HSF>: total chunk num is 51390
+2025-01-08 17:19:34 <Dedup_HSF>: feature num is 31713
+2025-01-08 17:19:34 <Dedup_HSF>: FP finished chunk num is 0
+2025-01-08 17:19:34 <Dedup_HSF>: FP unfinished chunk num is 0
+2025-01-08 17:19:34 <Dedup_HSF>: a Finished chunk num is 0
+2025-01-08 17:19:34 <Dedup_HSF>: a Unfinished chunk num is 0
+2025-01-08 17:19:34 <Dedup_HSF>: compressed chunk num is 0
+2025-01-08 17:19:34 <Dedup_HSF>: 583 chunk with feature is zero
+2025-01-08 17:19:34 <Dedup_HSF>: Throughput is -nan GiB/s
+2025-01-08 17:19:34 <Ftcg>:  processNum 2 
+2025-01-08 17:19:34 <Ftcg>: Group Num is 0
+2025-01-08 17:19:34 <Ftcg>: Total logical size is 0
+2025-01-08 17:19:34 <Ftcg>: Total compressed size is 0
+2025-01-08 17:19:34 <Ftcg>: Compression ratio is -nan
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-01-08 17:21:01 <Ftcg>: Start to process 2 files
+2025-01-08 17:21:01 <Chunker>: chunking done.
+2025-01-08 17:21:01 <Chunker>: thread exit.
+2025-01-08 17:21:02 <Chunker>: chunking done.
+2025-01-08 17:21:02 <Chunker>: thread exit.
+2025-01-08 17:21:03 <FPLz4SFBIB>: feature num is 0
+2025-01-08 17:21:03 <FPLz4SFBIB>: FP finished chunk num is 0
+2025-01-08 17:21:03 <FPLz4SFBIB>: FP unfinished chunk num is 0
+2025-01-08 17:21:03 <FPLz4SFBIB>: total chunk num is 51390
+2025-01-08 17:21:03 <FPLz4SFBIB>: second Finished chunk num is 11718
+2025-01-08 17:21:03 <FPLz4SFBIB>: second Unfinished chunk num is 38821
+2025-01-08 17:21:05 <FPLz4SFBIB>: third Finished chunk num is 50539
+2025-01-08 17:21:05 <FPLz4SFBIB>: third Unfinished chunk num is 0
+2025-01-08 17:21:12 <FPLz4SFBIB>: tmp chunk num is 50539
+2025-01-08 17:21:12 <FPLz4SFBIB>: 0 chunk with feature is zero
+2025-01-08 17:21:12 <FPLz4SFBIB>: 0 chunk with bibfeature is zero
+2025-01-08 17:21:12 <FPLz4SFBIB>: Throughput is 7.847965 GiB/s
+2025-01-08 17:21:12 <Ftcg>:  processNum 2 
+2025-01-08 17:21:12 <Ftcg>: Group Num is 13421
+2025-01-08 17:21:12 <Ftcg>: Total logical size is 414015488
+2025-01-08 17:21:12 <Ftcg>: Total compressed size is 151113483
+2025-01-08 17:21:12 <Ftcg>: Compression ratio is 2.7398
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-01-08 17:21:23 <Ftcg>: Start to process 2 files
+2025-01-08 17:21:23 <Chunker>: chunking done.
+2025-01-08 17:21:23 <Chunker>: thread exit.
+2025-01-08 17:21:24 <Chunker>: chunking done.
+2025-01-08 17:21:24 <Chunker>: thread exit.
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: total chunk num is 51390
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: feature num is 31713
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: FP finished chunk num is 0
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: FP unfinished chunk num is 0
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: a Finished chunk num is 0
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: a Unfinished chunk num is 0
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: third Finished chunk num is 0
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: third Unfinished chunk num is 0
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: compressed chunk num is 0
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: 583 chunk with feature is zero
+2025-01-08 17:21:25 <Dedup_HSH_BIB>: Throughput is -nan GiB/s
+2025-01-08 17:21:25 <Ftcg>:  processNum 2 
+2025-01-08 17:21:25 <Ftcg>: Group Num is 0
+2025-01-08 17:21:25 <Ftcg>: Total logical size is 0
+2025-01-08 17:21:25 <Ftcg>: Total compressed size is 0
+2025-01-08 17:21:25 <Ftcg>: Compression ratio is -nan
+--------------------------------------------------
