@@ -143,7 +143,6 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
         ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, representChunk.offset_start, representChunk.offset_end);
         // ThirdCutPointHashMin_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
 
-        representChunkSet.push_back(representChunk);
         string representChunkContent((char *)GroupTmpChunk.chunkContent + representChunk.offset_start, representChunk.offset_end - representChunk.offset_start);
         representTable.Put(to_string(id), (char *)representChunkContent.c_str());
         Rfeature_unfinishedGroup[representTable.key_feature_table_[to_string(id)][0]].push_back({id});
@@ -167,7 +166,6 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
         // ThirdCutPointSizeMax_remove(chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize, start, end);
         Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
         ThirdCutPointHashMin(GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize, representChunk.offset_start, representChunk.offset_end);
-        representChunkSet.push_back(representChunk);
         string representChunkContent((char *)GroupTmpChunk.chunkContent + representChunk.offset_start, representChunk.offset_end - representChunk.offset_start);
         representTable.Put(to_string(id), (char *)representChunkContent.c_str());
         Rfeature_unfinishedGroup[representTable.key_feature_table_[to_string(id)][0]].push_back(*group);

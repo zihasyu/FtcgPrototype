@@ -298,6 +298,7 @@ bool absMethod::IsDedup(Chunk_t &chunk)
 
 void absMethod::CompressionToFinishedGroup()
 {
+    tool::Logging(myName_.c_str(), "Compression start\n");
     for (auto group : finishedGroups)
     {
         groupLogicalSize[group.size()] = 0;
@@ -336,4 +337,5 @@ void absMethod::CompressionToFinishedGroup()
 
         groupCompressedSize[group.size()] += compressedSize;
     }
+    tool::Logging(myName_.c_str(), "Compression finished\n");
 }

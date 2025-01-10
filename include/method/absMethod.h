@@ -33,6 +33,7 @@ protected:
     map<uint64_t, set<string>> feature_FP_Table;
     map<int, uint64_t> groupLogicalSize;
     map<int, uint64_t> groupCompressedSize;
+    vector<uint64_t> Recipe;
 
 public:
     // util
