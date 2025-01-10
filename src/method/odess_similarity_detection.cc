@@ -95,7 +95,22 @@ void FeatureIndexTable::PutHierarchicalSF(const string &key, const string &value
     hierarchicalSFA_C_table[hierarchicalSF[0]].insert(hierarchicalSF[0] + hierarchicalSF[1] + hierarchicalSF[2]);
     key_hierarchicalSF_table[key] = {hierarchicalSF[0], hierarchicalSF[0] + hierarchicalSF[1], hierarchicalSF[0] + hierarchicalSF[1] + hierarchicalSF[2]};
 }
+void FeatureIndexTable::PutHSFRank(const string &key, const string &value)
+{
+    Rank_feature = feature_generator_.GenerateFeatures(value);
+    original_key_feature_table_[key] = Rank_feature.back();
+    original_feature_key_table[Rank_feature.back()].insert(key);
 
+    Rank_super_features = feature_generator_.GetSuperFeatures();
+    key_feature_table_[key] = Rank_super_features;
+    feature_key_table_[Rank_super_features[0]].insert(key);
+
+    Rank_hierarchicalSF[0] = to_string(Rank_feature.back());
+    Rank_hierarchicalSF[1] = to_string(XXH64(&Rank_feature[8], sizeof(feature_t) * 3, 0x7fcaf1));
+    Rank_hierarchicalSF[2] = to_string(XXH64(&Rank_feature[0], sizeof(feature_t) * 8, 0x7fcaf1));
+    hierarchicalSFA_C_table[Rank_hierarchicalSF[0]].insert(Rank_hierarchicalSF[0] + Rank_hierarchicalSF[1] + Rank_hierarchicalSF[2]);
+    key_hierarchicalSF_table[key] = {Rank_hierarchicalSF[0], Rank_hierarchicalSF[0] + Rank_hierarchicalSF[1], Rank_hierarchicalSF[0] + Rank_hierarchicalSF[1] + Rank_hierarchicalSF[2]};
+}
 bool FeatureIndexTable::GetSuperFeatures(const string &key,
                                          SuperFeatures *super_features)
 {

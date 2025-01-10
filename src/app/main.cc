@@ -89,13 +89,25 @@ int main(int argc, char **argv)
         else
             absMethodObj = new Dedup_HSF(ExchunkSize);
         break;
+    case 3:
+        if (ExchunkSize == -1)
+            absMethodObj = new Dedup_HSFRank(); // Dedup + HSF
+        else
+            absMethodObj = new Dedup_HSFRank(ExchunkSize);
+        break;
+    case 4:
+        if (ExchunkSize == -1)
+            absMethodObj = new Dedup_HSFRank_BIB(); // Dedup + HSF
+        else
+            absMethodObj = new Dedup_HSFRank_BIB(ExchunkSize);
+        break;
     // case 4:
     //     if (ExchunkSize == -1)
     //         absMethodObj = new FPLz4BaselineImplement(); // Dedup + tmpTest
     //     else
     //         absMethodObj = new FPLz4BaselineImplement(ExchunkSize);
     //     break;
-    case 3:
+    case 5:
         if (ExchunkSize == -1)
             absMethodObj = new Dedup_SF_BIB(); // Dedup + SF + BIB
         else
@@ -107,7 +119,7 @@ int main(int argc, char **argv)
     // case 7:
     //     absMethodObj = new bruteforce(); // BF
     //     break;
-    case 4:
+    case 6:
         if (ExchunkSize == -1)
             absMethodObj = new Dedup_HSH_BIB(); // Dedup + HSF + BIB
         else

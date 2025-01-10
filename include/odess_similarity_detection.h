@@ -98,10 +98,10 @@ private:
 class FeatureIndexTable
 {
 public:
-  FeatureIndexTable() {};
+  FeatureIndexTable() : Rank_hierarchicalSF(3), Rank_super_features(3) {};
   FeatureIndexTable(feature_t sample_mask, size_t feature_number,
                     size_t super_feature_number)
-      : feature_generator_(sample_mask, feature_number, super_feature_number) {};
+      : feature_generator_(sample_mask, feature_number, super_feature_number), Rank_hierarchicalSF(3), Rank_super_features(3) {};
 
   // generate the super features of the value
   // index the key-feature
@@ -112,13 +112,15 @@ public:
   void PutOrignals(const string &key, const string &value);
 
   void PutHierarchicalSF(const string &key, const string &value);
-
+  void PutHSFRank(const string &key, const string &value);
   // 初始化子特征之间的相似度矩阵
   void initOriginalFeatureCorelationMatrix();
 
   // sort the features of each key
   vector<feature_t> sortFeatureBySetSize();
-
+  vector<feature_t> Rank_feature;
+  vector<string> Rank_hierarchicalSF;
+  vector<super_feature_t> Rank_super_features;
   // Delete (key, feature_number of super feature) pair and
   // feature_number of (super feature,key) pairs
   void Delete(const string &key);

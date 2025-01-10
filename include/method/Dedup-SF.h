@@ -1,5 +1,5 @@
-#ifndef Dedup_SF_H
-#define Dedup_SF_H
+#ifndef DEDUP_SF_H
+#define DEDUP_SF_H
 #include "absMethod.h"
 #include "../odess_similarity_detection.h"
 #include "../NTransFormSF.h"

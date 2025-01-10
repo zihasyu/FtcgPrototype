@@ -1,5 +1,5 @@
-#ifndef DEDUP_HSF_H
-#define DEDUP_HSF_H
+#ifndef DEDUP_HSFRANK_BIB_H
+#define DEDUP_HSFRANK_BIB_H
 
 #include "absMethod.h"
 #include "../odess_similarity_detection.h"
@@ -10,11 +10,11 @@
 #define HIERARCHICAL_SF_NUM 3
 #define HIERARCHICAL_FEATURE_SIZE 128 // single hierarchical feature size(bit)
 
-class Dedup_HSF : public absMethod
+class Dedup_HSFRank_BIB : public absMethod
 {
 private:
     /* data */
-    string myName_ = "Dedup_HSF";
+    string myName_ = "Dedup_HSFRank_BIB";
 
     // Feature Table
     FeatureIndexTable table;
@@ -25,11 +25,13 @@ private:
     unordered_map<string, vector<set<uint64_t>>> hierarchicalSFC_unfinished_group;
     map<string, vector<uint64_t>> hierarchicalSFC_unfinished_chunk;
     set<uint64_t> unfinishedChunks;
+    // BIB group
+    vector<representChunk_t> representChunkSet;
 
 public:
-    Dedup_HSF();
-    Dedup_HSF(uint64_t ExchunkSize);
-    ~Dedup_HSF();
+    Dedup_HSFRank_BIB();
+    Dedup_HSFRank_BIB(uint64_t ExchunkSize);
+    ~Dedup_HSFRank_BIB();
 
     void ProcessOneTrace();
 };

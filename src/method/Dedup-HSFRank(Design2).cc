@@ -1,6 +1,6 @@
-#include "../../include/method/Dedup-HSF.h"
+#include "../../include/method/Dedup-HSFRank.h"
 
-Dedup_HSF::Dedup_HSF()
+Dedup_HSFRank::Dedup_HSFRank()
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
@@ -9,7 +9,7 @@ Dedup_HSF::Dedup_HSF()
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
 }
 
-Dedup_HSF::Dedup_HSF(uint64_t ExchunkSize) : absMethod(ExchunkSize)
+Dedup_HSFRank::Dedup_HSFRank(uint64_t ExchunkSize) : absMethod(ExchunkSize)
 {
     lz4ChunkBuffer = (uint8_t *)malloc(16 * 8 * 1024);
     readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
@@ -18,7 +18,7 @@ Dedup_HSF::Dedup_HSF(uint64_t ExchunkSize) : absMethod(ExchunkSize)
     hashBuf = (uint8_t *)malloc(CHUNK_HASH_SIZE * sizeof(uint8_t));
 }
 
-Dedup_HSF::~Dedup_HSF()
+Dedup_HSFRank::~Dedup_HSFRank()
 {
     free(lz4ChunkBuffer);
     free(readFileBuffer);
@@ -27,7 +27,7 @@ Dedup_HSF::~Dedup_HSF()
     free(hashBuf);
 }
 
-void Dedup_HSF::ProcessOneTrace()
+void Dedup_HSFRank::ProcessOneTrace()
 {
     while (true)
     {
@@ -42,8 +42,8 @@ void Dedup_HSF::ProcessOneTrace()
             // calculate feature
             if (!IsDedup(tmpChunk))
             {
-                table.PutHierarchicalSF(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
-                hierarchicalSFC_unfinished_group[table.key_hierarchicalSF_table[to_string(tmpChunk.chunkID)][2]].push_back({tmpChunk.chunkID});
+                table.PutHSFRank(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
+                hierarchicalSFC_unfinished_chunk[table.key_hierarchicalSF_table[to_string(tmpChunk.chunkID)][2]].push_back(tmpChunk.chunkID);
                 unfinishedChunks.insert(tmpChunk.chunkID);
                 Chunk_Insert(tmpChunk);
                 totalChunkNum++;
@@ -71,31 +71,18 @@ void Dedup_HSF::ProcessOneTrace()
     tool::Logging(myName_.c_str(), "FP finished chunk num is %d\n", finishedChunks.size());
     tool::Logging(myName_.c_str(), "FP unfinished chunk num is %d\n", unfinishedChunks.size());
 
-    for (auto it : table.hierarchicalSFB_C_table)
+    for (auto &it : table.hierarchicalSFA_C_table)
     {
-        for (auto sf_c : it.second)
+        vector<string> SFCs(it.second.begin(), it.second.end());
+        sort(SFCs.begin(), SFCs.end(), [&](const string &a, const string &b)
+             { return a > b; });
+        tmpGroup.clear();
+        for (auto sf_c : SFCs)
         {
-            hierarchicalSFB_unfinished_group[it.first].insert(hierarchicalSFB_unfinished_group[it.first].end(), hierarchicalSFC_unfinished_group[sf_c].begin(), hierarchicalSFC_unfinished_group[sf_c].end());
-        }
-    }
-    for (auto it : table.hierarchicalSFA_B_table)
-    {
-        for (auto sf_b : it.second)
-        {
-            hierarchicalSFA_unfinished_group[it.first].insert(hierarchicalSFA_unfinished_group[it.first].end(), hierarchicalSFB_unfinished_group[sf_b].begin(), hierarchicalSFB_unfinished_group[sf_b].end());
-        }
-    }
-    // SFa分组
-    for (auto it = hierarchicalSFA_unfinished_group.begin(); it != hierarchicalSFA_unfinished_group.end(); it++)
-    {
-        auto &groups = it->second;
-        // if (it->first == "0" || groups.size() > 0)
-        if (groups.size() > 512)
-        {
-            tmpGroup.clear();
-            for (auto group : it->second)
+            for (auto groups : hierarchicalSFC_unfinished_chunk[sf_c])
             {
-                if (tmpGroup.size() + group.size() > MAX_GROUP_SIZE)
+                tmpGroup.insert(groups);
+                if (tmpGroup.size() >= MAX_GROUP_SIZE)
                 {
                     finishedGroups.push_back(tmpGroup);
                     for (auto id : tmpGroup)
@@ -105,37 +92,28 @@ void Dedup_HSF::ProcessOneTrace()
                     }
                     tmpGroup.clear();
                 }
-                tmpGroup.insert(group.begin(), group.end());
             }
-            if (tmpGroup.size() > 1)
+        }
+        if (tmpGroup.size() > 1)
+        {
+            finishedGroups.push_back(tmpGroup);
+            for (auto id : tmpGroup)
             {
-                finishedGroups.push_back(tmpGroup);
-                for (auto id : tmpGroup)
-                {
-                    finishedChunks.insert(id);
-                    unfinishedChunks.erase(id);
-                }
+                finishedChunks.insert(id);
+                unfinishedChunks.erase(id);
             }
             tmpGroup.clear();
         }
         else
         {
-            groupmerge(groups, MAX_GROUP_SIZE);
-            for (auto group : groups)
+            for (auto id : tmpGroup)
             {
-                if (group.size() >= 2)
-
-                {
-                    for (auto id : group)
-                    {
-                        finishedChunks.insert(id);
-                        unfinishedChunks.erase(id);
-                    }
-                    finishedGroups.push_back(group);
-                }
+                // unfinishedChunks.insert(id);
             }
+            tmpGroup.clear();
         }
     }
+
     tool::Logging(myName_.c_str(), "a Finished chunk num is %d\n", finishedChunks.size());
     tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunks.size());
 
