@@ -143,6 +143,7 @@ int main(int argc, char **argv)
     absMethodObj->SetInputMQ(chunker2lz4);
 
     tool::Logging(myName.c_str(), "Start to process %d files\n", processNum);
+    auto startsum = std::chrono::high_resolution_clock::now();
     for (auto i = 0; i < processNum; i++)
     {
         chunkerObj->LoadChunkFile(readfileList[i]);
@@ -156,13 +157,17 @@ int main(int argc, char **argv)
         thTmp->join();
         delete thTmp;
     }
+    auto endsum = std::chrono::high_resolution_clock::now();
+    auto sumTime = (endsum - startsum);
+    auto sumTimeInSeconds = std::chrono::duration_cast<std::chrono::seconds>(endsum - startsum).count();
+    std::cout << "Time taken by for loop: " << sumTimeInSeconds << " s " << std::endl;
 
     tool::Logging(myName.c_str(), " processNum %d \n", processNum);
     tool::Logging(myName.c_str(), "Group Num is %d\n", absMethodObj->groupNum);
     tool::Logging(myName.c_str(), "Total logical size is %lu\n", absMethodObj->totalLogicalSize);
     tool::Logging(myName.c_str(), "Total compressed size is %lu\n", absMethodObj->totalCompressedSize);
     tool::Logging(myName.c_str(), "Compression ratio is %.4f\n", (double)absMethodObj->totalLogicalSize / (double)absMethodObj->totalCompressedSize);
-
+    absMethodObj->PrintChunkInfo(dirName, chunkingType, compressionMethod, processNum, sumTimeInSeconds);
     delete chunkerObj;
     delete absMethodObj;
     return 0;

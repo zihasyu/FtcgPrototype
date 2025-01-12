@@ -19,3 +19,6 @@ Whether or not to store all data in memory before compression can be set on the 
 - The experimental functions of design2 and design3 have been improved
 - Fixed the bug that experiment 3 would output the last tmpgroup twice
 - Removed a number of O(n) repeated requests for memory
+
+### 2025.1.12
+data Compressed data persistence

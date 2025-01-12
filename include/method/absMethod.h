@@ -101,5 +101,6 @@ public:
     void Chunk_Insert(const Chunk_t &chunk);
     Chunk_t Get_Chunk_Info(int id);
     void CompressionToFinishedGroup();
+    void PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, int64_t time);
 };
 #endif

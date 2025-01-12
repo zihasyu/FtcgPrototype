@@ -345,3 +345,20 @@ void absMethod::CompressionToFinishedGroup()
     outfile.close();
     tool::Logging(myName_.c_str(), "Compression finished\n");
 }
+
+void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, int64_t time)
+{
+    string outfileName = "./ChunkInfo/ChunkInfo.txt";
+    ofstream outfile(outfileName, std::ios::app);
+    outfile << "-----------------INSTRUCTION----------------------" << endl;
+    outfile << "./Ftcg -i " << inputDirpath << " -c " << chunkingMethod << " -m " << method << " -n " << fileNum << endl;
+    outfile << "-----------------COMPRESSION-----------------------" << endl;
+    outfile << "Group Num is" << groupNum << endl;
+    outfile << "Total logical size is" << totalLogicalSize << endl;
+    outfile << "Total compressed size is" << totalCompressedSize << endl;
+    outfile << "Compression ratio is " << (double)totalLogicalSize / (double)totalCompressedSize << endl;
+    outfile << "-----------------TIME-----------------------" << endl;
+    outfile << "Total time is " << time << "s" << endl;
+    outfile << "--------------------------------------------------" << endl;
+    outfile.close();
+}
