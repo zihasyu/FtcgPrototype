@@ -6,13 +6,22 @@
 typedef struct
 {
     uint64_t chunkID;
-    uint32_t chunkSize;
-    uint32_t saveSize;
+    uint32_t chunkSize; // can remove
     uint8_t *chunkContent;
-    bool loadFromDisk;
-    uint64_t offset;
-    uint64_t containerID;
+    bool loadFromDisk;    // only for read from disk
+    uint64_t offset;      // only for read from disk
+    uint64_t containerID; // only for read from disk
+    uint32_t GroupID;
 } Chunk_t;
+
+typedef struct
+{
+    std::set<uint64_t> chunkIDs;
+    uint32_t Orisize;
+    uint32_t Comsize;
+    uint64_t ReOffset;      // For restore
+    uint64_t ReContainerID; // For restore
+} Group_t;
 
 typedef struct
 {

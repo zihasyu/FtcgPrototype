@@ -285,6 +285,7 @@ bool absMethod::IsDedup(Chunk_t &chunk)
     if (it != Dedupindex.end())
     {
         chunk.chunkID = it->second;
+        dataWrite_->RecipeMap[fileName].push_back(chunk.chunkID);
         return true;
     }
     // unique chunk
@@ -292,6 +293,7 @@ bool absMethod::IsDedup(Chunk_t &chunk)
     {
         chunk.chunkID = ChunkID++;
         Dedupindex[hashStr] = chunk.chunkID;
+        dataWrite_->RecipeMap[fileName].push_back(chunk.chunkID);
         return false;
     }
 }
@@ -299,16 +301,19 @@ bool absMethod::IsDedup(Chunk_t &chunk)
 void absMethod::CompressionToFinishedGroup()
 {
     tool::Logging(myName_.c_str(), "Compression start\n");
-    for (auto group : finishedGroups)
+    // for (auto group : finishedGroups)
+    string outfileName = "./CompressionFiles/" + myName_;
+    ofstream outfile(outfileName, std::ios::binary);
+    for (uint32_t GroupID = 0; GroupID < finishedGroups.size(); GroupID++)
     {
-        groupLogicalSize[group.size()] = 0;
-        groupCompressedSize[group.size()] = 0;
-
-        for (auto id : group)
+        groupLogicalSize[finishedGroups[GroupID].size()] = 0;
+        groupCompressedSize[finishedGroups[GroupID].size()] = 0;
+        for (auto id : finishedGroups[GroupID]) // finishedGroups is index(group->chunkID)
         {
 
             auto start = std::chrono::high_resolution_clock::now();
             Chunk_t GroupTmpChunk = Get_Chunk_Info(id);
+            chunkSet[id].GroupID = GroupID; // final group id for each chunk, it's index(chunkID->groupID)
             memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
             if (GroupTmpChunk.loadFromDisk)
             {
@@ -316,26 +321,27 @@ void absMethod::CompressionToFinishedGroup()
             }
             auto end = std::chrono::high_resolution_clock::now();
             clustringTime += end - start;
-
             clusterCnt++;
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
             clusterSize += chunkSet[id].chunkSize;
         }
-        groupLogicalSize[group.size()] += clusterSize;
+
         // do lz4 compression
         int compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
         if (compressedSize <= 0)
         {
             compressedSize = clusterSize;
         }
+        outfile.write(reinterpret_cast<const char *>(lz4ChunkBuffer), compressedSize);
         totalCompressedSize += compressedSize;
         // totalLogicalSize += clusterSize;
+        groupLogicalSize[finishedGroups[GroupID].size()] += clusterSize;
+        groupCompressedSize[finishedGroups[GroupID].size()] += compressedSize;
         clusterNum++;
         clusterCnt = 0;
         clusterSize = 0;
-
-        groupCompressedSize[group.size()] += compressedSize;
     }
+    outfile.close();
     tool::Logging(myName_.c_str(), "Compression finished\n");
 }

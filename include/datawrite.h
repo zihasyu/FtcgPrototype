@@ -26,7 +26,6 @@ private:
     //  unordered_map<uint32_t, vector<int>> ObjectIndex;
     // unordered_map<string, vector<int>> ObjectIndex;
     vector<Chunk_t> recipelist;
-    unordered_map<string, vector<Recipe_t>> RecipeMap;
     // unordered_map<string, vector<int>> *SFindex;
     //  static Container_t curContainer;
     ReadCache *containerCache;
@@ -56,6 +55,8 @@ private:
     uint8_t *lz4SafeChunkBuffer;
 
 public:
+    vector<Group_t> Grouplist;
+    unordered_map<string, vector<uint64_t>> RecipeMap;
     int containerNum = 0;
     Container_t curContainer;
     uint64_t curOffset = 0;
@@ -76,6 +77,7 @@ public:
     MessageQueue<Container_t> *MQ;
     bool Chunk_Insert(Chunk_t chunk);
     bool Chunk_Insert(Chunk_t chunk, uint8_t *lz4Buffer);
+    bool Group_Insert(Group_t group, uint8_t *lz4Buffer);
     int Get_Chunk_Num();
     int Get_Container_Num(Chunk_t chunk);
     Chunk_t Get_Chunk_Info(int id);

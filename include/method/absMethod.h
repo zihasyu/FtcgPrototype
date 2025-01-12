@@ -20,7 +20,7 @@ protected:
     vector<Chunk_t> chunkSet;
     uint64_t ChunkID = 0;                 // uinque chunk id
     string hashStr;                       // for fp hash
-    vector<set<uint64_t>> finishedGroups; // for group
+    vector<set<uint64_t>> finishedGroups; //  finishedGroups is index(group->chunkID)
     // cluster
     uint8_t *clusterBuffer;
     int clusterCnt = 0;
@@ -33,7 +33,7 @@ protected:
     map<uint64_t, set<string>> feature_FP_Table;
     map<int, uint64_t> groupLogicalSize;
     map<int, uint64_t> groupCompressedSize;
-    vector<uint64_t> Recipe;
+    // restore
 
 public:
     // util

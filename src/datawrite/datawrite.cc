@@ -26,7 +26,9 @@ void dataWrite::PrintBinaryArray(const uint8_t *buffer, size_t buffer_size)
     fprintf(stdout, "\n");
     return;
 }
-
+bool dataWrite::Group_Insert(Group_t group, uint8_t *lz4Buffer)
+{
+}
 bool dataWrite::Chunk_Insert(Chunk_t chunk)
 {
     int tmpSize = 0;
@@ -300,5 +302,55 @@ void dataWrite::PrintMetrics()
 void dataWrite::SetFilename(string name)
 {
     filename.assign(name);
+    return;
+}
+
+void dataWrite::restoreFile(string fileName)
+{
+    string name;
+    size_t pos = fileName.find_last_of('/');
+    if (pos != std::string::npos)
+    {
+        name = fileName.substr(pos + 1);
+    }
+    else
+    {
+        name = fileName;
+    }
+    string writePath = "./restoreFile/" + name;
+    // cout << chunkSet_.size() << endl;
+    cout << "write path is " << writePath << endl;
+    ofstream outFile(writePath, std::ios_base::binary);
+
+    auto tmpRecipe = RecipeMap[fileName];
+    for (auto recipe : tmpRecipe)
+    {
+        Chunk_t tmpChunkInfo = Get_Chunk_Info(recipe);
+        // if (tmpChunkInfo.deltaFlag == NO_DELTA || tmpChunkInfo.deltaFlag == NO_LZ4)
+        // {
+        //     outFile.write((char *)tmpChunkInfo.chunkPtr, tmpChunkInfo.chunkSize);
+        // }
+        // else
+        // {
+        //     // auto tmpLocalChunkInfo = xd3_recursive_restore(tmpChunkInfo);
+        //     auto baseChunkInfo = Get_Chunk_Info(tmpChunkInfo.basechunkID);
+        //     uint64_t recSize = 0;
+        //     auto chunk_ptr = xd3_decode(tmpChunkInfo.chunkPtr, tmpChunkInfo.saveSize, baseChunkInfo.chunkPtr, baseChunkInfo.chunkSize, &recSize);
+        //     // cout << "rec size is " << recSize << endl;
+        //     //  memcpy(tmpChunkInfo.chunkptr, chunk_ptr, recSize);
+        //     outFile.write((char *)chunk_ptr, tmpChunkInfo.chunkSize);
+
+        //     if (baseChunkInfo.loadFromDisk)
+        //         free(baseChunkInfo.chunkPtr);
+        //     if (chunk_ptr != nullptr)
+        //     {
+        //         free(chunk_ptr);
+        //         chunk_ptr = nullptr;
+        //     }
+        // }
+        // if (tmpChunkInfo.loadFromDisk)
+        //     free(tmpChunkInfo.chunkPtr);
+    }
+    outFile.close();
     return;
 }
