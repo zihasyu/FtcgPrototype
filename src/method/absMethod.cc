@@ -349,17 +349,28 @@ void absMethod::FinalMerge()
 {
     for (auto chunk : chunkSet)
     {
-        if (chunk.isGrouped == true)
+        if (chunk.isGrouped == false)
         {
-            continue;
-        }
-        tmpGroup.insert(chunk.chunkID);
-        if (tmpGroup.size() == MAX_GROUP_SIZE)
-        {
-            finishedGroups.push_back(tmpGroup);
-            tmpGroup.clear();
+            tmpGroup.insert(chunk.chunkID);
+            if (tmpGroup.size() == 1)
+            {
+                finishedGroups.push_back(tmpGroup);
+                tmpGroup.clear();
+            }
         }
     }
+    // for (auto chunk : chunkSet)
+    // {
+    //     if (chunk.isGrouped == false)
+    //     {
+    //         tmpGroup.insert(chunk.chunkID);
+    //         if (tmpGroup.size() == MAX_GROUP_SIZE)
+    //         {
+    //             finishedGroups.push_back(tmpGroup);
+    //             tmpGroup.clear();
+    //         }
+    //     }
+    // }
     if (tmpGroup.size() > 0)
     {
         finishedGroups.push_back(tmpGroup);
