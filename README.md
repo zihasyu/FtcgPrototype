@@ -21,4 +21,9 @@ Whether or not to store all data in memory before compression can be set on the 
 - Removed a number of O(n) repeated requests for memory
 
 ### 2025.1.12
-data Compressed data persistence
+- data Compressed data persistence
+- Improved log output
+
+### 2025.1.13
+- removed some erase(), BIB can improve performance by a great deal
+- Final 8 merge 1 can be removed or retained

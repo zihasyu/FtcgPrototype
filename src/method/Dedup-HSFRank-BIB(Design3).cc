@@ -64,7 +64,6 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
     tool::Logging(myName_.c_str(), "total chunk num is %d\n", totalChunkNum);
     totalFeature += table.original_feature_key_table.size();
     set<uint64_t> finishedChunks;
-    set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
 
     tool::Logging(myName_.c_str(), "feature num is %d\n", table.original_feature_key_table.size());
@@ -96,7 +95,7 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
         }
         if (tmpGroup.size() > 1)
         {
-            finishedGroups.push_back(tmpGroup);
+            unfinishedGroups.push_back(tmpGroup);
             for (auto id : tmpGroup)
             {
                 finishedChunks.insert(id);
@@ -119,6 +118,10 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
 
     frequency_table.clear();
     for (auto it : finishedGroups)
+    {
+        frequency_table[it.size()]++;
+    }
+    for (auto it : unfinishedGroups)
     {
         frequency_table[it.size()]++;
     }
@@ -151,13 +154,8 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
             free(GroupTmpChunk.chunkContent);
         }
     }
-    for (auto group = finishedGroups.begin(); group != finishedGroups.end();)
+    for (auto group = unfinishedGroups.begin(); group != unfinishedGroups.end(); group++)
     {
-        if (group->size() > MAX_GROUP_SIZE - 1)
-        {
-            group++;
-            continue;
-        }
         auto id = *group->begin();
 
         representChunk_t representChunk;
@@ -174,7 +172,6 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
             unfinishedChunks.insert(id);
             finishedChunks.erase(id);
         }
-        group = finishedGroups.erase(group);
     }
 
     for (auto it : representTable.feature_key_table_)
@@ -223,20 +220,7 @@ void Dedup_HSFRank_BIB::ProcessOneTrace()
         out << it.first << ", " << it.second << endl;
     }
 
-    for (auto id : unfinishedChunks)
-    {
-        tmpGroup.insert(id);
-        if (tmpGroup.size() == MAX_GROUP_SIZE)
-        {
-            finishedGroups.push_back(tmpGroup);
-            tmpGroup.clear();
-        }
-    }
-    if (tmpGroup.size() > 0)
-    {
-        finishedGroups.push_back(tmpGroup);
-        tmpGroup.clear();
-    }
+    FinalMerge();
     groupNum += finishedGroups.size();
     for (const auto &it : finishedGroups)
     {

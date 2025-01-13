@@ -345,17 +345,33 @@ void absMethod::CompressionToFinishedGroup()
     outfile.close();
     tool::Logging(myName_.c_str(), "Compression finished\n");
 }
-
+void absMethod::FinalMerge()
+{
+    for (auto id : unfinishedChunks)
+    {
+        tmpGroup.insert(id);
+        if (tmpGroup.size() == MAX_GROUP_SIZE)
+        {
+            finishedGroups.push_back(tmpGroup);
+            tmpGroup.clear();
+        }
+    }
+    if (tmpGroup.size() > 0)
+    {
+        finishedGroups.push_back(tmpGroup);
+        tmpGroup.clear();
+    }
+}
 void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, int64_t time)
 {
-    string outfileName = "./ChunkInfo/ChunkInfo.txt";
+    string outfileName = "./ChunkInfo.txt";
     ofstream outfile(outfileName, std::ios::app);
     outfile << "-----------------INSTRUCTION----------------------" << endl;
     outfile << "./Ftcg -i " << inputDirpath << " -c " << chunkingMethod << " -m " << method << " -n " << fileNum << endl;
     outfile << "-----------------COMPRESSION-----------------------" << endl;
-    outfile << "Group Num is" << groupNum << endl;
-    outfile << "Total logical size is" << totalLogicalSize << endl;
-    outfile << "Total compressed size is" << totalCompressedSize << endl;
+    outfile << "Group Num is " << groupNum << endl;
+    outfile << "Total logical size is " << totalLogicalSize << endl;
+    outfile << "Total compressed size is " << totalCompressedSize << endl;
     outfile << "Compression ratio is " << (double)totalLogicalSize / (double)totalCompressedSize << endl;
     outfile << "-----------------TIME-----------------------" << endl;
     outfile << "Total time is " << time << "s" << endl;

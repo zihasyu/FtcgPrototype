@@ -21,7 +21,10 @@ protected:
     uint64_t ChunkID = 0;                 // uinque chunk id
     string hashStr;                       // for fp hash
     vector<set<uint64_t>> finishedGroups; //  finishedGroups is index(group->chunkID)
+    vector<set<uint64_t>> unfinishedGroups;
     // cluster
+    set<uint64_t> unfinishedChunks;
+    set<uint64_t> tmpGroup;
     uint8_t *clusterBuffer;
     int clusterCnt = 0;
     uint64_t clusterSize = 0;
@@ -100,6 +103,7 @@ public:
     void SetIsDisk(bool isDisk_) { isDisk = isDisk_; }
     void Chunk_Insert(const Chunk_t &chunk);
     Chunk_t Get_Chunk_Info(int id);
+    void FinalMerge();
     void CompressionToFinishedGroup();
     void PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, int64_t time);
 };

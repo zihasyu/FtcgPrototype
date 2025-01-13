@@ -66,9 +66,7 @@ void Dedup_HSH_BIB::ProcessOneTrace()
 
     totalFeature += table.original_feature_key_table.size();
     set<uint64_t> finishedChunks;
-    set<uint64_t> unfinishedChunks;
 
-    set<uint64_t> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     vector<vector<int>> indices; // 标识特征值下面那些group有相同的FP
 
@@ -433,20 +431,17 @@ void Dedup_HSH_BIB::ProcessOneTrace()
     }
     // 将剩余的1块进行分组
 
-    vector<set<uint64_t>> leftGroups;
     for (auto id : unfinishedChunks)
     {
         tmpGroup.insert(id);
         if (tmpGroup.size() == MAX_GROUP_SIZE)
         {
-            leftGroups.push_back(tmpGroup);
             finishedGroups.push_back(tmpGroup);
             tmpGroup.clear();
         }
     }
     if (tmpGroup.size() > 0)
     {
-        leftGroups.push_back(tmpGroup);
         finishedGroups.push_back(tmpGroup);
         tmpGroup.clear();
     }

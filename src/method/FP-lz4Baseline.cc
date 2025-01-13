@@ -124,8 +124,7 @@ void FPLz4Baseline::ProcessOneTrace()
 
     totalFeature += table.original_feature_key_table.size();
     set<uint64_t> finishedChunks;
-    set<uint64_t> unfinishedChunks;
-    set<uint64_t> tmpGroup; // 16一组chunkid
+
     ofstream out("../frequencyTable.txt", ios::app);
 
     // tool::Logging(myName_.c_str(), "chunk num is %d\n", table.original_feature_key_table.size());

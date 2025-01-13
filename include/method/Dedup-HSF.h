@@ -24,7 +24,6 @@ private:
     unordered_map<string, vector<set<uint64_t>>> hierarchicalSFB_unfinished_group;
     unordered_map<string, vector<set<uint64_t>>> hierarchicalSFC_unfinished_group;
     map<string, vector<uint64_t>> hierarchicalSFC_unfinished_chunk;
-    set<uint64_t> unfinishedChunks;
 
 public:
     Dedup_HSF();

@@ -64,7 +64,7 @@ void Dedup_HSFRank::ProcessOneTrace()
     tool::Logging(myName_.c_str(), "total chunk num is %d\n", totalChunkNum);
     totalFeature += table.original_feature_key_table.size();
     set<uint64_t> finishedChunks;
-    set<uint64_t> tmpGroup; // 16一组chunkid
+
     ofstream out("../frequencyTable.txt", ios::app);
 
     tool::Logging(myName_.c_str(), "feature num is %d\n", table.original_feature_key_table.size());
@@ -128,23 +128,7 @@ void Dedup_HSFRank::ProcessOneTrace()
     {
         out << it.first << ", " << it.second << endl;
     }
-    vector<set<uint64_t>> leftGroups;
-    for (auto id : unfinishedChunks)
-    {
-        tmpGroup.insert(id);
-        if (tmpGroup.size() == MAX_GROUP_SIZE)
-        {
-            leftGroups.push_back(tmpGroup);
-            finishedGroups.push_back(tmpGroup);
-            tmpGroup.clear();
-        }
-    }
-    if (tmpGroup.size() > 0)
-    {
-        leftGroups.push_back(tmpGroup);
-        finishedGroups.push_back(tmpGroup);
-        tmpGroup.clear();
-    }
+    FinalMerge();
 
     groupNum += finishedGroups.size();
 

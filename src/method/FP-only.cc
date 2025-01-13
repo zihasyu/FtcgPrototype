@@ -51,8 +51,7 @@ void FPOnly::ProcessOneTrace()
     }
 
     set<uint64_t> finishedChunks;
-    set<uint64_t> unfinishedChunks;
-    set<uint64_t> tmpGroup; // 16一组chunkid
+
     ofstream out("../frequencyTable.txt", ios::app);
 
     // set<string> usedChunks;

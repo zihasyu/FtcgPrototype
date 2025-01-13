@@ -15,7 +15,6 @@ private:
     FeatureIndexTable table;
     NTransIndexTable nTransTable;
     FinesseIndexTable finesseTable;
-    set<uint64_t> unfinishedChunks;
 
 public:
     Dedup_SF();
