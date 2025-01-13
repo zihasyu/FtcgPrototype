@@ -347,9 +347,13 @@ void absMethod::CompressionToFinishedGroup()
 }
 void absMethod::FinalMerge()
 {
-    for (auto id : unfinishedChunks)
+    for (auto chunk : chunkSet)
     {
-        tmpGroup.insert(id);
+        if (chunk.isGrouped == true)
+        {
+            continue;
+        }
+        tmpGroup.insert(chunk.chunkID);
         if (tmpGroup.size() == MAX_GROUP_SIZE)
         {
             finishedGroups.push_back(tmpGroup);

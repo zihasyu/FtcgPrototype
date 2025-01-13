@@ -44,7 +44,8 @@ void Dedup_HSF::ProcessOneTrace()
             {
                 table.PutHierarchicalSF(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
                 hierarchicalSFC_unfinished_group[table.key_hierarchicalSF_table[to_string(tmpChunk.chunkID)][2]].push_back({tmpChunk.chunkID});
-                unfinishedChunks.insert(tmpChunk.chunkID);
+                tmpChunk.isGrouped = false;
+                unfinishedChunkNum++;
                 Chunk_Insert(tmpChunk);
                 totalChunkNum++;
                 // todo:add to decipe
@@ -68,7 +69,7 @@ void Dedup_HSF::ProcessOneTrace()
 
     tool::Logging(myName_.c_str(), "feature num is %d\n", table.original_feature_key_table.size());
     tool::Logging(myName_.c_str(), "FP finished chunk num is %d\n", finishedChunks.size());
-    tool::Logging(myName_.c_str(), "FP unfinished chunk num is %d\n", unfinishedChunks.size());
+    tool::Logging(myName_.c_str(), "FP unfinished chunk num is %d\n", unfinishedChunkNum);
 
     for (auto it : table.hierarchicalSFB_C_table)
     {
@@ -100,7 +101,8 @@ void Dedup_HSF::ProcessOneTrace()
                     for (auto id : tmpGroup)
                     {
                         finishedChunks.insert(id);
-                        unfinishedChunks.erase(id);
+                        chunkSet[id].isGrouped = true;
+                        unfinishedChunkNum--;
                     }
                     tmpGroup.clear();
                 }
@@ -112,7 +114,8 @@ void Dedup_HSF::ProcessOneTrace()
                 for (auto id : tmpGroup)
                 {
                     finishedChunks.insert(id);
-                    unfinishedChunks.erase(id);
+                    chunkSet[id].isGrouped = true;
+                    unfinishedChunkNum--;
                 }
             }
             tmpGroup.clear();
@@ -128,7 +131,8 @@ void Dedup_HSF::ProcessOneTrace()
                     for (auto id : group)
                     {
                         finishedChunks.insert(id);
-                        unfinishedChunks.erase(id);
+                        chunkSet[id].isGrouped = true;
+                        unfinishedChunkNum--;
                     }
                     finishedGroups.push_back(group);
                 }
@@ -136,7 +140,7 @@ void Dedup_HSF::ProcessOneTrace()
         }
     }
     tool::Logging(myName_.c_str(), "a Finished chunk num is %d\n", finishedChunks.size());
-    tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunks.size());
+    tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunkNum);
 
     frequency_table.clear();
     for (auto it : finishedGroups)
@@ -144,7 +148,7 @@ void Dedup_HSF::ProcessOneTrace()
         frequency_table[it.size()]++;
     }
     out << "first group size, frequency" << endl;
-    out << 1 << "," << unfinishedChunks.size() << endl;
+    out << 1 << "," << unfinishedChunkNum << endl;
     for (auto it : frequency_table)
     {
         out << it.first << ", " << it.second << endl;

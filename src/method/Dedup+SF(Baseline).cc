@@ -43,7 +43,8 @@ void Dedup_SF::ProcessOneTrace()
             if (!IsDedup(tmpChunk))
             {
                 table.Put(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
-                unfinishedChunks.insert(tmpChunk.chunkID);
+                tmpChunk.isGrouped = false;
+                unfinishedChunkNum++;
                 Chunk_Insert(tmpChunk);
                 totalChunkNum++;
                 // todo:add to decipe
@@ -68,7 +69,7 @@ void Dedup_SF::ProcessOneTrace()
 
     tool::Logging(myName_.c_str(), "feature num is %d\n", table.original_feature_key_table.size());
     tool::Logging(myName_.c_str(), "FP finished chunk num is %d\n", finishedChunks.size());
-    tool::Logging(myName_.c_str(), "FP unfinished chunk num is %d\n", unfinishedChunks.size());
+    tool::Logging(myName_.c_str(), "FP unfinished chunk num is %d\n", unfinishedChunkNum);
     for (auto feature : table.feature_key_table_)
     {
         tmpGroup.clear();
@@ -79,7 +80,8 @@ void Dedup_SF::ProcessOneTrace()
                 continue;
             }
             tmpGroup.insert(stoull(id));
-            unfinishedChunks.erase(stoull(id));
+            chunkSet[stoull(id)].isGrouped = true;
+            unfinishedChunkNum--;
             finishedChunks.insert(stoull(id));
             if (tmpGroup.size() == MAX_GROUP_SIZE)
             {
@@ -97,13 +99,14 @@ void Dedup_SF::ProcessOneTrace()
             for (auto id : tmpGroup)
             {
                 finishedChunks.erase(id);
-                unfinishedChunks.insert(id);
+                chunkSet[id].isGrouped = false;
+                unfinishedChunkNum++;
             }
             tmpGroup.clear();
         }
     }
     tool::Logging(myName_.c_str(), "a Finished chunk num is %d\n", finishedChunks.size());
-    tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunks.size());
+    tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunkNum);
 
     frequency_table.clear();
     for (auto it : finishedGroups)
@@ -111,7 +114,7 @@ void Dedup_SF::ProcessOneTrace()
         frequency_table[it.size()]++;
     }
     out << "first group size, frequency" << endl;
-    out << 1 << "," << unfinishedChunks.size() << endl;
+    out << 1 << "," << unfinishedChunkNum << endl;
     for (auto it : frequency_table)
     {
         out << it.first << ", " << it.second << endl;

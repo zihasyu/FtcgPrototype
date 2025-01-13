@@ -12,6 +12,7 @@ typedef struct
     uint64_t offset;      // only for read from disk
     uint64_t containerID; // only for read from disk
     uint32_t GroupID;
+    bool isGrouped;
 } Chunk_t;
 
 typedef struct

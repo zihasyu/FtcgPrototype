@@ -24,6 +24,7 @@ protected:
     vector<set<uint64_t>> unfinishedGroups;
     // cluster
     set<uint64_t> unfinishedChunks;
+    uint64_t unfinishedChunkNum = 0;
     set<uint64_t> tmpGroup;
     uint8_t *clusterBuffer;
     int clusterCnt = 0;
@@ -59,17 +60,10 @@ public:
     bool isLastFile = false;
 
     // 测试用变量
-    uint64_t singeFeature = 0;         // 单个特征
-    uint64_t totalFeature = 0;         // 总特征
-    uint64_t totalOriginalFeature = 0; // 总原始特征
-    uint64_t feature_less_than_16 = 0; // 小于16的特征
-    uint64_t notFullGroupNum = 0;      // 不完整的组数
-    uint64_t stillNotFullGroupNum = 0; // 二次分组后仍然不完整的组数
-    uint64_t groupNum = 0;             // 总组数
-    uint64_t corelationIsOne = 0;      // 相关性为1的原始特征数
-    uint64_t totalMatrixSize = 0;      // 总矩阵大小
-    map<uint, uint> frequency_table;   // 频率表
-    uint64_t totalChunkNum = 0;        // 总chunk数
+    uint64_t totalFeature = 0;       // 总特征
+    uint64_t groupNum = 0;           // 总组数
+    map<uint, uint> frequency_table; // 频率表
+    uint64_t totalChunkNum = 0;      // 总chunk数
     map<string, set<uint64_t>> FPdeduplicationTable;
     uint64_t compressedChunkNum = 0;
 
