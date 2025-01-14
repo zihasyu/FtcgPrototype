@@ -17,11 +17,10 @@ typedef struct
 
 typedef struct
 {
-    std::set<uint64_t> chunkIDs;
+    std::vector<uint64_t> chunkIDs;
     uint32_t Orisize;
     uint32_t Comsize;
-    uint64_t ReOffset;      // For restore
-    uint64_t ReContainerID; // For restore
+    uint64_t ReOffset; // For restore
 } Group_t;
 
 typedef struct

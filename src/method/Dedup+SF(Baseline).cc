@@ -42,7 +42,8 @@ void Dedup_SF::ProcessOneTrace()
             // calculate feature
             if (!IsDedup(tmpChunk))
             {
-                table.Put(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
+                table.Put(std::to_string(tmpChunk.chunkID),
+                          std::string(reinterpret_cast<char *>(tmpChunk.chunkContent), tmpChunk.chunkSize));
                 tmpChunk.isGrouped = false;
                 unfinishedChunkNum++;
                 Chunk_Insert(tmpChunk);

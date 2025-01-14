@@ -42,7 +42,8 @@ void Dedup_HSF::ProcessOneTrace()
             // calculate feature
             if (!IsDedup(tmpChunk))
             {
-                table.PutHierarchicalSF(std::to_string(tmpChunk.chunkID), (char *)tmpChunk.chunkContent);
+                table.PutHierarchicalSF(std::to_string(tmpChunk.chunkID),
+                                        std::string(reinterpret_cast<char *>(tmpChunk.chunkContent), tmpChunk.chunkSize));
                 hierarchicalSFC_unfinished_group[table.key_hierarchicalSF_table[to_string(tmpChunk.chunkID)][2]].push_back({tmpChunk.chunkID});
                 tmpChunk.isGrouped = false;
                 unfinishedChunkNum++;

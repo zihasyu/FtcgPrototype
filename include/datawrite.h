@@ -55,7 +55,8 @@ private:
     uint8_t *lz4SafeChunkBuffer;
 
 public:
-    vector<Group_t> Grouplist;
+    vector<uint64_t> chunkOffset;
+    vector<Group_t> GroupRecipe;
     unordered_map<string, vector<uint64_t>> RecipeMap;
     int containerNum = 0;
     Container_t curContainer;

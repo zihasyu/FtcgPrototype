@@ -16,6 +16,7 @@ private:
 protected:
     string myName_ = "absMethod";
     string fileName;
+    string CompressionfileName;
     bool isDisk = false;
     vector<Chunk_t> chunkSet;
     uint64_t ChunkID = 0;                 // uinque chunk id
@@ -38,8 +39,11 @@ protected:
     map<int, uint64_t> groupLogicalSize;
     map<int, uint64_t> groupCompressedSize;
     // restore
+    uint8_t *DeCompressionBuffer;
+    ifstream CompressionFile_;
 
 public:
+    uint64_t TotalOffset = 0;
     // util
     uint8_t *readFileBuffer;
     uint8_t *lz4ChunkBuffer;
@@ -99,6 +103,8 @@ public:
     Chunk_t Get_Chunk_Info(int id);
     void FinalMerge();
     void CompressionToFinishedGroup();
+    void SetGroup(uint64_t GroupID, uint64_t Orisize, uint32_t Comsize, uint64_t ReOffset);
+    void DeCompressionAll();
     void PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, int64_t time);
 };
 #endif

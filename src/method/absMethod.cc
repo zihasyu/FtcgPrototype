@@ -302,12 +302,14 @@ void absMethod::CompressionToFinishedGroup()
 {
     tool::Logging(myName_.c_str(), "Compression start\n");
     // for (auto group : finishedGroups)
-    string outfileName = "./CompressionFiles/" + myName_;
-    ofstream outfile(outfileName, std::ios::binary);
+    CompressionfileName = "./CompressionFiles/" + myName_;
+    ofstream outfile(CompressionfileName, std::ios::binary);
     for (uint32_t GroupID = 0; GroupID < finishedGroups.size(); GroupID++)
     {
         groupLogicalSize[finishedGroups[GroupID].size()] = 0;
         groupCompressedSize[finishedGroups[GroupID].size()] = 0;
+        dataWrite_->GroupRecipe.push_back({{}, 0, 0, 0});
+
         for (auto id : finishedGroups[GroupID]) // finishedGroups is index(group->chunkID)
         {
 
@@ -325,6 +327,10 @@ void absMethod::CompressionToFinishedGroup()
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
             clusterSize += chunkSet[id].chunkSize;
+
+            dataWrite_->chunkOffset.push_back(TotalOffset);
+            dataWrite_->GroupRecipe[GroupID].chunkIDs.push_back(id);
+            TotalOffset += chunkSet[id].chunkSize;
         }
 
         // do lz4 compression
@@ -334,6 +340,7 @@ void absMethod::CompressionToFinishedGroup()
             compressedSize = clusterSize;
         }
         outfile.write(reinterpret_cast<const char *>(lz4ChunkBuffer), compressedSize);
+        SetGroup(GroupID, clusterSize, compressedSize, totalCompressedSize); // for group recipe
         totalCompressedSize += compressedSize;
         // totalLogicalSize += clusterSize;
         groupLogicalSize[finishedGroups[GroupID].size()] += clusterSize;
@@ -393,3 +400,65 @@ void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int meth
     outfile << "--------------------------------------------------" << endl;
     outfile.close();
 }
+void absMethod::SetGroup(uint64_t GroupID, uint64_t Orisize, uint32_t Comsize, uint64_t ReOffset) // for group recipe
+{
+    dataWrite_->GroupRecipe[GroupID].Orisize = Orisize;
+    dataWrite_->GroupRecipe[GroupID].Comsize = Comsize;
+    dataWrite_->GroupRecipe[GroupID].ReOffset = ReOffset;
+}
+
+void absMethod::DeCompressionAll()
+{
+    cout << "TotalOffset: " << TotalOffset << endl;
+    DeCompressionBuffer = (uint8_t *)malloc(TotalOffset);
+    uint64_t TotalOffset_ = 0;
+    uint64_t DeComFileOffset = 0;
+    bool end = false;
+    uint64_t GroupID_ = 0;
+    CompressionFile_.open(CompressionfileName, ios_base::in | ios::binary);
+    while (!end)
+    {
+        // read file
+
+        memset((char *)readFileBuffer, 0, sizeof(uint8_t) * READ_FILE_SIZE);
+        CompressionFile_.read((char *)readFileBuffer, READ_FILE_SIZE);
+        //
+        end = CompressionFile_.eof();
+        size_t len = CompressionFile_.gcount();
+
+        uint64_t localOffset = 0;
+        cout << "len is " << len << endl;
+        cout << "end is " << end << endl;
+        if (len == 0)
+        {
+            break;
+        }
+
+        while (((len - localOffset) >= CONTAINER_MAX_SIZE) || (end && (localOffset < len)))
+        {
+            // cout << "GroupID: " << GroupID_ << endl;
+            int cpOffset = LZ4_decompress_safe((char *)(readFileBuffer + localOffset), (char *)lz4ChunkBuffer, dataWrite_->GroupRecipe[GroupID_].Comsize, CONTAINER_MAX_SIZE);
+            cout << "cpOffset: " << cpOffset << " dataWrite_->GroupRecipe[GroupID_].Comsize is " << dataWrite_->GroupRecipe[GroupID_].Comsize << endl;
+            localOffset += dataWrite_->GroupRecipe[GroupID_].Comsize;
+            // cout << "localOffset: " << localOffset << endl;
+            cout << "DeComFileOffset: " << DeComFileOffset << endl;
+            if (cpOffset > 0)
+            {
+                memcpy(DeCompressionBuffer + DeComFileOffset, lz4ChunkBuffer, cpOffset);
+                DeComFileOffset += cpOffset;
+                // cout << "DeComFileOffset: " << DeComFileOffset << endl;
+            }
+            else
+            {
+                memcpy(DeCompressionBuffer + DeComFileOffset, readFileBuffer + localOffset, dataWrite_->GroupRecipe[GroupID_].Comsize);
+                DeComFileOffset += dataWrite_->GroupRecipe[GroupID_].Comsize;
+            }
+            GroupID_++;
+        }
+        TotalOffset_ += localOffset;
+        cout << "len: " << len << endl;
+        cout << "TotalOffset_: " << TotalOffset_ << endl;
+        cout << "DeComFileOffset: " << DeComFileOffset << endl;
+        CompressionFile_.seekg(TotalOffset_, ios_base::beg);
+    }
+};
