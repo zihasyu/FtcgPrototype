@@ -327,8 +327,7 @@ void absMethod::CompressionToFinishedGroup()
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
             clusterSize += chunkSet[id].chunkSize;
-
-            dataWrite_->chunkOffset.push_back(TotalOffset);
+            chunkSet[id].ReOffset = TotalOffset;
             dataWrite_->GroupRecipe[GroupID].chunkIDs.push_back(id);
             TotalOffset += chunkSet[id].chunkSize;
         }
@@ -338,9 +337,15 @@ void absMethod::CompressionToFinishedGroup()
         if (compressedSize <= 0)
         {
             compressedSize = clusterSize;
+            outfile.write(reinterpret_cast<const char *>(clusterBuffer), compressedSize);
+            SetGroup(GroupID, clusterSize, clusterSize, totalCompressedSize); // for group recipe
         }
-        outfile.write(reinterpret_cast<const char *>(lz4ChunkBuffer), compressedSize);
-        SetGroup(GroupID, clusterSize, compressedSize, totalCompressedSize); // for group recipe
+        else
+        {
+            outfile.write(reinterpret_cast<const char *>(lz4ChunkBuffer), compressedSize);
+            SetGroup(GroupID, clusterSize, compressedSize, totalCompressedSize); // for group recipe
+        }
+
         totalCompressedSize += compressedSize;
         // totalLogicalSize += clusterSize;
         groupLogicalSize[finishedGroups[GroupID].size()] += clusterSize;
@@ -409,7 +414,6 @@ void absMethod::SetGroup(uint64_t GroupID, uint64_t Orisize, uint32_t Comsize, u
 
 void absMethod::DeCompressionAll()
 {
-    cout << "TotalOffset: " << TotalOffset << endl;
     DeCompressionBuffer = (uint8_t *)malloc(TotalOffset);
     uint64_t TotalOffset_ = 0;
     uint64_t DeComFileOffset = 0;
@@ -427,8 +431,6 @@ void absMethod::DeCompressionAll()
         size_t len = CompressionFile_.gcount();
 
         uint64_t localOffset = 0;
-        cout << "len is " << len << endl;
-        cout << "end is " << end << endl;
         if (len == 0)
         {
             break;
@@ -436,29 +438,54 @@ void absMethod::DeCompressionAll()
 
         while (((len - localOffset) >= CONTAINER_MAX_SIZE) || (end && (localOffset < len)))
         {
-            // cout << "GroupID: " << GroupID_ << endl;
             int cpOffset = LZ4_decompress_safe((char *)(readFileBuffer + localOffset), (char *)lz4ChunkBuffer, dataWrite_->GroupRecipe[GroupID_].Comsize, CONTAINER_MAX_SIZE);
-            cout << "cpOffset: " << cpOffset << " dataWrite_->GroupRecipe[GroupID_].Comsize is " << dataWrite_->GroupRecipe[GroupID_].Comsize << endl;
-            localOffset += dataWrite_->GroupRecipe[GroupID_].Comsize;
-            // cout << "localOffset: " << localOffset << endl;
-            cout << "DeComFileOffset: " << DeComFileOffset << endl;
+
             if (cpOffset > 0)
             {
                 memcpy(DeCompressionBuffer + DeComFileOffset, lz4ChunkBuffer, cpOffset);
                 DeComFileOffset += cpOffset;
-                // cout << "DeComFileOffset: " << DeComFileOffset << endl;
             }
             else
             {
                 memcpy(DeCompressionBuffer + DeComFileOffset, readFileBuffer + localOffset, dataWrite_->GroupRecipe[GroupID_].Comsize);
                 DeComFileOffset += dataWrite_->GroupRecipe[GroupID_].Comsize;
             }
+            localOffset += dataWrite_->GroupRecipe[GroupID_].Comsize;
             GroupID_++;
         }
+
         TotalOffset_ += localOffset;
-        cout << "len: " << len << endl;
-        cout << "TotalOffset_: " << TotalOffset_ << endl;
-        cout << "DeComFileOffset: " << DeComFileOffset << endl;
         CompressionFile_.seekg(TotalOffset_, ios_base::beg);
     }
 };
+
+void absMethod::restoreFile(string fileName)
+{
+    string name;
+    size_t pos = fileName.find_last_of('/');
+    if (pos != std::string::npos)
+    {
+        name = fileName.substr(pos + 1);
+    }
+    else
+    {
+        name = fileName;
+    }
+    string writePath = "./restoreFile/" + name;
+    // cout << chunkSet_.size() << endl;
+    cout << "write path is " << writePath << endl;
+    ofstream outFile(writePath, std::ios_base::binary);
+    for (auto id : dataWrite_->RecipeMap[fileName])
+    {
+        outFile.write((char *)(DeCompressionBuffer + chunkSet[id].ReOffset), chunkSet[id].chunkSize);
+        /* For debug */
+        // if (memcmp((char *)(DeCompressionBuffer + chunkSet[id].ReOffset), (char *)chunkSet[id].chunkContent, chunkSet[id].chunkSize) != 0)
+        // {
+        //     std::cout << "Chunkid " << id << std::endl;
+        //     printf("Decompression content: %.*s\n", (int)chunkSet[id].chunkSize, (char *)(DeCompressionBuffer + chunkSet[id].ReOffset));
+        //     printf("Chunk content: %.*s\n", (int)chunkSet[id].chunkSize, (char *)chunkSet[id].chunkContent);
+        // }
+    }
+    outFile.close();
+    return;
+}

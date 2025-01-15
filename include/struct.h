@@ -12,6 +12,7 @@ typedef struct
     uint64_t offset;      // only for read from disk
     uint64_t containerID; // only for read from disk
     uint32_t GroupID;
+    uint64_t ReOffset; // For restore
     bool isGrouped = false;
 } Chunk_t;
 

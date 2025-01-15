@@ -2,6 +2,10 @@
 
 
 ## Changes
+### 2025.1.15
+- finished the recipe design and restore. If you want to use restore, uncomment the DeCompressionAll() and restoreFile(readfileList[i]) sections of main().
+- fixed some memory safety issues  
+- preliminarily testing restore, it can be considered that it is currently a stable version
 ### 2025.1.14
 - Restore is 80% complete
 ### 2025.1.13

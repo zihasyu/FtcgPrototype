@@ -152,6 +152,7 @@ int main(int argc, char **argv)
         {
             absMethodObj->isLastFile = true;
         }
+        absMethodObj->setFileName(readfileList[i]);
         absMethodObj->ProcessOneTrace();
 
         thTmp->join();
@@ -168,7 +169,13 @@ int main(int argc, char **argv)
     tool::Logging(myName.c_str(), "Total compressed size is %lu\n", absMethodObj->totalCompressedSize);
     tool::Logging(myName.c_str(), "Compression ratio is %.4f\n", (double)absMethodObj->totalLogicalSize / (double)absMethodObj->totalCompressedSize);
     absMethodObj->PrintChunkInfo(dirName, chunkingType, compressionMethod, processNum, sumTimeInSeconds);
-    absMethodObj->DeCompressionAll();
+    // absMethodObj->DeCompressionAll();
+    // if (true)
+    //     for (auto i = 0; i < processNum; i++)
+    //     {
+    //         absMethodObj->setFileName(readfileList[i]);
+    //         absMethodObj->restoreFile(readfileList[i]);
+    //     }
     delete chunkerObj;
     delete absMethodObj;
     return 0;
