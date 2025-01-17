@@ -163,7 +163,6 @@ void Dedup_HSF::ProcessOneTrace()
     }
     tool::Logging(myName_.c_str(), "compressed chunk num is %d\n", compressedChunkNum);
     tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
-    totalLogicalSize = compressedChunkNum * 8 * 1024;
     tool::Logging(myName_.c_str(), "Compression start\n");
     CompressionToFinishedGroup();
     tool::Logging(myName_.c_str(), "Compression finished\n");

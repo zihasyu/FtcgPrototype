@@ -278,6 +278,7 @@ Chunk_t absMethod::Get_Chunk_Info(int id)
 
 bool absMethod::IsDedup(Chunk_t &chunk)
 {
+    totalLogicalSize += chunk.chunkSize;
     GenerateHash(mdCtx, chunk.chunkContent, chunk.chunkSize, hashBuf);
     hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
     auto it = Dedupindex.find(hashStr);
@@ -294,6 +295,7 @@ bool absMethod::IsDedup(Chunk_t &chunk)
         chunk.chunkID = ChunkID++;
         Dedupindex[hashStr] = chunk.chunkID;
         dataWrite_->RecipeMap[fileName].push_back(chunk.chunkID);
+        totaluniqueSize += chunk.chunkSize;
         return false;
     }
 }
@@ -398,8 +400,10 @@ void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int meth
     outfile << "-----------------COMPRESSION-----------------------" << endl;
     outfile << "Group Num is " << groupNum << endl;
     outfile << "Total logical size is " << totalLogicalSize << endl;
+    outfile << "Total unique size is " << totaluniqueSize << endl;
     outfile << "Total compressed size is " << totalCompressedSize << endl;
-    outfile << "Compression ratio is " << (double)totalLogicalSize / (double)totalCompressedSize << endl;
+    outfile << "Overall Compression ratio is " << (double)totalLogicalSize / (double)totalCompressedSize << endl;
+    outfile << "Unique Compression ratio is " << (double)totaluniqueSize / (double)totalCompressedSize << endl;
     outfile << "-----------------TIME-----------------------" << endl;
     outfile << "Total time is " << time << "s" << endl;
     outfile << "--------------------------------------------------" << endl;

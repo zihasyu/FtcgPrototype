@@ -2,6 +2,10 @@
 
 
 ## Changes
+### 2025.1.17
+- The compression ratio of the previous output was uniqueSize/compressionSize. This has been corrected to LogicalSize/CompressionSize
+### 2025.1.16
+- The first version was released after restore testing
 ### 2025.1.15
 - finished the recipe design and restore. If you want to use restore, uncomment the DeCompressionAll() and restoreFile(readfileList[i]) sections of main().
 - fixed some memory safety issues  
@@ -32,7 +36,7 @@
 - The subclass that uses dedup is rewritten in the dedup stage, and the dedupindex is used instead of the previous fpindex, and only one IsDedup is needed to replace the chunkid assignment and deduplication
 
 ### 2024.12.31
-Whether or not to store all data in memory before compression can be set on the command line and can be adjusted by the user. -d 1 is considered to be in external memory, -d 0 is regarded as in memory, and it is in memory by default when the suffix is not written, please enter -d 1 when the dataset is larger than your memory space.
+- Whether or not to store all data in memory before compression can be set on the command line and can be adjusted by the user. -d 1 is considered to be in external memory, -d 0 is regarded as in memory, and it is in memory by default when the suffix is not written, please enter -d 1 when the dataset is larger than your memory space.
 
 
 

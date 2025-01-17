@@ -51,6 +51,7 @@ public:
 
     // statics
     uint64_t totalLogicalSize = 0; // 总逻辑大小
+    uint64_t totaluniqueSize = 0;
     uint64_t totalCompressedSize = 0;
     uint64_t ChunkNum = 0;
     uint64_t clusterNum = 0;
