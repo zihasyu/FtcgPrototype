@@ -405,6 +405,7 @@ void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int meth
     outfile << "Overall Compression ratio is " << (double)totalLogicalSize / (double)totalCompressedSize << endl;
     outfile << "Unique Compression ratio is " << (double)totaluniqueSize / (double)totalCompressedSize << endl;
     outfile << "-----------------TIME-----------------------" << endl;
+    outfile << "Throughput is " << (double)totalLogicalSize / time << " MiB/s" << endl;
     outfile << "Total time is " << time << "s" << endl;
     outfile << "--------------------------------------------------" << endl;
     outfile.close();
