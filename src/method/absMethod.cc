@@ -391,7 +391,7 @@ void absMethod::FinalMerge()
         tmpGroup.clear();
     }
 }
-void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, int64_t time)
+void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, double time)
 {
     string outfileName = "./ChunkInfo.txt";
     ofstream outfile(outfileName, std::ios::app);
@@ -405,7 +405,7 @@ void absMethod::PrintChunkInfo(string inputDirpath, int chunkingMethod, int meth
     outfile << "Overall Compression ratio is " << (double)totalLogicalSize / (double)totalCompressedSize << endl;
     outfile << "Unique Compression ratio is " << (double)totaluniqueSize / (double)totalCompressedSize << endl;
     outfile << "-----------------TIME-----------------------" << endl;
-    outfile << "Throughput is " << (double)totalLogicalSize / time << " MiB/s" << endl;
+    outfile << "Throughput is " << (double)totalLogicalSize / 1024 / 1024 / time << " MiB/s" << endl;
     outfile << "Total time is " << time << "s" << endl;
     outfile << "--------------------------------------------------" << endl;
     outfile.close();

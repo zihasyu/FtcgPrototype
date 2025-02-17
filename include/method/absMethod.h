@@ -107,6 +107,6 @@ public:
     void SetGroup(uint64_t GroupID, uint64_t Orisize, uint32_t Comsize, uint64_t ReOffset);
     void DeCompressionAll();
     void restoreFile(string fileName);
-    void PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, int64_t time);
+    void PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, double time);
 };
 #endif
