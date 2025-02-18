@@ -1,6 +1,6 @@
 cd bin
 chunktype=0
-method=4
+method=0
 
 
 

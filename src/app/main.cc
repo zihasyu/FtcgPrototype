@@ -165,7 +165,7 @@ int main(int argc, char **argv)
     }
     auto endsum = std::chrono::high_resolution_clock::now();
     auto sumTime = (endsum - startsum);
-    auto sumTimeInSeconds = std::chrono::duration_cast<std::chrono::duration<double>>(endsum - startsum).count();
+    double sumTimeInSeconds = std::chrono::duration<double>(endsum - startsum).count();
     std::cout << "Time taken by for loop: " << sumTimeInSeconds << " s " << std::endl;
     std::cout << "loop throughput is " << (double)absMethodObj->totalLogicalSize / (double)sumTimeInSeconds / (1 << 30) << "GiB/s" << std::endl;
 
