@@ -9,7 +9,7 @@ class bruteforce : public absMethod
 {
 private:
     /* data */
-    string myName_ = "FPLz4SFBIB";
+    string myName_ = "BF";
 
     // Feature Table
     FeatureIndexTable table;

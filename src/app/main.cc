@@ -125,6 +125,11 @@ int main(int argc, char **argv)
         else
             absMethodObj = new Dedup_HSH_BIB(ExchunkSize);
         break;
+    case 7:
+        if (ExchunkSize == -1)
+            absMethodObj = new bruteforce();
+        else
+            absMethodObj = new bruteforce(ExchunkSize);
     default:
         break;
     }
@@ -160,8 +165,9 @@ int main(int argc, char **argv)
     }
     auto endsum = std::chrono::high_resolution_clock::now();
     auto sumTime = (endsum - startsum);
-    auto sumTimeInSeconds = std::chrono::duration_cast<std::chrono::seconds>(endsum - startsum).count();
+    auto sumTimeInSeconds = std::chrono::duration_cast<std::chrono::duration<double>>(endsum - startsum).count();
     std::cout << "Time taken by for loop: " << sumTimeInSeconds << " s " << std::endl;
+    std::cout << "loop throughput is " << (double)absMethodObj->totalLogicalSize / (double)sumTimeInSeconds / (1 << 30) << "GiB/s" << std::endl;
 
     tool::Logging(myName.c_str(), "processNum %d \n", processNum);
     tool::Logging(myName.c_str(), "Group Num is %d\n", absMethodObj->groupNum);

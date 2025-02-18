@@ -120,6 +120,57 @@ void Dedup_SF::ProcessOneTrace()
     {
         out << it.first << ", " << it.second << endl;
     }
+
+    // compute reduce size
+    // compute reduced size
+    for (auto it = finishedGroups.begin(); it != finishedGroups.end(); it++)
+    {
+        if (it->size() == 1)
+        {
+            continue;
+        }
+        int beforeSize = 0;
+        int afterSize = 0;
+        clusterSize = 0;
+        cout << "---------------group size:" << it->size() << "--------------------" << endl;
+        for (auto id : *it)
+        {
+            // compute before size
+            int compressedSize = 0;
+            beforeSize = 0;
+            if (clusterSize > 0)
+            {
+                beforeSize = 0;
+                compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
+                if (compressedSize <= 0)
+                {
+                    compressedSize = clusterSize;
+                }
+                beforeSize += compressedSize;
+            }
+
+            compressedSize = LZ4_compress_fast((char *)chunkSet[id].chunkContent, (char *)lz4ChunkBuffer, chunkSet[id].chunkSize, chunkSet[id].chunkSize, 3);
+            if (compressedSize <= 0)
+            {
+                compressedSize = chunkSet[id].chunkSize;
+            }
+            beforeSize += compressedSize;
+            // compute after size
+            memcpy(clusterBuffer + clusterSize, chunkSet[id].chunkContent, chunkSet[id].chunkSize);
+            clusterSize += chunkSet[id].chunkSize;
+
+            compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
+            if (compressedSize <= 0)
+            {
+                compressedSize = clusterSize;
+            }
+            afterSize = compressedSize;
+            int groupReduceSize = beforeSize - afterSize;
+
+            if (clusterSize / chunkSet[id].chunkSize > 1)
+                cout << "current group size:" << clusterSize / chunkSet[id].chunkSize << " reduce size:" << groupReduceSize << endl;
+        }
+    }
     FinalMerge();
     groupNum += finishedGroups.size();
 

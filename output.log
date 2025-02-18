@@ -1,28 +1,686 @@
 Running LZ4Cluster on LKT with size 1024
 avgChunkSize is 1024
-2025-01-13 16:50:21 <Ftcg>: Start to process 2 files
-2025-01-13 16:50:21 <Chunker>: chunking done.
-2025-01-13 16:50:21 <Chunker>: thread exit.
-2025-01-13 16:50:22 <Chunker>: chunking done.
-2025-01-13 16:50:22 <Chunker>: thread exit.
-2025-01-13 16:50:23 <Dedup_HSFRank_BIB>: total chunk num is 51390
-2025-01-13 16:50:23 <Dedup_HSFRank_BIB>: feature num is 31713
-2025-01-13 16:50:23 <Dedup_HSFRank_BIB>: FP finished chunk num is 0
-2025-01-13 16:50:23 <Dedup_HSFRank_BIB>: FP unfinished chunk num is 50539
-2025-01-13 16:50:23 <Dedup_HSFRank_BIB>: unfinished chunk num is 18045
-2025-01-13 16:50:23 <Dedup_HSFRank_BIB>: HSF Finished chunk num is 32494
-2025-01-13 16:50:23 <Dedup_HSFRank_BIB>: HSF Unfinished chunk num is 18045
-2025-01-13 16:50:24 <Dedup_HSFRank_BIB>: third Finished chunk num is 36425
-2025-01-13 16:50:24 <Dedup_HSFRank_BIB>: third Unfinished chunk num is 14114
-2025-01-13 16:50:24 <Dedup_HSFRank_BIB>: compressed chunk num is 50539
-2025-01-13 16:50:24 <Dedup_HSFRank_BIB>: 583 chunk with feature is zero
-2025-01-13 16:50:24 <absMethod>: Compression start
-2025-01-13 16:50:26 <absMethod>: Compression finished
-2025-01-13 16:50:26 <Dedup_HSFRank_BIB>: Throughput is 6.308506 GiB/s
-Time taken by for loop: 5 s 
-2025-01-13 16:50:26 <Ftcg>:  processNum 2 
-2025-01-13 16:50:26 <Ftcg>: Group Num is 16944
-2025-01-13 16:50:26 <Ftcg>: Total logical size is 414015488
-2025-01-13 16:50:26 <Ftcg>: Total compressed size is 140596480
-2025-01-13 16:50:26 <Ftcg>: Compression ratio is 2.9447
+2025-02-18 15:27:17 <Ftcg>: Start to process 1 files
+2025-02-18 15:27:17 <Chunker>: chunking done.
+2025-02-18 15:27:17 <Chunker>: thread exit.
+2025-02-18 15:27:17 <Dedup_SF>: total chunk num is 100
+2025-02-18 15:27:17 <Dedup_SF>: feature num is 0
+2025-02-18 15:27:17 <Dedup_SF>: FP finished chunk num is 0
+2025-02-18 15:27:17 <Dedup_SF>: FP unfinished chunk num is 100
+2025-02-18 15:27:17 <Dedup_SF>: a Finished chunk num is 0
+2025-02-18 15:27:17 <Dedup_SF>: a Unfinished chunk num is 100
+2025-02-18 15:27:17 <Dedup_SF>: compressed chunk num is 100
+2025-02-18 15:27:17 <Dedup_SF>: 0 chunk with feature is zero
+2025-02-18 15:27:17 <absMethod>: Compression start
+2025-02-18 15:27:17 <absMethod>: Compression finished
+2025-02-18 15:27:17 <Dedup_SF>: Throughput is 11.402814 GiB/s
+Time taken by for loop: 0 s 
+2025-02-18 15:27:17 <Ftcg>: processNum 1 
+2025-02-18 15:27:17 <Ftcg>: Group Num is 100
+2025-02-18 15:27:17 <Ftcg>: Total logical size is 819200
+2025-02-18 15:27:17 <Ftcg>: Total unique size is 819200
+2025-02-18 15:27:17 <Ftcg>: Total compressed size is 302035
+2025-02-18 15:27:17 <Ftcg>: Overall Compression ratio is 2.7123
+2025-02-18 15:27:17 <Ftcg>: Unique Compression ratio is 2.7123
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 15:27:32 <Ftcg>: Start to process 1 files
+2025-02-18 15:27:32 <Chunker>: chunking done.
+2025-02-18 15:27:32 <Chunker>: thread exit.
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 11, 85
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 1332
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 12, 87
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 1211
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 14, 93
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 1125
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 11, 12
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 1083
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 5, 10
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 972
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 5, 9
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 1037
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 15, 95
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 897
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 13, 90
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 873
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 5, 11
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 796
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 5, 7
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 819
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 0, 1
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 733
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 0, 2
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 812
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 0, 3
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 766
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 14, 15
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 714
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 14, 78
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 1033
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 0, 4
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 706
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 0, 91
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 700
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 0, 21
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 719
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 0, 71
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 742
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 13, 14
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 674
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 13, 75
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 671
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 74, 83
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 639
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 74, 77
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 607
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 26, 28
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 550
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 26, 29
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 609
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 18, 19
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 537
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 18, 74
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 755
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 18, 26
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 765
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 80, 81
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 520
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 80, 82
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 520
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 80, 92
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 506
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 80, 88
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 592
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 80, 89
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 594
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 80, 97
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 664
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 80, 96
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 616
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 37, 40
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 492
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 69, 76
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 484
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 69, 73
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 563
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 16, 17
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 473
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 69, 70
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 470
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 69, 79
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 518
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 16, 69
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 452
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 16, 22
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 886
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 37, 41
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 439
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 24, 68
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 436
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 24, 30
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 425
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 37, 38
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 424
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 46, 47
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 414
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 20, 67
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 351
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 20, 24
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 534
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 20, 84
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 434
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 20, 25
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 413
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 20, 86
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 373
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 65, 66
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 346
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 46, 48
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 325
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 36, 37
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 302
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 36, 39
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 324
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 44, 45
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 296
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 58, 59
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 278
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 46, 49
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 270
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 43, 44
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 265
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 43, 46
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 318
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 43, 50
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 247
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 58, 60
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 244
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 98, 99
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 231
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 36, 65
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 219
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 31, 32
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 204
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 31, 33
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 219
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 31, 34
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 229
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 31, 58
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 218
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 31, 42
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 217
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 6, 8
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 181
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 6, 23
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 307
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 6, 72
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 347
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 6, 94
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 185
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 61, 63
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 173
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 61, 64
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 144
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 53, 54
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 143
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 6, 27
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 119
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 6, 98
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 143
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 35, 61
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 117
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 35, 62
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 123
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 55, 56
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 112
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 55, 57
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 109
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 35, 55
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 106
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 51, 53
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 95
+2025-02-18 15:27:32 <FPLz4SFBIB>: best pair is 51, 52
+2025-02-18 15:27:32 <FPLz4SFBIB>: reduce size: 122
+2025-02-18 15:27:32 <FPLz4SFBIB>: no best pair found
+0 1 2 3 4 21 71 91 
+5 7 9 10 11 12 85 87 
+6 8 23 27 72 94 98 99 
+13 14 15 75 78 90 93 95 
+16 17 22 69 70 73 76 79 
+18 19 26 28 29 74 77 83 
+20 24 25 30 67 68 84 86 
+31 32 33 34 42 58 59 60 
+35 55 56 57 61 62 63 64 
+36 37 38 39 40 41 65 66 
+43 44 45 46 47 48 49 50 
+51 52 53 54 
+80 81 82 88 89 92 96 97 
+2025-02-18 15:27:32 <FPLz4SFBIB>: Throughput is 12.368114 GiB/s
+2025-02-18 15:27:32 <FPLz4SFBIB>: open file failed
+Time taken by for loop: 0 s 
+2025-02-18 15:27:32 <Ftcg>: processNum 1 
+2025-02-18 15:27:32 <Ftcg>: Group Num is 0
+2025-02-18 15:27:32 <Ftcg>: Total logical size is 819200
+2025-02-18 15:27:32 <Ftcg>: Total unique size is 0
+2025-02-18 15:27:32 <Ftcg>: Total compressed size is 259940
+2025-02-18 15:27:32 <Ftcg>: Overall Compression ratio is 3.1515
+2025-02-18 15:27:32 <Ftcg>: Unique Compression ratio is 0.0000
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 15:31:22 <Ftcg>: Start to process 1 files
+2025-02-18 15:31:22 <Chunker>: chunking done.
+2025-02-18 15:31:22 <Chunker>: thread exit.
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 11, 85
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 1332
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 12, 87
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 1211
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 14, 93
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 1125
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 11, 12
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 1083
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 5, 10
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 972
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 5, 9
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 1037
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 15, 95
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 897
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 13, 90
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 873
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 5, 11
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 796
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 5, 7
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 819
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 0, 1
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 733
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 0, 2
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 812
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 0, 3
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 766
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 14, 15
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 714
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 14, 78
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 1033
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 0, 4
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 706
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 0, 91
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 700
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 0, 21
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 719
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 0, 71
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 742
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 13, 14
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 674
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 13, 75
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 671
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 74, 83
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 639
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 74, 77
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 607
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 26, 28
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 550
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 26, 29
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 609
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 18, 19
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 537
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 18, 74
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 755
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 18, 26
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 765
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 80, 81
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 520
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 80, 82
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 520
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 80, 92
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 506
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 80, 88
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 592
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 80, 89
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 594
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 80, 97
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 664
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 80, 96
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 616
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 37, 40
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 492
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 69, 76
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 484
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 69, 73
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 563
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 16, 17
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 473
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 69, 70
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 470
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 69, 79
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 518
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 16, 69
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 452
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 16, 22
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 886
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 37, 41
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 439
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 24, 68
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 436
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 24, 30
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 425
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 37, 38
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 424
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 46, 47
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 414
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 20, 67
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 351
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 20, 24
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 534
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 20, 84
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 434
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 20, 25
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 413
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 20, 86
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 373
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 65, 66
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 346
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 46, 48
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 325
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 36, 37
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 302
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 36, 39
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 324
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 44, 45
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 296
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 58, 59
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 278
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 46, 49
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 270
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 43, 44
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 265
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 43, 46
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 318
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 43, 50
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 247
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 58, 60
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 244
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 98, 99
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 231
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 36, 65
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 219
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 31, 32
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 204
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 31, 33
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 219
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 31, 34
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 229
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 31, 58
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 218
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 31, 42
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 217
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 6, 8
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 181
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 6, 23
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 307
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 6, 72
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 347
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 6, 94
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 185
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 61, 63
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 173
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 61, 64
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 144
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 53, 54
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 143
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 6, 27
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 119
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 6, 98
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 143
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 35, 61
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 117
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 35, 62
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 123
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 55, 56
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 112
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 55, 57
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 109
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 35, 55
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 106
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 51, 53
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 95
+2025-02-18 15:31:22 <FPLz4SFBIB>: best pair is 51, 52
+2025-02-18 15:31:22 <FPLz4SFBIB>: reduce size: 122
+2025-02-18 15:31:22 <FPLz4SFBIB>: no best pair found
+0 1 2 3 4 21 71 91 
+5 7 9 10 11 12 85 87 
+6 8 23 27 72 94 98 99 
+13 14 15 75 78 90 93 95 
+16 17 22 69 70 73 76 79 
+18 19 26 28 29 74 77 83 
+20 24 25 30 67 68 84 86 
+31 32 33 34 42 58 59 60 
+35 55 56 57 61 62 63 64 
+36 37 38 39 40 41 65 66 
+43 44 45 46 47 48 49 50 
+51 52 53 54 
+80 81 82 88 89 92 96 97 
+2025-02-18 15:31:22 <FPLz4SFBIB>: Throughput is 12.327346 GiB/s
+2025-02-18 15:31:22 <FPLz4SFBIB>: open file failed
+Time taken by for loop: 0.634034 s 
+2025-02-18 15:31:22 <Ftcg>: processNum 1 
+2025-02-18 15:31:22 <Ftcg>: Group Num is 0
+2025-02-18 15:31:22 <Ftcg>: Total logical size is 819200
+2025-02-18 15:31:22 <Ftcg>: Total unique size is 0
+2025-02-18 15:31:22 <Ftcg>: Total compressed size is 259940
+2025-02-18 15:31:22 <Ftcg>: Overall Compression ratio is 3.1515
+2025-02-18 15:31:22 <Ftcg>: Unique Compression ratio is 0.0000
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 15:40:50 <Ftcg>: Start to process 1 files
+2025-02-18 15:40:50 <Chunker>: chunking done.
+2025-02-18 15:40:50 <Chunker>: thread exit.
+2025-02-18 15:40:50 <BF>: best pair is 11, 85
+2025-02-18 15:40:50 <BF>: reduce size: 1332
+2025-02-18 15:40:50 <BF>: best pair is 12, 87
+2025-02-18 15:40:50 <BF>: reduce size: 1211
+2025-02-18 15:40:50 <BF>: best pair is 14, 93
+2025-02-18 15:40:50 <BF>: reduce size: 1125
+2025-02-18 15:40:50 <BF>: best pair is 11, 12
+2025-02-18 15:40:50 <BF>: reduce size: 1083
+2025-02-18 15:40:50 <BF>: best pair is 5, 10
+2025-02-18 15:40:50 <BF>: reduce size: 972
+2025-02-18 15:40:50 <BF>: best pair is 5, 9
+2025-02-18 15:40:50 <BF>: reduce size: 1037
+2025-02-18 15:40:50 <BF>: best pair is 15, 95
+2025-02-18 15:40:50 <BF>: reduce size: 897
+2025-02-18 15:40:50 <BF>: best pair is 13, 90
+2025-02-18 15:40:50 <BF>: reduce size: 873
+2025-02-18 15:40:50 <BF>: best pair is 5, 11
+2025-02-18 15:40:50 <BF>: reduce size: 796
+2025-02-18 15:40:50 <BF>: best pair is 5, 7
+2025-02-18 15:40:50 <BF>: reduce size: 819
+2025-02-18 15:40:50 <BF>: best pair is 0, 1
+2025-02-18 15:40:50 <BF>: reduce size: 733
+2025-02-18 15:40:50 <BF>: best pair is 0, 2
+2025-02-18 15:40:50 <BF>: reduce size: 812
+2025-02-18 15:40:50 <BF>: best pair is 0, 3
+2025-02-18 15:40:50 <BF>: reduce size: 766
+2025-02-18 15:40:50 <BF>: best pair is 14, 15
+2025-02-18 15:40:50 <BF>: reduce size: 714
+2025-02-18 15:40:50 <BF>: best pair is 14, 78
+2025-02-18 15:40:50 <BF>: reduce size: 1033
+2025-02-18 15:40:50 <BF>: best pair is 0, 4
+2025-02-18 15:40:50 <BF>: reduce size: 706
+2025-02-18 15:40:50 <BF>: best pair is 0, 91
+2025-02-18 15:40:50 <BF>: reduce size: 700
+2025-02-18 15:40:50 <BF>: best pair is 0, 21
+2025-02-18 15:40:50 <BF>: reduce size: 719
+2025-02-18 15:40:50 <BF>: best pair is 0, 71
+2025-02-18 15:40:50 <BF>: reduce size: 742
+2025-02-18 15:40:50 <BF>: best pair is 13, 14
+2025-02-18 15:40:50 <BF>: reduce size: 674
+2025-02-18 15:40:50 <BF>: best pair is 13, 75
+2025-02-18 15:40:50 <BF>: reduce size: 671
+2025-02-18 15:40:51 <BF>: best pair is 74, 83
+2025-02-18 15:40:51 <BF>: reduce size: 639
+2025-02-18 15:40:51 <BF>: best pair is 74, 77
+2025-02-18 15:40:51 <BF>: reduce size: 607
+2025-02-18 15:40:51 <BF>: best pair is 26, 28
+2025-02-18 15:40:51 <BF>: reduce size: 550
+2025-02-18 15:40:51 <BF>: best pair is 26, 29
+2025-02-18 15:40:51 <BF>: reduce size: 609
+2025-02-18 15:40:51 <BF>: best pair is 18, 19
+2025-02-18 15:40:51 <BF>: reduce size: 537
+2025-02-18 15:40:51 <BF>: best pair is 18, 74
+2025-02-18 15:40:51 <BF>: reduce size: 755
+2025-02-18 15:40:51 <BF>: best pair is 18, 26
+2025-02-18 15:40:51 <BF>: reduce size: 765
+2025-02-18 15:40:51 <BF>: best pair is 80, 81
+2025-02-18 15:40:51 <BF>: reduce size: 520
+2025-02-18 15:40:51 <BF>: best pair is 80, 82
+2025-02-18 15:40:51 <BF>: reduce size: 520
+2025-02-18 15:40:51 <BF>: best pair is 80, 92
+2025-02-18 15:40:51 <BF>: reduce size: 506
+2025-02-18 15:40:51 <BF>: best pair is 80, 88
+2025-02-18 15:40:51 <BF>: reduce size: 592
+2025-02-18 15:40:51 <BF>: best pair is 80, 89
+2025-02-18 15:40:51 <BF>: reduce size: 594
+2025-02-18 15:40:51 <BF>: best pair is 80, 97
+2025-02-18 15:40:51 <BF>: reduce size: 664
+2025-02-18 15:40:51 <BF>: best pair is 80, 96
+2025-02-18 15:40:51 <BF>: reduce size: 616
+2025-02-18 15:40:51 <BF>: best pair is 37, 40
+2025-02-18 15:40:51 <BF>: reduce size: 492
+2025-02-18 15:40:51 <BF>: best pair is 69, 76
+2025-02-18 15:40:51 <BF>: reduce size: 484
+2025-02-18 15:40:51 <BF>: best pair is 69, 73
+2025-02-18 15:40:51 <BF>: reduce size: 563
+2025-02-18 15:40:51 <BF>: best pair is 16, 17
+2025-02-18 15:40:51 <BF>: reduce size: 473
+2025-02-18 15:40:51 <BF>: best pair is 69, 70
+2025-02-18 15:40:51 <BF>: reduce size: 470
+2025-02-18 15:40:51 <BF>: best pair is 69, 79
+2025-02-18 15:40:51 <BF>: reduce size: 518
+2025-02-18 15:40:51 <BF>: best pair is 16, 69
+2025-02-18 15:40:51 <BF>: reduce size: 452
+2025-02-18 15:40:51 <BF>: best pair is 16, 22
+2025-02-18 15:40:51 <BF>: reduce size: 886
+2025-02-18 15:40:51 <BF>: best pair is 37, 41
+2025-02-18 15:40:51 <BF>: reduce size: 439
+2025-02-18 15:40:51 <BF>: best pair is 24, 68
+2025-02-18 15:40:51 <BF>: reduce size: 436
+2025-02-18 15:40:51 <BF>: best pair is 24, 30
+2025-02-18 15:40:51 <BF>: reduce size: 425
+2025-02-18 15:40:51 <BF>: best pair is 37, 38
+2025-02-18 15:40:51 <BF>: reduce size: 424
+2025-02-18 15:40:51 <BF>: best pair is 46, 47
+2025-02-18 15:40:51 <BF>: reduce size: 414
+2025-02-18 15:40:51 <BF>: best pair is 20, 67
+2025-02-18 15:40:51 <BF>: reduce size: 351
+2025-02-18 15:40:51 <BF>: best pair is 20, 24
+2025-02-18 15:40:51 <BF>: reduce size: 534
+2025-02-18 15:40:51 <BF>: best pair is 20, 84
+2025-02-18 15:40:51 <BF>: reduce size: 434
+2025-02-18 15:40:51 <BF>: best pair is 20, 25
+2025-02-18 15:40:51 <BF>: reduce size: 413
+2025-02-18 15:40:51 <BF>: best pair is 20, 86
+2025-02-18 15:40:51 <BF>: reduce size: 373
+2025-02-18 15:40:51 <BF>: best pair is 65, 66
+2025-02-18 15:40:51 <BF>: reduce size: 346
+2025-02-18 15:40:51 <BF>: best pair is 46, 48
+2025-02-18 15:40:51 <BF>: reduce size: 325
+2025-02-18 15:40:51 <BF>: best pair is 36, 37
+2025-02-18 15:40:51 <BF>: reduce size: 302
+2025-02-18 15:40:51 <BF>: best pair is 36, 39
+2025-02-18 15:40:51 <BF>: reduce size: 324
+2025-02-18 15:40:51 <BF>: best pair is 44, 45
+2025-02-18 15:40:51 <BF>: reduce size: 296
+2025-02-18 15:40:51 <BF>: best pair is 58, 59
+2025-02-18 15:40:51 <BF>: reduce size: 278
+2025-02-18 15:40:51 <BF>: best pair is 46, 49
+2025-02-18 15:40:51 <BF>: reduce size: 270
+2025-02-18 15:40:51 <BF>: best pair is 43, 44
+2025-02-18 15:40:51 <BF>: reduce size: 265
+2025-02-18 15:40:51 <BF>: best pair is 43, 46
+2025-02-18 15:40:51 <BF>: reduce size: 318
+2025-02-18 15:40:51 <BF>: best pair is 43, 50
+2025-02-18 15:40:51 <BF>: reduce size: 247
+2025-02-18 15:40:51 <BF>: best pair is 58, 60
+2025-02-18 15:40:51 <BF>: reduce size: 244
+2025-02-18 15:40:51 <BF>: best pair is 98, 99
+2025-02-18 15:40:51 <BF>: reduce size: 231
+2025-02-18 15:40:51 <BF>: best pair is 36, 65
+2025-02-18 15:40:51 <BF>: reduce size: 219
+2025-02-18 15:40:51 <BF>: best pair is 31, 32
+2025-02-18 15:40:51 <BF>: reduce size: 204
+2025-02-18 15:40:51 <BF>: best pair is 31, 33
+2025-02-18 15:40:51 <BF>: reduce size: 219
+2025-02-18 15:40:51 <BF>: best pair is 31, 34
+2025-02-18 15:40:51 <BF>: reduce size: 229
+2025-02-18 15:40:51 <BF>: best pair is 31, 58
+2025-02-18 15:40:51 <BF>: reduce size: 218
+2025-02-18 15:40:51 <BF>: best pair is 31, 42
+2025-02-18 15:40:51 <BF>: reduce size: 217
+2025-02-18 15:40:51 <BF>: best pair is 6, 8
+2025-02-18 15:40:51 <BF>: reduce size: 181
+2025-02-18 15:40:51 <BF>: best pair is 6, 23
+2025-02-18 15:40:51 <BF>: reduce size: 307
+2025-02-18 15:40:51 <BF>: best pair is 6, 72
+2025-02-18 15:40:51 <BF>: reduce size: 347
+2025-02-18 15:40:51 <BF>: best pair is 6, 94
+2025-02-18 15:40:51 <BF>: reduce size: 185
+2025-02-18 15:40:51 <BF>: best pair is 61, 63
+2025-02-18 15:40:51 <BF>: reduce size: 173
+2025-02-18 15:40:51 <BF>: best pair is 61, 64
+2025-02-18 15:40:51 <BF>: reduce size: 144
+2025-02-18 15:40:51 <BF>: best pair is 53, 54
+2025-02-18 15:40:51 <BF>: reduce size: 143
+2025-02-18 15:40:51 <BF>: best pair is 6, 27
+2025-02-18 15:40:51 <BF>: reduce size: 119
+2025-02-18 15:40:51 <BF>: best pair is 6, 98
+2025-02-18 15:40:51 <BF>: reduce size: 143
+2025-02-18 15:40:51 <BF>: best pair is 35, 61
+2025-02-18 15:40:51 <BF>: reduce size: 117
+2025-02-18 15:40:51 <BF>: best pair is 35, 62
+2025-02-18 15:40:51 <BF>: reduce size: 123
+2025-02-18 15:40:51 <BF>: best pair is 55, 56
+2025-02-18 15:40:51 <BF>: reduce size: 112
+2025-02-18 15:40:51 <BF>: best pair is 55, 57
+2025-02-18 15:40:51 <BF>: reduce size: 109
+2025-02-18 15:40:51 <BF>: best pair is 35, 55
+2025-02-18 15:40:51 <BF>: reduce size: 106
+2025-02-18 15:40:51 <BF>: best pair is 51, 53
+2025-02-18 15:40:51 <BF>: reduce size: 95
+2025-02-18 15:40:51 <BF>: best pair is 51, 52
+2025-02-18 15:40:51 <BF>: reduce size: 122
+2025-02-18 15:40:51 <BF>: no best pair found
+0 1 2 3 4 21 71 91 
+5 7 9 10 11 12 85 87 
+6 8 23 27 72 94 98 99 
+13 14 15 75 78 90 93 95 
+16 17 22 69 70 73 76 79 
+18 19 26 28 29 74 77 83 
+20 24 25 30 67 68 84 86 
+31 32 33 34 42 58 59 60 
+35 55 56 57 61 62 63 64 
+36 37 38 39 40 41 65 66 
+43 44 45 46 47 48 49 50 
+51 52 53 54 
+80 81 82 88 89 92 96 97 
+Time taken by for loop: 0.634156 s 
+2025-02-18 15:40:51 <Ftcg>: processNum 1 
+2025-02-18 15:40:51 <Ftcg>: Group Num is 0
+2025-02-18 15:40:51 <Ftcg>: Total logical size is 819200
+2025-02-18 15:40:51 <Ftcg>: Total unique size is 0
+2025-02-18 15:40:51 <Ftcg>: Total compressed size is 259940
+2025-02-18 15:40:51 <Ftcg>: Overall Compression ratio is 3.1515
+2025-02-18 15:40:51 <Ftcg>: Unique Compression ratio is 0.0000
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 15:47:08 <Ftcg>: Start to process 1 files
+2025-02-18 15:47:08 <Chunker>: chunking done.
+2025-02-18 15:47:08 <Chunker>: thread exit.
+2025-02-18 15:47:08 <Dedup_SF>: total chunk num is 100
+2025-02-18 15:47:08 <Dedup_SF>: feature num is 0
+2025-02-18 15:47:08 <Dedup_SF>: FP finished chunk num is 0
+2025-02-18 15:47:08 <Dedup_SF>: FP unfinished chunk num is 100
+2025-02-18 15:47:08 <Dedup_SF>: a Finished chunk num is 0
+2025-02-18 15:47:08 <Dedup_SF>: a Unfinished chunk num is 100
+2025-02-18 15:47:08 <Dedup_SF>: compressed chunk num is 100
+2025-02-18 15:47:08 <Dedup_SF>: 0 chunk with feature is zero
+2025-02-18 15:47:08 <absMethod>: Compression start
+2025-02-18 15:47:08 <absMethod>: Compression finished
+2025-02-18 15:47:08 <Dedup_SF>: Throughput is 12.594124 GiB/s
+Time taken by for loop: 0.0676913 s 
+2025-02-18 15:47:08 <Ftcg>: processNum 1 
+2025-02-18 15:47:08 <Ftcg>: Group Num is 100
+2025-02-18 15:47:08 <Ftcg>: Total logical size is 819200
+2025-02-18 15:47:08 <Ftcg>: Total unique size is 819200
+2025-02-18 15:47:08 <Ftcg>: Total compressed size is 302035
+2025-02-18 15:47:08 <Ftcg>: Overall Compression ratio is 2.7123
+2025-02-18 15:47:08 <Ftcg>: Unique Compression ratio is 2.7123
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 15:50:45 <Ftcg>: Start to process 1 files
+2025-02-18 15:50:46 <Chunker>: chunking done.
+2025-02-18 15:50:46 <Chunker>: thread exit.
+2025-02-18 15:50:46 <Dedup_SF>: total chunk num is 100
+2025-02-18 15:50:46 <Dedup_SF>: feature num is 0
+2025-02-18 15:50:46 <Dedup_SF>: FP finished chunk num is 0
+2025-02-18 15:50:46 <Dedup_SF>: FP unfinished chunk num is 100
+2025-02-18 15:50:46 <Dedup_SF>: a Finished chunk num is 0
+2025-02-18 15:50:46 <Dedup_SF>: a Unfinished chunk num is 100
+2025-02-18 15:50:46 <Dedup_SF>: compressed chunk num is 100
+2025-02-18 15:50:46 <Dedup_SF>: 0 chunk with feature is zero
+2025-02-18 15:50:46 <absMethod>: Compression start
+2025-02-18 15:50:46 <absMethod>: Compression finished
+2025-02-18 15:50:46 <Dedup_SF>: Throughput is 11.513634 GiB/s
+Time taken by for loop: 0.0669686 s 
+loop throughput is 0.0113925GiB/s
+2025-02-18 15:50:46 <Ftcg>: processNum 1 
+2025-02-18 15:50:46 <Ftcg>: Group Num is 100
+2025-02-18 15:50:46 <Ftcg>: Total logical size is 819200
+2025-02-18 15:50:46 <Ftcg>: Total unique size is 819200
+2025-02-18 15:50:46 <Ftcg>: Total compressed size is 302035
+2025-02-18 15:50:46 <Ftcg>: Overall Compression ratio is 2.7123
+2025-02-18 15:50:46 <Ftcg>: Unique Compression ratio is 2.7123
 --------------------------------------------------
