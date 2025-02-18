@@ -43,20 +43,7 @@ void bruteforce::ProcessOneTrace()
             // calculate feature
             stringstream ss;
             ss << tmpChunk.chunkID;
-            auto start = std::chrono::high_resolution_clock::now();
-            // table.PutOrignals(ss.str(), (char *)tmpChunk.chunkContent);
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            //  nTransTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            // finesseTable.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            auto end = std::chrono::high_resolution_clock::now();
-            featureExtractTime += end - start;
-            // table.Put(ss.str(), (char *)tmpChunk.chunkContent);
-            GenerateHash(mdCtx, tmpChunk.chunkContent, tmpChunk.chunkSize, hashBuf);
-            hashStr.assign((char *)hashBuf, CHUNK_HASH_SIZE);
-            FP_Insert(hashStr, tmpChunk.chunkID);
-
             Chunk_Insert(tmpChunk);
-
             totalChunkNum++;
         }
     }
@@ -65,10 +52,6 @@ void bruteforce::ProcessOneTrace()
         recieveQueue->done_ = false;
         return;
     }
-    vector<set<string>> finishedGroups;
-    set<string> finishedChunks;
-    set<string> unfinishedChunks;
-    set<string> tmpGroup; // 16一组chunkid
     ofstream out("../frequencyTable.txt", ios::app);
     if (!out.is_open())
     {
@@ -197,19 +180,19 @@ void bruteforce::ProcessOneTrace()
     }
 
     // output group result
-    // for (auto group : mergedGroup)
-    // {
-    //     tmpGroup.clear();
-    //     if (group.second.size() == 0)
-    //         continue;
-    //     for (auto id : group.second)
-    //     {
-    //         tmpGroup.insert(to_string(id));
-    //         cout << id << " ";
-    //     }
-    //     finishedGroups.push_back(tmpGroup);
-    //     cout << endl;
-    // }
+    for (auto group : mergedGroup)
+    {
+        tmpGroup.clear();
+        if (group.second.size() == 0)
+            continue;
+        for (auto id : group.second)
+        {
+            tmpGroup.insert(id);
+            // cout << id << " ";
+        }
+        finishedGroups.push_back(tmpGroup);
+        // cout << endl;
+    }
 
     frequency_table.clear();
     for (auto it : finishedGroups)
@@ -224,8 +207,6 @@ void bruteforce::ProcessOneTrace()
     clusterSize = 0;
     totalLogicalSize = 0;
     totalCompressedSize = 0;
-    map<int, uint64_t> groupLogicalSize;
-    map<int, uint64_t> groupCompressedSize;
     for (auto group : finishedGroups)
     {
         if (!groupLogicalSize[group.size()])
@@ -240,7 +221,7 @@ void bruteforce::ProcessOneTrace()
         {
 
             auto start = std::chrono::high_resolution_clock::now();
-            memcpy(clusterBuffer + clusterSize, chunkSet[stoull(id)].chunkContent, chunkSet[stoull(id)].chunkSize);
+            memcpy(clusterBuffer + clusterSize, chunkSet[id].chunkContent, chunkSet[id].chunkSize);
 
             // Chunk_t GroupTmpChunk = dataWrite_->Get_Chunk_Info(stoull(id));
             // memcpy(clusterBuffer + clusterSize, GroupTmpChunk.chunkContent, GroupTmpChunk.chunkSize);
@@ -255,7 +236,7 @@ void bruteforce::ProcessOneTrace()
             clusterCnt++;
             ChunkNum++;
             // clusterSize += GroupTmpChunk.chunkSize;
-            clusterSize += chunkSet[stoull(id)].chunkSize;
+            clusterSize += chunkSet[id].chunkSize;
         }
         groupLogicalSize[group.size()] += clusterSize;
         // do lz4 compression

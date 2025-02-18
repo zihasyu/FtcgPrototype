@@ -684,3 +684,2645 @@ loop throughput is 0.0113925GiB/s
 2025-02-18 15:50:46 <Ftcg>: Overall Compression ratio is 2.7123
 2025-02-18 15:50:46 <Ftcg>: Unique Compression ratio is 2.7123
 --------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 16:20:20 <Ftcg>: Start to process 1 files
+2025-02-18 16:20:20 <Chunker>: chunking done.
+2025-02-18 16:20:20 <Chunker>: thread exit.
+2025-02-18 16:20:35 <BF>: best pair is 491, 994
+2025-02-18 16:20:35 <BF>: reduce size: 3367
+2025-02-18 16:20:35 <BF>: best pair is 587, 750
+2025-02-18 16:20:35 <BF>: reduce size: 3207
+2025-02-18 16:20:35 <BF>: best pair is 490, 993
+2025-02-18 16:20:35 <BF>: reduce size: 3032
+2025-02-18 16:20:35 <BF>: best pair is 77, 498
+2025-02-18 16:20:35 <BF>: reduce size: 2851
+2025-02-18 16:20:35 <BF>: best pair is 77, 649
+2025-02-18 16:20:35 <BF>: reduce size: 2853
+2025-02-18 16:20:35 <BF>: best pair is 96, 748
+2025-02-18 16:20:35 <BF>: reduce size: 2789
+2025-02-18 16:20:36 <BF>: best pair is 77, 352
+2025-02-18 16:20:36 <BF>: reduce size: 2695
+2025-02-18 16:20:36 <BF>: best pair is 77, 126
+2025-02-18 16:20:36 <BF>: reduce size: 2752
+2025-02-18 16:20:36 <BF>: best pair is 96, 679
+2025-02-18 16:20:36 <BF>: reduce size: 2694
+2025-02-18 16:20:36 <BF>: best pair is 586, 749
+2025-02-18 16:20:36 <BF>: reduce size: 2631
+2025-02-18 16:20:36 <BF>: best pair is 77, 539
+2025-02-18 16:20:36 <BF>: reduce size: 2581
+2025-02-18 16:20:36 <BF>: best pair is 96, 585
+2025-02-18 16:20:36 <BF>: reduce size: 2581
+2025-02-18 16:20:36 <BF>: best pair is 586, 680
+2025-02-18 16:20:36 <BF>: reduce size: 2481
+2025-02-18 16:20:36 <BF>: best pair is 390, 543
+2025-02-18 16:20:36 <BF>: reduce size: 2457
+2025-02-18 16:20:36 <BF>: best pair is 469, 959
+2025-02-18 16:20:36 <BF>: reduce size: 2455
+2025-02-18 16:20:36 <BF>: best pair is 501, 998
+2025-02-18 16:20:36 <BF>: reduce size: 2414
+2025-02-18 16:20:36 <BF>: best pair is 16, 459
+2025-02-18 16:20:36 <BF>: reduce size: 2410
+2025-02-18 16:20:36 <BF>: best pair is 390, 509
+2025-02-18 16:20:36 <BF>: reduce size: 2405
+2025-02-18 16:20:36 <BF>: best pair is 570, 636
+2025-02-18 16:20:36 <BF>: reduce size: 2366
+2025-02-18 16:20:37 <BF>: best pair is 73, 535
+2025-02-18 16:20:37 <BF>: reduce size: 2351
+2025-02-18 16:20:37 <BF>: best pair is 73, 119
+2025-02-18 16:20:37 <BF>: reduce size: 2328
+2025-02-18 16:20:37 <BF>: best pair is 77, 799
+2025-02-18 16:20:37 <BF>: reduce size: 2318
+2025-02-18 16:20:37 <BF>: best pair is 564, 673
+2025-02-18 16:20:37 <BF>: reduce size: 2273
+2025-02-18 16:20:37 <BF>: best pair is 564, 740
+2025-02-18 16:20:37 <BF>: reduce size: 2248
+2025-02-18 16:20:37 <BF>: best pair is 73, 280
+2025-02-18 16:20:37 <BF>: reduce size: 2241
+2025-02-18 16:20:37 <BF>: best pair is 106, 603
+2025-02-18 16:20:37 <BF>: reduce size: 2223
+2025-02-18 16:20:37 <BF>: best pair is 76, 538
+2025-02-18 16:20:37 <BF>: reduce size: 2181
+2025-02-18 16:20:37 <BF>: best pair is 76, 713
+2025-02-18 16:20:37 <BF>: reduce size: 2308
+2025-02-18 16:20:37 <BF>: best pair is 96, 514
+2025-02-18 16:20:37 <BF>: reduce size: 2180
+2025-02-18 16:20:37 <BF>: best pair is 96, 586
+2025-02-18 16:20:37 <BF>: reduce size: 2249
+2025-02-18 16:20:37 <BF>: best pair is 22, 111
+2025-02-18 16:20:37 <BF>: reduce size: 2175
+2025-02-18 16:20:38 <BF>: best pair is 641, 794
+2025-02-18 16:20:38 <BF>: reduce size: 2137
+2025-02-18 16:20:38 <BF>: best pair is 85, 449
+2025-02-18 16:20:38 <BF>: reduce size: 2131
+2025-02-18 16:20:38 <BF>: best pair is 593, 772
+2025-02-18 16:20:38 <BF>: reduce size: 2127
+2025-02-18 16:20:38 <BF>: best pair is 22, 531
+2025-02-18 16:20:38 <BF>: reduce size: 2114
+2025-02-18 16:20:38 <BF>: best pair is 213, 318
+2025-02-18 16:20:38 <BF>: reduce size: 2082
+2025-02-18 16:20:38 <BF>: best pair is 949, 1015
+2025-02-18 16:20:38 <BF>: reduce size: 2078
+2025-02-18 16:20:38 <BF>: best pair is 12, 1023
+2025-02-18 16:20:38 <BF>: reduce size: 2054
+2025-02-18 16:20:38 <BF>: best pair is 569, 635
+2025-02-18 16:20:38 <BF>: reduce size: 2053
+2025-02-18 16:20:38 <BF>: best pair is 18, 103
+2025-02-18 16:20:38 <BF>: reduce size: 2051
+2025-02-18 16:20:38 <BF>: best pair is 18, 593
+2025-02-18 16:20:38 <BF>: reduce size: 2110
+2025-02-18 16:20:38 <BF>: best pair is 76, 351
+2025-02-18 16:20:38 <BF>: reduce size: 2045
+2025-02-18 16:20:38 <BF>: best pair is 12, 155
+2025-02-18 16:20:38 <BF>: reduce size: 2035
+2025-02-18 16:20:38 <BF>: best pair is 12, 564
+2025-02-18 16:20:38 <BF>: reduce size: 2028
+2025-02-18 16:20:39 <BF>: best pair is 76, 490
+2025-02-18 16:20:39 <BF>: reduce size: 2013
+2025-02-18 16:20:39 <BF>: best pair is 705, 788
+2025-02-18 16:20:39 <BF>: reduce size: 2012
+2025-02-18 16:20:39 <BF>: best pair is 77, 715
+2025-02-18 16:20:39 <BF>: reduce size: 2010
+2025-02-18 16:20:39 <BF>: best pair is 460, 525
+2025-02-18 16:20:39 <BF>: reduce size: 2000
+2025-02-18 16:20:39 <BF>: best pair is 22, 252
+2025-02-18 16:20:39 <BF>: reduce size: 1981
+2025-02-18 16:20:39 <BF>: best pair is 666, 809
+2025-02-18 16:20:39 <BF>: reduce size: 1975
+2025-02-18 16:20:39 <BF>: best pair is 826, 829
+2025-02-18 16:20:39 <BF>: reduce size: 1970
+2025-02-18 16:20:39 <BF>: best pair is 17, 460
+2025-02-18 16:20:39 <BF>: reduce size: 1960
+2025-02-18 16:20:39 <BF>: best pair is 136, 390
+2025-02-18 16:20:39 <BF>: reduce size: 1907
+2025-02-18 16:20:39 <BF>: best pair is 451, 567
+2025-02-18 16:20:39 <BF>: reduce size: 1904
+2025-02-18 16:20:39 <BF>: best pair is 599, 776
+2025-02-18 16:20:39 <BF>: reduce size: 1903
+2025-02-18 16:20:39 <BF>: best pair is 73, 478
+2025-02-18 16:20:39 <BF>: reduce size: 1898
+2025-02-18 16:20:40 <BF>: best pair is 518, 545
+2025-02-18 16:20:40 <BF>: reduce size: 1893
+2025-02-18 16:20:40 <BF>: best pair is 73, 705
+2025-02-18 16:20:40 <BF>: reduce size: 1879
+2025-02-18 16:20:40 <BF>: best pair is 73, 120
+2025-02-18 16:20:40 <BF>: reduce size: 1879
+2025-02-18 16:20:40 <BF>: best pair is 17, 524
+2025-02-18 16:20:40 <BF>: reduce size: 1840
+2025-02-18 16:20:40 <BF>: best pair is 22, 606
+2025-02-18 16:20:40 <BF>: reduce size: 1827
+2025-02-18 16:20:40 <BF>: best pair is 22, 472
+2025-02-18 16:20:40 <BF>: reduce size: 1835
+2025-02-18 16:20:40 <BF>: best pair is 536, 638
+2025-02-18 16:20:40 <BF>: reduce size: 1811
+2025-02-18 16:20:40 <BF>: best pair is 729, 1008
+2025-02-18 16:20:40 <BF>: reduce size: 1811
+2025-02-18 16:20:40 <BF>: best pair is 700, 783
+2025-02-18 16:20:40 <BF>: reduce size: 1807
+2025-02-18 16:20:40 <BF>: best pair is 599, 692
+2025-02-18 16:20:40 <BF>: reduce size: 1798
+2025-02-18 16:20:40 <BF>: best pair is 856, 883
+2025-02-18 16:20:40 <BF>: reduce size: 1792
+2025-02-18 16:20:40 <BF>: best pair is 83, 518
+2025-02-18 16:20:40 <BF>: reduce size: 1791
+2025-02-18 16:20:41 <BF>: best pair is 83, 738
+2025-02-18 16:20:41 <BF>: reduce size: 1955
+2025-02-18 16:20:41 <BF>: best pair is 171, 173
+2025-02-18 16:20:41 <BF>: reduce size: 1777
+2025-02-18 16:20:41 <BF>: best pair is 171, 177
+2025-02-18 16:20:41 <BF>: reduce size: 1926
+2025-02-18 16:20:41 <BF>: best pair is 83, 394
+2025-02-18 16:20:41 <BF>: reduce size: 1775
+2025-02-18 16:20:41 <BF>: best pair is 16, 587
+2025-02-18 16:20:41 <BF>: reduce size: 1765
+2025-02-18 16:20:41 <BF>: best pair is 16, 17
+2025-02-18 16:20:41 <BF>: reduce size: 2453
+2025-02-18 16:20:41 <BF>: best pair is 678, 957
+2025-02-18 16:20:41 <BF>: reduce size: 1757
+2025-02-18 16:20:41 <BF>: best pair is 594, 773
+2025-02-18 16:20:41 <BF>: reduce size: 1752
+2025-02-18 16:20:41 <BF>: best pair is 125, 798
+2025-02-18 16:20:41 <BF>: reduce size: 1741
+2025-02-18 16:20:41 <BF>: best pair is 125, 643
+2025-02-18 16:20:41 <BF>: reduce size: 1909
+2025-02-18 16:20:41 <BF>: best pair is 85, 519
+2025-02-18 16:20:41 <BF>: reduce size: 1736
+2025-02-18 16:20:41 <BF>: best pair is 197, 261
+2025-02-18 16:20:41 <BF>: reduce size: 1736
+2025-02-18 16:20:41 <BF>: best pair is 91, 952
+2025-02-18 16:20:41 <BF>: reduce size: 1729
+2025-02-18 16:20:42 <BF>: best pair is 465, 691
+2025-02-18 16:20:42 <BF>: reduce size: 1718
+2025-02-18 16:20:42 <BF>: best pair is 12, 520
+2025-02-18 16:20:42 <BF>: reduce size: 1708
+2025-02-18 16:20:42 <BF>: best pair is 12, 450
+2025-02-18 16:20:42 <BF>: reduce size: 1732
+2025-02-18 16:20:42 <BF>: best pair is 18, 965
+2025-02-18 16:20:42 <BF>: reduce size: 1702
+2025-02-18 16:20:42 <BF>: best pair is 18, 687
+2025-02-18 16:20:42 <BF>: reduce size: 1841
+2025-02-18 16:20:42 <BF>: best pair is 141, 813
+2025-02-18 16:20:42 <BF>: reduce size: 1685
+2025-02-18 16:20:42 <BF>: best pair is 125, 797
+2025-02-18 16:20:42 <BF>: reduce size: 1675
+2025-02-18 16:20:42 <BF>: best pair is 818, 819
+2025-02-18 16:20:42 <BF>: reduce size: 1663
+2025-02-18 16:20:42 <BF>: best pair is 85, 154
+2025-02-18 16:20:42 <BF>: reduce size: 1650
+2025-02-18 16:20:42 <BF>: best pair is 818, 827
+2025-02-18 16:20:42 <BF>: reduce size: 1650
+2025-02-18 16:20:42 <BF>: best pair is 652, 801
+2025-02-18 16:20:42 <BF>: reduce size: 1649
+2025-02-18 16:20:42 <BF>: best pair is 74, 121
+2025-02-18 16:20:42 <BF>: reduce size: 1639
+2025-02-18 16:20:43 <BF>: best pair is 74, 536
+2025-02-18 16:20:43 <BF>: reduce size: 1703
+2025-02-18 16:20:43 <BF>: best pair is 624, 787
+2025-02-18 16:20:43 <BF>: reduce size: 1612
+2025-02-18 16:20:43 <BF>: best pair is 164, 179
+2025-02-18 16:20:43 <BF>: reduce size: 1608
+2025-02-18 16:20:43 <BF>: best pair is 164, 171
+2025-02-18 16:20:43 <BF>: reduce size: 1685
+2025-02-18 16:20:43 <BF>: best pair is 164, 170
+2025-02-18 16:20:43 <BF>: reduce size: 1891
+2025-02-18 16:20:43 <BF>: best pair is 164, 174
+2025-02-18 16:20:43 <BF>: reduce size: 1639
+2025-02-18 16:20:43 <BF>: best pair is 164, 176
+2025-02-18 16:20:43 <BF>: reduce size: 1658
+2025-02-18 16:20:43 <BF>: best pair is 671, 817
+2025-02-18 16:20:43 <BF>: reduce size: 1603
+2025-02-18 16:20:43 <BF>: best pair is 136, 666
+2025-02-18 16:20:43 <BF>: reduce size: 1583
+2025-02-18 16:20:43 <BF>: best pair is 136, 730
+2025-02-18 16:20:43 <BF>: reduce size: 1643
+2025-02-18 16:20:43 <BF>: best pair is 22, 780
+2025-02-18 16:20:43 <BF>: reduce size: 1581
+2025-02-18 16:20:44 <BF>: best pair is 22, 975
+2025-02-18 16:20:44 <BF>: reduce size: 1585
+2025-02-18 16:20:44 <BF>: best pair is 74, 708
+2025-02-18 16:20:44 <BF>: reduce size: 1580
+2025-02-18 16:20:44 <BF>: best pair is 296, 312
+2025-02-18 16:20:44 <BF>: reduce size: 1578
+2025-02-18 16:20:44 <BF>: best pair is 74, 792
+2025-02-18 16:20:44 <BF>: reduce size: 1573
+2025-02-18 16:20:44 <BF>: best pair is 823, 832
+2025-02-18 16:20:44 <BF>: reduce size: 1570
+2025-02-18 16:20:44 <BF>: best pair is 823, 826
+2025-02-18 16:20:44 <BF>: reduce size: 1611
+2025-02-18 16:20:44 <BF>: best pair is 823, 825
+2025-02-18 16:20:44 <BF>: reduce size: 1630
+2025-02-18 16:20:44 <BF>: best pair is 85, 739
+2025-02-18 16:20:44 <BF>: reduce size: 1561
+2025-02-18 16:20:44 <BF>: best pair is 85, 672
+2025-02-18 16:20:44 <BF>: reduce size: 1563
+2025-02-18 16:20:44 <BF>: best pair is 74, 990
+2025-02-18 16:20:44 <BF>: reduce size: 1543
+2025-02-18 16:20:45 <BF>: best pair is 856, 884
+2025-02-18 16:20:45 <BF>: reduce size: 1538
+2025-02-18 16:20:45 <BF>: best pair is 192, 251
+2025-02-18 16:20:45 <BF>: reduce size: 1518
+2025-02-18 16:20:45 <BF>: best pair is 192, 386
+2025-02-18 16:20:45 <BF>: reduce size: 1642
+2025-02-18 16:20:45 <BF>: best pair is 588, 751
+2025-02-18 16:20:45 <BF>: reduce size: 1517
+2025-02-18 16:20:45 <BF>: best pair is 18, 526
+2025-02-18 16:20:45 <BF>: reduce size: 1508
+2025-02-18 16:20:45 <BF>: best pair is 512, 544
+2025-02-18 16:20:45 <BF>: reduce size: 1505
+2025-02-18 16:20:45 <BF>: best pair is 451, 741
+2025-02-18 16:20:45 <BF>: reduce size: 1500
+2025-02-18 16:20:45 <BF>: best pair is 192, 244
+2025-02-18 16:20:45 <BF>: reduce size: 1499
+2025-02-18 16:20:45 <BF>: best pair is 192, 243
+2025-02-18 16:20:45 <BF>: reduce size: 1530
+2025-02-18 16:20:45 <BF>: best pair is 470, 530
+2025-02-18 16:20:45 <BF>: reduce size: 1483
+2025-02-18 16:20:45 <BF>: best pair is 568, 634
+2025-02-18 16:20:45 <BF>: reduce size: 1482
+2025-02-18 16:20:45 <BF>: best pair is 856, 900
+2025-02-18 16:20:45 <BF>: reduce size: 1475
+2025-02-18 16:20:46 <BF>: best pair is 856, 878
+2025-02-18 16:20:46 <BF>: reduce size: 1485
+2025-02-18 16:20:46 <BF>: best pair is 856, 877
+2025-02-18 16:20:46 <BF>: reduce size: 1526
+2025-02-18 16:20:46 <BF>: best pair is 756, 757
+2025-02-18 16:20:46 <BF>: reduce size: 1473
+2025-02-18 16:20:46 <BF>: best pair is 192, 357
+2025-02-18 16:20:46 <BF>: reduce size: 1469
+2025-02-18 16:20:46 <BF>: best pair is 192, 207
+2025-02-18 16:20:46 <BF>: reduce size: 1466
+2025-02-18 16:20:46 <BF>: best pair is 685, 686
+2025-02-18 16:20:46 <BF>: reduce size: 1463
+2025-02-18 16:20:46 <BF>: best pair is 582, 745
+2025-02-18 16:20:46 <BF>: reduce size: 1459
+2025-02-18 16:20:46 <BF>: best pair is 468, 958
+2025-02-18 16:20:46 <BF>: reduce size: 1454
+2025-02-18 16:20:46 <BF>: best pair is 489, 537
+2025-02-18 16:20:46 <BF>: reduce size: 1441
+2025-02-18 16:20:46 <BF>: best pair is 76, 492
+2025-02-18 16:20:46 <BF>: reduce size: 1431
+2025-02-18 16:20:46 <BF>: best pair is 569, 570
+2025-02-18 16:20:46 <BF>: reduce size: 1430
+2025-02-18 16:20:47 <BF>: best pair is 76, 644
+2025-02-18 16:20:47 <BF>: reduce size: 1425
+2025-02-18 16:20:47 <BF>: best pair is 75, 350
+2025-02-18 16:20:47 <BF>: reduce size: 1416
+2025-02-18 16:20:47 <BF>: best pair is 75, 123
+2025-02-18 16:20:47 <BF>: reduce size: 1460
+2025-02-18 16:20:47 <BF>: best pair is 75, 641
+2025-02-18 16:20:47 <BF>: reduce size: 1502
+2025-02-18 16:20:47 <BF>: best pair is 75, 489
+2025-02-18 16:20:47 <BF>: reduce size: 1510
+2025-02-18 16:20:47 <BF>: best pair is 668, 812
+2025-02-18 16:20:47 <BF>: reduce size: 1414
+2025-02-18 16:20:47 <BF>: best pair is 75, 992
+2025-02-18 16:20:47 <BF>: reduce size: 1411
+2025-02-18 16:20:47 <BF>: best pair is 81, 135
+2025-02-18 16:20:47 <BF>: reduce size: 1401
+2025-02-18 16:20:47 <BF>: best pair is 197, 300
+2025-02-18 16:20:47 <BF>: reduce size: 1400
+2025-02-18 16:20:47 <BF>: best pair is 107, 968
+2025-02-18 16:20:47 <BF>: reduce size: 1398
+2025-02-18 16:20:47 <BF>: best pair is 107, 599
+2025-02-18 16:20:47 <BF>: reduce size: 1444
+2025-02-18 16:20:48 <BF>: best pair is 107, 466
+2025-02-18 16:20:48 <BF>: reduce size: 1488
+2025-02-18 16:20:48 <BF>: best pair is 652, 802
+2025-02-18 16:20:48 <BF>: reduce size: 1389
+2025-02-18 16:20:48 <BF>: best pair is 210, 465
+2025-02-18 16:20:48 <BF>: reduce size: 1387
+2025-02-18 16:20:48 <BF>: best pair is 690, 735
+2025-02-18 16:20:48 <BF>: reduce size: 1385
+2025-02-18 16:20:48 <BF>: best pair is 756, 768
+2025-02-18 16:20:48 <BF>: reduce size: 1384
+2025-02-18 16:20:48 <BF>: best pair is 83, 546
+2025-02-18 16:20:48 <BF>: reduce size: 1383
+2025-02-18 16:20:48 <BF>: best pair is 83, 1019
+2025-02-18 16:20:48 <BF>: reduce size: 1516
+2025-02-18 16:20:48 <BF>: best pair is 74, 293
+2025-02-18 16:20:48 <BF>: reduce size: 1373
+2025-02-18 16:20:48 <BF>: best pair is 736, 1016
+2025-02-18 16:20:48 <BF>: reduce size: 1366
+2025-02-18 16:20:48 <BF>: best pair is 158, 317
+2025-02-18 16:20:48 <BF>: reduce size: 1357
+2025-02-18 16:20:48 <BF>: best pair is 187, 246
+2025-02-18 16:20:48 <BF>: reduce size: 1356
+2025-02-18 16:20:48 <BF>: best pair is 583, 746
+2025-02-18 16:20:48 <BF>: reduce size: 1353
+2025-02-18 16:20:48 <BF>: best pair is 13, 163
+2025-02-18 16:20:48 <BF>: reduce size: 1352
+2025-02-18 16:20:49 <BF>: best pair is 13, 454
+2025-02-18 16:20:49 <BF>: reduce size: 1402
+2025-02-18 16:20:49 <BF>: best pair is 13, 674
+2025-02-18 16:20:49 <BF>: reduce size: 1536
+2025-02-18 16:20:49 <BF>: best pair is 13, 742
+2025-02-18 16:20:49 <BF>: reduce size: 1548
+2025-02-18 16:20:49 <BF>: best pair is 13, 574
+2025-02-18 16:20:49 <BF>: reduce size: 1522
+2025-02-18 16:20:49 <BF>: best pair is 160, 191
+2025-02-18 16:20:49 <BF>: reduce size: 1349
+2025-02-18 16:20:49 <BF>: best pair is 18, 462
+2025-02-18 16:20:49 <BF>: reduce size: 1348
+2025-02-18 16:20:49 <BF>: best pair is 21, 470
+2025-02-18 16:20:49 <BF>: reduce size: 1348
+2025-02-18 16:20:49 <BF>: best pair is 21, 695
+2025-02-18 16:20:49 <BF>: reduce size: 1419
+2025-02-18 16:20:49 <BF>: best pair is 21, 110
+2025-02-18 16:20:49 <BF>: reduce size: 1415
+2025-02-18 16:20:49 <BF>: best pair is 615, 815
+2025-02-18 16:20:49 <BF>: reduce size: 1348
+2025-02-18 16:20:49 <BF>: best pair is 158, 212
+2025-02-18 16:20:49 <BF>: reduce size: 1341
+2025-02-18 16:20:49 <BF>: best pair is 158, 377
+2025-02-18 16:20:49 <BF>: reduce size: 1346
+2025-02-18 16:20:50 <BF>: best pair is 112, 781
+2025-02-18 16:20:50 <BF>: reduce size: 1339
+2025-02-18 16:20:50 <BF>: best pair is 20, 528
+2025-02-18 16:20:50 <BF>: reduce size: 1335
+2025-02-18 16:20:50 <BF>: best pair is 20, 107
+2025-02-18 16:20:50 <BF>: reduce size: 1459
+2025-02-18 16:20:50 <BF>: best pair is 11, 85
+2025-02-18 16:20:50 <BF>: reduce size: 1332
+2025-02-18 16:20:50 <BF>: best pair is 11, 1022
+2025-02-18 16:20:50 <BF>: reduce size: 1349
+2025-02-18 16:20:50 <BF>: best pair is 850, 875
+2025-02-18 16:20:50 <BF>: reduce size: 1328
+2025-02-18 16:20:50 <BF>: best pair is 729, 818
+2025-02-18 16:20:50 <BF>: reduce size: 1320
+2025-02-18 16:20:50 <BF>: best pair is 210, 967
+2025-02-18 16:20:50 <BF>: reduce size: 1311
+2025-02-18 16:20:50 <BF>: best pair is 722, 727
+2025-02-18 16:20:50 <BF>: reduce size: 1302
+2025-02-18 16:20:50 <BF>: best pair is 158, 187
+2025-02-18 16:20:50 <BF>: reduce size: 1299
+2025-02-18 16:20:50 <BF>: best pair is 158, 237
+2025-02-18 16:20:50 <BF>: reduce size: 1342
+2025-02-18 16:20:50 <BF>: best pair is 192, 388
+2025-02-18 16:20:50 <BF>: reduce size: 1299
+2025-02-18 16:20:51 <BF>: best pair is 152, 199
+2025-02-18 16:20:51 <BF>: reduce size: 1295
+2025-02-18 16:20:51 <BF>: best pair is 169, 175
+2025-02-18 16:20:51 <BF>: reduce size: 1292
+2025-02-18 16:20:51 <BF>: best pair is 554, 657
+2025-02-18 16:20:51 <BF>: reduce size: 1292
+2025-02-18 16:20:51 <BF>: best pair is 613, 980
+2025-02-18 16:20:51 <BF>: reduce size: 1292
+2025-02-18 16:20:51 <BF>: best pair is 613, 700
+2025-02-18 16:20:51 <BF>: reduce size: 1448
+2025-02-18 16:20:51 <BF>: best pair is 613, 614
+2025-02-18 16:20:51 <BF>: reduce size: 1428
+2025-02-18 16:20:51 <BF>: best pair is 633, 790
+2025-02-18 16:20:51 <BF>: reduce size: 1288
+2025-02-18 16:20:51 <BF>: best pair is 281, 479
+2025-02-18 16:20:51 <BF>: reduce size: 1279
+2025-02-18 16:20:51 <BF>: best pair is 159, 242
+2025-02-18 16:20:51 <BF>: reduce size: 1275
+2025-02-18 16:20:51 <BF>: best pair is 592, 771
+2025-02-18 16:20:51 <BF>: reduce size: 1274
+2025-02-18 16:20:51 <BF>: best pair is 667, 811
+2025-02-18 16:20:51 <BF>: reduce size: 1272
+2025-02-18 16:20:51 <BF>: best pair is 856, 885
+2025-02-18 16:20:51 <BF>: reduce size: 1272
+2025-02-18 16:20:51 <BF>: best pair is 856, 886
+2025-02-18 16:20:51 <BF>: reduce size: 1377
+2025-02-18 16:20:52 <BF>: best pair is 850, 927
+2025-02-18 16:20:52 <BF>: reduce size: 1270
+2025-02-18 16:20:52 <BF>: best pair is 850, 861
+2025-02-18 16:20:52 <BF>: reduce size: 1353
+2025-02-18 16:20:52 <BF>: best pair is 903, 926
+2025-02-18 16:20:52 <BF>: reduce size: 1268
+2025-02-18 16:20:52 <BF>: best pair is 216, 341
+2025-02-18 16:20:52 <BF>: reduce size: 1265
+2025-02-18 16:20:52 <BF>: best pair is 588, 963
+2025-02-18 16:20:52 <BF>: reduce size: 1252
+2025-02-18 16:20:52 <BF>: best pair is 217, 259
+2025-02-18 16:20:52 <BF>: reduce size: 1250
+2025-02-18 16:20:52 <BF>: best pair is 891, 892
+2025-02-18 16:20:52 <BF>: reduce size: 1249
+2025-02-18 16:20:52 <BF>: best pair is 678, 747
+2025-02-18 16:20:52 <BF>: reduce size: 1246
+2025-02-18 16:20:52 <BF>: best pair is 158, 284
+2025-02-18 16:20:52 <BF>: reduce size: 1243
+2025-02-18 16:20:52 <BF>: best pair is 146, 149
+2025-02-18 16:20:52 <BF>: reduce size: 1238
+2025-02-18 16:20:52 <BF>: best pair is 949, 950
+2025-02-18 16:20:52 <BF>: reduce size: 1232
+2025-02-18 16:20:52 <BF>: best pair is 186, 584
+2025-02-18 16:20:52 <BF>: reduce size: 1231
+2025-02-18 16:20:52 <BF>: best pair is 186, 678
+2025-02-18 16:20:52 <BF>: reduce size: 1700
+2025-02-18 16:20:52 <BF>: best pair is 186, 349
+2025-02-18 16:20:52 <BF>: reduce size: 1417
+2025-02-18 16:20:53 <BF>: best pair is 652, 653
+2025-02-18 16:20:53 <BF>: reduce size: 1221
+2025-02-18 16:20:53 <BF>: best pair is 115, 475
+2025-02-18 16:20:53 <BF>: reduce size: 1220
+2025-02-18 16:20:53 <BF>: best pair is 851, 911
+2025-02-18 16:20:53 <BF>: reduce size: 1207
+2025-02-18 16:20:53 <BF>: best pair is 851, 903
+2025-02-18 16:20:53 <BF>: reduce size: 1285
+2025-02-18 16:20:53 <BF>: best pair is 851, 860
+2025-02-18 16:20:53 <BF>: reduce size: 1302
+2025-02-18 16:20:53 <BF>: best pair is 851, 859
+2025-02-18 16:20:53 <BF>: reduce size: 1311
+2025-02-18 16:20:53 <BF>: best pair is 851, 915
+2025-02-18 16:20:53 <BF>: reduce size: 1353
+2025-02-18 16:20:53 <BF>: best pair is 851, 914
+2025-02-18 16:20:53 <BF>: reduce size: 1216
+2025-02-18 16:20:53 <BF>: best pair is 152, 262
+2025-02-18 16:20:53 <BF>: reduce size: 1206
+2025-02-18 16:20:53 <BF>: best pair is 152, 217
+2025-02-18 16:20:53 <BF>: reduce size: 1243
+2025-02-18 16:20:54 <BF>: best pair is 554, 654
+2025-02-18 16:20:54 <BF>: reduce size: 1202
+2025-02-18 16:20:54 <BF>: best pair is 502, 540
+2025-02-18 16:20:54 <BF>: reduce size: 1194
+2025-02-18 16:20:54 <BF>: best pair is 864, 917
+2025-02-18 16:20:54 <BF>: reduce size: 1194
+2025-02-18 16:20:54 <BF>: best pair is 81, 729
+2025-02-18 16:20:54 <BF>: reduce size: 1193
+2025-02-18 16:20:54 <BF>: best pair is 83, 143
+2025-02-18 16:20:54 <BF>: reduce size: 1181
+2025-02-18 16:20:54 <BF>: best pair is 14, 184
+2025-02-18 16:20:54 <BF>: reduce size: 1178
+2025-02-18 16:20:54 <BF>: best pair is 14, 580
+2025-02-18 16:20:54 <BF>: reduce size: 1285
+2025-02-18 16:20:54 <BF>: best pair is 14, 744
+2025-02-18 16:20:54 <BF>: reduce size: 1327
+2025-02-18 16:20:54 <BF>: best pair is 14, 93
+2025-02-18 16:20:54 <BF>: reduce size: 1320
+2025-02-18 16:20:54 <BF>: best pair is 14, 676
+2025-02-18 16:20:54 <BF>: reduce size: 1376
+2025-02-18 16:20:54 <BF>: best pair is 14, 582
+2025-02-18 16:20:54 <BF>: reduce size: 1332
+2025-02-18 16:20:55 <BF>: best pair is 23, 114
+2025-02-18 16:20:55 <BF>: reduce size: 1170
+2025-02-18 16:20:55 <BF>: best pair is 23, 613
+2025-02-18 16:20:55 <BF>: reduce size: 1386
+2025-02-18 16:20:55 <BF>: best pair is 23, 474
+2025-02-18 16:20:55 <BF>: reduce size: 1619
+2025-02-18 16:20:55 <BF>: best pair is 267, 273
+2025-02-18 16:20:55 <BF>: reduce size: 1169
+2025-02-18 16:20:55 <BF>: best pair is 152, 343
+2025-02-18 16:20:55 <BF>: reduce size: 1167
+2025-02-18 16:20:55 <BF>: best pair is 134, 136
+2025-02-18 16:20:55 <BF>: reduce size: 1163
+2025-02-18 16:20:55 <BF>: best pair is 210, 594
+2025-02-18 16:20:55 <BF>: reduce size: 1157
+2025-02-18 16:20:55 <BF>: best pair is 210, 583
+2025-02-18 16:20:55 <BF>: reduce size: 1197
+2025-02-18 16:20:55 <BF>: best pair is 760, 761
+2025-02-18 16:20:55 <BF>: reduce size: 1157
+2025-02-18 16:20:55 <BF>: best pair is 760, 766
+2025-02-18 16:20:55 <BF>: reduce size: 1271
+2025-02-18 16:20:55 <BF>: best pair is 760, 765
+2025-02-18 16:20:55 <BF>: reduce size: 1227
+2025-02-18 16:20:56 <BF>: best pair is 760, 763
+2025-02-18 16:20:56 <BF>: reduce size: 1223
+2025-02-18 16:20:56 <BF>: best pair is 760, 762
+2025-02-18 16:20:56 <BF>: reduce size: 1255
+2025-02-18 16:20:56 <BF>: best pair is 760, 770
+2025-02-18 16:20:56 <BF>: reduce size: 1441
+2025-02-18 16:20:56 <BF>: best pair is 760, 775
+2025-02-18 16:20:56 <BF>: reduce size: 1410
+2025-02-18 16:20:56 <BF>: best pair is 152, 235
+2025-02-18 16:20:56 <BF>: reduce size: 1156
+2025-02-18 16:20:56 <BF>: best pair is 756, 758
+2025-02-18 16:20:56 <BF>: reduce size: 1143
+2025-02-18 16:20:56 <BF>: best pair is 756, 759
+2025-02-18 16:20:56 <BF>: reduce size: 1149
+2025-02-18 16:20:56 <BF>: best pair is 756, 764
+2025-02-18 16:20:56 <BF>: reduce size: 1159
+2025-02-18 16:20:56 <BF>: best pair is 663, 806
+2025-02-18 16:20:56 <BF>: reduce size: 1142
+2025-02-18 16:20:56 <BF>: best pair is 663, 805
+2025-02-18 16:20:56 <BF>: reduce size: 1580
+2025-02-18 16:20:56 <BF>: best pair is 864, 876
+2025-02-18 16:20:56 <BF>: reduce size: 1140
+2025-02-18 16:20:57 <BF>: best pair is 864, 931
+2025-02-18 16:20:57 <BF>: reduce size: 1176
+2025-02-18 16:20:57 <BF>: best pair is 864, 930
+2025-02-18 16:20:57 <BF>: reduce size: 1262
+2025-02-18 16:20:57 <BF>: best pair is 864, 895
+2025-02-18 16:20:57 <BF>: reduce size: 1275
+2025-02-18 16:20:57 <BF>: best pair is 864, 881
+2025-02-18 16:20:57 <BF>: reduce size: 1221
+2025-02-18 16:20:57 <BF>: best pair is 197, 198
+2025-02-18 16:20:57 <BF>: reduce size: 1137
+2025-02-18 16:20:57 <BF>: best pair is 197, 206
+2025-02-18 16:20:57 <BF>: reduce size: 1169
+2025-02-18 16:20:57 <BF>: best pair is 197, 302
+2025-02-18 16:20:57 <BF>: reduce size: 1155
+2025-02-18 16:20:57 <BF>: best pair is 697, 710
+2025-02-18 16:20:57 <BF>: reduce size: 1137
+2025-02-18 16:20:57 <BF>: best pair is 621, 622
+2025-02-18 16:20:57 <BF>: reduce size: 1133
+2025-02-18 16:20:57 <BF>: best pair is 159, 250
+2025-02-18 16:20:57 <BF>: reduce size: 1126
+2025-02-18 16:20:57 <BF>: best pair is 196, 588
+2025-02-18 16:20:57 <BF>: reduce size: 1120
+2025-02-18 16:20:57 <BF>: best pair is 196, 260
+2025-02-18 16:20:57 <BF>: reduce size: 1197
+2025-02-18 16:20:58 <BF>: best pair is 663, 1005
+2025-02-18 16:20:58 <BF>: reduce size: 1120
+2025-02-18 16:20:58 <BF>: best pair is 112, 605
+2025-02-18 16:20:58 <BF>: reduce size: 1118
+2025-02-18 16:20:58 <BF>: best pair is 112, 625
+2025-02-18 16:20:58 <BF>: reduce size: 1130
+2025-02-18 16:20:58 <BF>: best pair is 112, 281
+2025-02-18 16:20:58 <BF>: reduce size: 1230
+2025-02-18 16:20:58 <BF>: best pair is 267, 271
+2025-02-18 16:20:58 <BF>: reduce size: 1118
+2025-02-18 16:20:58 <BF>: best pair is 21, 245
+2025-02-18 16:20:58 <BF>: reduce size: 1114
+2025-02-18 16:20:58 <BF>: best pair is 21, 471
+2025-02-18 16:20:58 <BF>: reduce size: 1138
+2025-02-18 16:20:58 <BF>: best pair is 756, 803
+2025-02-18 16:20:58 <BF>: reduce size: 1114
+2025-02-18 16:20:58 <BF>: best pair is 912, 936
+2025-02-18 16:20:58 <BF>: reduce size: 1113
+2025-02-18 16:20:58 <BF>: best pair is 912, 939
+2025-02-18 16:20:58 <BF>: reduce size: 1139
+2025-02-18 16:20:58 <BF>: best pair is 912, 913
+2025-02-18 16:20:58 <BF>: reduce size: 1189
+2025-02-18 16:20:58 <BF>: best pair is 502, 652
+2025-02-18 16:20:58 <BF>: reduce size: 1102
+2025-02-18 16:20:59 <BF>: best pair is 502, 718
+2025-02-18 16:20:59 <BF>: reduce size: 1356
+2025-02-18 16:20:59 <BF>: best pair is 13, 743
+2025-02-18 16:20:59 <BF>: reduce size: 1097
+2025-02-18 16:20:59 <BF>: best pair is 13, 575
+2025-02-18 16:20:59 <BF>: reduce size: 1280
+2025-02-18 16:20:59 <BF>: best pair is 602, 779
+2025-02-18 16:20:59 <BF>: reduce size: 1096
+2025-02-18 16:20:59 <BF>: best pair is 863, 864
+2025-02-18 16:20:59 <BF>: reduce size: 1092
+2025-02-18 16:20:59 <BF>: best pair is 81, 808
+2025-02-18 16:20:59 <BF>: reduce size: 1091
+2025-02-18 16:20:59 <BF>: best pair is 702, 721
+2025-02-18 16:20:59 <BF>: reduce size: 1091
+2025-02-18 16:20:59 <BF>: best pair is 167, 169
+2025-02-18 16:20:59 <BF>: reduce size: 1089
+2025-02-18 16:20:59 <BF>: best pair is 167, 182
+2025-02-18 16:20:59 <BF>: reduce size: 1152
+2025-02-18 16:20:59 <BF>: best pair is 152, 263
+2025-02-18 16:20:59 <BF>: reduce size: 1088
+2025-02-18 16:20:59 <BF>: best pair is 937, 938
+2025-02-18 16:20:59 <BF>: reduce size: 1085
+2025-02-18 16:20:59 <BF>: best pair is 267, 663
+2025-02-18 16:20:59 <BF>: reduce size: 1081
+2025-02-18 16:21:00 <BF>: best pair is 267, 275
+2025-02-18 16:21:00 <BF>: reduce size: 1078
+2025-02-18 16:21:00 <BF>: best pair is 87, 945
+2025-02-18 16:21:00 <BF>: reduce size: 1076
+2025-02-18 16:21:00 <BF>: best pair is 445, 446
+2025-02-18 16:21:00 <BF>: reduce size: 1076
+2025-02-18 16:21:00 <BF>: best pair is 196, 667
+2025-02-18 16:21:00 <BF>: reduce size: 1075
+2025-02-18 16:21:00 <BF>: best pair is 112, 624
+2025-02-18 16:21:00 <BF>: reduce size: 1074
+2025-02-18 16:21:00 <BF>: best pair is 689, 723
+2025-02-18 16:21:00 <BF>: reduce size: 1073
+2025-02-18 16:21:00 <BF>: best pair is 159, 289
+2025-02-18 16:21:00 <BF>: reduce size: 1070
+2025-02-18 16:21:00 <BF>: best pair is 159, 160
+2025-02-18 16:21:00 <BF>: reduce size: 1068
+2025-02-18 16:21:00 <BF>: best pair is 159, 282
+2025-02-18 16:21:00 <BF>: reduce size: 1306
+2025-02-18 16:21:00 <BF>: best pair is 159, 290
+2025-02-18 16:21:00 <BF>: reduce size: 1278
+2025-02-18 16:21:00 <BF>: best pair is 125, 712
+2025-02-18 16:21:00 <BF>: reduce size: 1048
+2025-02-18 16:21:00 <BF>: best pair is 178, 387
+2025-02-18 16:21:00 <BF>: reduce size: 1046
+2025-02-18 16:21:01 <BF>: best pair is 445, 447
+2025-02-18 16:21:01 <BF>: reduce size: 1045
+2025-02-18 16:21:01 <BF>: best pair is 736, 737
+2025-02-18 16:21:01 <BF>: reduce size: 1042
+2025-02-18 16:21:01 <BF>: best pair is 736, 1017
+2025-02-18 16:21:01 <BF>: reduce size: 1123
+2025-02-18 16:21:01 <BF>: best pair is 837, 847
+2025-02-18 16:21:01 <BF>: reduce size: 1028
+2025-02-18 16:21:01 <BF>: best pair is 823, 833
+2025-02-18 16:21:01 <BF>: reduce size: 1024
+2025-02-18 16:21:01 <BF>: best pair is 178, 374
+2025-02-18 16:21:01 <BF>: reduce size: 1023
+2025-02-18 16:21:01 <BF>: best pair is 178, 371
+2025-02-18 16:21:01 <BF>: reduce size: 1060
+2025-02-18 16:21:01 <BF>: best pair is 178, 291
+2025-02-18 16:21:01 <BF>: reduce size: 1057
+2025-02-18 16:21:01 <BF>: best pair is 178, 375
+2025-02-18 16:21:01 <BF>: reduce size: 1125
+2025-02-18 16:21:01 <BF>: best pair is 178, 292
+2025-02-18 16:21:01 <BF>: reduce size: 1046
+2025-02-18 16:21:01 <BF>: best pair is 501, 999
+2025-02-18 16:21:01 <BF>: reduce size: 1023
+2025-02-18 16:21:01 <BF>: best pair is 756, 767
+2025-02-18 16:21:01 <BF>: reduce size: 1023
+2025-02-18 16:21:01 <BF>: best pair is 640, 793
+2025-02-18 16:21:01 <BF>: reduce size: 1016
+2025-02-18 16:21:02 <BF>: best pair is 850, 887
+2025-02-18 16:21:02 <BF>: reduce size: 1015
+2025-02-18 16:21:02 <BF>: best pair is 850, 928
+2025-02-18 16:21:02 <BF>: reduce size: 1242
+2025-02-18 16:21:02 <BF>: best pair is 850, 929
+2025-02-18 16:21:02 <BF>: reduce size: 1139
+2025-02-18 16:21:02 <BF>: best pair is 850, 866
+2025-02-18 16:21:02 <BF>: reduce size: 1139
+2025-02-18 16:21:02 <BF>: best pair is 671, 814
+2025-02-18 16:21:02 <BF>: reduce size: 1007
+2025-02-18 16:21:02 <BF>: best pair is 933, 934
+2025-02-18 16:21:02 <BF>: reduce size: 1007
+2025-02-18 16:21:02 <BF>: best pair is 901, 902
+2025-02-18 16:21:02 <BF>: reduce size: 1006
+2025-02-18 16:21:02 <BF>: best pair is 901, 933
+2025-02-18 16:21:02 <BF>: reduce size: 1057
+2025-02-18 16:21:02 <BF>: best pair is 901, 912
+2025-02-18 16:21:02 <BF>: reduce size: 1310
+2025-02-18 16:21:02 <BF>: best pair is 220, 327
+2025-02-18 16:21:02 <BF>: reduce size: 1005
+2025-02-18 16:21:02 <BF>: best pair is 238, 378
+2025-02-18 16:21:02 <BF>: reduce size: 1005
+2025-02-18 16:21:02 <BF>: best pair is 15, 677
+2025-02-18 16:21:02 <BF>: reduce size: 1001
+2025-02-18 16:21:02 <BF>: best pair is 15, 95
+2025-02-18 16:21:02 <BF>: reduce size: 1142
+2025-02-18 16:21:03 <BF>: best pair is 15, 458
+2025-02-18 16:21:03 <BF>: reduce size: 1190
+2025-02-18 16:21:03 <BF>: best pair is 15, 956
+2025-02-18 16:21:03 <BF>: reduce size: 1279
+2025-02-18 16:21:03 <BF>: best pair is 15, 480
+2025-02-18 16:21:03 <BF>: reduce size: 1067
+2025-02-18 16:21:03 <BF>: best pair is 15, 185
+2025-02-18 16:21:03 <BF>: reduce size: 1200
+2025-02-18 16:21:03 <BF>: best pair is 453, 951
+2025-02-18 16:21:03 <BF>: reduce size: 1001
+2025-02-18 16:21:03 <BF>: best pair is 453, 522
+2025-02-18 16:21:03 <BF>: reduce size: 1019
+2025-02-18 16:21:03 <BF>: best pair is 453, 457
+2025-02-18 16:21:03 <BF>: reduce size: 1056
+2025-02-18 16:21:03 <BF>: best pair is 453, 501
+2025-02-18 16:21:03 <BF>: reduce size: 1057
+2025-02-18 16:21:03 <BF>: best pair is 453, 500
+2025-02-18 16:21:03 <BF>: reduce size: 1486
+2025-02-18 16:21:03 <BF>: best pair is 704, 722
+2025-02-18 16:21:03 <BF>: reduce size: 1000
+2025-02-18 16:21:03 <BF>: best pair is 658, 804
+2025-02-18 16:21:03 <BF>: reduce size: 993
+2025-02-18 16:21:04 <BF>: best pair is 329, 330
+2025-02-18 16:21:04 <BF>: reduce size: 991
+2025-02-18 16:21:04 <BF>: best pair is 197, 314
+2025-02-18 16:21:04 <BF>: reduce size: 989
+2025-02-18 16:21:04 <BF>: best pair is 891, 894
+2025-02-18 16:21:04 <BF>: reduce size: 984
+2025-02-18 16:21:04 <BF>: best pair is 891, 918
+2025-02-18 16:21:04 <BF>: reduce size: 1008
+2025-02-18 16:21:04 <BF>: best pair is 891, 919
+2025-02-18 16:21:04 <BF>: reduce size: 993
+2025-02-18 16:21:04 <BF>: best pair is 891, 923
+2025-02-18 16:21:04 <BF>: reduce size: 1142
+2025-02-18 16:21:04 <BF>: best pair is 141, 193
+2025-02-18 16:21:04 <BF>: reduce size: 982
+2025-02-18 16:21:04 <BF>: best pair is 141, 668
+2025-02-18 16:21:04 <BF>: reduce size: 1289
+2025-02-18 16:21:04 <BF>: best pair is 141, 671
+2025-02-18 16:21:04 <BF>: reduce size: 995
+2025-02-18 16:21:04 <BF>: best pair is 188, 247
+2025-02-18 16:21:04 <BF>: reduce size: 980
+2025-02-18 16:21:04 <BF>: best pair is 15, 495
+2025-02-18 16:21:04 <BF>: reduce size: 973
+2025-02-18 16:21:04 <BF>: best pair is 5, 10
+2025-02-18 16:21:04 <BF>: reduce size: 972
+2025-02-18 16:21:04 <BF>: best pair is 5, 9
+2025-02-18 16:21:04 <BF>: reduce size: 1037
+2025-02-18 16:21:05 <BF>: best pair is 201, 203
+2025-02-18 16:21:05 <BF>: reduce size: 967
+2025-02-18 16:21:05 <BF>: best pair is 201, 204
+2025-02-18 16:21:05 <BF>: reduce size: 1003
+2025-02-18 16:21:05 <BF>: best pair is 201, 365
+2025-02-18 16:21:05 <BF>: reduce size: 1056
+2025-02-18 16:21:05 <BF>: best pair is 201, 361
+2025-02-18 16:21:05 <BF>: reduce size: 1207
+2025-02-18 16:21:05 <BF>: best pair is 201, 214
+2025-02-18 16:21:05 <BF>: reduce size: 1093
+2025-02-18 16:21:05 <BF>: best pair is 503, 541
+2025-02-18 16:21:05 <BF>: reduce size: 959
+2025-02-18 16:21:05 <BF>: best pair is 553, 656
+2025-02-18 16:21:05 <BF>: reduce size: 959
+2025-02-18 16:21:05 <BF>: best pair is 78, 353
+2025-02-18 16:21:05 <BF>: reduce size: 958
+2025-02-18 16:21:05 <BF>: best pair is 595, 623
+2025-02-18 16:21:05 <BF>: reduce size: 956
+2025-02-18 16:21:05 <BF>: best pair is 342, 373
+2025-02-18 16:21:05 <BF>: reduce size: 952
+2025-02-18 16:21:05 <BF>: best pair is 197, 205
+2025-02-18 16:21:05 <BF>: reduce size: 949
+2025-02-18 16:21:05 <BF>: best pair is 216, 342
+2025-02-18 16:21:05 <BF>: reduce size: 946
+2025-02-18 16:21:05 <BF>: best pair is 216, 313
+2025-02-18 16:21:05 <BF>: reduce size: 1006
+2025-02-18 16:21:05 <BF>: best pair is 216, 296
+2025-02-18 16:21:05 <BF>: reduce size: 948
+2025-02-18 16:21:05 <BF>: best pair is 238, 379
+2025-02-18 16:21:05 <BF>: reduce size: 946
+2025-02-18 16:21:05 <BF>: best pair is 238, 385
+2025-02-18 16:21:05 <BF>: reduce size: 960
+2025-02-18 16:21:06 <BF>: best pair is 329, 331
+2025-02-18 16:21:06 <BF>: reduce size: 940
+2025-02-18 16:21:06 <BF>: best pair is 157, 162
+2025-02-18 16:21:06 <BF>: reduce size: 933
+2025-02-18 16:21:06 <BF>: best pair is 157, 238
+2025-02-18 16:21:06 <BF>: reduce size: 942
+2025-02-18 16:21:06 <BF>: best pair is 157, 276
+2025-02-18 16:21:06 <BF>: reduce size: 986
+2025-02-18 16:21:06 <BF>: best pair is 503, 504
+2025-02-18 16:21:06 <BF>: reduce size: 933
+2025-02-18 16:21:06 <BF>: best pair is 166, 168
+2025-02-18 16:21:06 <BF>: reduce size: 932
+2025-02-18 16:21:06 <BF>: best pair is 166, 180
+2025-02-18 16:21:06 <BF>: reduce size: 937
+2025-02-18 16:21:06 <BF>: best pair is 166, 172
+2025-02-18 16:21:06 <BF>: reduce size: 951
+2025-02-18 16:21:06 <BF>: best pair is 704, 720
+2025-02-18 16:21:06 <BF>: reduce size: 930
+2025-02-18 16:21:06 <BF>: best pair is 167, 183
+2025-02-18 16:21:06 <BF>: reduce size: 926
+2025-02-18 16:21:06 <BF>: best pair is 505, 659
+2025-02-18 16:21:06 <BF>: reduce size: 926
+2025-02-18 16:21:06 <BF>: best pair is 505, 658
+2025-02-18 16:21:06 <BF>: reduce size: 1081
+2025-02-18 16:21:06 <BF>: best pair is 505, 555
+2025-02-18 16:21:06 <BF>: reduce size: 1005
+2025-02-18 16:21:06 <BF>: best pair is 882, 891
+2025-02-18 16:21:06 <BF>: reduce size: 926
+2025-02-18 16:21:06 <BF>: best pair is 882, 899
+2025-02-18 16:21:06 <BF>: reduce size: 1107
+2025-02-18 16:21:07 <BF>: best pair is 486, 487
+2025-02-18 16:21:07 <BF>: reduce size: 924
+2025-02-18 16:21:07 <BF>: best pair is 201, 358
+2025-02-18 16:21:07 <BF>: reduce size: 923
+2025-02-18 16:21:07 <BF>: best pair is 133, 784
+2025-02-18 16:21:07 <BF>: reduce size: 921
+2025-02-18 16:21:07 <BF>: best pair is 196, 589
+2025-02-18 16:21:07 <BF>: reduce size: 920
+2025-02-18 16:21:07 <BF>: best pair is 201, 283
+2025-02-18 16:21:07 <BF>: reduce size: 919
+2025-02-18 16:21:07 <BF>: best pair is 368, 369
+2025-02-18 16:21:07 <BF>: reduce size: 914
+2025-02-18 16:21:07 <BF>: best pair is 368, 505
+2025-02-18 16:21:07 <BF>: reduce size: 916
+2025-02-18 16:21:07 <BF>: best pair is 368, 789
+2025-02-18 16:21:07 <BF>: reduce size: 933
+2025-02-18 16:21:07 <BF>: best pair is 444, 445
+2025-02-18 16:21:07 <BF>: reduce size: 910
+2025-02-18 16:21:07 <BF>: best pair is 444, 774
+2025-02-18 16:21:07 <BF>: reduce size: 1044
+2025-02-18 16:21:07 <BF>: best pair is 946, 949
+2025-02-18 16:21:07 <BF>: reduce size: 906
+2025-02-18 16:21:07 <BF>: best pair is 837, 842
+2025-02-18 16:21:07 <BF>: reduce size: 900
+2025-02-18 16:21:07 <BF>: best pair is 837, 846
+2025-02-18 16:21:07 <BF>: reduce size: 917
+2025-02-18 16:21:08 <BF>: best pair is 837, 844
+2025-02-18 16:21:08 <BF>: reduce size: 908
+2025-02-18 16:21:08 <BF>: best pair is 837, 845
+2025-02-18 16:21:08 <BF>: reduce size: 921
+2025-02-18 16:21:08 <BF>: best pair is 837, 843
+2025-02-18 16:21:08 <BF>: reduce size: 1050
+2025-02-18 16:21:08 <BF>: best pair is 178, 304
+2025-02-18 16:21:08 <BF>: reduce size: 897
+2025-02-18 16:21:08 <BF>: best pair is 602, 971
+2025-02-18 16:21:08 <BF>: reduce size: 897
+2025-02-18 16:21:08 <BF>: best pair is 602, 704
+2025-02-18 16:21:08 <BF>: reduce size: 921
+2025-02-18 16:21:08 <BF>: best pair is 133, 468
+2025-02-18 16:21:08 <BF>: reduce size: 893
+2025-02-18 16:21:08 <BF>: best pair is 133, 946
+2025-02-18 16:21:08 <BF>: reduce size: 974
+2025-02-18 16:21:08 <BF>: best pair is 736, 1014
+2025-02-18 16:21:08 <BF>: reduce size: 886
+2025-02-18 16:21:08 <BF>: best pair is 736, 1004
+2025-02-18 16:21:08 <BF>: reduce size: 908
+2025-02-18 16:21:08 <BF>: best pair is 167, 451
+2025-02-18 16:21:08 <BF>: reduce size: 884
+2025-02-18 16:21:09 <BF>: best pair is 571, 637
+2025-02-18 16:21:09 <BF>: reduce size: 880
+2025-02-18 16:21:09 <BF>: best pair is 241, 270
+2025-02-18 16:21:09 <BF>: reduce size: 877
+2025-02-18 16:21:09 <BF>: best pair is 241, 272
+2025-02-18 16:21:09 <BF>: reduce size: 884
+2025-02-18 16:21:09 <BF>: best pair is 600, 777
+2025-02-18 16:21:09 <BF>: reduce size: 877
+2025-02-18 16:21:09 <BF>: best pair is 550, 837
+2025-02-18 16:21:09 <BF>: reduce size: 876
+2025-02-18 16:21:09 <BF>: best pair is 752, 753
+2025-02-18 16:21:09 <BF>: reduce size: 874
+2025-02-18 16:21:09 <BF>: best pair is 354, 502
+2025-02-18 16:21:09 <BF>: reduce size: 873
+2025-02-18 16:21:09 <BF>: best pair is 615, 631
+2025-02-18 16:21:09 <BF>: reduce size: 872
+2025-02-18 16:21:09 <BF>: best pair is 615, 816
+2025-02-18 16:21:09 <BF>: reduce size: 914
+2025-02-18 16:21:09 <BF>: best pair is 444, 592
+2025-02-18 16:21:09 <BF>: reduce size: 870
+2025-02-18 16:21:09 <BF>: best pair is 444, 786
+2025-02-18 16:21:09 <BF>: reduce size: 991
+2025-02-18 16:21:09 <BF>: best pair is 137, 810
+2025-02-18 16:21:09 <BF>: reduce size: 869
+2025-02-18 16:21:09 <BF>: best pair is 157, 383
+2025-02-18 16:21:09 <BF>: reduce size: 869
+2025-02-18 16:21:09 <BF>: best pair is 855, 857
+2025-02-18 16:21:09 <BF>: reduce size: 868
+2025-02-18 16:21:10 <BF>: best pair is 188, 241
+2025-02-18 16:21:10 <BF>: reduce size: 866
+2025-02-18 16:21:10 <BF>: best pair is 675, 954
+2025-02-18 16:21:10 <BF>: reduce size: 866
+2025-02-18 16:21:10 <BF>: best pair is 855, 862
+2025-02-18 16:21:10 <BF>: reduce size: 863
+2025-02-18 16:21:10 <BF>: best pair is 186, 348
+2025-02-18 16:21:10 <BF>: reduce size: 854
+2025-02-18 16:21:10 <BF>: best pair is 186, 265
+2025-02-18 16:21:10 <BF>: reduce size: 1020
+2025-02-18 16:21:10 <BF>: best pair is 145, 395
+2025-02-18 16:21:10 <BF>: reduce size: 849
+2025-02-18 16:21:10 <BF>: best pair is 732, 733
+2025-02-18 16:21:10 <BF>: reduce size: 843
+2025-02-18 16:21:10 <BF>: best pair is 124, 125
+2025-02-18 16:21:10 <BF>: reduce size: 835
+2025-02-18 16:21:10 <BF>: best pair is 124, 732
+2025-02-18 16:21:10 <BF>: reduce size: 1684
+2025-02-18 16:21:10 <BF>: best pair is 188, 855
+2025-02-18 16:21:10 <BF>: reduce size: 822
+2025-02-18 16:21:10 <BF>: best pair is 319, 322
+2025-02-18 16:21:10 <BF>: reduce size: 821
+2025-02-18 16:21:10 <BF>: best pair is 224, 288
+2025-02-18 16:21:10 <BF>: reduce size: 817
+2025-02-18 16:21:10 <BF>: best pair is 218, 219
+2025-02-18 16:21:10 <BF>: reduce size: 816
+2025-02-18 16:21:10 <BF>: best pair is 218, 220
+2025-02-18 16:21:10 <BF>: reduce size: 1176
+2025-02-18 16:21:10 <BF>: best pair is 615, 616
+2025-02-18 16:21:10 <BF>: reduce size: 809
+2025-02-18 16:21:11 <BF>: best pair is 696, 709
+2025-02-18 16:21:11 <BF>: reduce size: 807
+2025-02-18 16:21:11 <BF>: best pair is 689, 690
+2025-02-18 16:21:11 <BF>: reduce size: 801
+2025-02-18 16:21:11 <BF>: best pair is 145, 146
+2025-02-18 16:21:11 <BF>: reduce size: 799
+2025-02-18 16:21:11 <BF>: best pair is 224, 225
+2025-02-18 16:21:11 <BF>: reduce size: 799
+2025-02-18 16:21:11 <BF>: best pair is 752, 823
+2025-02-18 16:21:11 <BF>: reduce size: 799
+2025-02-18 16:21:11 <BF>: best pair is 366, 367
+2025-02-18 16:21:11 <BF>: reduce size: 797
+2025-02-18 16:21:11 <BF>: best pair is 366, 376
+2025-02-18 16:21:11 <BF>: reduce size: 905
+2025-02-18 16:21:11 <BF>: best pair is 689, 697
+2025-02-18 16:21:11 <BF>: reduce size: 795
+2025-02-18 16:21:11 <BF>: best pair is 973, 974
+2025-02-18 16:21:11 <BF>: reduce size: 794
+2025-02-18 16:21:11 <BF>: best pair is 973, 978
+2025-02-18 16:21:11 <BF>: reduce size: 793
+2025-02-18 16:21:11 <BF>: best pair is 973, 1018
+2025-02-18 16:21:11 <BF>: reduce size: 792
+2025-02-18 16:21:11 <BF>: best pair is 973, 984
+2025-02-18 16:21:11 <BF>: reduce size: 871
+2025-02-18 16:21:11 <BF>: best pair is 973, 986
+2025-02-18 16:21:11 <BF>: reduce size: 849
+2025-02-18 16:21:11 <BF>: best pair is 973, 983
+2025-02-18 16:21:11 <BF>: reduce size: 913
+2025-02-18 16:21:12 <BF>: best pair is 973, 1012
+2025-02-18 16:21:12 <BF>: reduce size: 852
+2025-02-18 16:21:12 <BF>: best pair is 366, 392
+2025-02-18 16:21:12 <BF>: reduce size: 791
+2025-02-18 16:21:12 <BF>: best pair is 366, 389
+2025-02-18 16:21:12 <BF>: reduce size: 878
+2025-02-18 16:21:12 <BF>: best pair is 366, 728
+2025-02-18 16:21:12 <BF>: reduce size: 925
+2025-02-18 16:21:12 <BF>: best pair is 366, 664
+2025-02-18 16:21:12 <BF>: reduce size: 926
+2025-02-18 16:21:12 <BF>: best pair is 366, 391
+2025-02-18 16:21:12 <BF>: reduce size: 820
+2025-02-18 16:21:12 <BF>: best pair is 600, 640
+2025-02-18 16:21:12 <BF>: reduce size: 784
+2025-02-18 16:21:12 <BF>: best pair is 684, 964
+2025-02-18 16:21:12 <BF>: reduce size: 784
+2025-02-18 16:21:12 <BF>: best pair is 684, 685
+2025-02-18 16:21:12 <BF>: reduce size: 964
+2025-02-18 16:21:12 <BF>: best pair is 503, 542
+2025-02-18 16:21:12 <BF>: reduce size: 781
+2025-02-18 16:21:12 <BF>: best pair is 503, 507
+2025-02-18 16:21:12 <BF>: reduce size: 807
+2025-02-18 16:21:12 <BF>: best pair is 503, 1000
+2025-02-18 16:21:12 <BF>: reduce size: 867
+2025-02-18 16:21:12 <BF>: best pair is 600, 778
+2025-02-18 16:21:12 <BF>: reduce size: 780
+2025-02-18 16:21:12 <BF>: best pair is 600, 601
+2025-02-18 16:21:12 <BF>: reduce size: 912
+2025-02-18 16:21:13 <BF>: best pair is 600, 800
+2025-02-18 16:21:13 <BF>: reduce size: 839
+2025-02-18 16:21:13 <BF>: best pair is 600, 997
+2025-02-18 16:21:13 <BF>: reduce size: 859
+2025-02-18 16:21:13 <BF>: best pair is 561, 562
+2025-02-18 16:21:13 <BF>: reduce size: 776
+2025-02-18 16:21:13 <BF>: best pair is 129, 130
+2025-02-18 16:21:13 <BF>: reduce size: 768
+2025-02-18 16:21:13 <BF>: best pair is 129, 503
+2025-02-18 16:21:13 <BF>: reduce size: 1010
+2025-02-18 16:21:13 <BF>: best pair is 299, 303
+2025-02-18 16:21:13 <BF>: reduce size: 767
+2025-02-18 16:21:13 <BF>: best pair is 299, 316
+2025-02-18 16:21:13 <BF>: reduce size: 788
+2025-02-18 16:21:13 <BF>: best pair is 299, 301
+2025-02-18 16:21:13 <BF>: reduce size: 847
+2025-02-18 16:21:13 <BF>: best pair is 21, 109
+2025-02-18 16:21:13 <BF>: reduce size: 766
+2025-02-18 16:21:13 <BF>: best pair is 621, 785
+2025-02-18 16:21:13 <BF>: reduce size: 766
+2025-02-18 16:21:13 <BF>: best pair is 621, 633
+2025-02-18 16:21:13 <BF>: reduce size: 843
+2025-02-18 16:21:13 <BF>: best pair is 145, 200
+2025-02-18 16:21:13 <BF>: reduce size: 765
+2025-02-18 16:21:13 <BF>: best pair is 145, 355
+2025-02-18 16:21:13 <BF>: reduce size: 829
+2025-02-18 16:21:13 <BF>: best pair is 145, 319
+2025-02-18 16:21:13 <BF>: reduce size: 913
+2025-02-18 16:21:13 <BF>: best pair is 571, 595
+2025-02-18 16:21:13 <BF>: reduce size: 759
+2025-02-18 16:21:14 <BF>: best pair is 985, 1001
+2025-02-18 16:21:14 <BF>: reduce size: 752
+2025-02-18 16:21:14 <BF>: best pair is 131, 719
+2025-02-18 16:21:14 <BF>: reduce size: 745
+2025-02-18 16:21:14 <BF>: best pair is 131, 985
+2025-02-18 16:21:14 <BF>: reduce size: 805
+2025-02-18 16:21:14 <BF>: best pair is 131, 1002
+2025-02-18 16:21:14 <BF>: reduce size: 753
+2025-02-18 16:21:14 <BF>: best pair is 131, 142
+2025-02-18 16:21:14 <BF>: reduce size: 804
+2025-02-18 16:21:14 <BF>: best pair is 736, 1013
+2025-02-18 16:21:14 <BF>: reduce size: 745
+2025-02-18 16:21:14 <BF>: best pair is 736, 943
+2025-02-18 16:21:14 <BF>: reduce size: 907
+2025-02-18 16:21:14 <BF>: best pair is 140, 513
+2025-02-18 16:21:14 <BF>: reduce size: 738
+2025-02-18 16:21:14 <BF>: best pair is 140, 512
+2025-02-18 16:21:14 <BF>: reduce size: 914
+2025-02-18 16:21:14 <BF>: best pair is 329, 332
+2025-02-18 16:21:14 <BF>: reduce size: 738
+2025-02-18 16:21:14 <BF>: best pair is 305, 306
+2025-02-18 16:21:14 <BF>: reduce size: 735
+2025-02-18 16:21:14 <BF>: best pair is 0, 1
+2025-02-18 16:21:14 <BF>: reduce size: 733
+2025-02-18 16:21:14 <BF>: best pair is 0, 5
+2025-02-18 16:21:14 <BF>: reduce size: 999
+2025-02-18 16:21:14 <BF>: best pair is 0, 2
+2025-02-18 16:21:14 <BF>: reduce size: 884
+2025-02-18 16:21:14 <BF>: best pair is 0, 3
+2025-02-18 16:21:14 <BF>: reduce size: 1074
+2025-02-18 16:21:15 <BF>: best pair is 0, 7
+2025-02-18 16:21:15 <BF>: reduce size: 770
+2025-02-18 16:21:15 <BF>: best pair is 305, 307
+2025-02-18 16:21:15 <BF>: reduce size: 731
+2025-02-18 16:21:15 <BF>: best pair is 216, 364
+2025-02-18 16:21:15 <BF>: reduce size: 726
+2025-02-18 16:21:15 <BF>: best pair is 571, 578
+2025-02-18 16:21:15 <BF>: reduce size: 725
+2025-02-18 16:21:15 <BF>: best pair is 571, 596
+2025-02-18 16:21:15 <BF>: reduce size: 824
+2025-02-18 16:21:15 <BF>: best pair is 571, 683
+2025-02-18 16:21:15 <BF>: reduce size: 794
+2025-02-18 16:21:15 <BF>: best pair is 571, 619
+2025-02-18 16:21:15 <BF>: reduce size: 801
+2025-02-18 16:21:15 <BF>: best pair is 151, 372
+2025-02-18 16:21:15 <BF>: reduce size: 719
+2025-02-18 16:21:15 <BF>: best pair is 151, 257
+2025-02-18 16:21:15 <BF>: reduce size: 763
+2025-02-18 16:21:15 <BF>: best pair is 151, 269
+2025-02-18 16:21:15 <BF>: reduce size: 818
+2025-02-18 16:21:15 <BF>: best pair is 151, 218
+2025-02-18 16:21:15 <BF>: reduce size: 774
+2025-02-18 16:21:15 <BF>: best pair is 362, 363
+2025-02-18 16:21:15 <BF>: reduce size: 718
+2025-02-18 16:21:15 <BF>: best pair is 305, 311
+2025-02-18 16:21:15 <BF>: reduce size: 717
+2025-02-18 16:21:15 <BF>: best pair is 78, 128
+2025-02-18 16:21:15 <BF>: reduce size: 716
+2025-02-18 16:21:16 <BF>: best pair is 78, 140
+2025-02-18 16:21:16 <BF>: reduce size: 836
+2025-02-18 16:21:16 <BF>: best pair is 78, 82
+2025-02-18 16:21:16 <BF>: reduce size: 821
+2025-02-18 16:21:16 <BF>: best pair is 131, 132
+2025-02-18 16:21:16 <BF>: reduce size: 715
+2025-02-18 16:21:16 <BF>: best pair is 131, 953
+2025-02-18 16:21:16 <BF>: reduce size: 805
+2025-02-18 16:21:16 <BF>: best pair is 89, 948
+2025-02-18 16:21:16 <BF>: reduce size: 714
+2025-02-18 16:21:16 <BF>: best pair is 115, 982
+2025-02-18 16:21:16 <BF>: reduce size: 709
+2025-02-18 16:21:16 <BF>: best pair is 115, 981
+2025-02-18 16:21:16 <BF>: reduce size: 979
+2025-02-18 16:21:16 <BF>: best pair is 115, 254
+2025-02-18 16:21:16 <BF>: reduce size: 729
+2025-02-18 16:21:16 <BF>: best pair is 835, 836
+2025-02-18 16:21:16 <BF>: reduce size: 707
+2025-02-18 16:21:16 <BF>: best pair is 116, 618
+2025-02-18 16:21:16 <BF>: reduce size: 705
+2025-02-18 16:21:16 <BF>: best pair is 116, 604
+2025-02-18 16:21:16 <BF>: reduce size: 754
+2025-02-18 16:21:16 <BF>: best pair is 91, 108
+2025-02-18 16:21:16 <BF>: reduce size: 698
+2025-02-18 16:21:16 <BF>: best pair is 91, 115
+2025-02-18 16:21:16 <BF>: reduce size: 879
+2025-02-18 16:21:16 <BF>: best pair is 482, 499
+2025-02-18 16:21:16 <BF>: reduce size: 698
+2025-02-18 16:21:16 <BF>: best pair is 360, 362
+2025-02-18 16:21:16 <BF>: reduce size: 695
+2025-02-18 16:21:16 <BF>: best pair is 360, 684
+2025-02-18 16:21:16 <BF>: reduce size: 780
+2025-02-18 16:21:17 <BF>: best pair is 274, 277
+2025-02-18 16:21:17 <BF>: reduce size: 693
+2025-02-18 16:21:17 <BF>: best pair is 437, 440
+2025-02-18 16:21:17 <BF>: reduce size: 682
+2025-02-18 16:21:17 <BF>: best pair is 105, 106
+2025-02-18 16:21:17 <BF>: reduce size: 681
+2025-02-18 16:21:17 <BF>: best pair is 105, 835
+2025-02-18 16:21:17 <BF>: reduce size: 765
+2025-02-18 16:21:17 <BF>: best pair is 105, 848
+2025-02-18 16:21:17 <BF>: reduce size: 728
+2025-02-18 16:21:17 <BF>: best pair is 105, 841
+2025-02-18 16:21:17 <BF>: reduce size: 819
+2025-02-18 16:21:17 <BF>: best pair is 105, 840
+2025-02-18 16:21:17 <BF>: reduce size: 729
+2025-02-18 16:21:17 <BF>: best pair is 213, 255
+2025-02-18 16:21:17 <BF>: reduce size: 680
+2025-02-18 16:21:17 <BF>: best pair is 213, 258
+2025-02-18 16:21:17 <BF>: reduce size: 693
+2025-02-18 16:21:17 <BF>: best pair is 213, 256
+2025-02-18 16:21:17 <BF>: reduce size: 714
+2025-02-18 16:21:17 <BF>: best pair is 213, 236
+2025-02-18 16:21:17 <BF>: reduce size: 730
+2025-02-18 16:21:17 <BF>: best pair is 232, 340
+2025-02-18 16:21:17 <BF>: reduce size: 673
+2025-02-18 16:21:17 <BF>: best pair is 639, 669
+2025-02-18 16:21:17 <BF>: reduce size: 669
+2025-02-18 16:21:17 <BF>: best pair is 969, 970
+2025-02-18 16:21:17 <BF>: reduce size: 668
+2025-02-18 16:21:17 <BF>: best pair is 496, 497
+2025-02-18 16:21:17 <BF>: reduce size: 653
+2025-02-18 16:21:17 <BF>: best pair is 969, 1009
+2025-02-18 16:21:17 <BF>: reduce size: 649
+2025-02-18 16:21:17 <BF>: best pair is 969, 1011
+2025-02-18 16:21:17 <BF>: reduce size: 727
+2025-02-18 16:21:17 <BF>: best pair is 969, 995
+2025-02-18 16:21:17 <BF>: reduce size: 723
+2025-02-18 16:21:18 <BF>: best pair is 360, 552
+2025-02-18 16:21:18 <BF>: reduce size: 648
+2025-02-18 16:21:18 <BF>: best pair is 612, 782
+2025-02-18 16:21:18 <BF>: reduce size: 648
+2025-02-18 16:21:18 <BF>: best pair is 612, 621
+2025-02-18 16:21:18 <BF>: reduce size: 715
+2025-02-18 16:21:18 <BF>: best pair is 612, 796
+2025-02-18 16:21:18 <BF>: reduce size: 661
+2025-02-18 16:21:18 <BF>: best pair is 482, 488
+2025-02-18 16:21:18 <BF>: reduce size: 643
+2025-02-18 16:21:18 <BF>: best pair is 482, 515
+2025-02-18 16:21:18 <BF>: reduce size: 742
+2025-02-18 16:21:18 <BF>: best pair is 482, 486
+2025-02-18 16:21:18 <BF>: reduce size: 823
+2025-02-18 16:21:18 <BF>: best pair is 482, 493
+2025-02-18 16:21:18 <BF>: reduce size: 641
+2025-02-18 16:21:18 <BF>: best pair is 557, 646
+2025-02-18 16:21:18 <BF>: reduce size: 631
+2025-02-18 16:21:18 <BF>: best pair is 496, 689
+2025-02-18 16:21:18 <BF>: reduce size: 628
+2025-02-18 16:21:18 <BF>: best pair is 190, 249
+2025-02-18 16:21:18 <BF>: reduce size: 616
+2025-02-18 16:21:18 <BF>: best pair is 190, 320
+2025-02-18 16:21:18 <BF>: reduce size: 646
+2025-02-18 16:21:18 <BF>: best pair is 190, 356
+2025-02-18 16:21:18 <BF>: reduce size: 633
+2025-02-18 16:21:18 <BF>: best pair is 299, 305
+2025-02-18 16:21:18 <BF>: reduce size: 616
+2025-02-18 16:21:18 <BF>: best pair is 416, 439
+2025-02-18 16:21:18 <BF>: reduce size: 615
+2025-02-18 16:21:18 <BF>: best pair is 416, 421
+2025-02-18 16:21:18 <BF>: reduce size: 646
+2025-02-18 16:21:19 <BF>: best pair is 491, 1007
+2025-02-18 16:21:19 <BF>: reduce size: 614
+2025-02-18 16:21:19 <BF>: best pair is 491, 969
+2025-02-18 16:21:19 <BF>: reduce size: 804
+2025-02-18 16:21:19 <BF>: best pair is 156, 266
+2025-02-18 16:21:19 <BF>: reduce size: 611
+2025-02-18 16:21:19 <BF>: best pair is 156, 213
+2025-02-18 16:21:19 <BF>: reduce size: 1003
+2025-02-18 16:21:19 <BF>: best pair is 69, 71
+2025-02-18 16:21:19 <BF>: reduce size: 610
+2025-02-18 16:21:19 <BF>: best pair is 69, 89
+2025-02-18 16:21:19 <BF>: reduce size: 615
+2025-02-18 16:21:19 <BF>: best pair is 69, 116
+2025-02-18 16:21:19 <BF>: reduce size: 735
+2025-02-18 16:21:19 <BF>: best pair is 69, 92
+2025-02-18 16:21:19 <BF>: reduce size: 750
+2025-02-18 16:21:19 <BF>: best pair is 264, 534
+2025-02-18 16:21:19 <BF>: reduce size: 605
+2025-02-18 16:21:19 <BF>: best pair is 264, 702
+2025-02-18 16:21:19 <BF>: reduce size: 703
+2025-02-18 16:21:19 <BF>: best pair is 264, 416
+2025-02-18 16:21:19 <BF>: reduce size: 690
+2025-02-18 16:21:19 <BF>: best pair is 264, 417
+2025-02-18 16:21:19 <BF>: reduce size: 650
+2025-02-18 16:21:19 <BF>: best pair is 568, 598
+2025-02-18 16:21:19 <BF>: reduce size: 602
+2025-02-18 16:21:19 <BF>: best pair is 568, 639
+2025-02-18 16:21:19 <BF>: reduce size: 612
+2025-02-18 16:21:19 <BF>: best pair is 568, 731
+2025-02-18 16:21:19 <BF>: reduce size: 655
+2025-02-18 16:21:19 <BF>: best pair is 568, 711
+2025-02-18 16:21:19 <BF>: reduce size: 643
+2025-02-18 16:21:20 <BF>: best pair is 568, 1006
+2025-02-18 16:21:20 <BF>: reduce size: 707
+2025-02-18 16:21:20 <BF>: best pair is 138, 681
+2025-02-18 16:21:20 <BF>: reduce size: 601
+2025-02-18 16:21:20 <BF>: best pair is 190, 295
+2025-02-18 16:21:20 <BF>: reduce size: 598
+2025-02-18 16:21:20 <BF>: best pair is 90, 521
+2025-02-18 16:21:20 <BF>: reduce size: 595
+2025-02-18 16:21:20 <BF>: best pair is 791, 989
+2025-02-18 16:21:20 <BF>: reduce size: 595
+2025-02-18 16:21:20 <BF>: best pair is 791, 977
+2025-02-18 16:21:20 <BF>: reduce size: 616
+2025-02-18 16:21:20 <BF>: best pair is 791, 979
+2025-02-18 16:21:20 <BF>: reduce size: 625
+2025-02-18 16:21:20 <BF>: best pair is 791, 942
+2025-02-18 16:21:20 <BF>: reduce size: 662
+2025-02-18 16:21:20 <BF>: best pair is 87, 455
+2025-02-18 16:21:20 <BF>: reduce size: 591
+2025-02-18 16:21:20 <BF>: best pair is 87, 791
+2025-02-18 16:21:20 <BF>: reduce size: 806
+2025-02-18 16:21:20 <BF>: best pair is 90, 456
+2025-02-18 16:21:20 <BF>: reduce size: 587
+2025-02-18 16:21:20 <BF>: best pair is 482, 511
+2025-02-18 16:21:20 <BF>: reduce size: 587
+2025-02-18 16:21:20 <BF>: best pair is 602, 724
+2025-02-18 16:21:20 <BF>: reduce size: 583
+2025-02-18 16:21:20 <BF>: best pair is 190, 274
+2025-02-18 16:21:20 <BF>: reduce size: 575
+2025-02-18 16:21:20 <BF>: best pair is 190, 268
+2025-02-18 16:21:20 <BF>: reduce size: 642
+2025-02-18 16:21:20 <BF>: best pair is 481, 632
+2025-02-18 16:21:20 <BF>: reduce size: 571
+2025-02-18 16:21:20 <BF>: best pair is 481, 675
+2025-02-18 16:21:20 <BF>: reduce size: 681
+2025-02-18 16:21:20 <BF>: best pair is 481, 988
+2025-02-18 16:21:20 <BF>: reduce size: 686
+2025-02-18 16:21:21 <BF>: best pair is 481, 553
+2025-02-18 16:21:21 <BF>: reduce size: 688
+2025-02-18 16:21:21 <BF>: best pair is 481, 955
+2025-02-18 16:21:21 <BF>: reduce size: 732
+2025-02-18 16:21:21 <BF>: best pair is 858, 879
+2025-02-18 16:21:21 <BF>: reduce size: 571
+2025-02-18 16:21:21 <BF>: best pair is 858, 908
+2025-02-18 16:21:21 <BF>: reduce size: 570
+2025-02-18 16:21:21 <BF>: best pair is 166, 849
+2025-02-18 16:21:21 <BF>: reduce size: 569
+2025-02-18 16:21:21 <BF>: best pair is 166, 549
+2025-02-18 16:21:21 <BF>: reduce size: 754
+2025-02-18 16:21:21 <BF>: best pair is 576, 627
+2025-02-18 16:21:21 <BF>: reduce size: 561
+2025-02-18 16:21:21 <BF>: best pair is 100, 682
+2025-02-18 16:21:21 <BF>: reduce size: 560
+2025-02-18 16:21:21 <BF>: best pair is 336, 337
+2025-02-18 16:21:21 <BF>: reduce size: 560
+2025-02-18 16:21:21 <BF>: best pair is 615, 630
+2025-02-18 16:21:21 <BF>: reduce size: 557
+2025-02-18 16:21:21 <BF>: best pair is 615, 617
+2025-02-18 16:21:21 <BF>: reduce size: 856
+2025-02-18 16:21:21 <BF>: best pair is 556, 645
+2025-02-18 16:21:21 <BF>: reduce size: 555
+2025-02-18 16:21:21 <BF>: best pair is 26, 28
+2025-02-18 16:21:21 <BF>: reduce size: 550
+2025-02-18 16:21:21 <BF>: best pair is 26, 29
+2025-02-18 16:21:21 <BF>: reduce size: 609
+2025-02-18 16:21:21 <BF>: best pair is 463, 464
+2025-02-18 16:21:21 <BF>: reduce size: 546
+2025-02-18 16:21:21 <BF>: best pair is 852, 853
+2025-02-18 16:21:21 <BF>: reduce size: 546
+2025-02-18 16:21:21 <BF>: best pair is 165, 166
+2025-02-18 16:21:21 <BF>: reduce size: 545
+2025-02-18 16:21:21 <BF>: best pair is 165, 443
+2025-02-18 16:21:21 <BF>: reduce size: 915
+2025-02-18 16:21:21 <BF>: best pair is 469, 484
+2025-02-18 16:21:21 <BF>: reduce size: 541
+2025-02-18 16:21:22 <BF>: best pair is 469, 566
+2025-02-18 16:21:22 <BF>: reduce size: 614
+2025-02-18 16:21:22 <BF>: best pair is 137, 144
+2025-02-18 16:21:22 <BF>: reduce size: 538
+2025-02-18 16:21:22 <BF>: best pair is 137, 469
+2025-02-18 16:21:22 <BF>: reduce size: 575
+2025-02-18 16:21:22 <BF>: best pair is 137, 485
+2025-02-18 16:21:22 <BF>: reduce size: 672
+2025-02-18 16:21:22 <BF>: best pair is 102, 208
+2025-02-18 16:21:22 <BF>: reduce size: 537
+2025-02-18 16:21:22 <BF>: best pair is 102, 717
+2025-02-18 16:21:22 <BF>: reduce size: 558
+2025-02-18 16:21:22 <BF>: best pair is 102, 122
+2025-02-18 16:21:22 <BF>: reduce size: 624
+2025-02-18 16:21:22 <BF>: best pair is 102, 127
+2025-02-18 16:21:22 <BF>: reduce size: 555
+2025-02-18 16:21:22 <BF>: best pair is 102, 139
+2025-02-18 16:21:22 <BF>: reduce size: 591
+2025-02-18 16:21:22 <BF>: best pair is 102, 118
+2025-02-18 16:21:22 <BF>: reduce size: 606
+2025-02-18 16:21:22 <BF>: best pair is 102, 113
+2025-02-18 16:21:22 <BF>: reduce size: 634
+2025-02-18 16:21:22 <BF>: best pair is 438, 441
+2025-02-18 16:21:22 <BF>: reduce size: 536
+2025-02-18 16:21:22 <BF>: best pair is 510, 529
+2025-02-18 16:21:22 <BF>: reduce size: 536
+2025-02-18 16:21:22 <BF>: best pair is 80, 1003
+2025-02-18 16:21:22 <BF>: reduce size: 532
+2025-02-18 16:21:22 <BF>: best pair is 858, 909
+2025-02-18 16:21:22 <BF>: reduce size: 531
+2025-02-18 16:21:22 <BF>: best pair is 858, 910
+2025-02-18 16:21:22 <BF>: reduce size: 681
+2025-02-18 16:21:22 <BF>: best pair is 858, 941
+2025-02-18 16:21:22 <BF>: reduce size: 627
+2025-02-18 16:21:22 <BF>: best pair is 858, 865
+2025-02-18 16:21:22 <BF>: reduce size: 565
+2025-02-18 16:21:23 <BF>: best pair is 897, 898
+2025-02-18 16:21:23 <BF>: reduce size: 531
+2025-02-18 16:21:23 <BF>: best pair is 858, 935
+2025-02-18 16:21:23 <BF>: reduce size: 529
+2025-02-18 16:21:23 <BF>: best pair is 26, 30
+2025-02-18 16:21:23 <BF>: reduce size: 516
+2025-02-18 16:21:23 <BF>: best pair is 26, 510
+2025-02-18 16:21:23 <BF>: reduce size: 681
+2025-02-18 16:21:23 <BF>: best pair is 26, 699
+2025-02-18 16:21:23 <BF>: reduce size: 638
+2025-02-18 16:21:23 <BF>: best pair is 26, 253
+2025-02-18 16:21:23 <BF>: reduce size: 681
+2025-02-18 16:21:23 <BF>: best pair is 393, 670
+2025-02-18 16:21:23 <BF>: reduce size: 505
+2025-02-18 16:21:23 <BF>: best pair is 896, 897
+2025-02-18 16:21:23 <BF>: reduce size: 500
+2025-02-18 16:21:23 <BF>: best pair is 896, 920
+2025-02-18 16:21:23 <BF>: reduce size: 627
+2025-02-18 16:21:23 <BF>: best pair is 896, 921
+2025-02-18 16:21:23 <BF>: reduce size: 584
+2025-02-18 16:21:23 <BF>: best pair is 896, 922
+2025-02-18 16:21:23 <BF>: reduce size: 514
+2025-02-18 16:21:23 <BF>: best pair is 707, 714
+2025-02-18 16:21:23 <BF>: reduce size: 499
+2025-02-18 16:21:23 <BF>: best pair is 138, 523
+2025-02-18 16:21:23 <BF>: reduce size: 493
+2025-02-18 16:21:23 <BF>: best pair is 138, 194
+2025-02-18 16:21:23 <BF>: reduce size: 506
+2025-02-18 16:21:23 <BF>: best pair is 37, 40
+2025-02-18 16:21:23 <BF>: reduce size: 492
+2025-02-18 16:21:23 <BF>: best pair is 626, 662
+2025-02-18 16:21:23 <BF>: reduce size: 489
+2025-02-18 16:21:23 <BF>: best pair is 696, 725
+2025-02-18 16:21:23 <BF>: reduce size: 488
+2025-02-18 16:21:23 <BF>: best pair is 696, 991
+2025-02-18 16:21:23 <BF>: reduce size: 519
+2025-02-18 16:21:23 <BF>: best pair is 696, 706
+2025-02-18 16:21:23 <BF>: reduce size: 496
+2025-02-18 16:21:23 <BF>: best pair is 696, 707
+2025-02-18 16:21:23 <BF>: reduce size: 544
+2025-02-18 16:21:24 <BF>: best pair is 696, 996
+2025-02-18 16:21:24 <BF>: reduce size: 489
+2025-02-18 16:21:24 <BF>: best pair is 80, 101
+2025-02-18 16:21:24 <BF>: reduce size: 487
+2025-02-18 16:21:24 <BF>: best pair is 754, 755
+2025-02-18 16:21:24 <BF>: reduce size: 483
+2025-02-18 16:21:24 <BF>: best pair is 590, 591
+2025-02-18 16:21:24 <BF>: reduce size: 482
+2025-02-18 16:21:24 <BF>: best pair is 590, 626
+2025-02-18 16:21:24 <BF>: reduce size: 572
+2025-02-18 16:21:24 <BF>: best pair is 590, 611
+2025-02-18 16:21:24 <BF>: reduce size: 575
+2025-02-18 16:21:24 <BF>: best pair is 590, 628
+2025-02-18 16:21:24 <BF>: reduce size: 525
+2025-02-18 16:21:24 <BF>: best pair is 590, 795
+2025-02-18 16:21:24 <BF>: reduce size: 496
+2025-02-18 16:21:24 <BF>: best pair is 590, 665
+2025-02-18 16:21:24 <BF>: reduce size: 548
+2025-02-18 16:21:24 <BF>: best pair is 232, 329
+2025-02-18 16:21:24 <BF>: reduce size: 479
+2025-02-18 16:21:24 <BF>: best pair is 232, 336
+2025-02-18 16:21:24 <BF>: reduce size: 603
+2025-02-18 16:21:24 <BF>: best pair is 90, 577
+2025-02-18 16:21:24 <BF>: reduce size: 478
+2025-02-18 16:21:24 <BF>: best pair is 90, 576
+2025-02-18 16:21:24 <BF>: reduce size: 545
+2025-02-18 16:21:24 <BF>: best pair is 90, 393
+2025-02-18 16:21:24 <BF>: reduce size: 602
+2025-02-18 16:21:24 <BF>: best pair is 100, 195
+2025-02-18 16:21:24 <BF>: reduce size: 478
+2025-02-18 16:21:24 <BF>: best pair is 888, 890
+2025-02-18 16:21:24 <BF>: reduce size: 476
+2025-02-18 16:21:24 <BF>: best pair is 888, 889
+2025-02-18 16:21:24 <BF>: reduce size: 575
+2025-02-18 16:21:24 <BF>: best pair is 896, 937
+2025-02-18 16:21:24 <BF>: reduce size: 476
+2025-02-18 16:21:25 <BF>: best pair is 224, 226
+2025-02-18 16:21:25 <BF>: reduce size: 473
+2025-02-18 16:21:25 <BF>: best pair is 533, 701
+2025-02-18 16:21:25 <BF>: reduce size: 471
+2025-02-18 16:21:25 <BF>: best pair is 726, 734
+2025-02-18 16:21:25 <BF>: reduce size: 469
+2025-02-18 16:21:25 <BF>: best pair is 161, 297
+2025-02-18 16:21:25 <BF>: reduce size: 467
+2025-02-18 16:21:25 <BF>: best pair is 615, 629
+2025-02-18 16:21:25 <BF>: reduce size: 457
+2025-02-18 16:21:25 <BF>: best pair is 79, 359
+2025-02-18 16:21:25 <BF>: reduce size: 456
+2025-02-18 16:21:25 <BF>: best pair is 202, 581
+2025-02-18 16:21:25 <BF>: reduce size: 456
+2025-02-18 16:21:25 <BF>: best pair is 202, 278
+2025-02-18 16:21:25 <BF>: reduce size: 495
+2025-02-18 16:21:25 <BF>: best pair is 202, 344
+2025-02-18 16:21:25 <BF>: reduce size: 555
+2025-02-18 16:21:25 <BF>: best pair is 202, 508
+2025-02-18 16:21:25 <BF>: reduce size: 497
+2025-02-18 16:21:25 <BF>: best pair is 202, 972
+2025-02-18 16:21:25 <BF>: reduce size: 552
+2025-02-18 16:21:25 <BF>: best pair is 202, 579
+2025-02-18 16:21:25 <BF>: reduce size: 528
+2025-02-18 16:21:25 <BF>: best pair is 202, 693
+2025-02-18 16:21:25 <BF>: reduce size: 564
+2025-02-18 16:21:25 <BF>: best pair is 161, 215
+2025-02-18 16:21:25 <BF>: reduce size: 455
+2025-02-18 16:21:25 <BF>: best pair is 161, 211
+2025-02-18 16:21:25 <BF>: reduce size: 480
+2025-02-18 16:21:25 <BF>: best pair is 820, 821
+2025-02-18 16:21:25 <BF>: reduce size: 455
+2025-02-18 16:21:25 <BF>: best pair is 100, 138
+2025-02-18 16:21:25 <BF>: reduce size: 454
+2025-02-18 16:21:25 <BF>: best pair is 100, 962
+2025-02-18 16:21:25 <BF>: reduce size: 514
+2025-02-18 16:21:25 <BF>: best pair is 437, 438
+2025-02-18 16:21:25 <BF>: reduce size: 453
+2025-02-18 16:21:25 <BF>: best pair is 79, 533
+2025-02-18 16:21:25 <BF>: reduce size: 447
+2025-02-18 16:21:25 <BF>: best pair is 79, 80
+2025-02-18 16:21:25 <BF>: reduce size: 573
+2025-02-18 16:21:25 <BF>: best pair is 79, 620
+2025-02-18 16:21:25 <BF>: reduce size: 551
+2025-02-18 16:21:26 <BF>: best pair is 104, 209
+2025-02-18 16:21:26 <BF>: reduce size: 445
+2025-02-18 16:21:26 <BF>: best pair is 104, 688
+2025-02-18 16:21:26 <BF>: reduce size: 491
+2025-02-18 16:21:26 <BF>: best pair is 104, 966
+2025-02-18 16:21:26 <BF>: reduce size: 449
+2025-02-18 16:21:26 <BF>: best pair is 104, 161
+2025-02-18 16:21:26 <BF>: reduce size: 479
+2025-02-18 16:21:26 <BF>: best pair is 37, 41
+2025-02-18 16:21:26 <BF>: reduce size: 439
+2025-02-18 16:21:26 <BF>: best pair is 473, 516
+2025-02-18 16:21:26 <BF>: reduce size: 439
+2025-02-18 16:21:26 <BF>: best pair is 473, 698
+2025-02-18 16:21:26 <BF>: reduce size: 442
+2025-02-18 16:21:26 <BF>: best pair is 473, 563
+2025-02-18 16:21:26 <BF>: reduce size: 437
+2025-02-18 16:21:26 <BF>: best pair is 473, 807
+2025-02-18 16:21:26 <BF>: reduce size: 484
+2025-02-18 16:21:26 <BF>: best pair is 473, 1021
+2025-02-18 16:21:26 <BF>: reduce size: 512
+2025-02-18 16:21:26 <BF>: best pair is 473, 477
+2025-02-18 16:21:26 <BF>: reduce size: 498
+2025-02-18 16:21:26 <BF>: best pair is 904, 905
+2025-02-18 16:21:26 <BF>: reduce size: 437
+2025-02-18 16:21:26 <BF>: best pair is 24, 68
+2025-02-18 16:21:26 <BF>: reduce size: 436
+2025-02-18 16:21:26 <BF>: best pair is 820, 822
+2025-02-18 16:21:26 <BF>: reduce size: 435
+2025-02-18 16:21:26 <BF>: best pair is 24, 70
+2025-02-18 16:21:26 <BF>: reduce size: 433
+2025-02-18 16:21:26 <BF>: best pair is 24, 97
+2025-02-18 16:21:26 <BF>: reduce size: 472
+2025-02-18 16:21:26 <BF>: best pair is 24, 88
+2025-02-18 16:21:26 <BF>: reduce size: 509
+2025-02-18 16:21:26 <BF>: best pair is 24, 947
+2025-02-18 16:21:26 <BF>: reduce size: 443
+2025-02-18 16:21:26 <BF>: best pair is 24, 642
+2025-02-18 16:21:26 <BF>: reduce size: 532
+2025-02-18 16:21:26 <BF>: best pair is 24, 854
+2025-02-18 16:21:26 <BF>: reduce size: 501
+2025-02-18 16:21:26 <BF>: best pair is 452, 473
+2025-02-18 16:21:26 <BF>: reduce size: 431
+2025-02-18 16:21:26 <BF>: best pair is 824, 830
+2025-02-18 16:21:26 <BF>: reduce size: 428
+2025-02-18 16:21:26 <BF>: best pair is 230, 333
+2025-02-18 16:21:26 <BF>: reduce size: 427
+2025-02-18 16:21:26 <BF>: best pair is 230, 334
+2025-02-18 16:21:26 <BF>: reduce size: 437
+2025-02-18 16:21:27 <BF>: best pair is 37, 38
+2025-02-18 16:21:27 <BF>: reduce size: 424
+2025-02-18 16:21:27 <BF>: best pair is 888, 924
+2025-02-18 16:21:27 <BF>: reduce size: 420
+2025-02-18 16:21:27 <BF>: best pair is 888, 904
+2025-02-18 16:21:27 <BF>: reduce size: 549
+2025-02-18 16:21:27 <BF>: best pair is 888, 925
+2025-02-18 16:21:27 <BF>: reduce size: 598
+2025-02-18 16:21:27 <BF>: best pair is 228, 229
+2025-02-18 16:21:27 <BF>: reduce size: 415
+2025-02-18 16:21:27 <BF>: best pair is 46, 47
+2025-02-18 16:21:27 <BF>: reduce size: 414
+2025-02-18 16:21:27 <BF>: best pair is 560, 648
+2025-02-18 16:21:27 <BF>: reduce size: 413
+2025-02-18 16:21:27 <BF>: best pair is 72, 476
+2025-02-18 16:21:27 <BF>: reduce size: 400
+2025-02-18 16:21:27 <BF>: best pair is 888, 932
+2025-02-18 16:21:27 <BF>: reduce size: 399
+2025-02-18 16:21:27 <BF>: best pair is 285, 397
+2025-02-18 16:21:27 <BF>: reduce size: 392
+2025-02-18 16:21:27 <BF>: best pair is 285, 315
+2025-02-18 16:21:27 <BF>: reduce size: 431
+2025-02-18 16:21:27 <BF>: best pair is 285, 437
+2025-02-18 16:21:27 <BF>: reduce size: 475
+2025-02-18 16:21:27 <BF>: best pair is 285, 398
+2025-02-18 16:21:27 <BF>: reduce size: 549
+2025-02-18 16:21:27 <BF>: best pair is 230, 231
+2025-02-18 16:21:27 <BF>: reduce size: 389
+2025-02-18 16:21:27 <BF>: best pair is 230, 328
+2025-02-18 16:21:27 <BF>: reduce size: 460
+2025-02-18 16:21:27 <BF>: best pair is 230, 335
+2025-02-18 16:21:27 <BF>: reduce size: 453
+2025-02-18 16:21:27 <BF>: best pair is 230, 339
+2025-02-18 16:21:27 <BF>: reduce size: 451
+2025-02-18 16:21:27 <BF>: best pair is 556, 610
+2025-02-18 16:21:27 <BF>: reduce size: 384
+2025-02-18 16:21:27 <BF>: best pair is 400, 548
+2025-02-18 16:21:27 <BF>: reduce size: 379
+2025-02-18 16:21:27 <BF>: best pair is 400, 556
+2025-02-18 16:21:27 <BF>: reduce size: 453
+2025-02-18 16:21:27 <BF>: best pair is 400, 560
+2025-02-18 16:21:27 <BF>: reduce size: 490
+2025-02-18 16:21:27 <BF>: best pair is 400, 551
+2025-02-18 16:21:27 <BF>: reduce size: 394
+2025-02-18 16:21:28 <BF>: best pair is 223, 224
+2025-02-18 16:21:28 <BF>: reduce size: 378
+2025-02-18 16:21:28 <BF>: best pair is 230, 597
+2025-02-18 16:21:28 <BF>: reduce size: 374
+2025-02-18 16:21:28 <BF>: best pair is 650, 651
+2025-02-18 16:21:28 <BF>: reduce size: 374
+2025-02-18 16:21:28 <BF>: best pair is 72, 650
+2025-02-18 16:21:28 <BF>: reduce size: 371
+2025-02-18 16:21:28 <BF>: best pair is 72, 294
+2025-02-18 16:21:28 <BF>: reduce size: 420
+2025-02-18 16:21:28 <BF>: best pair is 406, 415
+2025-02-18 16:21:28 <BF>: reduce size: 370
+2025-02-18 16:21:28 <BF>: best pair is 409, 411
+2025-02-18 16:21:28 <BF>: reduce size: 367
+2025-02-18 16:21:28 <BF>: best pair is 418, 419
+2025-02-18 16:21:28 <BF>: reduce size: 364
+2025-02-18 16:21:28 <BF>: best pair is 828, 831
+2025-02-18 16:21:28 <BF>: reduce size: 352
+2025-02-18 16:21:28 <BF>: best pair is 870, 871
+2025-02-18 16:21:28 <BF>: reduce size: 350
+2025-02-18 16:21:28 <BF>: best pair is 413, 414
+2025-02-18 16:21:28 <BF>: reduce size: 348
+2025-02-18 16:21:28 <BF>: best pair is 608, 609
+2025-02-18 16:21:28 <BF>: reduce size: 347
+2025-02-18 16:21:28 <BF>: best pair is 65, 66
+2025-02-18 16:21:28 <BF>: reduce size: 346
+2025-02-18 16:21:28 <BF>: best pair is 987, 1020
+2025-02-18 16:21:28 <BF>: reduce size: 346
+2025-02-18 16:21:28 <BF>: best pair is 413, 427
+2025-02-18 16:21:28 <BF>: reduce size: 337
+2025-02-18 16:21:28 <BF>: best pair is 413, 428
+2025-02-18 16:21:28 <BF>: reduce size: 344
+2025-02-18 16:21:28 <BF>: best pair is 838, 839
+2025-02-18 16:21:28 <BF>: reduce size: 334
+2025-02-18 16:21:28 <BF>: best pair is 838, 1010
+2025-02-18 16:21:28 <BF>: reduce size: 334
+2025-02-18 16:21:28 <BF>: best pair is 838, 987
+2025-02-18 16:21:28 <BF>: reduce size: 418
+2025-02-18 16:21:28 <BF>: best pair is 838, 944
+2025-02-18 16:21:28 <BF>: reduce size: 490
+2025-02-18 16:21:28 <BF>: best pair is 418, 420
+2025-02-18 16:21:28 <BF>: reduce size: 333
+2025-02-18 16:21:28 <BF>: best pair is 418, 716
+2025-02-18 16:21:28 <BF>: reduce size: 335
+2025-02-18 16:21:28 <BF>: best pair is 418, 608
+2025-02-18 16:21:28 <BF>: reduce size: 382
+2025-02-18 16:21:28 <BF>: best pair is 418, 565
+2025-02-18 16:21:28 <BF>: reduce size: 431
+2025-02-18 16:21:28 <BF>: best pair is 418, 703
+2025-02-18 16:21:28 <BF>: reduce size: 408
+2025-02-18 16:21:28 <BF>: best pair is 279, 347
+2025-02-18 16:21:28 <BF>: reduce size: 330
+2025-02-18 16:21:28 <BF>: best pair is 279, 346
+2025-02-18 16:21:28 <BF>: reduce size: 332
+2025-02-18 16:21:28 <BF>: best pair is 321, 326
+2025-02-18 16:21:28 <BF>: reduce size: 328
+2025-02-18 16:21:29 <BF>: best pair is 321, 399
+2025-02-18 16:21:29 <BF>: reduce size: 380
+2025-02-18 16:21:29 <BF>: best pair is 321, 406
+2025-02-18 16:21:29 <BF>: reduce size: 620
+2025-02-18 16:21:29 <BF>: best pair is 321, 726
+2025-02-18 16:21:29 <BF>: reduce size: 371
+2025-02-18 16:21:29 <BF>: best pair is 321, 483
+2025-02-18 16:21:29 <BF>: reduce size: 410
+2025-02-18 16:21:29 <BF>: best pair is 413, 426
+2025-02-18 16:21:29 <BF>: reduce size: 328
+2025-02-18 16:21:29 <BF>: best pair is 46, 48
+2025-02-18 16:21:29 <BF>: reduce size: 325
+2025-02-18 16:21:29 <BF>: best pair is 148, 150
+2025-02-18 16:21:29 <BF>: reduce size: 324
+2025-02-18 16:21:29 <BF>: best pair is 413, 425
+2025-02-18 16:21:29 <BF>: reduce size: 324
+2025-02-18 16:21:29 <BF>: best pair is 25, 153
+2025-02-18 16:21:29 <BF>: reduce size: 317
+2025-02-18 16:21:29 <BF>: best pair is 25, 838
+2025-02-18 16:21:29 <BF>: reduce size: 358
+2025-02-18 16:21:29 <BF>: best pair is 824, 828
+2025-02-18 16:21:29 <BF>: reduce size: 313
+2025-02-18 16:21:29 <BF>: best pair is 84, 834
+2025-02-18 16:21:29 <BF>: reduce size: 310
+2025-02-18 16:21:29 <BF>: best pair is 84, 86
+2025-02-18 16:21:29 <BF>: reduce size: 337
+2025-02-18 16:21:29 <BF>: best pair is 84, 824
+2025-02-18 16:21:29 <BF>: reduce size: 386
+2025-02-18 16:21:29 <BF>: best pair is 84, 380
+2025-02-18 16:21:29 <BF>: reduce size: 376
+2025-02-18 16:21:29 <BF>: best pair is 36, 37
+2025-02-18 16:21:29 <BF>: reduce size: 302
+2025-02-18 16:21:29 <BF>: best pair is 36, 39
+2025-02-18 16:21:29 <BF>: reduce size: 324
+2025-02-18 16:21:29 <BF>: best pair is 44, 45
+2025-02-18 16:21:29 <BF>: reduce size: 296
+2025-02-18 16:21:29 <BF>: best pair is 852, 940
+2025-02-18 16:21:29 <BF>: reduce size: 292
+2025-02-18 16:21:29 <BF>: best pair is 852, 893
+2025-02-18 16:21:29 <BF>: reduce size: 302
+2025-02-18 16:21:29 <BF>: best pair is 4, 8
+2025-02-18 16:21:29 <BF>: reduce size: 289
+2025-02-18 16:21:29 <BF>: best pair is 4, 19
+2025-02-18 16:21:29 <BF>: reduce size: 345
+2025-02-18 16:21:29 <BF>: best pair is 4, 72
+2025-02-18 16:21:29 <BF>: reduce size: 492
+2025-02-18 16:21:29 <BF>: best pair is 221, 222
+2025-02-18 16:21:29 <BF>: reduce size: 289
+2025-02-18 16:21:29 <BF>: best pair is 413, 422
+2025-02-18 16:21:29 <BF>: reduce size: 287
+2025-02-18 16:21:29 <BF>: best pair is 906, 907
+2025-02-18 16:21:29 <BF>: reduce size: 287
+2025-02-18 16:21:29 <BF>: best pair is 448, 461
+2025-02-18 16:21:29 <BF>: reduce size: 286
+2025-02-18 16:21:30 <BF>: best pair is 448, 467
+2025-02-18 16:21:30 <BF>: reduce size: 399
+2025-02-18 16:21:30 <BF>: best pair is 448, 694
+2025-02-18 16:21:30 <BF>: reduce size: 313
+2025-02-18 16:21:30 <BF>: best pair is 448, 532
+2025-02-18 16:21:30 <BF>: reduce size: 337
+2025-02-18 16:21:30 <BF>: best pair is 448, 561
+2025-02-18 16:21:30 <BF>: reduce size: 313
+2025-02-18 16:21:30 <BF>: best pair is 448, 506
+2025-02-18 16:21:30 <BF>: reduce size: 316
+2025-02-18 16:21:30 <BF>: best pair is 870, 872
+2025-02-18 16:21:30 <BF>: reduce size: 285
+2025-02-18 16:21:30 <BF>: best pair is 867, 868
+2025-02-18 16:21:30 <BF>: reduce size: 282
+2025-02-18 16:21:30 <BF>: best pair is 867, 870
+2025-02-18 16:21:30 <BF>: reduce size: 328
+2025-02-18 16:21:30 <BF>: best pair is 867, 874
+2025-02-18 16:21:30 <BF>: reduce size: 302
+2025-02-18 16:21:30 <BF>: best pair is 404, 405
+2025-02-18 16:21:30 <BF>: reduce size: 281
+2025-02-18 16:21:30 <BF>: best pair is 58, 59
+2025-02-18 16:21:30 <BF>: reduce size: 278
+2025-02-18 16:21:30 <BF>: best pair is 409, 410
+2025-02-18 16:21:30 <BF>: reduce size: 278
+2025-02-18 16:21:30 <BF>: best pair is 409, 412
+2025-02-18 16:21:30 <BF>: reduce size: 320
+2025-02-18 16:21:30 <BF>: best pair is 46, 49
+2025-02-18 16:21:30 <BF>: reduce size: 270
+2025-02-18 16:21:30 <BF>: best pair is 279, 345
+2025-02-18 16:21:30 <BF>: reduce size: 268
+2025-02-18 16:21:30 <BF>: best pair is 867, 869
+2025-02-18 16:21:30 <BF>: reduce size: 267
+2025-02-18 16:21:30 <BF>: best pair is 867, 873
+2025-02-18 16:21:30 <BF>: reduce size: 296
+2025-02-18 16:21:30 <BF>: best pair is 43, 44
+2025-02-18 16:21:30 <BF>: reduce size: 265
+2025-02-18 16:21:30 <BF>: best pair is 43, 46
+2025-02-18 16:21:30 <BF>: reduce size: 318
+2025-02-18 16:21:30 <BF>: best pair is 223, 227
+2025-02-18 16:21:30 <BF>: reduce size: 265
+2025-02-18 16:21:30 <BF>: best pair is 558, 647
+2025-02-18 16:21:30 <BF>: reduce size: 252
+2025-02-18 16:21:30 <BF>: best pair is 880, 916
+2025-02-18 16:21:30 <BF>: reduce size: 252
+2025-02-18 16:21:30 <BF>: best pair is 960, 976
+2025-02-18 16:21:30 <BF>: reduce size: 250
+2025-02-18 16:21:30 <BF>: best pair is 852, 906
+2025-02-18 16:21:30 <BF>: reduce size: 248
+2025-02-18 16:21:30 <BF>: best pair is 852, 880
+2025-02-18 16:21:30 <BF>: reduce size: 448
+2025-02-18 16:21:30 <BF>: best pair is 43, 50
+2025-02-18 16:21:30 <BF>: reduce size: 247
+2025-02-18 16:21:30 <BF>: best pair is 6, 298
+2025-02-18 16:21:30 <BF>: reduce size: 246
+2025-02-18 16:21:30 <BF>: best pair is 6, 223
+2025-02-18 16:21:30 <BF>: reduce size: 380
+2025-02-18 16:21:30 <BF>: best pair is 58, 60
+2025-02-18 16:21:30 <BF>: reduce size: 244
+2025-02-18 16:21:30 <BF>: best pair is 413, 424
+2025-02-18 16:21:30 <BF>: reduce size: 240
+2025-02-18 16:21:31 <BF>: best pair is 98, 99
+2025-02-18 16:21:31 <BF>: reduce size: 231
+2025-02-18 16:21:31 <BF>: best pair is 98, 961
+2025-02-18 16:21:31 <BF>: reduce size: 269
+2025-02-18 16:21:31 <BF>: best pair is 98, 960
+2025-02-18 16:21:31 <BF>: reduce size: 261
+2025-02-18 16:21:31 <BF>: best pair is 98, 370
+2025-02-18 16:21:31 <BF>: reduce size: 238
+2025-02-18 16:21:31 <BF>: best pair is 98, 517
+2025-02-18 16:21:31 <BF>: reduce size: 299
+2025-02-18 16:21:31 <BF>: best pair is 569, 572
+2025-02-18 16:21:31 <BF>: reduce size: 230
+2025-02-18 16:21:31 <BF>: best pair is 323, 324
+2025-02-18 16:21:31 <BF>: reduce size: 229
+2025-02-18 16:21:31 <BF>: best pair is 323, 325
+2025-02-18 16:21:31 <BF>: reduce size: 290
+2025-02-18 16:21:31 <BF>: best pair is 323, 569
+2025-02-18 16:21:31 <BF>: reduce size: 251
+2025-02-18 16:21:31 <BF>: best pair is 429, 431
+2025-02-18 16:21:31 <BF>: reduce size: 229
+2025-02-18 16:21:31 <BF>: best pair is 381, 382
+2025-02-18 16:21:31 <BF>: reduce size: 228
+2025-02-18 16:21:31 <BF>: best pair is 558, 559
+2025-02-18 16:21:31 <BF>: reduce size: 228
+2025-02-18 16:21:31 <BF>: best pair is 233, 234
+2025-02-18 16:21:31 <BF>: reduce size: 225
+2025-02-18 16:21:31 <BF>: best pair is 233, 279
+2025-02-18 16:21:31 <BF>: reduce size: 280
+2025-02-18 16:21:31 <BF>: best pair is 233, 494
+2025-02-18 16:21:31 <BF>: reduce size: 237
+2025-02-18 16:21:31 <BF>: best pair is 233, 248
+2025-02-18 16:21:31 <BF>: reduce size: 253
+2025-02-18 16:21:31 <BF>: best pair is 660, 661
+2025-02-18 16:21:31 <BF>: reduce size: 224
+2025-02-18 16:21:31 <BF>: best pair is 36, 65
+2025-02-18 16:21:31 <BF>: reduce size: 219
+2025-02-18 16:21:31 <BF>: best pair is 308, 309
+2025-02-18 16:21:31 <BF>: reduce size: 214
+2025-02-18 16:21:31 <BF>: best pair is 31, 32
+2025-02-18 16:21:31 <BF>: reduce size: 204
+2025-02-18 16:21:31 <BF>: best pair is 31, 33
+2025-02-18 16:21:31 <BF>: reduce size: 219
+2025-02-18 16:21:31 <BF>: best pair is 31, 34
+2025-02-18 16:21:31 <BF>: reduce size: 229
+2025-02-18 16:21:31 <BF>: best pair is 31, 58
+2025-02-18 16:21:31 <BF>: reduce size: 218
+2025-02-18 16:21:31 <BF>: best pair is 31, 42
+2025-02-18 16:21:31 <BF>: reduce size: 217
+2025-02-18 16:21:31 <BF>: best pair is 403, 404
+2025-02-18 16:21:31 <BF>: reduce size: 202
+2025-02-18 16:21:31 <BF>: best pair is 403, 429
+2025-02-18 16:21:31 <BF>: reduce size: 244
+2025-02-18 16:21:31 <BF>: best pair is 554, 655
+2025-02-18 16:21:31 <BF>: reduce size: 200
+2025-02-18 16:21:31 <BF>: best pair is 401, 402
+2025-02-18 16:21:31 <BF>: reduce size: 193
+2025-02-18 16:21:31 <BF>: best pair is 401, 403
+2025-02-18 16:21:31 <BF>: reduce size: 247
+2025-02-18 16:21:31 <BF>: best pair is 286, 287
+2025-02-18 16:21:31 <BF>: reduce size: 189
+2025-02-18 16:21:31 <BF>: best pair is 148, 228
+2025-02-18 16:21:31 <BF>: reduce size: 188
+2025-02-18 16:21:31 <BF>: best pair is 148, 221
+2025-02-18 16:21:31 <BF>: reduce size: 212
+2025-02-18 16:21:32 <BF>: best pair is 148, 286
+2025-02-18 16:21:32 <BF>: reduce size: 182
+2025-02-18 16:21:32 <BF>: best pair is 401, 430
+2025-02-18 16:21:32 <BF>: reduce size: 176
+2025-02-18 16:21:32 <BF>: best pair is 61, 63
+2025-02-18 16:21:32 <BF>: reduce size: 173
+2025-02-18 16:21:32 <BF>: best pair is 98, 547
+2025-02-18 16:21:32 <BF>: reduce size: 173
+2025-02-18 16:21:32 <BF>: best pair is 409, 754
+2025-02-18 16:21:32 <BF>: reduce size: 173
+2025-02-18 16:21:32 <BF>: best pair is 409, 463
+2025-02-18 16:21:32 <BF>: reduce size: 180
+2025-02-18 16:21:32 <BF>: best pair is 308, 310
+2025-02-18 16:21:32 <BF>: reduce size: 163
+2025-02-18 16:21:32 <BF>: best pair is 432, 433
+2025-02-18 16:21:32 <BF>: reduce size: 163
+2025-02-18 16:21:32 <BF>: best pair is 67, 527
+2025-02-18 16:21:32 <BF>: reduce size: 162
+2025-02-18 16:21:32 <BF>: best pair is 67, 117
+2025-02-18 16:21:32 <BF>: reduce size: 154
+2025-02-18 16:21:32 <BF>: best pair is 94, 181
+2025-02-18 16:21:32 <BF>: reduce size: 150
+2025-02-18 16:21:32 <BF>: best pair is 61, 64
+2025-02-18 16:21:32 <BF>: reduce size: 144
+2025-02-18 16:21:32 <BF>: best pair is 53, 54
+2025-02-18 16:21:32 <BF>: reduce size: 143
+2025-02-18 16:21:32 <BF>: best pair is 432, 435
+2025-02-18 16:21:32 <BF>: reduce size: 143
+2025-02-18 16:21:32 <BF>: best pair is 67, 423
+2025-02-18 16:21:32 <BF>: reduce size: 139
+2025-02-18 16:21:32 <BF>: best pair is 94, 396
+2025-02-18 16:21:32 <BF>: reduce size: 136
+2025-02-18 16:21:32 <BF>: best pair is 94, 240
+2025-02-18 16:21:32 <BF>: reduce size: 148
+2025-02-18 16:21:32 <BF>: best pair is 94, 820
+2025-02-18 16:21:32 <BF>: reduce size: 162
+2025-02-18 16:21:32 <BF>: best pair is 94, 607
+2025-02-18 16:21:32 <BF>: reduce size: 138
+2025-02-18 16:21:32 <BF>: best pair is 407, 408
+2025-02-18 16:21:32 <BF>: reduce size: 120
+2025-02-18 16:21:32 <BF>: best pair is 35, 61
+2025-02-18 16:21:32 <BF>: reduce size: 117
+2025-02-18 16:21:32 <BF>: best pair is 35, 62
+2025-02-18 16:21:32 <BF>: reduce size: 123
+2025-02-18 16:21:32 <BF>: best pair is 67, 573
+2025-02-18 16:21:32 <BF>: reduce size: 116
+2025-02-18 16:21:32 <BF>: best pair is 67, 436
+2025-02-18 16:21:32 <BF>: reduce size: 140
+2025-02-18 16:21:32 <BF>: best pair is 67, 381
+2025-02-18 16:21:32 <BF>: reduce size: 165
+2025-02-18 16:21:32 <BF>: best pair is 55, 56
+2025-02-18 16:21:32 <BF>: reduce size: 112
+2025-02-18 16:21:32 <BF>: best pair is 55, 57
+2025-02-18 16:21:32 <BF>: reduce size: 109
+2025-02-18 16:21:32 <BF>: best pair is 35, 55
+2025-02-18 16:21:32 <BF>: reduce size: 106
+2025-02-18 16:21:32 <BF>: best pair is 51, 53
+2025-02-18 16:21:32 <BF>: reduce size: 95
+2025-02-18 16:21:32 <BF>: best pair is 51, 52
+2025-02-18 16:21:32 <BF>: reduce size: 122
+2025-02-18 16:21:32 <BF>: best pair is 338, 554
+2025-02-18 16:21:32 <BF>: reduce size: 93
+2025-02-18 16:21:32 <BF>: best pair is 147, 338
+2025-02-18 16:21:32 <BF>: reduce size: 84
+2025-02-18 16:21:32 <BF>: best pair is 189, 239
+2025-02-18 16:21:32 <BF>: reduce size: 74
+2025-02-18 16:21:32 <BF>: best pair is 189, 308
+2025-02-18 16:21:32 <BF>: reduce size: 86
+2025-02-18 16:21:32 <BF>: best pair is 189, 558
+2025-02-18 16:21:32 <BF>: reduce size: 56
+2025-02-18 16:21:33 <BF>: best pair is 434, 557
+2025-02-18 16:21:33 <BF>: reduce size: 56
+2025-02-18 16:21:33 <BF>: best pair is 434, 660
+2025-02-18 16:21:33 <BF>: reduce size: 76
+2025-02-18 16:21:33 <BF>: best pair is 432, 434
+2025-02-18 16:21:33 <BF>: reduce size: 54
+2025-02-18 16:21:33 <BF>: best pair is 51, 407
+2025-02-18 16:21:33 <BF>: reduce size: 35
+2025-02-18 16:21:33 <BF>: best pair is 27, 769
+2025-02-18 16:21:33 <BF>: reduce size: 33
+2025-02-18 16:21:33 <BF>: best pair is 51, 442
+2025-02-18 16:21:33 <BF>: reduce size: 30
+2025-02-18 16:21:33 <BF>: best pair is 51, 384
+2025-02-18 16:21:33 <BF>: reduce size: 2
+2025-02-18 16:21:33 <BF>: no best pair found
+Time taken by for loop: 72.7155 s 
+loop throughput is 0GiB/s
+2025-02-18 16:21:33 <Ftcg>: processNum 1 
+2025-02-18 16:21:33 <Ftcg>: Group Num is 0
+2025-02-18 16:21:33 <Ftcg>: Total logical size is 0
+2025-02-18 16:21:33 <Ftcg>: Total unique size is 0
+2025-02-18 16:21:33 <Ftcg>: Total compressed size is 0
+2025-02-18 16:21:33 <Ftcg>: Overall Compression ratio is -nan
+2025-02-18 16:21:33 <Ftcg>: Unique Compression ratio is -nan
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 16:26:41 <Ftcg>: Start to process 1 files
+2025-02-18 16:26:41 <Chunker>: chunking done.
+2025-02-18 16:26:41 <Chunker>: thread exit.
+2025-02-18 16:26:42 <BF>: best pair is 11, 85
+2025-02-18 16:26:42 <BF>: reduce size: 1332
+2025-02-18 16:26:42 <BF>: best pair is 12, 87
+2025-02-18 16:26:42 <BF>: reduce size: 1211
+2025-02-18 16:26:42 <BF>: best pair is 14, 93
+2025-02-18 16:26:42 <BF>: reduce size: 1125
+2025-02-18 16:26:42 <BF>: best pair is 11, 12
+2025-02-18 16:26:42 <BF>: reduce size: 1083
+2025-02-18 16:26:42 <BF>: best pair is 5, 10
+2025-02-18 16:26:42 <BF>: reduce size: 972
+2025-02-18 16:26:42 <BF>: best pair is 5, 9
+2025-02-18 16:26:42 <BF>: reduce size: 1037
+2025-02-18 16:26:42 <BF>: best pair is 15, 95
+2025-02-18 16:26:42 <BF>: reduce size: 897
+2025-02-18 16:26:42 <BF>: best pair is 13, 90
+2025-02-18 16:26:42 <BF>: reduce size: 873
+2025-02-18 16:26:42 <BF>: best pair is 5, 11
+2025-02-18 16:26:42 <BF>: reduce size: 796
+2025-02-18 16:26:42 <BF>: best pair is 5, 7
+2025-02-18 16:26:42 <BF>: reduce size: 819
+2025-02-18 16:26:42 <BF>: best pair is 0, 1
+2025-02-18 16:26:42 <BF>: reduce size: 733
+2025-02-18 16:26:42 <BF>: best pair is 0, 2
+2025-02-18 16:26:42 <BF>: reduce size: 812
+2025-02-18 16:26:42 <BF>: best pair is 0, 3
+2025-02-18 16:26:42 <BF>: reduce size: 766
+2025-02-18 16:26:42 <BF>: best pair is 14, 15
+2025-02-18 16:26:42 <BF>: reduce size: 714
+2025-02-18 16:26:42 <BF>: best pair is 14, 78
+2025-02-18 16:26:42 <BF>: reduce size: 1033
+2025-02-18 16:26:42 <BF>: best pair is 0, 4
+2025-02-18 16:26:42 <BF>: reduce size: 706
+2025-02-18 16:26:42 <BF>: best pair is 0, 91
+2025-02-18 16:26:42 <BF>: reduce size: 700
+2025-02-18 16:26:42 <BF>: best pair is 0, 21
+2025-02-18 16:26:42 <BF>: reduce size: 719
+2025-02-18 16:26:42 <BF>: best pair is 0, 71
+2025-02-18 16:26:42 <BF>: reduce size: 742
+2025-02-18 16:26:42 <BF>: best pair is 13, 14
+2025-02-18 16:26:42 <BF>: reduce size: 674
+2025-02-18 16:26:42 <BF>: best pair is 13, 75
+2025-02-18 16:26:42 <BF>: reduce size: 671
+2025-02-18 16:26:42 <BF>: best pair is 74, 83
+2025-02-18 16:26:42 <BF>: reduce size: 639
+2025-02-18 16:26:42 <BF>: best pair is 74, 77
+2025-02-18 16:26:42 <BF>: reduce size: 607
+2025-02-18 16:26:42 <BF>: best pair is 26, 28
+2025-02-18 16:26:42 <BF>: reduce size: 550
+2025-02-18 16:26:42 <BF>: best pair is 26, 29
+2025-02-18 16:26:42 <BF>: reduce size: 609
+2025-02-18 16:26:42 <BF>: best pair is 18, 19
+2025-02-18 16:26:42 <BF>: reduce size: 537
+2025-02-18 16:26:42 <BF>: best pair is 18, 74
+2025-02-18 16:26:42 <BF>: reduce size: 755
+2025-02-18 16:26:42 <BF>: best pair is 18, 26
+2025-02-18 16:26:42 <BF>: reduce size: 765
+2025-02-18 16:26:42 <BF>: best pair is 80, 81
+2025-02-18 16:26:42 <BF>: reduce size: 520
+2025-02-18 16:26:42 <BF>: best pair is 80, 82
+2025-02-18 16:26:42 <BF>: reduce size: 520
+2025-02-18 16:26:42 <BF>: best pair is 80, 92
+2025-02-18 16:26:42 <BF>: reduce size: 506
+2025-02-18 16:26:42 <BF>: best pair is 80, 88
+2025-02-18 16:26:42 <BF>: reduce size: 592
+2025-02-18 16:26:42 <BF>: best pair is 80, 89
+2025-02-18 16:26:42 <BF>: reduce size: 594
+2025-02-18 16:26:42 <BF>: best pair is 80, 97
+2025-02-18 16:26:42 <BF>: reduce size: 664
+2025-02-18 16:26:42 <BF>: best pair is 80, 96
+2025-02-18 16:26:42 <BF>: reduce size: 616
+2025-02-18 16:26:42 <BF>: best pair is 37, 40
+2025-02-18 16:26:42 <BF>: reduce size: 492
+2025-02-18 16:26:42 <BF>: best pair is 69, 76
+2025-02-18 16:26:42 <BF>: reduce size: 484
+2025-02-18 16:26:42 <BF>: best pair is 69, 73
+2025-02-18 16:26:42 <BF>: reduce size: 563
+2025-02-18 16:26:42 <BF>: best pair is 16, 17
+2025-02-18 16:26:42 <BF>: reduce size: 473
+2025-02-18 16:26:42 <BF>: best pair is 69, 70
+2025-02-18 16:26:42 <BF>: reduce size: 470
+2025-02-18 16:26:42 <BF>: best pair is 69, 79
+2025-02-18 16:26:42 <BF>: reduce size: 518
+2025-02-18 16:26:42 <BF>: best pair is 16, 69
+2025-02-18 16:26:42 <BF>: reduce size: 452
+2025-02-18 16:26:42 <BF>: best pair is 16, 22
+2025-02-18 16:26:42 <BF>: reduce size: 886
+2025-02-18 16:26:42 <BF>: best pair is 37, 41
+2025-02-18 16:26:42 <BF>: reduce size: 439
+2025-02-18 16:26:42 <BF>: best pair is 24, 68
+2025-02-18 16:26:42 <BF>: reduce size: 436
+2025-02-18 16:26:42 <BF>: best pair is 24, 30
+2025-02-18 16:26:42 <BF>: reduce size: 425
+2025-02-18 16:26:42 <BF>: best pair is 37, 38
+2025-02-18 16:26:42 <BF>: reduce size: 424
+2025-02-18 16:26:42 <BF>: best pair is 46, 47
+2025-02-18 16:26:42 <BF>: reduce size: 414
+2025-02-18 16:26:42 <BF>: best pair is 20, 67
+2025-02-18 16:26:42 <BF>: reduce size: 351
+2025-02-18 16:26:42 <BF>: best pair is 20, 24
+2025-02-18 16:26:42 <BF>: reduce size: 534
+2025-02-18 16:26:42 <BF>: best pair is 20, 84
+2025-02-18 16:26:42 <BF>: reduce size: 434
+2025-02-18 16:26:42 <BF>: best pair is 20, 25
+2025-02-18 16:26:42 <BF>: reduce size: 413
+2025-02-18 16:26:42 <BF>: best pair is 20, 86
+2025-02-18 16:26:42 <BF>: reduce size: 373
+2025-02-18 16:26:42 <BF>: best pair is 65, 66
+2025-02-18 16:26:42 <BF>: reduce size: 346
+2025-02-18 16:26:42 <BF>: best pair is 46, 48
+2025-02-18 16:26:42 <BF>: reduce size: 325
+2025-02-18 16:26:42 <BF>: best pair is 36, 37
+2025-02-18 16:26:42 <BF>: reduce size: 302
+2025-02-18 16:26:42 <BF>: best pair is 36, 39
+2025-02-18 16:26:42 <BF>: reduce size: 324
+2025-02-18 16:26:42 <BF>: best pair is 44, 45
+2025-02-18 16:26:42 <BF>: reduce size: 296
+2025-02-18 16:26:42 <BF>: best pair is 58, 59
+2025-02-18 16:26:42 <BF>: reduce size: 278
+2025-02-18 16:26:42 <BF>: best pair is 46, 49
+2025-02-18 16:26:42 <BF>: reduce size: 270
+2025-02-18 16:26:42 <BF>: best pair is 43, 44
+2025-02-18 16:26:42 <BF>: reduce size: 265
+2025-02-18 16:26:42 <BF>: best pair is 43, 46
+2025-02-18 16:26:42 <BF>: reduce size: 318
+2025-02-18 16:26:42 <BF>: best pair is 43, 50
+2025-02-18 16:26:42 <BF>: reduce size: 247
+2025-02-18 16:26:42 <BF>: best pair is 58, 60
+2025-02-18 16:26:42 <BF>: reduce size: 244
+2025-02-18 16:26:42 <BF>: best pair is 98, 99
+2025-02-18 16:26:42 <BF>: reduce size: 231
+2025-02-18 16:26:42 <BF>: best pair is 36, 65
+2025-02-18 16:26:42 <BF>: reduce size: 219
+2025-02-18 16:26:42 <BF>: best pair is 31, 32
+2025-02-18 16:26:42 <BF>: reduce size: 204
+2025-02-18 16:26:42 <BF>: best pair is 31, 33
+2025-02-18 16:26:42 <BF>: reduce size: 219
+2025-02-18 16:26:42 <BF>: best pair is 31, 34
+2025-02-18 16:26:42 <BF>: reduce size: 229
+2025-02-18 16:26:42 <BF>: best pair is 31, 58
+2025-02-18 16:26:42 <BF>: reduce size: 218
+2025-02-18 16:26:42 <BF>: best pair is 31, 42
+2025-02-18 16:26:42 <BF>: reduce size: 217
+2025-02-18 16:26:42 <BF>: best pair is 6, 8
+2025-02-18 16:26:42 <BF>: reduce size: 181
+2025-02-18 16:26:42 <BF>: best pair is 6, 23
+2025-02-18 16:26:42 <BF>: reduce size: 307
+2025-02-18 16:26:42 <BF>: best pair is 6, 72
+2025-02-18 16:26:42 <BF>: reduce size: 347
+2025-02-18 16:26:42 <BF>: best pair is 6, 94
+2025-02-18 16:26:42 <BF>: reduce size: 185
+2025-02-18 16:26:42 <BF>: best pair is 61, 63
+2025-02-18 16:26:42 <BF>: reduce size: 173
+2025-02-18 16:26:42 <BF>: best pair is 61, 64
+2025-02-18 16:26:42 <BF>: reduce size: 144
+2025-02-18 16:26:42 <BF>: best pair is 53, 54
+2025-02-18 16:26:42 <BF>: reduce size: 143
+2025-02-18 16:26:42 <BF>: best pair is 6, 27
+2025-02-18 16:26:42 <BF>: reduce size: 119
+2025-02-18 16:26:42 <BF>: best pair is 6, 98
+2025-02-18 16:26:42 <BF>: reduce size: 143
+2025-02-18 16:26:42 <BF>: best pair is 35, 61
+2025-02-18 16:26:42 <BF>: reduce size: 117
+2025-02-18 16:26:42 <BF>: best pair is 35, 62
+2025-02-18 16:26:42 <BF>: reduce size: 123
+2025-02-18 16:26:42 <BF>: best pair is 55, 56
+2025-02-18 16:26:42 <BF>: reduce size: 112
+2025-02-18 16:26:42 <BF>: best pair is 55, 57
+2025-02-18 16:26:42 <BF>: reduce size: 109
+2025-02-18 16:26:42 <BF>: best pair is 35, 55
+2025-02-18 16:26:42 <BF>: reduce size: 106
+2025-02-18 16:26:42 <BF>: best pair is 51, 53
+2025-02-18 16:26:42 <BF>: reduce size: 95
+2025-02-18 16:26:42 <BF>: best pair is 51, 52
+2025-02-18 16:26:42 <BF>: reduce size: 122
+2025-02-18 16:26:42 <BF>: no best pair found
+Time taken by for loop: 0.631783 s 
+loop throughput is 0GiB/s
+2025-02-18 16:26:42 <Ftcg>: processNum 1 
+2025-02-18 16:26:42 <Ftcg>: Group Num is 0
+2025-02-18 16:26:42 <Ftcg>: Total logical size is 0
+2025-02-18 16:26:42 <Ftcg>: Total unique size is 0
+2025-02-18 16:26:42 <Ftcg>: Total compressed size is 0
+2025-02-18 16:26:42 <Ftcg>: Overall Compression ratio is -nan
+2025-02-18 16:26:42 <Ftcg>: Unique Compression ratio is -nan
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 16:31:07 <Ftcg>: Start to process 1 files
+2025-02-18 16:31:07 <Chunker>: chunking done.
+2025-02-18 16:31:07 <Chunker>: thread exit.
+2025-02-18 16:31:08 <BF>: best pair is 11, 85
+2025-02-18 16:31:08 <BF>: reduce size: 1332
+2025-02-18 16:31:08 <BF>: best pair is 12, 87
+2025-02-18 16:31:08 <BF>: reduce size: 1211
+2025-02-18 16:31:08 <BF>: best pair is 14, 93
+2025-02-18 16:31:08 <BF>: reduce size: 1125
+2025-02-18 16:31:08 <BF>: best pair is 11, 12
+2025-02-18 16:31:08 <BF>: reduce size: 1083
+2025-02-18 16:31:08 <BF>: best pair is 5, 10
+2025-02-18 16:31:08 <BF>: reduce size: 972
+2025-02-18 16:31:08 <BF>: best pair is 5, 9
+2025-02-18 16:31:08 <BF>: reduce size: 1037
+2025-02-18 16:31:09 <BF>: best pair is 15, 95
+2025-02-18 16:31:09 <BF>: reduce size: 897
+2025-02-18 16:31:09 <BF>: best pair is 13, 90
+2025-02-18 16:31:09 <BF>: reduce size: 873
+2025-02-18 16:31:09 <BF>: best pair is 5, 11
+2025-02-18 16:31:09 <BF>: reduce size: 796
+2025-02-18 16:31:09 <BF>: best pair is 5, 7
+2025-02-18 16:31:09 <BF>: reduce size: 819
+2025-02-18 16:31:09 <BF>: best pair is 0, 1
+2025-02-18 16:31:09 <BF>: reduce size: 733
+2025-02-18 16:31:09 <BF>: best pair is 0, 2
+2025-02-18 16:31:09 <BF>: reduce size: 812
+2025-02-18 16:31:09 <BF>: best pair is 0, 3
+2025-02-18 16:31:09 <BF>: reduce size: 766
+2025-02-18 16:31:09 <BF>: best pair is 14, 15
+2025-02-18 16:31:09 <BF>: reduce size: 714
+2025-02-18 16:31:09 <BF>: best pair is 14, 78
+2025-02-18 16:31:09 <BF>: reduce size: 1033
+2025-02-18 16:31:09 <BF>: best pair is 0, 4
+2025-02-18 16:31:09 <BF>: reduce size: 706
+2025-02-18 16:31:09 <BF>: best pair is 0, 91
+2025-02-18 16:31:09 <BF>: reduce size: 700
+2025-02-18 16:31:09 <BF>: best pair is 0, 21
+2025-02-18 16:31:09 <BF>: reduce size: 719
+2025-02-18 16:31:10 <BF>: best pair is 0, 71
+2025-02-18 16:31:10 <BF>: reduce size: 742
+2025-02-18 16:31:10 <BF>: best pair is 13, 14
+2025-02-18 16:31:10 <BF>: reduce size: 674
+2025-02-18 16:31:10 <BF>: best pair is 13, 75
+2025-02-18 16:31:10 <BF>: reduce size: 671
+2025-02-18 16:31:10 <BF>: best pair is 74, 83
+2025-02-18 16:31:10 <BF>: reduce size: 639
+2025-02-18 16:31:10 <BF>: best pair is 74, 77
+2025-02-18 16:31:10 <BF>: reduce size: 607
+2025-02-18 16:31:10 <BF>: best pair is 26, 28
+2025-02-18 16:31:10 <BF>: reduce size: 550
+2025-02-18 16:31:10 <BF>: best pair is 26, 29
+2025-02-18 16:31:10 <BF>: reduce size: 609
+2025-02-18 16:31:10 <BF>: best pair is 18, 19
+2025-02-18 16:31:10 <BF>: reduce size: 537
+2025-02-18 16:31:10 <BF>: best pair is 18, 74
+2025-02-18 16:31:10 <BF>: reduce size: 755
+2025-02-18 16:31:10 <BF>: best pair is 18, 26
+2025-02-18 16:31:10 <BF>: reduce size: 765
+2025-02-18 16:31:10 <BF>: best pair is 80, 81
+2025-02-18 16:31:10 <BF>: reduce size: 520
+2025-02-18 16:31:10 <BF>: best pair is 80, 82
+2025-02-18 16:31:10 <BF>: reduce size: 520
+2025-02-18 16:31:10 <BF>: best pair is 80, 92
+2025-02-18 16:31:10 <BF>: reduce size: 506
+2025-02-18 16:31:10 <BF>: best pair is 80, 88
+2025-02-18 16:31:10 <BF>: reduce size: 592
+2025-02-18 16:31:10 <BF>: best pair is 80, 89
+2025-02-18 16:31:10 <BF>: reduce size: 594
+2025-02-18 16:31:10 <BF>: best pair is 80, 97
+2025-02-18 16:31:10 <BF>: reduce size: 664
+2025-02-18 16:31:11 <BF>: best pair is 80, 96
+2025-02-18 16:31:11 <BF>: reduce size: 616
+2025-02-18 16:31:11 <BF>: best pair is 37, 40
+2025-02-18 16:31:11 <BF>: reduce size: 492
+2025-02-18 16:31:11 <BF>: best pair is 69, 76
+2025-02-18 16:31:11 <BF>: reduce size: 484
+2025-02-18 16:31:11 <BF>: best pair is 69, 73
+2025-02-18 16:31:11 <BF>: reduce size: 563
+2025-02-18 16:31:11 <BF>: best pair is 16, 17
+2025-02-18 16:31:11 <BF>: reduce size: 473
+2025-02-18 16:31:11 <BF>: best pair is 69, 70
+2025-02-18 16:31:11 <BF>: reduce size: 470
+2025-02-18 16:31:11 <BF>: best pair is 69, 79
+2025-02-18 16:31:11 <BF>: reduce size: 518
+2025-02-18 16:31:11 <BF>: best pair is 16, 69
+2025-02-18 16:31:11 <BF>: reduce size: 452
+2025-02-18 16:31:11 <BF>: best pair is 16, 22
+2025-02-18 16:31:11 <BF>: reduce size: 886
+2025-02-18 16:31:11 <BF>: best pair is 37, 41
+2025-02-18 16:31:11 <BF>: reduce size: 439
+2025-02-18 16:31:11 <BF>: best pair is 24, 68
+2025-02-18 16:31:11 <BF>: reduce size: 436
+2025-02-18 16:31:11 <BF>: best pair is 24, 30
+2025-02-18 16:31:11 <BF>: reduce size: 425
+2025-02-18 16:31:11 <BF>: best pair is 37, 38
+2025-02-18 16:31:11 <BF>: reduce size: 424
+2025-02-18 16:31:11 <BF>: best pair is 46, 47
+2025-02-18 16:31:11 <BF>: reduce size: 414
+2025-02-18 16:31:11 <BF>: best pair is 20, 67
+2025-02-18 16:31:11 <BF>: reduce size: 351
+2025-02-18 16:31:11 <BF>: best pair is 20, 24
+2025-02-18 16:31:11 <BF>: reduce size: 534
+2025-02-18 16:31:11 <BF>: best pair is 20, 84
+2025-02-18 16:31:11 <BF>: reduce size: 434
+2025-02-18 16:31:11 <BF>: best pair is 20, 25
+2025-02-18 16:31:11 <BF>: reduce size: 413
+2025-02-18 16:31:11 <BF>: best pair is 20, 86
+2025-02-18 16:31:11 <BF>: reduce size: 373
+2025-02-18 16:31:11 <BF>: best pair is 65, 66
+2025-02-18 16:31:11 <BF>: reduce size: 346
+2025-02-18 16:31:11 <BF>: best pair is 46, 48
+2025-02-18 16:31:11 <BF>: reduce size: 325
+2025-02-18 16:31:12 <BF>: best pair is 36, 37
+2025-02-18 16:31:12 <BF>: reduce size: 302
+2025-02-18 16:31:12 <BF>: best pair is 36, 39
+2025-02-18 16:31:12 <BF>: reduce size: 324
+2025-02-18 16:31:12 <BF>: best pair is 44, 45
+2025-02-18 16:31:12 <BF>: reduce size: 296
+2025-02-18 16:31:12 <BF>: best pair is 58, 59
+2025-02-18 16:31:12 <BF>: reduce size: 278
+2025-02-18 16:31:12 <BF>: best pair is 46, 49
+2025-02-18 16:31:12 <BF>: reduce size: 270
+2025-02-18 16:31:12 <BF>: best pair is 43, 44
+2025-02-18 16:31:12 <BF>: reduce size: 265
+2025-02-18 16:31:12 <BF>: best pair is 43, 46
+2025-02-18 16:31:12 <BF>: reduce size: 318
+2025-02-18 16:31:12 <BF>: best pair is 43, 50
+2025-02-18 16:31:12 <BF>: reduce size: 247
+2025-02-18 16:31:12 <BF>: best pair is 58, 60
+2025-02-18 16:31:12 <BF>: reduce size: 244
+2025-02-18 16:31:12 <BF>: best pair is 98, 99
+2025-02-18 16:31:12 <BF>: reduce size: 231
+2025-02-18 16:31:12 <BF>: best pair is 36, 65
+2025-02-18 16:31:12 <BF>: reduce size: 219
+2025-02-18 16:31:12 <BF>: best pair is 31, 32
+2025-02-18 16:31:12 <BF>: reduce size: 204
+2025-02-18 16:31:12 <BF>: best pair is 31, 33
+2025-02-18 16:31:12 <BF>: reduce size: 219
+2025-02-18 16:31:12 <BF>: best pair is 31, 34
+2025-02-18 16:31:12 <BF>: reduce size: 229
+2025-02-18 16:31:12 <BF>: best pair is 31, 58
+2025-02-18 16:31:12 <BF>: reduce size: 218
+2025-02-18 16:31:12 <BF>: best pair is 31, 42
+2025-02-18 16:31:12 <BF>: reduce size: 217
+2025-02-18 16:31:12 <BF>: best pair is 6, 8
+2025-02-18 16:31:12 <BF>: reduce size: 181
+2025-02-18 16:31:12 <BF>: best pair is 6, 23
+2025-02-18 16:31:12 <BF>: reduce size: 307
+2025-02-18 16:31:12 <BF>: best pair is 6, 72
+2025-02-18 16:31:12 <BF>: reduce size: 347
+2025-02-18 16:31:12 <BF>: best pair is 6, 94
+2025-02-18 16:31:12 <BF>: reduce size: 185
+2025-02-18 16:31:12 <BF>: best pair is 61, 63
+2025-02-18 16:31:12 <BF>: reduce size: 173
+2025-02-18 16:31:12 <BF>: best pair is 61, 64
+2025-02-18 16:31:12 <BF>: reduce size: 144
+2025-02-18 16:31:12 <BF>: best pair is 53, 54
+2025-02-18 16:31:12 <BF>: reduce size: 143
+2025-02-18 16:31:12 <BF>: best pair is 6, 27
+2025-02-18 16:31:12 <BF>: reduce size: 119
+2025-02-18 16:31:12 <BF>: best pair is 6, 98
+2025-02-18 16:31:12 <BF>: reduce size: 143
+2025-02-18 16:31:12 <BF>: best pair is 35, 61
+2025-02-18 16:31:12 <BF>: reduce size: 117
+2025-02-18 16:31:12 <BF>: best pair is 35, 62
+2025-02-18 16:31:12 <BF>: reduce size: 123
+2025-02-18 16:31:12 <BF>: best pair is 55, 56
+2025-02-18 16:31:12 <BF>: reduce size: 112
+2025-02-18 16:31:12 <BF>: best pair is 55, 57
+2025-02-18 16:31:12 <BF>: reduce size: 109
+2025-02-18 16:31:12 <BF>: best pair is 35, 55
+2025-02-18 16:31:12 <BF>: reduce size: 106
+2025-02-18 16:31:12 <BF>: best pair is 51, 53
+2025-02-18 16:31:12 <BF>: reduce size: 95
+2025-02-18 16:31:12 <BF>: best pair is 51, 52
+2025-02-18 16:31:12 <BF>: reduce size: 122
+2025-02-18 16:31:12 <BF>: no best pair found
+Time taken by for loop: 5.4754 s 
+loop throughput is 0.000139339GiB/s
+2025-02-18 16:31:12 <Ftcg>: processNum 1 
+2025-02-18 16:31:12 <Ftcg>: Group Num is 0
+2025-02-18 16:31:12 <Ftcg>: Total logical size is 819200
+2025-02-18 16:31:12 <Ftcg>: Total unique size is 0
+2025-02-18 16:31:12 <Ftcg>: Total compressed size is 259673
+2025-02-18 16:31:12 <Ftcg>: Overall Compression ratio is 3.1547
+2025-02-18 16:31:12 <Ftcg>: Unique Compression ratio is 0.0000
+
+=================================================================
+==1120919==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 134217728 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x682251 in absMethod::absMethod(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/absMethod.cc:17:33
+    #2 0x5c1f33 in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:48
+    #3 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 8388608 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x69794c in Finesse::Finesse() /home/public/SXL/repo/FtcgPrototype/src/method/finesse.cc:8:38
+    #2 0x5cb43b in FinesseIndexTable::FinesseIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../finesse.h:39:5
+    #3 0x5c202e in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 4194768 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x58b8a8 in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:137:32
+    #2 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 4194304 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x697890 in Finesse::Finesse() /home/public/SXL/repo/FtcgPrototype/src/method/finesse.cc:5:33
+    #2 0x5cb43b in FinesseIndexTable::FinesseIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../finesse.h:39:5
+    #3 0x5c202e in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 737280 byte(s) in 90 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x6dd032 in Chunker::FixSizedChunking() /home/public/SXL/repo/FtcgPrototype/src/util/chunker.cc:124:49
+    #2 0x6dcb31 in Chunker::Chunking() /home/public/SXL/repo/FtcgPrototype/src/util/chunker.cc:54:9
+    #3 0x5ae0e1 in boost::_mfi::mf0<void, Chunker>::operator()(Chunker*) const /usr/include/boost/bind/mem_fn_template.hpp:49:29
+    #4 0x5adff4 in void boost::_bi::list1<boost::_bi::value<Chunker*> >::operator()<boost::_mfi::mf0<void, Chunker>, boost::_bi::list0>(boost::_bi::type<void>, boost::_mfi::mf0<void, Chunker>&, boost::_bi::list0&, int) /usr/include/boost/bind/bind.hpp:259:9
+    #5 0x5adf0e in boost::_bi::bind_t<void, boost::_mfi::mf0<void, Chunker>, boost::_bi::list1<boost::_bi::value<Chunker*> > >::operator()() /usr/include/boost/bind/bind.hpp:1294:16
+    #6 0x5acead in boost::detail::thread_data<boost::_bi::bind_t<void, boost::_mfi::mf0<void, Chunker>, boost::_bi::list1<boost::_bi::value<Chunker*> > > >::run() /usr/include/boost/thread/detail/thread.hpp:120:17
+    #7 0x7f83a4893786  (/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0+0xb786)
+
+Direct leak of 131072 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x682299 in absMethod::absMethod(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/absMethod.cc:18:32
+    #2 0x5c1f33 in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:48
+    #3 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 131072 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x682209 in absMethod::absMethod(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/absMethod.cc:16:33
+    #2 0x5c1f33 in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:48
+    #3 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 2048 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x66c5ba in NtransFeatureGen::NtransFeatureGen() /home/public/SXL/repo/FtcgPrototype/src/method/Ntrans.cc:25:30
+    #2 0x5cb3cb in NTransIndexTable::NTransIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../NTransFormSF.h:67:5
+    #3 0x5c200d in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 512 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x66c2da in NtransFeatureGen::NtransFeatureGen() /home/public/SXL/repo/FtcgPrototype/src/method/Ntrans.cc:15:29
+    #2 0x5cb3cb in NTransIndexTable::NTransIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../NTransFormSF.h:67:5
+    #3 0x5c200d in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 176 byte(s) in 1 object(s) allocated from:
+    #0 0x58811d in operator new[](unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58811d)
+    #1 0x6979d6 in Finesse::Finesse() /home/public/SXL/repo/FtcgPrototype/src/method/finesse.cc:10:15
+    #2 0x5cb43b in FinesseIndexTable::FinesseIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../finesse.h:39:5
+    #3 0x5c202e in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 160 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x58b106 in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:65:50
+    #2 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 152 byte(s) in 1 object(s) allocated from:
+    #0 0x58811d in operator new[](unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58811d)
+    #1 0x66c0e3 in NtransFeatureGen::NtransFeatureGen() /home/public/SXL/repo/FtcgPrototype/src/method/Ntrans.cc:10:15
+    #2 0x5cb3cb in NTransIndexTable::NTransIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../NTransFormSF.h:67:5
+    #3 0x5c200d in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 96 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x697991 in Finesse::Finesse() /home/public/SXL/repo/FtcgPrototype/src/method/finesse.cc:9:29
+    #2 0x5cb43b in FinesseIndexTable::FinesseIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../finesse.h:39:5
+    #3 0x5c202e in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 96 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x5c076b in __gnu_cxx::new_allocator<unsigned long>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ext/new_allocator.h:115:27
+    #2 0x5c0713 in std::allocator_traits<std::allocator<unsigned long> >::allocate(std::allocator<unsigned long>&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/alloc_traits.h:460:20
+    #3 0x5c06c2 in std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:346:20
+    #4 0x6cdcea in std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_append(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/vector.tcc:635:34
+    #5 0x6b7a98 in std::vector<unsigned long, std::allocator<unsigned long> >::resize(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:940:4
+    #6 0x6aaaee in FeatureGenerator::FeatureGenerator(unsigned long, unsigned long, unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/odess_similarity_detection.cc:203:30
+    #7 0x5cb18d in FeatureIndexTable::FeatureIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../odess_similarity_detection.h:101:3
+    #8 0x5c1fec in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #9 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #10 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 96 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x5c076b in __gnu_cxx::new_allocator<unsigned long>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ext/new_allocator.h:115:27
+    #2 0x5c0713 in std::allocator_traits<std::allocator<unsigned long> >::allocate(std::allocator<unsigned long>&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/alloc_traits.h:460:20
+    #3 0x5c06c2 in std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:346:20
+    #4 0x6cdcea in std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_append(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/vector.tcc:635:34
+    #5 0x6b7a98 in std::vector<unsigned long, std::allocator<unsigned long> >::resize(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:940:4
+    #6 0x6aaa99 in FeatureGenerator::FeatureGenerator(unsigned long, unsigned long, unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/odess_similarity_detection.cc:202:30
+    #7 0x5cb18d in FeatureIndexTable::FeatureIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../odess_similarity_detection.h:101:3
+    #8 0x5c1fec in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #9 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #10 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 96 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x5c076b in __gnu_cxx::new_allocator<unsigned long>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ext/new_allocator.h:115:27
+    #2 0x5c0713 in std::allocator_traits<std::allocator<unsigned long> >::allocate(std::allocator<unsigned long>&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/alloc_traits.h:460:20
+    #3 0x5c06c2 in std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:346:20
+    #4 0x6cdcea in std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_append(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/vector.tcc:635:34
+    #5 0x6b7a98 in std::vector<unsigned long, std::allocator<unsigned long> >::resize(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:940:4
+    #6 0x6aaa44 in FeatureGenerator::FeatureGenerator(unsigned long, unsigned long, unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/odess_similarity_detection.cc:201:15
+    #7 0x5cb18d in FeatureIndexTable::FeatureIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../odess_similarity_detection.h:101:3
+    #8 0x5c1fec in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #9 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #10 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 96 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x59974b in __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ext/new_allocator.h:115:27
+    #2 0x5996f3 in std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/alloc_traits.h:460:20
+    #3 0x5990f2 in std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:346:20
+    #4 0x5d0963 in std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:361:33
+    #5 0x5d07e4 in std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:305:9
+    #6 0x5d0348 in std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:511:9
+    #7 0x5cb10a in FeatureIndexTable::FeatureIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../odess_similarity_detection.h:101:25
+    #8 0x5c1fec in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #9 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #10 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 48 byte(s) in 1 object(s) allocated from:
+    #0 0x58811d in operator new[](unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58811d)
+    #1 0x66bfc3 in NtransFeatureGen::NtransFeatureGen() /home/public/SXL/repo/FtcgPrototype/src/method/Ntrans.cc:7:15
+    #2 0x5cb3cb in NTransIndexTable::NTransIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../NTransFormSF.h:67:5
+    #3 0x5c200d in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 48 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x7f83a4a40349 in CRYPTO_zalloc (/lib/x86_64-linux-gnu/libcrypto.so.1.1+0x195349)
+    #2 0x5c1f33 in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:48
+    #3 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 48 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x7f83a4a40349 in CRYPTO_zalloc (/lib/x86_64-linux-gnu/libcrypto.so.1.1+0x195349)
+    #2 0x5cb43b in FinesseIndexTable::FinesseIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../finesse.h:39:5
+    #3 0x5c202e in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 32 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x682199 in absMethod::absMethod(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/absMethod.cc:14:26
+    #2 0x5c1f33 in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:48
+    #3 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 32 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x697907 in Finesse::Finesse() /home/public/SXL/repo/FtcgPrototype/src/method/finesse.cc:7:26
+    #2 0x5cb43b in FinesseIndexTable::FinesseIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../finesse.h:39:5
+    #3 0x5c202e in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0x58811d in operator new[](unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58811d)
+    #1 0x66c01a in NtransFeatureGen::NtransFeatureGen() /home/public/SXL/repo/FtcgPrototype/src/method/Ntrans.cc:8:20
+    #2 0x5cb3cb in NTransIndexTable::NTransIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../NTransFormSF.h:67:5
+    #3 0x5c200d in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #4 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #5 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Direct leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x5d158b in __gnu_cxx::new_allocator<unsigned long long>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ext/new_allocator.h:115:27
+    #2 0x5d1533 in std::allocator_traits<std::allocator<unsigned long long> >::allocate(std::allocator<unsigned long long>&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/alloc_traits.h:460:20
+    #3 0x5d14e2 in std::_Vector_base<unsigned long long, std::allocator<unsigned long long> >::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:346:20
+    #4 0x5d12c3 in std::_Vector_base<unsigned long long, std::allocator<unsigned long long> >::_M_create_storage(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:361:33
+    #5 0x5d0db4 in std::_Vector_base<unsigned long long, std::allocator<unsigned long long> >::_Vector_base(unsigned long, std::allocator<unsigned long long> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:305:9
+    #6 0x5d03d8 in std::vector<unsigned long long, std::allocator<unsigned long long> >::vector(unsigned long, std::allocator<unsigned long long> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:511:9
+    #7 0x5cb14b in FeatureIndexTable::FeatureIndexTable() /home/public/SXL/repo/FtcgPrototype/src/method/../../include/method/../odess_similarity_detection.h:101:49
+    #8 0x5c1fec in bruteforce::bruteforce(unsigned long) /home/public/SXL/repo/FtcgPrototype/src/method/BF.cc:12:13
+    #9 0x58b85e in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:132:32
+    #10 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Indirect leak of 268435456 byte(s) in 64 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x780e92 in ReadCache::ReadCache() /home/public/SXL/repo/FtcgPrototype/src/util/readCache.cc:11:40
+    #2 0x5b14fb in dataWrite::dataWrite() /home/public/SXL/repo/FtcgPrototype/src/datawrite/datawrite.cc:10:26
+    #3 0x58b8ce in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:137:36
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Indirect leak of 8388551 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x5a063b in __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ext/new_allocator.h:115:27
+    #2 0x59fb8c in boost::alignment::aligned_allocator_adaptor<std::allocator<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node>, 64ul>::allocate(unsigned long) /usr/include/boost/align/aligned_allocator_adaptor.hpp:110:24
+    #3 0x59f64f in boost::lockfree::detail::runtime_sized_freelist_storage<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node, std::allocator<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node> >::runtime_sized_freelist_storage<std::allocator<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node> >(std::allocator<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node> const&, unsigned long) /usr/include/boost/lockfree/detail/freelist.hpp:382:34
+    #4 0x59efa9 in boost::lockfree::detail::fixed_size_freelist<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node, boost::lockfree::detail::runtime_sized_freelist_storage<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node, std::allocator<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node> > >::fixed_size_freelist<std::allocator<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node> >(std::allocator<boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::node> const&, unsigned long) /usr/include/boost/lockfree/detail/freelist.hpp:435:9
+    #5 0x59eaf8 in boost::lockfree::queue<Chunk_t, boost::lockfree::fixed_sized<true> >::queue(unsigned long) /usr/include/boost/lockfree/queue.hpp:234:9
+    #6 0x58e983 in ProduceConsumerQueue<Chunk_t>::ProduceConsumerQueue(unsigned int) /home/public/SXL/repo/FtcgPrototype/src/app/../../include/produceconsumerqueue.h:16:51
+    #7 0x58b131 in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:65:54
+    #8 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Indirect leak of 81920 byte(s) in 10 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x6dd032 in Chunker::FixSizedChunking() /home/public/SXL/repo/FtcgPrototype/src/util/chunker.cc:124:49
+    #2 0x6dcb31 in Chunker::Chunking() /home/public/SXL/repo/FtcgPrototype/src/util/chunker.cc:54:9
+    #3 0x5ae0e1 in boost::_mfi::mf0<void, Chunker>::operator()(Chunker*) const /usr/include/boost/bind/mem_fn_template.hpp:49:29
+    #4 0x5adff4 in void boost::_bi::list1<boost::_bi::value<Chunker*> >::operator()<boost::_mfi::mf0<void, Chunker>, boost::_bi::list0>(boost::_bi::type<void>, boost::_mfi::mf0<void, Chunker>&, boost::_bi::list0&, int) /usr/include/boost/bind/bind.hpp:259:9
+    #5 0x5adf0e in boost::_bi::bind_t<void, boost::_mfi::mf0<void, Chunker>, boost::_bi::list1<boost::_bi::value<Chunker*> > >::operator()() /usr/include/boost/bind/bind.hpp:1294:16
+    #6 0x5acead in boost::detail::thread_data<boost::_bi::bind_t<void, boost::_mfi::mf0<void, Chunker>, boost::_bi::list1<boost::_bi::value<Chunker*> > > >::run() /usr/include/boost/thread/detail/thread.hpp:120:17
+    #7 0x7f83a4893786  (/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0+0xb786)
+
+Indirect leak of 8192 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x5b13b3 in dataWrite::dataWrite() /home/public/SXL/repo/FtcgPrototype/src/datawrite/datawrite.cc:6:36
+    #2 0x58b8ce in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:137:36
+    #3 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Indirect leak of 512 byte(s) in 1 object(s) allocated from:
+    #0 0x55836d in malloc (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x55836d)
+    #1 0x780de6 in ReadCache::ReadCache() /home/public/SXL/repo/FtcgPrototype/src/util/readCache.cc:8:34
+    #2 0x5b14fb in dataWrite::dataWrite() /home/public/SXL/repo/FtcgPrototype/src/datawrite/datawrite.cc:10:26
+    #3 0x58b8ce in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:137:36
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Indirect leak of 112 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x780d1d in ReadCache::ReadCache() /home/public/SXL/repo/FtcgPrototype/src/util/readCache.cc:6:24
+    #2 0x5b14fb in dataWrite::dataWrite() /home/public/SXL/repo/FtcgPrototype/src/datawrite/datawrite.cc:10:26
+    #3 0x58b8ce in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:137:36
+    #4 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+Indirect leak of 32 byte(s) in 1 object(s) allocated from:
+    #0 0x58800d in operator new(unsigned long) (/home/public/SXL/repo/FtcgPrototype/bin/Ftcg+0x58800d)
+    #1 0x5b14d5 in dataWrite::dataWrite() /home/public/SXL/repo/FtcgPrototype/src/datawrite/datawrite.cc:10:22
+    #2 0x58b8ce in main /home/public/SXL/repo/FtcgPrototype/src/app/main.cc:137:36
+    #3 0x7f83a430ed79 in __libc_start_main csu/../csu/libc-start.c:308:16
+
+SUMMARY: AddressSanitizer: 428913391 byte(s) leaked in 192 allocation(s).
+--------------------------------------------------
+Running LZ4Cluster on LKT with size 1024
+avgChunkSize is 1024
+2025-02-18 16:34:29 <Ftcg>: Start to process 1 files
+2025-02-18 16:34:29 <Chunker>: chunking done.
+2025-02-18 16:34:29 <Chunker>: thread exit.
+2025-02-18 16:34:31 <BF>: best pair is 11, 85
+2025-02-18 16:34:31 <BF>: reduce size: 1332
+2025-02-18 16:34:31 <BF>: best pair is 12, 87
+2025-02-18 16:34:31 <BF>: reduce size: 1211
+2025-02-18 16:34:31 <BF>: best pair is 14, 93
+2025-02-18 16:34:31 <BF>: reduce size: 1125
+2025-02-18 16:34:31 <BF>: best pair is 11, 12
+2025-02-18 16:34:31 <BF>: reduce size: 1083
+2025-02-18 16:34:31 <BF>: best pair is 5, 10
+2025-02-18 16:34:31 <BF>: reduce size: 972
+2025-02-18 16:34:31 <BF>: best pair is 5, 9
+2025-02-18 16:34:31 <BF>: reduce size: 1037
+2025-02-18 16:34:31 <BF>: best pair is 15, 95
+2025-02-18 16:34:31 <BF>: reduce size: 897
+2025-02-18 16:34:31 <BF>: best pair is 13, 90
+2025-02-18 16:34:31 <BF>: reduce size: 873
+2025-02-18 16:34:31 <BF>: best pair is 5, 11
+2025-02-18 16:34:31 <BF>: reduce size: 796
+2025-02-18 16:34:31 <BF>: best pair is 5, 7
+2025-02-18 16:34:31 <BF>: reduce size: 819
+2025-02-18 16:34:31 <BF>: best pair is 0, 1
+2025-02-18 16:34:31 <BF>: reduce size: 733
+2025-02-18 16:34:31 <BF>: best pair is 0, 2
+2025-02-18 16:34:31 <BF>: reduce size: 812
+2025-02-18 16:34:31 <BF>: best pair is 0, 3
+2025-02-18 16:34:31 <BF>: reduce size: 766
+2025-02-18 16:34:31 <BF>: best pair is 14, 15
+2025-02-18 16:34:31 <BF>: reduce size: 714
+2025-02-18 16:34:31 <BF>: best pair is 14, 78
+2025-02-18 16:34:31 <BF>: reduce size: 1033
+2025-02-18 16:34:32 <BF>: best pair is 0, 4
+2025-02-18 16:34:32 <BF>: reduce size: 706
+2025-02-18 16:34:32 <BF>: best pair is 0, 91
+2025-02-18 16:34:32 <BF>: reduce size: 700
+2025-02-18 16:34:32 <BF>: best pair is 0, 21
+2025-02-18 16:34:32 <BF>: reduce size: 719
+2025-02-18 16:34:32 <BF>: best pair is 0, 71
+2025-02-18 16:34:32 <BF>: reduce size: 742
+2025-02-18 16:34:32 <BF>: best pair is 13, 14
+2025-02-18 16:34:32 <BF>: reduce size: 674
+2025-02-18 16:34:32 <BF>: best pair is 13, 75
+2025-02-18 16:34:32 <BF>: reduce size: 671
+2025-02-18 16:34:32 <BF>: best pair is 74, 83
+2025-02-18 16:34:32 <BF>: reduce size: 639
+2025-02-18 16:34:32 <BF>: best pair is 74, 77
+2025-02-18 16:34:32 <BF>: reduce size: 607
+2025-02-18 16:34:32 <BF>: best pair is 26, 28
+2025-02-18 16:34:32 <BF>: reduce size: 550
+2025-02-18 16:34:32 <BF>: best pair is 26, 29
+2025-02-18 16:34:32 <BF>: reduce size: 609
+2025-02-18 16:34:32 <BF>: best pair is 18, 19
+2025-02-18 16:34:32 <BF>: reduce size: 537
+2025-02-18 16:34:32 <BF>: best pair is 18, 74
+2025-02-18 16:34:32 <BF>: reduce size: 755
+2025-02-18 16:34:32 <BF>: best pair is 18, 26
+2025-02-18 16:34:32 <BF>: reduce size: 765
+2025-02-18 16:34:33 <BF>: best pair is 80, 81
+2025-02-18 16:34:33 <BF>: reduce size: 520
+2025-02-18 16:34:33 <BF>: best pair is 80, 82
+2025-02-18 16:34:33 <BF>: reduce size: 520
+2025-02-18 16:34:33 <BF>: best pair is 80, 92
+2025-02-18 16:34:33 <BF>: reduce size: 506
+2025-02-18 16:34:33 <BF>: best pair is 80, 88
+2025-02-18 16:34:33 <BF>: reduce size: 592
+2025-02-18 16:34:33 <BF>: best pair is 80, 89
+2025-02-18 16:34:33 <BF>: reduce size: 594
+2025-02-18 16:34:33 <BF>: best pair is 80, 97
+2025-02-18 16:34:33 <BF>: reduce size: 664
+2025-02-18 16:34:33 <BF>: best pair is 80, 96
+2025-02-18 16:34:33 <BF>: reduce size: 616
+2025-02-18 16:34:33 <BF>: best pair is 37, 40
+2025-02-18 16:34:33 <BF>: reduce size: 492
+2025-02-18 16:34:33 <BF>: best pair is 69, 76
+2025-02-18 16:34:33 <BF>: reduce size: 484
+2025-02-18 16:34:33 <BF>: best pair is 69, 73
+2025-02-18 16:34:33 <BF>: reduce size: 563
+2025-02-18 16:34:33 <BF>: best pair is 16, 17
+2025-02-18 16:34:33 <BF>: reduce size: 473
+2025-02-18 16:34:33 <BF>: best pair is 69, 70
+2025-02-18 16:34:33 <BF>: reduce size: 470
+2025-02-18 16:34:33 <BF>: best pair is 69, 79
+2025-02-18 16:34:33 <BF>: reduce size: 518
+2025-02-18 16:34:33 <BF>: best pair is 16, 69
+2025-02-18 16:34:33 <BF>: reduce size: 452
+2025-02-18 16:34:33 <BF>: best pair is 16, 22
+2025-02-18 16:34:33 <BF>: reduce size: 886
+2025-02-18 16:34:33 <BF>: best pair is 37, 41
+2025-02-18 16:34:33 <BF>: reduce size: 439
+2025-02-18 16:34:33 <BF>: best pair is 24, 68
+2025-02-18 16:34:33 <BF>: reduce size: 436
+2025-02-18 16:34:33 <BF>: best pair is 24, 30
+2025-02-18 16:34:33 <BF>: reduce size: 425
+2025-02-18 16:34:33 <BF>: best pair is 37, 38
+2025-02-18 16:34:33 <BF>: reduce size: 424
+2025-02-18 16:34:34 <BF>: best pair is 46, 47
+2025-02-18 16:34:34 <BF>: reduce size: 414
+2025-02-18 16:34:34 <BF>: best pair is 20, 67
+2025-02-18 16:34:34 <BF>: reduce size: 351
+2025-02-18 16:34:34 <BF>: best pair is 20, 24
+2025-02-18 16:34:34 <BF>: reduce size: 534
+2025-02-18 16:34:34 <BF>: best pair is 20, 84
+2025-02-18 16:34:34 <BF>: reduce size: 434
+2025-02-18 16:34:34 <BF>: best pair is 20, 25
+2025-02-18 16:34:34 <BF>: reduce size: 413
+2025-02-18 16:34:34 <BF>: best pair is 20, 86
+2025-02-18 16:34:34 <BF>: reduce size: 373
+2025-02-18 16:34:34 <BF>: best pair is 65, 66
+2025-02-18 16:34:34 <BF>: reduce size: 346
+2025-02-18 16:34:34 <BF>: best pair is 46, 48
+2025-02-18 16:34:34 <BF>: reduce size: 325
+2025-02-18 16:34:34 <BF>: best pair is 36, 37
+2025-02-18 16:34:34 <BF>: reduce size: 302
+2025-02-18 16:34:34 <BF>: best pair is 36, 39
+2025-02-18 16:34:34 <BF>: reduce size: 324
+2025-02-18 16:34:34 <BF>: best pair is 44, 45
+2025-02-18 16:34:34 <BF>: reduce size: 296
+2025-02-18 16:34:34 <BF>: best pair is 58, 59
+2025-02-18 16:34:34 <BF>: reduce size: 278
+2025-02-18 16:34:34 <BF>: best pair is 46, 49
+2025-02-18 16:34:34 <BF>: reduce size: 270
+2025-02-18 16:34:34 <BF>: best pair is 43, 44
+2025-02-18 16:34:34 <BF>: reduce size: 265
+2025-02-18 16:34:34 <BF>: best pair is 43, 46
+2025-02-18 16:34:34 <BF>: reduce size: 318
+2025-02-18 16:34:34 <BF>: best pair is 43, 50
+2025-02-18 16:34:34 <BF>: reduce size: 247
+2025-02-18 16:34:34 <BF>: best pair is 58, 60
+2025-02-18 16:34:34 <BF>: reduce size: 244
+2025-02-18 16:34:34 <BF>: best pair is 98, 99
+2025-02-18 16:34:34 <BF>: reduce size: 231
+2025-02-18 16:34:34 <BF>: best pair is 36, 65
+2025-02-18 16:34:34 <BF>: reduce size: 219
+2025-02-18 16:34:34 <BF>: best pair is 31, 32
+2025-02-18 16:34:34 <BF>: reduce size: 204
+2025-02-18 16:34:34 <BF>: best pair is 31, 33
+2025-02-18 16:34:34 <BF>: reduce size: 219
+2025-02-18 16:34:34 <BF>: best pair is 31, 34
+2025-02-18 16:34:34 <BF>: reduce size: 229
+2025-02-18 16:34:34 <BF>: best pair is 31, 58
+2025-02-18 16:34:34 <BF>: reduce size: 218
+2025-02-18 16:34:34 <BF>: best pair is 31, 42
+2025-02-18 16:34:34 <BF>: reduce size: 217
+2025-02-18 16:34:34 <BF>: best pair is 6, 8
+2025-02-18 16:34:34 <BF>: reduce size: 181
+2025-02-18 16:34:34 <BF>: best pair is 6, 23
+2025-02-18 16:34:34 <BF>: reduce size: 307
+2025-02-18 16:34:34 <BF>: best pair is 6, 72
+2025-02-18 16:34:34 <BF>: reduce size: 347
+2025-02-18 16:34:34 <BF>: best pair is 6, 94
+2025-02-18 16:34:34 <BF>: reduce size: 185
+2025-02-18 16:34:34 <BF>: best pair is 61, 63
+2025-02-18 16:34:34 <BF>: reduce size: 173
+2025-02-18 16:34:34 <BF>: best pair is 61, 64
+2025-02-18 16:34:34 <BF>: reduce size: 144
+2025-02-18 16:34:35 <BF>: best pair is 53, 54
+2025-02-18 16:34:35 <BF>: reduce size: 143
+2025-02-18 16:34:35 <BF>: best pair is 6, 27
+2025-02-18 16:34:35 <BF>: reduce size: 119
+2025-02-18 16:34:35 <BF>: best pair is 6, 98
+2025-02-18 16:34:35 <BF>: reduce size: 143
+2025-02-18 16:34:35 <BF>: best pair is 35, 61
+2025-02-18 16:34:35 <BF>: reduce size: 117
+2025-02-18 16:34:35 <BF>: best pair is 35, 62
+2025-02-18 16:34:35 <BF>: reduce size: 123
+2025-02-18 16:34:35 <BF>: best pair is 55, 56
+2025-02-18 16:34:35 <BF>: reduce size: 112
+2025-02-18 16:34:35 <BF>: best pair is 55, 57
+2025-02-18 16:34:35 <BF>: reduce size: 109
+2025-02-18 16:34:35 <BF>: best pair is 35, 55
+2025-02-18 16:34:35 <BF>: reduce size: 106
+2025-02-18 16:34:35 <BF>: best pair is 51, 53
+2025-02-18 16:34:35 <BF>: reduce size: 95
+2025-02-18 16:34:35 <BF>: best pair is 51, 52
+2025-02-18 16:34:35 <BF>: reduce size: 122
+2025-02-18 16:34:35 <BF>: no best pair found
+Time taken by for loop: 5.47625 s 
+loop throughput is 0.000139318GiB/s
+2025-02-18 16:34:35 <Ftcg>: processNum 1 
+2025-02-18 16:34:35 <Ftcg>: Group Num is 0
+2025-02-18 16:34:35 <Ftcg>: Total logical size is 819200
+2025-02-18 16:34:35 <Ftcg>: Total unique size is 0
+2025-02-18 16:34:35 <Ftcg>: Total compressed size is 259673
+2025-02-18 16:34:35 <Ftcg>: Overall Compression ratio is 3.1547
+2025-02-18 16:34:35 <Ftcg>: Unique Compression ratio is 0.0000

@@ -30,7 +30,7 @@ using HashSignature = std::bitset<HASH_DIM>;
 using HashTable = std::unordered_map<HashSignature, std::vector<int>>;
 #define CHUNK_HASH_SIZE 32
 #define MAX_GROUP_SIZE 8
-#define EXPERIMENT_CHUNK_NUM 1024
+#define EXPERIMENT_CHUNK_NUM 100
 
 static const uint64_t MB_2_B = 1000 * 1000;
 static const uint64_t MiB_2_B = uint64_t(1) << 20;

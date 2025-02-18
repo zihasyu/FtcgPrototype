@@ -41,7 +41,7 @@ fi
 
 cd bin
 echo "Running LZ4Cluster on $1 with size $size">>../output.log
-./Ftcg -i $dir -m 1 -c 0 -n 1 -s $size>>../output.log 2>&1
+./Ftcg -i $dir -m 7 -c 0 -n 1 -s $size>>../output.log 2>&1
 # echo "--------------------------------------------------" >>../output.log
 # ./LZ4Cluster -i $dir -m 1 -c 0 -n 1 -s $size>>../output.log 2>&1
 # 输出分割线
