@@ -143,12 +143,6 @@ void Chunker::FixSizedChunking()
                 tool::Logging(myName_.c_str(), "insert chunk to output MQ error.\n");
                 exit(EXIT_FAILURE);
             }
-
-            if (chunk.chunkID > EXPERIMENT_CHUNK_NUM - 2)
-            {
-                end = true;
-                break;
-            }
         }
     }
 
