@@ -8,6 +8,7 @@
 #include "../chunker.h"
 #include "../lz4.h"
 #include "../datawrite.h"
+#include <lz4frame.h>
 using namespace std;
 
 class absMethod
@@ -41,6 +42,9 @@ protected:
     // restore
     uint8_t *DeCompressionBuffer;
     ifstream CompressionFile_;
+    /*Migration*/
+    ofstream MigrationIndex;
+    string MigrationFileName;
 
 public:
     uint64_t TotalOffset = 0;
@@ -108,5 +112,11 @@ public:
     void DeCompressionAll();
     void restoreFile(string fileName);
     void PrintChunkInfo(string inputDirpath, int chunkingMethod, int method, int fileNum, double time);
+    void SortFinishedGroups(); // sort finishedGroups by the min element in the set and print it into file
+    void MigratoryCompression();
+    void MigratoryDeCompression();
+    void CompressionLagerFile(const string &inputFilePath, const string &outputFilePath); // big block compression
+    void FrameCompression(const string &inputFilePath, const string &outputFilePath);     // lz4 frame compression
+    void FrameDeCompression(const string &inputFilePath, const string &outputFilePath);   // lz4 frame decompression
 };
 #endif

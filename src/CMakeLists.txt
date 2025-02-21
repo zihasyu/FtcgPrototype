@@ -27,6 +27,11 @@ if(OPENSSL_VERSION VERSION_LESS "1.1")
     message(FATAL_ERROR "OpenSSL version is less than 1.1")
 endif()
 
+# 手动指定 LZ4 库的路径和包含目录
+set(LZ4_INCLUDE_DIR "/usr/local/include")
+set(LZ4_LIBRARY "/usr/local/lib/liblz4.so")
+
+include_directories(${LZ4_INCLUDE_DIR})
 
 set(BOOST_LIBRARY_OBJ boost_thread boost_system boost_serialization)
 
@@ -36,9 +41,14 @@ set(INSIDE_OBJ datawritecore methodcore utilcore)
 
 set(ZLIB_LIBRARY_OBJ ${ZLIB_LIBRARIES})
 
-set(FINAL_OBJ ${OPENSSL_LIBRARY_OBJ} ${INSIDE_OBJ} ${BOOST_LIBRARY_OBJ} ${ZLIB_LIBRARY_OBJ})
+set(LZ4_LIBRARY_OBJ ${LZ4_LIBRARY})
+
+set(FINAL_OBJ ${OPENSSL_LIBRARY_OBJ} ${INSIDE_OBJ} ${BOOST_LIBRARY_OBJ} ${ZLIB_LIBRARY_OBJ} ${LZ4_LIBRARY_OBJ})
 
 add_subdirectory(app)
 add_subdirectory(method)
 add_subdirectory(datawrite)
 add_subdirectory(util)
+
+# 链接 LZ4 库到你的目标
+target_link_libraries(Ftcg ${FINAL_OBJ})

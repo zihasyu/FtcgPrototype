@@ -120,8 +120,8 @@ void Dedup_HSFRank::ProcessOneTrace()
         }
     }
 
-    tool::Logging(myName_.c_str(), "a Finished chunk num is %d\n", finishedChunks.size());
-    tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunkNum);
+    tool::Logging(myName_.c_str(), "HSF Finished chunk num is %d\n", finishedChunks.size());
+    tool::Logging(myName_.c_str(), "HSF Unfinished chunk num is %d\n", unfinishedChunkNum);
 
     frequency_table.clear();
     for (auto it : finishedGroups)
@@ -143,8 +143,11 @@ void Dedup_HSFRank::ProcessOneTrace()
         compressedChunkNum += it.size();
     }
     tool::Logging(myName_.c_str(), "compressed chunk num is %d\n", compressedChunkNum);
-    tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
-    CompressionToFinishedGroup();
+    // tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
+
+    // CompressionToFinishedGroup();
+    MigratoryCompression();
+
     out << "group size, logical size, compressed size, ratio" << endl;
     for (auto it : groupLogicalSize)
     {

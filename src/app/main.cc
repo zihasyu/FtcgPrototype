@@ -167,7 +167,7 @@ int main(int argc, char **argv)
     auto sumTime = (endsum - startsum);
     double sumTimeInSeconds = std::chrono::duration<double>(endsum - startsum).count();
     std::cout << "Time taken by for loop: " << sumTimeInSeconds << " s " << std::endl;
-    std::cout << "loop throughput is " << (double)absMethodObj->totalLogicalSize / (double)sumTimeInSeconds / (1 << 30) << "GiB/s" << std::endl;
+    // std::cout << "loop throughput is " << (double)absMethodObj->totalLogicalSize / (double)sumTimeInSeconds / (1 << 30) << "GiB/s" << std::endl;
 
     tool::Logging(myName.c_str(), "processNum %d \n", processNum);
     tool::Logging(myName.c_str(), "Group Num is %d\n", absMethodObj->groupNum);
@@ -177,7 +177,7 @@ int main(int argc, char **argv)
     tool::Logging(myName.c_str(), "Overall Compression ratio is %.4f\n", (double)absMethodObj->totalLogicalSize / (double)absMethodObj->totalCompressedSize);
     tool::Logging(myName.c_str(), "Unique Compression ratio is %.4f\n", (double)absMethodObj->totaluniqueSize / (double)absMethodObj->totalCompressedSize);
     absMethodObj->PrintChunkInfo(dirName, chunkingType, compressionMethod, processNum, sumTimeInSeconds);
-    // absMethodObj->DeCompressionAll();
+    // absMethodObj->MigratoryDeCompression();
     // if (true)
     //     for (auto i = 0; i < processNum; i++)
     //     {

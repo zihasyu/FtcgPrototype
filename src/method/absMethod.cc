@@ -425,6 +425,7 @@ void absMethod::DeCompressionAll()
     bool end = false;
     uint64_t GroupID_ = 0;
     CompressionFile_.open(CompressionfileName, ios_base::in | ios::binary);
+    // CompressionFile_.open(MigrationFileName, ios_base::in | ios::binary);
     while (!end)
     {
         // read file
@@ -480,9 +481,16 @@ void absMethod::restoreFile(string fileName)
     // cout << chunkSet_.size() << endl;
     cout << "write path is " << writePath << endl;
     ofstream outFile(writePath, std::ios_base::binary);
+
+    uint8_t *decompressionBuffer = (uint8_t *)malloc(TotalOffset);
+    ifstream inFile(MigrationFileName + ".lz4.de", std::ios_base::binary);
+    inFile.read((char *)decompressionBuffer, TotalOffset);
+    inFile.close();
+
     for (auto id : dataWrite_->RecipeMap[fileName])
     {
-        outFile.write((char *)(DeCompressionBuffer + chunkSet[id].ReOffset), chunkSet[id].chunkSize);
+        // outFile.write((char *)(DeCompressionBuffer + chunkSet[id].ReOffset), chunkSet[id].chunkSize);
+        outFile.write((char *)(decompressionBuffer + chunkSet[id].ReOffset), chunkSet[id].chunkSize);
         /* For debug */
         // if (memcmp((char *)(DeCompressionBuffer + chunkSet[id].ReOffset), (char *)chunkSet[id].chunkContent, chunkSet[id].chunkSize) != 0)
         // {
@@ -493,4 +501,243 @@ void absMethod::restoreFile(string fileName)
     }
     outFile.close();
     return;
+}
+
+void absMethod::SortFinishedGroups()
+{
+    std::sort(finishedGroups.begin(), finishedGroups.end(), [&](const set<uint64_t> &a, const set<uint64_t> &b)
+              { if(a.empty()||b.empty()){
+                    return a.empty()<b.empty();   
+                    } 
+                return *a.begin() < *b.begin(); });
+
+    MigrationIndex.open("./MigrationFile.txt", ios::trunc);
+    for (auto group : finishedGroups)
+    {
+        for (auto id : group)
+        {
+            MigrationIndex << id << " ";
+        }
+    }
+    MigrationIndex.close();
+}
+
+void absMethod::CompressionLagerFile(const string &inputFilePath, const string &outputFilePath)
+{
+    int blockSize = 128 * 1024 * 1024;
+    // 打开输入文件
+    std::ifstream inputFile(inputFilePath, std::ios::binary);
+    if (!inputFile.is_open())
+    {
+        std::cerr << "Unable to open input file: " << inputFilePath << std::endl;
+        return;
+    }
+
+    // 打开输出文件
+    std::ofstream outputFile(outputFilePath, std::ios::binary);
+    if (!outputFile.is_open())
+    {
+        std::cerr << "Unable to open output file: " << outputFilePath << std::endl;
+        return;
+    }
+
+    std::vector<char> inputBuffer(blockSize);
+    std::vector<char> compressedBuffer(LZ4_compressBound(blockSize));
+
+    while (inputFile)
+    {
+        // 读取一个块
+        inputFile.read(inputBuffer.data(), blockSize);
+        std::streamsize bytesRead = inputFile.gcount();
+        if (bytesRead == 0)
+            break;
+
+        // 压缩块
+        int compressedSize = LZ4_compress_fast(inputBuffer.data(), compressedBuffer.data(), bytesRead, compressedBuffer.size(), 3);
+        if (compressedSize <= 0)
+        {
+            std::cerr << "Compression failed" << std::endl;
+            return;
+        }
+
+        totalCompressedSize += compressedSize;
+        // 写入压缩块大小
+        outputFile.write(reinterpret_cast<const char *>(&compressedSize), sizeof(compressedSize));
+        // 写入压缩数据
+        outputFile.write(compressedBuffer.data(), compressedSize);
+    }
+
+    inputFile.close();
+    outputFile.close();
+}
+
+void absMethod::MigratoryCompression()
+{
+    SortFinishedGroups();
+    MigrationFileName = "./MigrationFiles/" + myName_ + ".me";
+    ofstream output(MigrationFileName, std::ios::binary);
+    if (!output.is_open())
+    {
+        cout << "Migratory open file failed" << endl;
+    }
+    for (auto group : finishedGroups)
+    {
+        for (auto id : group)
+        {
+            Chunk_t tmpChunk = Get_Chunk_Info(id);
+            output.write(reinterpret_cast<const char *>(tmpChunk.chunkContent), tmpChunk.chunkSize);
+            chunkSet[id].ReOffset = TotalOffset;
+            TotalOffset += tmpChunk.chunkSize;
+        }
+    }
+    output.close();
+    tool::Logging(myName_.c_str(), "Migration finished\n");
+    tool::Logging(myName_.c_str(), "Compresion start\n");
+    // CompressionLagerFile(MigrationFileName, MigrationFileName + ".lz4");
+    FrameCompression(MigrationFileName, MigrationFileName + ".lz4");
+    tool::Logging(myName_.c_str(), "Compresion finished\n");
+}
+
+void absMethod::MigratoryDeCompression()
+{
+    // CompressionLagerFile(MigrationFileName + ".lz4", MigrationFileName + ".lz4.de");
+    FrameDeCompression(MigrationFileName + ".lz4", MigrationFileName + ".lz4.de");
+}
+
+void absMethod::FrameCompression(const string &inputFilePath, const string &outputFilePath)
+{
+    // 初始化压缩上下文
+    LZ4F_compressionContext_t ctx;
+    LZ4_CHECK(LZ4F_createCompressionContext(&ctx, LZ4F_VERSION));
+
+    int level = 3; // 压缩级别
+
+    // 打开文件
+    ifstream fin(inputFilePath, ios::binary);
+    ofstream fout(outputFilePath, ios::binary);
+    if (!fin || !fout)
+        throw runtime_error("文件打开失败");
+
+    try
+    {
+        // 配置压缩参数
+        LZ4F_preferences_t prefs = {
+            .frameInfo = {
+                .blockSizeID = LZ4F_max4MB,
+                .blockMode = LZ4F_blockLinked,
+                .contentChecksumFlag = LZ4F_contentChecksumEnabled},
+            .compressionLevel = level,
+            .autoFlush = 1};
+
+        // 写入帧头
+        vector<char> header(LZ4F_HEADER_SIZE_MAX);
+        size_t headerSize = LZ4F_compressBegin(ctx, header.data(), header.size(), &prefs);
+        fout.write(header.data(), headerSize);
+
+        // 设置缓冲区
+        const size_t block_size = 4 << 20; // 4MB
+        vector<char> in_buf(block_size);
+        vector<char> out_buf(LZ4F_compressBound(block_size, &prefs));
+
+        // 压缩循环
+        while (fin.read(in_buf.data(), block_size) || fin.gcount() > 0)
+        {
+            size_t comp_size = LZ4F_compressUpdate(
+                ctx, out_buf.data(), out_buf.size(),
+                in_buf.data(), fin.gcount(), nullptr);
+            totalCompressedSize += comp_size;
+            fout.write(out_buf.data(), comp_size);
+        }
+
+        // 写入结束标记
+        size_t end_size = LZ4F_compressEnd(ctx, out_buf.data(), out_buf.size(), nullptr);
+        totalCompressedSize += end_size;
+        fout.write(out_buf.data(), end_size);
+    }
+    catch (...)
+    {
+        LZ4F_freeCompressionContext(ctx);
+        throw;
+    }
+
+    LZ4F_freeCompressionContext(ctx);
+}
+
+void absMethod::FrameDeCompression(const string &inputFilePath, const string &outputFilePath)
+{
+    // 初始化解压上下文
+    LZ4F_decompressionContext_t dctx;
+    LZ4_CHECK(LZ4F_createDecompressionContext(&dctx, LZ4F_VERSION));
+
+    // 打开文件
+    ifstream fin(inputFilePath, ios::binary);
+    ofstream fout(outputFilePath, ios::binary);
+    if (!fin.is_open() || !fout.is_open())
+    {
+        std::cerr << "Unable to open input or output file" << std::endl;
+        return;
+    }
+
+    try
+    {
+        // 缓冲区设置
+        const size_t in_bufsize = 4 << 20; // 4MB
+        const size_t out_bufsize = 4 << 20;
+        vector<char> in_buf(in_bufsize);
+        vector<char> out_buf(out_bufsize);
+
+        // 读取帧头
+        fin.read(in_buf.data(), LZ4F_HEADER_SIZE_MAX);
+        size_t in_size = fin.gcount();
+        if (in_size == 0)
+        {
+            std::cerr << "Failed to read frame header" << std::endl;
+            return;
+        }
+
+        // 验证帧头
+        LZ4F_frameInfo_t frameInfo;
+        size_t header_size = LZ4F_getFrameInfo(dctx, &frameInfo, in_buf.data(), &in_size);
+        if (LZ4F_isError(header_size))
+        {
+            std::cerr << "Invalid frame header: " << LZ4F_getErrorName(header_size) << std::endl;
+            return;
+        }
+
+        // 解压循环
+        size_t consumed = 0;
+        while (true)
+        {
+            // 读取数据到缓冲区
+            fin.read(in_buf.data() + consumed, in_bufsize - consumed);
+            size_t read_size = fin.gcount();
+            if (read_size == 0 && consumed == 0)
+                break;
+
+            in_size = consumed + read_size;
+            size_t src_size = in_size;
+            size_t dst_size = out_bufsize;
+
+            // 解压数据
+            size_t decomp_size = LZ4F_decompress(dctx, out_buf.data(), &dst_size, in_buf.data(), &src_size, NULL);
+
+            if (LZ4F_isError(decomp_size))
+            {
+                std::cerr << "Decompression error: " << LZ4F_getErrorName(decomp_size) << std::endl;
+                return;
+            }
+
+            fout.write(out_buf.data(), dst_size);
+            consumed = in_size - src_size;
+            memmove(in_buf.data(), in_buf.data() + src_size, consumed);
+        }
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Exception: " << e.what() << std::endl;
+        LZ4F_freeDecompressionContext(dctx);
+        return;
+    }
+
+    LZ4F_freeDecompressionContext(dctx);
 }

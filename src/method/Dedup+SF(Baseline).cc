@@ -121,57 +121,8 @@ void Dedup_SF::ProcessOneTrace()
         out << it.first << ", " << it.second << endl;
     }
 
-    // // compute reduce size
-    // for (auto it = finishedGroups.begin(); it != finishedGroups.end(); it++)
-    // {
-    //     if (it->size() == 1)
-    //     {
-    //         continue;
-    //     }
-    //     int beforeSize = 0;
-    //     int afterSize = 0;
-    //     clusterSize = 0;
-    //     cout << "---------------group size:" << it->size() << "--------------------" << endl;
-    //     for (auto id : *it)
-    //     {
-    //         // compute before size
-    //         int compressedSize = 0;
-    //         beforeSize = 0;
-    //         if (clusterSize > 0)
-    //         {
-    //             beforeSize = 0;
-    //             compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
-    //             if (compressedSize <= 0)
-    //             {
-    //                 compressedSize = clusterSize;
-    //             }
-    //             beforeSize += compressedSize;
-    //         }
-
-    //         compressedSize = LZ4_compress_fast((char *)chunkSet[id].chunkContent, (char *)lz4ChunkBuffer, chunkSet[id].chunkSize, chunkSet[id].chunkSize, 3);
-    //         if (compressedSize <= 0)
-    //         {
-    //             compressedSize = chunkSet[id].chunkSize;
-    //         }
-    //         beforeSize += compressedSize;
-    //         // compute after size
-    //         memcpy(clusterBuffer + clusterSize, chunkSet[id].chunkContent, chunkSet[id].chunkSize);
-    //         clusterSize += chunkSet[id].chunkSize;
-
-    //         compressedSize = LZ4_compress_fast((char *)clusterBuffer, (char *)lz4ChunkBuffer, clusterSize, clusterSize, 3);
-    //         if (compressedSize <= 0)
-    //         {
-    //             compressedSize = clusterSize;
-    //         }
-    //         afterSize = compressedSize;
-    //         int groupReduceSize = beforeSize - afterSize;
-
-    //         if (clusterSize / chunkSet[id].chunkSize > 1)
-    //             cout << "current group size:" << clusterSize / chunkSet[id].chunkSize << " reduce size:" << groupReduceSize << endl;
-    //     }
-    // }
-
     FinalMerge();
+
     groupNum += finishedGroups.size();
 
     for (const auto &it : finishedGroups)
@@ -180,7 +131,9 @@ void Dedup_SF::ProcessOneTrace()
     }
     tool::Logging(myName_.c_str(), "compressed chunk num is %d\n", compressedChunkNum);
     tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
-    CompressionToFinishedGroup();
+
+    // CompressionToFinishedGroup();
+    MigratoryCompression();
     out << "group size, logical size, compressed size, ratio" << endl;
     for (auto it : groupLogicalSize)
     {
@@ -188,9 +141,9 @@ void Dedup_SF::ProcessOneTrace()
     }
     out.close();
     // calculate the throughput
-    double totalTimeInSeconds = featureExtractTime.count() + clustringTime.count();
-    double throughput = (double)totalLogicalSize / (double)(totalTimeInSeconds * (1 << 30)); // 转换为GiB/s
-    tool::Logging(myName_.c_str(), "Throughput is %f GiB/s\n", throughput);
+    // double totalTimeInSeconds = featureExtractTime.count() + clustringTime.count();
+    // double throughput = (double)totalLogicalSize / (double)(totalTimeInSeconds * (1 << 30)); // 转换为GiB/s
+    // tool::Logging(myName_.c_str(), "Throughput is %f GiB/s\n", throughput);
     recieveQueue->done_ = false;
     return;
 }

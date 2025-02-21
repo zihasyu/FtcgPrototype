@@ -371,4 +371,17 @@ namespace tool
 
 auto nofilter = [](const std::string &name)
 { return true; };
+
+// 错误检查宏
+#define LZ4_CHECK(call)                                                                     \
+    do                                                                                      \
+    {                                                                                       \
+        size_t err_code = (call);                                                           \
+        if (LZ4F_isError(err_code))                                                         \
+        {                                                                                   \
+            cerr << "LZ4错误 @" << __LINE__ << ": " << LZ4F_getErrorName(err_code) << endl; \
+            throw runtime_error("LZ4操作失败");                                             \
+        }                                                                                   \
+    } while (0)
+
 #endif

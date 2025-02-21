@@ -109,7 +109,7 @@ void Dedup_HSF::ProcessOneTrace()
                 }
                 tmpGroup.insert(group.begin(), group.end());
             }
-            if (tmpGroup.size() > 1)
+            if (tmpGroup.size() >= 1)
             {
                 finishedGroups.push_back(tmpGroup);
                 for (auto id : tmpGroup)
@@ -126,7 +126,7 @@ void Dedup_HSF::ProcessOneTrace()
             groupmerge(groups, MAX_GROUP_SIZE);
             for (auto group : groups)
             {
-                if (group.size() >= 2)
+                if (group.size() >= 1)
 
                 {
                     for (auto id : group)
@@ -162,10 +162,11 @@ void Dedup_HSF::ProcessOneTrace()
         compressedChunkNum += it.size();
     }
     tool::Logging(myName_.c_str(), "compressed chunk num is %d\n", compressedChunkNum);
-    tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
-    tool::Logging(myName_.c_str(), "Compression start\n");
-    CompressionToFinishedGroup();
-    tool::Logging(myName_.c_str(), "Compression finished\n");
+    // tool::Logging(myName_.c_str(), "%d chunk with feature is zero\n", table.original_feature_key_table[0].size());
+
+    // CompressionToFinishedGroup();
+    MigratoryCompression();
+
     out << "group size, logical size, compressed size, ratio" << endl;
     for (auto it : groupLogicalSize)
     {
