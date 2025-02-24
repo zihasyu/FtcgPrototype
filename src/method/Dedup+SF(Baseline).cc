@@ -84,11 +84,11 @@ void Dedup_SF::ProcessOneTrace()
             chunkSet[stoull(id)].isGrouped = true;
             unfinishedChunkNum--;
             finishedChunks.insert(stoull(id));
-            if (tmpGroup.size() == MAX_GROUP_SIZE)
-            {
-                finishedGroups.push_back(tmpGroup);
-                tmpGroup.clear();
-            }
+            // if (tmpGroup.size() == MAX_GROUP_SIZE)
+            // {
+            //     finishedGroups.push_back(tmpGroup);
+            //     tmpGroup.clear();
+            // }
         }
         if (tmpGroup.size() > 1)
         {

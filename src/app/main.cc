@@ -130,6 +130,12 @@ int main(int argc, char **argv)
             absMethodObj = new bruteforce();
         else
             absMethodObj = new bruteforce(ExchunkSize);
+    case 8:
+        if (ExchunkSize == -1)
+            absMethodObj = new FPLz4BaselineImplement(); // Dedup + tmpTest
+        else
+            absMethodObj = new FPLz4BaselineImplement(ExchunkSize);
+        break;
     default:
         break;
     }
