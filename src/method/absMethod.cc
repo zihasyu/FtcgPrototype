@@ -741,3 +741,20 @@ void absMethod::FrameDeCompression(const string &inputFilePath, const string &ou
 
     LZ4F_freeDecompressionContext(dctx);
 }
+
+uint8_t *absMethod::xd3_encode(const uint8_t *targetChunkbuffer, size_t targetChunkbuffer_size, const uint8_t *baseChunkBuffer, size_t baseChunkBuffer_size, size_t *deltaChunkBuffer_size, uint8_t *tmpbuffer)
+{
+    size_t deltachunkSize;
+    int ret = xd3_encode_memory(targetChunkbuffer, targetChunkbuffer_size, baseChunkBuffer, baseChunkBuffer_size, tmpbuffer, &deltachunkSize, CONTAINER_MAX_SIZE * 2, 0);
+    if (ret != 0)
+    {
+        cout << "delta error" << endl;
+        const char *errMsg = xd3_strerror(ret);
+        cout << errMsg << endl;
+    }
+    uint8_t *deltaChunkBuffer;
+    deltaChunkBuffer = (uint8_t *)malloc(deltachunkSize);
+    *deltaChunkBuffer_size = deltachunkSize;
+    memcpy(deltaChunkBuffer, tmpbuffer, deltachunkSize);
+    return deltaChunkBuffer;
+}

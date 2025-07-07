@@ -9,6 +9,12 @@
 #include "../lz4.h"
 #include "../datawrite.h"
 #include <lz4frame.h>
+
+extern "C"
+{
+#include "../config.h"
+#include "../xdelta3.h"
+}
 using namespace std;
 
 class absMethod
@@ -118,5 +124,6 @@ public:
     void CompressionLagerFile(const string &inputFilePath, const string &outputFilePath); // big block compression
     void FrameCompression(const string &inputFilePath, const string &outputFilePath);     // lz4 frame compression
     void FrameDeCompression(const string &inputFilePath, const string &outputFilePath);   // lz4 frame decompression
+    uint8_t *xd3_encode(const uint8_t *targetChunkbuffer, size_t targetChunkbuffer_size, const uint8_t *baseChunkBuffer, size_t baseChunkBuffer_size, size_t *deltaChunkBuffer_size, uint8_t *tmpbuffer);
 };
 #endif

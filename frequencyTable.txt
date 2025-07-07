@@ -1,2617 +1,827 @@
 first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
+1,106822
+2, 18845
+3, 5568
+4, 812
+5, 196
+6, 120
+7, 63
+8, 52
+9, 28
+10, 23
+11, 10
+12, 13
+13, 12
+14, 9
+15, 9
+16, 5
+17, 4
+18, 2
+19, 5
+20, 1
+22, 1
+23, 1
+24, 2
+25, 1
+26, 1
+27, 3
+28, 2
+30, 1
+31, 3
+33, 2
+36, 1
+37, 1
+40, 1
+56, 1
+61, 1
 group size, logical size, compressed size, ratio
 first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-1, 8192, 1299, 6.30639
-2, 16384, 4544, 3.60563
-3, 24576, 3025, 8.1243
-4, 32768, 7392, 4.4329
-5, 40960, 5429, 7.54467
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,106857
-2, 18871
-3, 5586
-4, 829
-5, 210
-6, 131
-7, 76
-8, 268
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-1, 8192, 1300, 6.30154
-2, 16384, 6465, 2.53426
-3, 24576, 8421, 2.91842
-4, 32768, 3731, 8.78263
-5, 40960, 5611, 7.29995
-6, 49152, 6127, 8.0222
-7, 57344, 8347, 6.87001
-8, 65536, 9834, 6.66423
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-1, 8192, 1300, 6.30154
-2, 16384, 2124, 7.71375
-3, 24576, 9842, 2.49705
-4, 32768, 13265, 2.47026
-5, 40960, 7294, 5.61557
-6, 49152, 11487, 4.27892
-7, 57344, 15515, 3.69604
-8, 65536, 16197, 4.04618
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-third group size, frequency
-2, 5238
-3, 5600
-4, 6639
-5, 1004
-6, 2158
-7, 2871
-8, 8301
-group size, logical size, compressed size, ratio
-1, 8192, 3346, 2.4483
-2, 16384, 7126, 2.29919
-3, 24576, 4268, 5.7582
-4, 32768, 12131, 2.70118
-5, 40960, 16568, 2.47224
-6, 49152, 7393, 6.64845
-7, 57344, 12127, 4.72862
-8, 65536, 32192, 2.03579
-first group size, frequency
-1,61490
-2, 14019
-3, 3307
-4, 653
+1,61486
+2, 14017
+3, 3306
+4, 651
 5, 34
-6, 19
+6, 18
 7, 11
-8, 22
+8, 11
+9, 3
+10, 2
+11, 1
+12, 2
+14, 1
+17, 1
 group size, logical size, compressed size, ratio
 first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
+1,201643
+2, 49401
+3, 13826
+4, 4587
+5, 2206
+6, 1564
+7, 1119
+8, 879
+9, 671
+10, 506
+11, 438
+12, 370
+13, 330
+14, 285
+15, 268
+16, 225
+17, 186
+18, 178
+19, 170
+20, 150
+21, 100
+22, 109
+23, 121
+24, 96
+25, 90
+26, 89
+27, 79
+28, 73
+29, 90
+30, 74
+31, 64
+32, 72
+33, 49
+34, 51
+35, 56
+36, 45
+37, 52
+38, 58
+39, 53
+40, 48
+41, 38
+42, 34
+43, 33
+44, 24
+45, 33
+46, 34
+47, 36
+48, 25
+49, 37
+50, 30
+51, 35
+52, 20
+53, 24
+54, 29
+55, 15
+56, 23
+57, 19
+58, 18
+59, 25
+60, 22
+61, 23
+62, 20
+63, 17
+64, 17
+65, 12
+66, 25
+67, 24
+68, 10
+69, 13
+70, 23
+71, 13
+72, 9
+73, 18
+74, 18
+75, 15
+76, 9
+77, 9
+78, 17
+79, 12
+80, 10
+81, 11
+82, 15
+83, 11
+84, 9
+85, 8
+86, 9
+87, 5
+88, 11
+89, 7
+90, 8
+91, 8
+92, 12
+93, 9
+94, 16
+95, 7
+96, 5
+97, 4
+98, 6
+99, 10
+100, 10
+101, 10
+102, 6
+103, 8
+104, 6
+105, 7
+106, 7
+107, 5
+108, 11
+109, 5
+110, 7
+111, 6
+112, 7
+113, 7
+114, 2
+115, 9
+116, 4
+117, 4
+118, 4
+119, 4
+120, 5
+121, 4
+122, 2
+123, 3
+124, 5
+125, 8
+126, 5
+127, 8
+128, 3
+129, 4
+130, 3
+131, 9
+132, 2
+133, 7
+134, 5
+135, 9
+136, 7
+137, 5
+138, 9
+139, 3
+140, 8
+141, 3
+142, 3
+143, 4
+144, 3
+145, 2
+146, 6
+147, 4
+148, 2
+149, 5
+150, 7
+151, 5
+152, 2
+153, 4
+154, 4
+155, 2
+156, 6
+157, 4
+158, 3
+159, 1
+160, 5
+161, 8
+162, 3
+163, 3
+164, 2
+165, 4
+166, 2
+167, 2
+168, 1
+169, 4
+170, 7
+171, 1
+172, 2
+173, 1
+174, 2
+175, 1
+177, 1
+178, 2
+179, 4
+180, 2
+181, 3
+182, 7
+183, 2
+184, 4
+185, 2
+187, 4
+188, 3
+189, 3
+190, 7
+192, 4
+193, 2
+194, 1
+195, 4
+196, 2
+197, 2
+198, 1
+199, 4
+200, 1
+202, 2
+203, 3
+205, 3
+206, 2
+207, 1
+208, 4
+209, 1
+213, 2
+214, 2
+215, 1
+216, 2
+218, 2
+219, 1
+222, 2
+223, 1
+224, 2
+226, 1
+228, 2
+229, 2
+231, 1
+232, 5
+234, 2
+238, 1
+240, 4
+242, 1
+243, 3
+245, 1
+246, 2
+247, 1
+248, 2
+249, 3
+250, 2
+251, 2
+252, 2
+253, 3
+256, 2
+257, 1
+258, 3
+261, 2
+262, 3
+263, 1
+264, 2
+266, 1
+267, 1
+268, 1
+269, 2
+270, 3
+272, 3
+274, 2
+275, 2
+276, 1
+278, 1
+279, 2
+280, 4
+282, 1
+283, 2
+284, 1
+286, 1
+287, 3
+288, 1
+290, 1
+291, 1
+293, 1
+294, 1
+296, 1
+299, 1
+300, 1
+302, 2
+303, 2
+305, 3
+306, 1
+308, 2
+310, 2
+311, 2
+313, 1
+314, 1
+315, 3
+317, 2
+318, 1
+319, 1
+320, 2
+323, 2
+325, 1
+327, 1
+328, 1
+330, 1
+331, 3
+333, 1
+335, 1
+338, 2
+339, 1
+340, 1
+341, 1
+342, 1
+343, 1
+346, 1
+347, 2
+348, 2
+349, 1
+350, 1
+352, 1
+353, 1
+356, 4
+357, 2
+359, 2
+360, 3
+361, 1
+362, 3
+363, 2
+366, 2
+369, 1
+370, 1
+373, 1
+377, 2
+379, 1
+380, 1
+382, 1
+383, 1
+385, 1
+386, 3
+387, 2
+391, 2
+396, 1
+399, 2
+400, 1
+401, 1
+403, 2
+407, 2
+409, 1
+411, 1
+413, 1
+417, 1
+419, 1
+420, 1
+421, 1
+422, 1
+425, 1
+431, 1
+432, 2
+435, 1
+436, 1
+438, 1
+441, 2
+442, 1
+443, 1
+444, 2
+447, 2
+450, 1
+452, 1
+454, 1
+457, 2
+459, 1
+461, 1
+463, 1
+464, 1
+465, 1
+466, 1
+468, 1
+474, 1
+476, 1
+478, 1
+489, 1
+490, 1
+491, 1
+493, 1
+495, 1
+501, 2
+503, 1
+508, 1
+509, 3
+510, 2
+511, 1
+512, 2
+513, 2
+518, 1
+520, 2
+521, 1
+522, 2
+528, 1
+529, 1
+531, 1
+532, 1
+537, 2
+538, 1
+539, 1
+540, 2
+543, 2
+544, 2
+547, 2
+551, 2
+553, 1
+554, 1
+563, 1
+564, 1
+565, 1
+566, 1
+567, 3
+568, 1
+578, 1
+580, 2
+581, 1
+582, 2
+583, 1
+586, 1
+588, 1
+589, 1
+602, 1
+603, 1
+605, 1
+610, 1
+611, 1
+616, 1
+617, 2
+624, 1
+628, 1
+632, 1
+638, 2
+650, 1
+653, 1
+656, 1
+661, 1
+665, 1
+667, 1
+668, 1
+673, 1
+676, 2
+680, 1
+682, 1
+685, 2
+686, 1
+696, 1
+697, 1
+701, 1
+704, 1
+723, 1
+724, 3
+728, 1
+729, 1
+735, 1
+736, 1
+737, 1
+754, 1
+757, 2
+767, 2
+771, 2
+772, 1
+773, 1
+778, 1
+781, 1
+782, 1
+789, 2
+791, 1
+796, 1
+814, 1
+819, 2
+823, 2
+824, 1
+825, 1
+835, 1
+837, 1
+858, 1
+874, 1
+882, 1
+920, 1
+921, 1
+928, 2
+969, 1
+971, 1
+974, 1
+986, 1
+992, 1
+997, 1
+999, 1
+1008, 1
+1021, 1
+1023, 1
+1028, 2
+1032, 1
+1049, 1
+1060, 1
+1067, 1
+1068, 1
+1079, 1
+1086, 1
+1087, 1
+1095, 1
+1100, 1
+1104, 1
+1122, 1
+1124, 1
+1136, 2
+1201, 1
+1234, 1
+1253, 1
+1255, 1
+1268, 1
+1269, 1
+1284, 1
+1298, 1
+1301, 1
+1319, 1
+1325, 1
+1335, 1
+1338, 1
+1361, 1
+1390, 1
+1401, 1
+1407, 1
+1415, 1
+1429, 1
+1438, 1
+1493, 1
+1505, 1
+1508, 1
+1536, 1
+1559, 1
+1574, 1
+1578, 1
+1611, 1
+1665, 1
+1676, 1
+1698, 1
+1713, 1
+1743, 1
+1799, 1
+1871, 1
+1897, 1
+1934, 1
+1941, 1
+1949, 1
+1955, 1
+1976, 1
+2025, 1
+2026, 1
+2124, 1
+2140, 1
+2179, 1
+2181, 2
+2183, 1
+2190, 1
+2234, 1
+2261, 1
+2358, 1
+2365, 1
+2480, 1
+2521, 1
+2611, 1
+2733, 1
+2810, 1
+2856, 1
+2889, 1
+2942, 1
+2958, 1
+2980, 1
+3219, 1
+3232, 1
+3285, 1
+3434, 1
+3742, 1
+4020, 1
+4127, 1
+4442, 1
+4754, 1
+4782, 1
+4834, 1
+5105, 1
+5805, 1
+6369, 1
+7532, 1
+8921, 1
+13398, 1
+16315, 1
+29949, 1
+35055, 1
 group size, logical size, compressed size, ratio
-1, 8192, 602, 13.608
-2, 16384, 5423, 3.02121
-3, 24576, 3405, 7.21762
-4, 32768, 2969, 11.0367
-5, 40960, 9517, 4.30388
-6, 49152, 10224, 4.80751
-7, 57344, 6480, 8.84938
-8, 65536, 13907, 4.71245
 first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-group size, logical size, compressed size, ratio
-1, 8192, 602, 13.608
-2, 16384, 5041, 3.25015
-3, 24576, 5926, 4.14715
-4, 32768, 7056, 4.64399
-5, 40960, 8543, 4.79457
-6, 49152, 12706, 3.86841
-7, 57344, 8192, 7
-8, 65536, 10427, 6.28522
-first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-third group size, frequency
-2, 7307
-3, 6004
-4, 9572
-5, 727
-6, 553
-7, 413
-8, 1348
-group size, logical size, compressed size, ratio
-1, 8192, 602, 13.608
-2, 16384, 5966, 2.74623
-3, 24576, 7003, 3.50935
-4, 32768, 7208, 4.54606
-5, 40960, 9207, 4.44879
-6, 49152, 6764, 7.26671
-7, 57344, 9787, 5.8592
-8, 65536, 9401, 6.97117
-first group size, frequency
-1,202891
-2, 50490
-3, 14843
-4, 5448
-5, 3024
-6, 2353
-7, 1850
-8, 85893
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-1, 8192, 4573, 1.79138
-2, 16384, 2889, 5.67117
-3, 24576, 10807, 2.27408
-4, 32768, 4680, 7.00171
-5, 40960, 6185, 6.62247
-6, 49152, 5491, 8.95137
-7, 57344, 5060, 11.3328
-8, 65536, 12325, 5.31732
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-1, 8192, 4573, 1.79138
-2, 16384, 8774, 1.86734
-3, 24576, 5349, 4.5945
-4, 32768, 5310, 6.171
-5, 40960, 10569, 3.87548
-6, 49152, 7502, 6.55185
-7, 57344, 7721, 7.42702
-8, 65536, 6517, 10.0562
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-third group size, frequency
-2, 8252
-3, 8106
-4, 10296
-5, 1880
-6, 2055
-7, 2459
-8, 120775
-group size, logical size, compressed size, ratio
-1, 8192, 2329, 3.51739
-2, 16384, 4456, 3.67684
-3, 24576, 4135, 5.94341
-4, 32768, 3665, 8.94079
-5, 40960, 11109, 3.6871
-6, 49152, 8229, 5.97302
-7, 57344, 8784, 6.52823
-8, 65536, 3295, 19.8895
-first group size, frequency
-1,607261
-2, 142810
-3, 35169
-4, 56645
-5, 3053
-6, 1837
-7, 1056
-8, 6169
+1,606761
+2, 142426
+3, 34911
+4, 56375
+5, 2861
+6, 1677
+7, 912
+8, 758
+9, 386
+10, 287
+11, 181
+12, 178
+13, 106
+14, 105
+15, 76
+16, 84
+17, 67
+18, 48
+19, 36
+20, 42
+21, 31
+22, 21
+23, 20
+24, 30
+25, 14
+26, 17
+27, 11
+28, 15
+29, 17
+30, 22
+31, 16
+32, 11
+33, 8
+34, 7
+35, 3
+36, 2
+37, 10
+38, 2
+39, 13
+40, 6
+41, 8
+42, 4
+43, 6
+44, 9
+45, 4
+46, 1
+47, 1
+48, 6
+49, 2
+50, 6
+51, 6
+52, 4
+53, 6
+54, 4
+56, 1
+57, 3
+58, 3
+59, 2
+60, 6
+61, 2
+62, 2
+63, 4
+64, 3
+65, 1
+66, 2
+67, 1
+68, 1
+69, 5
+71, 1
+72, 1
+74, 3
+76, 4
+77, 4
+78, 1
+79, 4
+80, 3
+81, 2
+82, 1
+83, 2
+84, 2
+85, 2
+87, 2
+89, 2
+90, 1
+91, 1
+95, 1
+98, 1
+100, 1
+101, 1
+106, 1
+107, 1
+111, 1
+113, 2
+115, 2
+117, 1
+121, 1
+127, 1
+129, 1
+131, 1
+132, 1
+143, 1
+152, 3
+154, 1
+160, 1
+193, 1
+199, 1
+200, 1
+213, 1
+215, 1
+228, 1
+247, 1
+260, 1
+269, 1
+286, 1
+299, 1
+300, 1
+302, 1
+314, 1
+324, 1
+331, 1
+357, 1
+369, 1
+393, 1
+436, 1
+531, 1
+875, 1
+1042, 1
+1360, 1
+1651, 1
 group size, logical size, compressed size, ratio
 first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-1, 8192, 3852, 2.12669
-2, 16384, 6833, 2.39778
-3, 24576, 13163, 1.86705
-4, 32768, 6884, 4.76002
-5, 40960, 13495, 3.0352
-6, 49152, 15430, 3.18548
-7, 57344, 15563, 3.68464
-8, 65536, 10650, 6.15362
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-1, 8192, 3852, 2.12669
-2, 16384, 2463, 6.65205
-3, 24576, 6636, 3.70344
-4, 32768, 5552, 5.90202
-5, 40960, 4612, 8.88118
-6, 49152, 14507, 3.38816
-7, 57344, 11399, 5.03062
-8, 65536, 14698, 4.45884
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-third group size, frequency
-2, 58895
-3, 59429
-4, 64548
-5, 9025
-6, 14388
-7, 11594
-8, 50659
-group size, logical size, compressed size, ratio
-1, 8192, 8192, 1
-2, 16384, 2084, 7.8618
-3, 24576, 5075, 4.84256
-4, 32768, 3305, 9.91467
-5, 40960, 13987, 2.92843
-6, 49152, 17857, 2.75253
-7, 57344, 6813, 8.41685
-8, 65536, 14175, 4.62335
-first group size, frequency
-1,949
-2, 58
-3, 15
+1,4423
+2, 993
+3, 391
+4, 213
+5, 132
+6, 90
+7, 72
+8, 36
+9, 29
+10, 10
+11, 10
+12, 5
+13, 4
+14, 5
+15, 4
+16, 1
+22, 2
 group size, logical size, compressed size, ratio
 first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-1, 8192, 261, 31.387
-2, 16384, 2798, 5.85561
-3, 24576, 8018, 3.0651
-4, 32768, 11671, 2.80764
-5, 40960, 7731, 5.29815
-6, 49152, 10417, 4.71844
-7, 57344, 8300, 6.90892
-8, 65536, 19811, 3.30806
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-1, 8192, 261, 31.387
-2, 16384, 5840, 2.80548
-3, 24576, 3530, 6.96204
-4, 32768, 10783, 3.03886
-5, 40960, 7217, 5.67549
-6, 49152, 10417, 4.71844
-7, 57344, 8300, 6.90892
-8, 65536, 10103, 6.48679
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-third group size, frequency
-2, 90
-3, 72
-4, 39
-5, 5
-6, 4
-7, 12
-8, 20
-group size, logical size, compressed size, ratio
-1, 8192, 2876, 2.8484
-2, 16384, 2359, 6.94532
-3, 24576, 5751, 4.27334
-4, 32768, 9278, 3.5318
-5, 40960, 8245, 4.96786
-6, 49152, 10417, 4.71844
-7, 57344, 11969, 4.79104
-8, 65536, 15841, 4.13711
-first group size, frequency
-1,6922
-2, 1620
-3, 548
-4, 223
-5, 103
-6, 51
-7, 25
-8, 41
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-1, 8192, 780, 10.5026
-2, 16384, 6970, 2.35065
-3, 24576, 6028, 4.07697
-4, 32768, 4466, 7.33721
-5, 40960, 8314, 4.92663
-6, 49152, 6189, 7.94183
-7, 57344, 7576, 7.56917
-8, 65536, 4035, 16.2419
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-1, 8192, 780, 10.5026
-2, 16384, 9263, 1.76876
-3, 24576, 5046, 4.87039
-4, 32768, 7210, 4.5448
-5, 40960, 5895, 6.94826
-6, 49152, 6372, 7.71375
-7, 57344, 7628, 7.51757
-8, 65536, 11874, 5.51929
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-third group size, frequency
-2, 783
-3, 490
-4, 607
-5, 157
-6, 190
-7, 165
-8, 541
-group size, logical size, compressed size, ratio
-1, 8192, 5122, 1.59938
-2, 16384, 5655, 2.89726
-3, 24576, 6212, 3.95621
-4, 32768, 8717, 3.75909
-5, 40960, 4523, 9.05594
-6, 49152, 11834, 4.15346
-7, 57344, 8252, 6.9491
-8, 65536, 10735, 6.10489
-first group size, frequency
-1,970
-2, 108
-3, 20
-4, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-1, 8192, 3083, 2.65715
-2, 16384, 3739, 4.38192
-3, 24576, 1085, 22.6507
-4, 32768, 9297, 3.52458
-5, 40960, 3294, 12.4347
-6, 49152, 7527, 6.53009
-7, 57344, 7714, 7.43376
-8, 65536, 8797, 7.44981
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-1, 8192, 3083, 2.65715
-2, 16384, 4699, 3.4867
-3, 24576, 4406, 5.57785
-4, 32768, 7436, 4.40667
-5, 40960, 3294, 12.4347
-6, 49152, 7527, 6.53009
-7, 57344, 6813, 8.41685
-8, 65536, 8797, 7.44981
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-third group size, frequency
-2, 95
-3, 51
-4, 62
-5, 9
-6, 11
-7, 21
-8, 30
-group size, logical size, compressed size, ratio
-1, 8192, 3083, 2.65715
-2, 16384, 4895, 3.34709
-3, 24576, 5666, 4.33745
-4, 32768, 5032, 6.51192
-5, 40960, 7497, 5.46352
-6, 49152, 5553, 8.85143
-7, 57344, 9650, 5.94238
-8, 65536, 11932, 5.49246
-first group size, frequency
-1,192
-2, 36
-3, 33
-4, 9
-5, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-1, 8192, 3177, 2.57853
-2, 16384, 3463, 4.73116
-3, 24576, 3911, 6.28381
-4, 32768, 5330, 6.14784
-5, 40960, 5753, 7.11976
-6, 49152, 5803, 8.4701
-7, 57344, 7902, 7.2569
-8, 65536, 11517, 5.69037
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-1, 8192, 4526, 1.80999
-2, 16384, 7127, 2.29886
-3, 24576, 2920, 8.41644
-4, 32768, 5150, 6.36272
-5, 40960, 5990, 6.83806
-6, 49152, 5066, 9.70233
-7, 57344, 7902, 7.2569
-8, 65536, 11548, 5.6751
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-third group size, frequency
-2, 27
-3, 14
-4, 17
-5, 11
-6, 5
-7, 7
-8, 7
-group size, logical size, compressed size, ratio
-1, 8192, 4467, 1.83389
-2, 16384, 7127, 2.29886
-3, 24576, 5047, 4.86943
-4, 32768, 4674, 7.0107
-5, 40960, 4422, 9.26278
-6, 49152, 7308, 6.72578
-7, 57344, 7902, 7.2569
-8, 65536, 10189, 6.43203
-first group size, frequency
-1,14843
-2, 2763
-3, 717
-4, 173
-5, 36
-6, 37
-7, 25
-8, 133
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-group size, logical size, compressed size, ratio
-1, 8192, 3553, 2.30566
-2, 16384, 6971, 2.35031
-3, 24576, 5937, 4.13946
-4, 32768, 3164, 10.3565
-5, 40960, 1902, 21.5352
-6, 49152, 9804, 5.01346
-7, 57344, 6713, 8.54223
-8, 65536, 3115, 21.0388
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-group size, logical size, compressed size, ratio
-1, 8192, 3553, 2.30566
-2, 16384, 5161, 3.17458
-3, 24576, 8930, 2.75207
-4, 32768, 7164, 4.57398
-5, 40960, 12125, 3.37814
-6, 49152, 4855, 10.124
-7, 57344, 6048, 9.48148
-8, 65536, 7931, 8.26327
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-third group size, frequency
-2, 1592
-3, 1251
-4, 1131
-5, 146
-6, 161
-7, 145
-8, 984
-group size, logical size, compressed size, ratio
-1, 8192, 3553, 2.30566
-2, 16384, 3055, 5.36301
-3, 24576, 5338, 4.60397
-4, 32768, 6481, 5.05601
-5, 40960, 6356, 6.4443
-6, 49152, 9811, 5.00989
-7, 57344, 9826, 5.83595
-8, 65536, 15413, 4.252
-first group size, frequency
-1,3298
-2, 638
-3, 190
-4, 29
-5, 3
-8, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
+1,9478
+2, 2935
+3, 1208
+4, 584
+5, 318
+6, 211
+7, 118
 8, 86
-group size, logical size, compressed size, ratio
-1, 8192, 3818, 2.14563
-2, 16384, 4370, 3.7492
-3, 24576, 6492, 3.78558
-4, 32768, 5086, 6.44278
-5, 40960, 6557, 6.24676
-6, 49152, 8488, 5.79076
-7, 57344, 8214, 6.98125
-8, 65536, 11240, 5.8306
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-group size, logical size, compressed size, ratio
-1, 8192, 3818, 2.14563
-2, 16384, 7448, 2.19979
-3, 24576, 7027, 3.49737
-4, 32768, 5911, 5.54356
-5, 40960, 14673, 2.79152
-6, 49152, 7375, 6.66468
-7, 57344, 6162, 9.30607
-8, 65536, 10902, 6.01137
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-third group size, frequency
-2, 286
-3, 353
-4, 283
-5, 59
-6, 41
-7, 29
-8, 115
-group size, logical size, compressed size, ratio
-1, 8192, 3818, 2.14563
-2, 16384, 5425, 3.02009
-3, 24576, 5420, 4.53432
-4, 32768, 6061, 5.40637
-5, 40960, 7303, 5.60865
-6, 49152, 8198, 5.99561
-7, 57344, 11703, 4.89994
-8, 65536, 8590, 7.62934
-first group size, frequency
-1,106857
-2, 18871
-3, 5586
-4, 829
-5, 210
-6, 131
-7, 76
-8, 268
+9, 57
+10, 30
+11, 29
+12, 19
+13, 14
+14, 11
+15, 9
+16, 7
+17, 4
+18, 3
+19, 1
+20, 7
+21, 4
+22, 2
+24, 1
+25, 3
+40, 1
+42, 1
+58, 1
 group size, logical size, compressed size, ratio
 first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-third group size, frequency
-2, 5238
-3, 5600
-4, 6639
-5, 1004
-6, 2158
-7, 2871
-8, 8301
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,61490
-2, 14019
-3, 3307
-4, 653
-5, 34
-6, 19
+1,6024
+2, 1415
+3, 368
+4, 138
+5, 64
+6, 32
 7, 11
-8, 22
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-third group size, frequency
-2, 7307
-3, 6004
-4, 9572
-5, 727
-6, 553
-7, 413
-8, 1348
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,202891
-2, 50490
-3, 14843
-4, 5448
-5, 3024
-6, 2353
-7, 1850
-8, 85893
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-third group size, frequency
-2, 8252
-3, 8106
-4, 10296
-5, 1880
-6, 2055
-7, 2459
-8, 120775
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,607261
-2, 142810
-3, 35169
-4, 56645
-5, 3053
-6, 1837
-7, 1056
-8, 6169
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-third group size, frequency
-2, 58895
-3, 59429
-4, 64548
-5, 9025
-6, 14388
-7, 11594
-8, 50659
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,949
-2, 58
-3, 15
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
 8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-third group size, frequency
-2, 90
-3, 72
-4, 39
-5, 5
-6, 4
-7, 12
-8, 20
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,6922
-2, 1620
-3, 548
-4, 223
-5, 103
-6, 51
-7, 25
-8, 41
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-third group size, frequency
-2, 783
-3, 490
-4, 607
-5, 157
-6, 190
-7, 165
-8, 541
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,970
-2, 108
-3, 20
-4, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-third group size, frequency
-2, 95
-3, 51
-4, 62
-5, 9
-6, 11
-7, 21
-8, 30
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,192
-2, 36
-3, 33
-4, 9
-5, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-third group size, frequency
-2, 27
-3, 14
-4, 17
-5, 11
-6, 5
-7, 7
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,14843
-2, 2763
-3, 717
-4, 173
-5, 36
-6, 37
-7, 25
-8, 133
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-third group size, frequency
-2, 1592
-3, 1251
-4, 1131
-5, 146
-6, 161
-7, 145
-8, 984
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3298
-2, 638
-3, 190
-4, 29
-5, 3
-8, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-third group size, frequency
-2, 286
-3, 353
-4, 283
-5, 59
-6, 41
-7, 29
-8, 115
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,25133
-2, 122
-3, 9
-4, 2
-5, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,106857
-2, 18871
-3, 5586
-4, 829
-5, 210
-6, 131
-7, 76
-8, 268
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,106857
-2, 18871
-3, 5586
-4, 829
-5, 210
-6, 131
-7, 76
-8, 268
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,61490
-2, 14019
-3, 3307
-4, 653
-5, 34
-6, 19
-7, 11
-8, 22
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,202891
-2, 50490
-3, 14843
-4, 5448
-5, 3024
-6, 2353
-7, 1850
-8, 85893
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,607261
-2, 142810
-3, 35169
-4, 56645
-5, 3053
-6, 1837
-7, 1056
-8, 6169
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,949
-2, 58
-3, 15
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,6922
-2, 1620
-3, 548
-4, 223
-5, 103
-6, 51
-7, 25
-8, 41
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,970
-2, 108
-3, 20
-4, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,192
-2, 36
-3, 33
-4, 9
-5, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,14843
-2, 2763
-3, 717
-4, 173
-5, 36
-6, 37
-7, 25
-8, 133
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3298
-2, 638
-3, 190
-4, 29
-5, 3
-8, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,949
-2, 58
-3, 15
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,949
-2, 58
-3, 15
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,949
-2, 58
-3, 15
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,970
-2, 108
-3, 20
-4, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,949
-2, 58
-3, 15
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,6922
-2, 1620
-3, 548
-4, 223
-5, 103
-6, 51
-7, 25
-8, 41
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,970
-2, 108
-3, 20
-4, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,192
-2, 36
-3, 33
-4, 9
-5, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,949
-2, 58
-3, 15
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,373
-2, 109
-3, 87
-4, 43
-5, 2
-6, 1
-7, 2
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,6922
-2, 1620
-3, 548
-4, 223
-5, 103
-6, 51
-7, 25
-8, 41
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1488
-2, 936
-3, 552
-4, 673
-5, 142
-6, 168
-7, 124
-8, 466
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,970
-2, 108
-3, 20
-4, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,272
-2, 133
-3, 83
-4, 85
-5, 3
-6, 5
-7, 2
-8, 9
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,192
-2, 36
-3, 33
-4, 9
-5, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,82
-2, 31
-3, 16
-4, 26
-5, 13
-6, 2
-7, 1
-8, 3
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1931
-2, 192
-3, 45
-4, 10
-5, 4
-7, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 444
-2, 259
-3, 138
-4, 42
-5, 60
-6, 37
-7, 29
-8, 31
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,444
-2, 259
-3, 138
-4, 42
-5, 60
-6, 37
-7, 29
-8, 31
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,9542
-2, 2970
-3, 1238
-4, 610
-5, 336
-6, 224
-7, 127
-8, 340
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1616
-2, 1188
-3, 592
-4, 550
-5, 473
-6, 315
-7, 290
-8, 1752
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1616
-2, 1188
-3, 592
-4, 550
-5, 473
-6, 315
-7, 290
-8, 1752
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,2331
-2, 288
-3, 85
-4, 27
-5, 16
-6, 4
-7, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 979
-2, 156
-3, 92
-4, 59
-5, 55
-6, 54
-7, 61
-8, 69
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,979
-2, 156
-3, 92
-4, 59
-5, 55
-6, 54
-7, 61
-8, 69
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,348
-2, 64
-3, 47
-4, 10
-5, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 150
-2, 51
-3, 42
-4, 31
-5, 13
-6, 3
-7, 3
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,150
-2, 51
-3, 42
-4, 31
-5, 13
-6, 3
-7, 3
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,2943
-2, 587
-3, 175
-4, 63
-5, 28
-6, 10
-7, 7
-8, 4
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 514
-2, 258
-3, 168
-4, 123
-5, 115
-6, 80
-7, 58
-8, 211
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,514
-2, 258
-3, 168
-4, 123
-5, 115
-6, 80
-7, 58
-8, 211
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,9542
-2, 2970
-3, 1238
-4, 610
-5, 336
-6, 224
-7, 127
-8, 340
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1616
-2, 1188
-3, 592
-4, 550
-5, 473
-6, 315
-7, 290
-8, 1752
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1616
-2, 1188
-3, 592
-4, 550
-5, 473
-6, 315
-7, 290
-8, 1752
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,6030
-2, 1416
-3, 369
-4, 139
-5, 65
-6, 33
-7, 13
-8, 25
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1148
-2, 528
-3, 410
-4, 244
-5, 357
-6, 134
-7, 108
-8, 448
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1148
-2, 528
-3, 410
-4, 244
-5, 357
-6, 134
-7, 108
-8, 448
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,348
-2, 64
-3, 47
-4, 10
-5, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 150
-2, 51
-3, 42
-4, 31
-5, 13
-6, 3
-7, 3
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,150
-2, 51
-3, 42
-4, 31
-5, 13
-6, 3
-7, 3
-8, 7
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,106857
-2, 18871
-3, 5586
-4, 829
-5, 210
-6, 131
-7, 76
-8, 268
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,37407
-2, 11209
-3, 10989
-4, 12894
-5, 376
-6, 306
-7, 323
-8, 2355
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,61490
-2, 14019
-3, 3307
-4, 653
-5, 34
-6, 19
-7, 11
-8, 22
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,13446
-2, 8110
-3, 6249
-4, 9897
-5, 335
-6, 331
-7, 280
-8, 1122
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,202891
-2, 50490
-3, 14843
-4, 5448
-5, 3024
-6, 2353
-7, 1850
-8, 85893
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,20272
-2, 11632
-3, 10173
-4, 12464
-5, 1385
-6, 1278
-7, 1236
-8, 119046
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,607261
-2, 142810
-3, 35169
-4, 56645
-5, 3053
-6, 1837
-7, 1056
-8, 6169
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,176993
-2, 78540
-3, 75948
-4, 86954
-5, 6646
-6, 8820
-7, 3772
-8, 35714
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,2943
-2, 587
-3, 175
-4, 63
-5, 28
-6, 10
-7, 7
-8, 4
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 514
-2, 258
-3, 168
-4, 123
-5, 115
-6, 80
-7, 58
-8, 211
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,514
-2, 258
-3, 168
-4, 123
-5, 115
-6, 80
-7, 58
-8, 211
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,9542
-2, 2970
-3, 1238
-4, 610
-5, 336
-6, 224
-7, 127
-8, 340
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1616
-2, 1188
-3, 592
-4, 550
-5, 473
-6, 315
-7, 290
-8, 1752
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1616
-2, 1188
-3, 592
-4, 550
-5, 473
-6, 315
-7, 290
-8, 1752
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,6030
-2, 1416
-3, 369
-4, 139
-5, 65
-6, 33
-7, 13
-8, 25
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1148
-2, 528
-3, 410
-4, 244
-5, 357
-6, 134
-7, 108
-8, 448
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1148
-2, 528
-3, 410
-4, 244
-5, 357
-6, 134
-7, 108
-8, 448
+9, 5
+10, 1
+11, 1
+12, 1
+13, 1
+14, 1
+15, 1
+16, 1
+23, 1
+25, 1
 group size, logical size, compressed size, ratio
 first group size, frequency
 1,525
@@ -2622,494 +832,47 @@ first group size, frequency
 6, 4
 group size, logical size, compressed size, ratio
 first group size, frequency
-1,0
-1, 163
-2, 87
-3, 76
-4, 46
-5, 40
-6, 22
-7, 4
-8, 19
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,163
-2, 87
-3, 76
-4, 46
-5, 40
-6, 22
-7, 4
-8, 19
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,14843
-2, 2763
-3, 717
-4, 173
-5, 36
-6, 37
-7, 25
-8, 133
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,3506
-2, 1810
-3, 1463
-4, 1271
-5, 96
-6, 86
-7, 70
-8, 846
+1,14824
+2, 2757
+3, 711
+4, 164
+5, 30
+6, 28
+7, 23
+8, 7
+9, 12
+10, 4
+11, 3
+12, 5
+13, 2
+14, 6
+15, 2
+16, 3
+17, 3
+18, 2
+19, 2
+20, 2
+21, 2
+24, 1
+25, 2
+29, 1
+38, 2
+41, 1
+43, 1
+46, 1
+52, 2
+69, 1
+73, 1
 group size, logical size, compressed size, ratio
 first group size, frequency
 1,3298
 2, 638
-3, 190
+3, 189
 4, 29
-5, 3
-8, 2
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1023
-2, 326
-3, 389
-4, 326
-5, 43
-6, 24
-7, 14
-8, 86
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,2943
-2, 587
-3, 175
-4, 63
-5, 28
-6, 10
-7, 7
-8, 4
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 514
-2, 258
-3, 168
-4, 123
-5, 115
-6, 80
-7, 58
-8, 211
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,514
-2, 258
-3, 168
-4, 123
-5, 115
-6, 80
-7, 58
-8, 211
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,4452
-2, 1003
-3, 401
-4, 218
-5, 136
-6, 97
-7, 76
-8, 109
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 1136
-2, 298
-3, 198
-4, 161
-5, 149
-6, 102
-7, 80
-8, 789
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,1136
-2, 298
-3, 198
-4, 161
-5, 149
-6, 102
-7, 80
-8, 789
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
+5, 2
 11, 1
-12, 2
-14, 1
-17, 1
+13, 1
 group size, logical size, compressed size, ratio
-first group size, frequency
-1,106822
-2, 18845
-3, 5568
-4, 812
-5, 196
-6, 120
-7, 63
-8, 52
-9, 28
-10, 23
-11, 10
-12, 13
-13, 12
-14, 9
-15, 9
-16, 5
-17, 4
-18, 2
-19, 5
-20, 1
-22, 1
-23, 1
-24, 2
-25, 1
-26, 1
-27, 3
-28, 2
-30, 1
-31, 3
-33, 2
-36, 1
-37, 1
-40, 1
-56, 1
-61, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 37313
-2, 11161
-3, 10912
-4, 12820
-5, 340
-6, 275
-7, 277
-8, 469
-9, 94
-10, 48
-11, 77
-12, 74
-13, 36
-14, 31
-15, 46
-16, 740
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,37313
-2, 11161
-3, 10912
-4, 12820
-5, 340
-6, 275
-7, 277
-8, 469
-9, 94
-10, 48
-11, 77
-12, 74
-13, 36
-14, 31
-15, 46
-16, 740
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,0
-1, 13386
-2, 8069
-3, 6211
-4, 9843
-5, 314
-6, 315
-7, 260
-8, 302
-9, 60
-10, 41
-11, 38
-12, 54
-13, 21
-14, 16
-15, 20
-16, 285
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,13386
-2, 8069
-3, 6211
-4, 9843
-5, 314
-6, 315
-7, 260
-8, 302
-9, 60
-10, 41
-11, 38
-12, 54
-13, 21
-14, 16
-15, 20
-16, 285
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,106822
-2, 18845
-3, 5568
-4, 812
-5, 196
-6, 120
-7, 63
-8, 52
-9, 28
-10, 23
-11, 10
-12, 13
-13, 12
-14, 9
-15, 9
-16, 5
-17, 4
-18, 2
-19, 5
-20, 1
-22, 1
-23, 1
-24, 2
-25, 1
-26, 1
-27, 3
-28, 2
-30, 1
-31, 3
-33, 2
-36, 1
-37, 1
-40, 1
-56, 1
-61, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-group size, logical size, compressed size, ratio
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
-first group size, frequency
-1,61486
-2, 14017
-3, 3306
-4, 651
-5, 34
-6, 18
-7, 11
-8, 11
-9, 3
-10, 2
-11, 1
-12, 2
-14, 1
-17, 1
 first group size, frequency
 1,106822
 2, 18845
@@ -3784,578 +1547,6 @@ first group size, frequency
 12, 2
 14, 1
 17, 1
-first group size, frequency
-1,201643
-2, 49401
-3, 13826
-4, 4587
-5, 2206
-6, 1564
-7, 1119
-8, 879
-9, 671
-10, 506
-11, 438
-12, 370
-13, 330
-14, 285
-15, 268
-16, 225
-17, 186
-18, 178
-19, 170
-20, 150
-21, 100
-22, 109
-23, 121
-24, 96
-25, 90
-26, 89
-27, 79
-28, 73
-29, 90
-30, 74
-31, 64
-32, 72
-33, 49
-34, 51
-35, 56
-36, 45
-37, 52
-38, 58
-39, 53
-40, 48
-41, 38
-42, 34
-43, 33
-44, 24
-45, 33
-46, 34
-47, 36
-48, 25
-49, 37
-50, 30
-51, 35
-52, 20
-53, 24
-54, 29
-55, 15
-56, 23
-57, 19
-58, 18
-59, 25
-60, 22
-61, 23
-62, 20
-63, 17
-64, 17
-65, 12
-66, 25
-67, 24
-68, 10
-69, 13
-70, 23
-71, 13
-72, 9
-73, 18
-74, 18
-75, 15
-76, 9
-77, 9
-78, 17
-79, 12
-80, 10
-81, 11
-82, 15
-83, 11
-84, 9
-85, 8
-86, 9
-87, 5
-88, 11
-89, 7
-90, 8
-91, 8
-92, 12
-93, 9
-94, 16
-95, 7
-96, 5
-97, 4
-98, 6
-99, 10
-100, 10
-101, 10
-102, 6
-103, 8
-104, 6
-105, 7
-106, 7
-107, 5
-108, 11
-109, 5
-110, 7
-111, 6
-112, 7
-113, 7
-114, 2
-115, 9
-116, 4
-117, 4
-118, 4
-119, 4
-120, 5
-121, 4
-122, 2
-123, 3
-124, 5
-125, 8
-126, 5
-127, 8
-128, 3
-129, 4
-130, 3
-131, 9
-132, 2
-133, 7
-134, 5
-135, 9
-136, 7
-137, 5
-138, 9
-139, 3
-140, 8
-141, 3
-142, 3
-143, 4
-144, 3
-145, 2
-146, 6
-147, 4
-148, 2
-149, 5
-150, 7
-151, 5
-152, 2
-153, 4
-154, 4
-155, 2
-156, 6
-157, 4
-158, 3
-159, 1
-160, 5
-161, 8
-162, 3
-163, 3
-164, 2
-165, 4
-166, 2
-167, 2
-168, 1
-169, 4
-170, 7
-171, 1
-172, 2
-173, 1
-174, 2
-175, 1
-177, 1
-178, 2
-179, 4
-180, 2
-181, 3
-182, 7
-183, 2
-184, 4
-185, 2
-187, 4
-188, 3
-189, 3
-190, 7
-192, 4
-193, 2
-194, 1
-195, 4
-196, 2
-197, 2
-198, 1
-199, 4
-200, 1
-202, 2
-203, 3
-205, 3
-206, 2
-207, 1
-208, 4
-209, 1
-213, 2
-214, 2
-215, 1
-216, 2
-218, 2
-219, 1
-222, 2
-223, 1
-224, 2
-226, 1
-228, 2
-229, 2
-231, 1
-232, 5
-234, 2
-238, 1
-240, 4
-242, 1
-243, 3
-245, 1
-246, 2
-247, 1
-248, 2
-249, 3
-250, 2
-251, 2
-252, 2
-253, 3
-256, 2
-257, 1
-258, 3
-261, 2
-262, 3
-263, 1
-264, 2
-266, 1
-267, 1
-268, 1
-269, 2
-270, 3
-272, 3
-274, 2
-275, 2
-276, 1
-278, 1
-279, 2
-280, 4
-282, 1
-283, 2
-284, 1
-286, 1
-287, 3
-288, 1
-290, 1
-291, 1
-293, 1
-294, 1
-296, 1
-299, 1
-300, 1
-302, 2
-303, 2
-305, 3
-306, 1
-308, 2
-310, 2
-311, 2
-313, 1
-314, 1
-315, 3
-317, 2
-318, 1
-319, 1
-320, 2
-323, 2
-325, 1
-327, 1
-328, 1
-330, 1
-331, 3
-333, 1
-335, 1
-338, 2
-339, 1
-340, 1
-341, 1
-342, 1
-343, 1
-346, 1
-347, 2
-348, 2
-349, 1
-350, 1
-352, 1
-353, 1
-356, 4
-357, 2
-359, 2
-360, 3
-361, 1
-362, 3
-363, 2
-366, 2
-369, 1
-370, 1
-373, 1
-377, 2
-379, 1
-380, 1
-382, 1
-383, 1
-385, 1
-386, 3
-387, 2
-391, 2
-396, 1
-399, 2
-400, 1
-401, 1
-403, 2
-407, 2
-409, 1
-411, 1
-413, 1
-417, 1
-419, 1
-420, 1
-421, 1
-422, 1
-425, 1
-431, 1
-432, 2
-435, 1
-436, 1
-438, 1
-441, 2
-442, 1
-443, 1
-444, 2
-447, 2
-450, 1
-452, 1
-454, 1
-457, 2
-459, 1
-461, 1
-463, 1
-464, 1
-465, 1
-466, 1
-468, 1
-474, 1
-476, 1
-478, 1
-489, 1
-490, 1
-491, 1
-493, 1
-495, 1
-501, 2
-503, 1
-508, 1
-509, 3
-510, 2
-511, 1
-512, 2
-513, 2
-518, 1
-520, 2
-521, 1
-522, 2
-528, 1
-529, 1
-531, 1
-532, 1
-537, 2
-538, 1
-539, 1
-540, 2
-543, 2
-544, 2
-547, 2
-551, 2
-553, 1
-554, 1
-563, 1
-564, 1
-565, 1
-566, 1
-567, 3
-568, 1
-578, 1
-580, 2
-581, 1
-582, 2
-583, 1
-586, 1
-588, 1
-589, 1
-602, 1
-603, 1
-605, 1
-610, 1
-611, 1
-616, 1
-617, 2
-624, 1
-628, 1
-632, 1
-638, 2
-650, 1
-653, 1
-656, 1
-661, 1
-665, 1
-667, 1
-668, 1
-673, 1
-676, 2
-680, 1
-682, 1
-685, 2
-686, 1
-696, 1
-697, 1
-701, 1
-704, 1
-723, 1
-724, 3
-728, 1
-729, 1
-735, 1
-736, 1
-737, 1
-754, 1
-757, 2
-767, 2
-771, 2
-772, 1
-773, 1
-778, 1
-781, 1
-782, 1
-789, 2
-791, 1
-796, 1
-814, 1
-819, 2
-823, 2
-824, 1
-825, 1
-835, 1
-837, 1
-858, 1
-874, 1
-882, 1
-920, 1
-921, 1
-928, 2
-969, 1
-971, 1
-974, 1
-986, 1
-992, 1
-997, 1
-999, 1
-1008, 1
-1021, 1
-1023, 1
-1028, 2
-1032, 1
-1049, 1
-1060, 1
-1067, 1
-1068, 1
-1079, 1
-1086, 1
-1087, 1
-1095, 1
-1100, 1
-1104, 1
-1122, 1
-1124, 1
-1136, 2
-1201, 1
-1234, 1
-1253, 1
-1255, 1
-1268, 1
-1269, 1
-1284, 1
-1298, 1
-1301, 1
-1319, 1
-1325, 1
-1335, 1
-1338, 1
-1361, 1
-1390, 1
-1401, 1
-1407, 1
-1415, 1
-1429, 1
-1438, 1
-1493, 1
-1505, 1
-1508, 1
-1536, 1
-1559, 1
-1574, 1
-1578, 1
-1611, 1
-1665, 1
-1676, 1
-1698, 1
-1713, 1
-1743, 1
-1799, 1
-1871, 1
-1897, 1
-1934, 1
-1941, 1
-1949, 1
-1955, 1
-1976, 1
-2025, 1
-2026, 1
-2124, 1
-2140, 1
-2179, 1
-2181, 2
-2183, 1
-2190, 1
-2234, 1
-2261, 1
-2358, 1
-2365, 1
-2480, 1
-2521, 1
-2611, 1
-2733, 1
-2810, 1
-2856, 1
-2889, 1
-2942, 1
-2958, 1
-2980, 1
-3219, 1
-3232, 1
-3285, 1
-3434, 1
-3742, 1
-4020, 1
-4127, 1
-4442, 1
-4754, 1
-4782, 1
-4834, 1
-5105, 1
-5805, 1
-6369, 1
-7532, 1
-8921, 1
-13398, 1
-16315, 1
-29949, 1
-35055, 1
 first group size, frequency
 1,606761
 2, 142426
@@ -4598,3 +1789,1786 @@ first group size, frequency
 5, 2
 11, 1
 13, 1
+first group size, frequency
+1,106822
+2, 18845
+3, 5568
+4, 812
+5, 196
+6, 120
+7, 63
+8, 52
+9, 28
+10, 23
+11, 10
+12, 13
+13, 12
+14, 9
+15, 9
+16, 5
+17, 4
+18, 2
+19, 5
+20, 1
+22, 1
+23, 1
+24, 2
+25, 1
+26, 1
+27, 3
+28, 2
+30, 1
+31, 3
+33, 2
+36, 1
+37, 1
+40, 1
+56, 1
+61, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 37407
+2, 11209
+3, 10989
+4, 12894
+5, 376
+6, 306
+7, 323
+8, 2355
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,37407
+2, 11209
+3, 10989
+4, 12894
+5, 376
+6, 306
+7, 323
+8, 2355
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,61486
+2, 14017
+3, 3306
+4, 651
+5, 34
+6, 18
+7, 11
+8, 11
+9, 3
+10, 2
+11, 1
+12, 2
+14, 1
+17, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 13446
+2, 8110
+3, 6249
+4, 9897
+5, 335
+6, 331
+7, 280
+8, 1122
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,13446
+2, 8110
+3, 6249
+4, 9897
+5, 335
+6, 331
+7, 280
+8, 1122
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,606761
+2, 142426
+3, 34911
+4, 56375
+5, 2861
+6, 1677
+7, 912
+8, 758
+9, 386
+10, 287
+11, 181
+12, 178
+13, 106
+14, 105
+15, 76
+16, 84
+17, 67
+18, 48
+19, 36
+20, 42
+21, 31
+22, 21
+23, 20
+24, 30
+25, 14
+26, 17
+27, 11
+28, 15
+29, 17
+30, 22
+31, 16
+32, 11
+33, 8
+34, 7
+35, 3
+36, 2
+37, 10
+38, 2
+39, 13
+40, 6
+41, 8
+42, 4
+43, 6
+44, 9
+45, 4
+46, 1
+47, 1
+48, 6
+49, 2
+50, 6
+51, 6
+52, 4
+53, 6
+54, 4
+56, 1
+57, 3
+58, 3
+59, 2
+60, 6
+61, 2
+62, 2
+63, 4
+64, 3
+65, 1
+66, 2
+67, 1
+68, 1
+69, 5
+71, 1
+72, 1
+74, 3
+76, 4
+77, 4
+78, 1
+79, 4
+80, 3
+81, 2
+82, 1
+83, 2
+84, 2
+85, 2
+87, 2
+89, 2
+90, 1
+91, 1
+95, 1
+98, 1
+100, 1
+101, 1
+106, 1
+107, 1
+111, 1
+113, 2
+115, 2
+117, 1
+121, 1
+127, 1
+129, 1
+131, 1
+132, 1
+143, 1
+152, 3
+154, 1
+160, 1
+193, 1
+199, 1
+200, 1
+213, 1
+215, 1
+228, 1
+247, 1
+260, 1
+269, 1
+286, 1
+299, 1
+300, 1
+302, 1
+314, 1
+324, 1
+331, 1
+357, 1
+369, 1
+393, 1
+436, 1
+531, 1
+875, 1
+1042, 1
+1360, 1
+1651, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 176993
+2, 78540
+3, 75948
+4, 86954
+5, 6646
+6, 8820
+7, 3772
+8, 35714
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,176993
+2, 78540
+3, 75948
+4, 86954
+5, 6646
+6, 8820
+7, 3772
+8, 35714
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,4423
+2, 993
+3, 391
+4, 213
+5, 132
+6, 90
+7, 72
+8, 36
+9, 29
+10, 10
+11, 10
+12, 5
+13, 4
+14, 5
+15, 4
+16, 1
+22, 2
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 1136
+2, 298
+3, 198
+4, 161
+5, 149
+6, 102
+7, 80
+8, 789
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1136
+2, 298
+3, 198
+4, 161
+5, 149
+6, 102
+7, 80
+8, 789
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,9478
+2, 2935
+3, 1208
+4, 584
+5, 318
+6, 211
+7, 118
+8, 86
+9, 57
+10, 30
+11, 29
+12, 19
+13, 14
+14, 11
+15, 9
+16, 7
+17, 4
+18, 3
+19, 1
+20, 7
+21, 4
+22, 2
+24, 1
+25, 3
+40, 1
+42, 1
+58, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 1616
+2, 1188
+3, 592
+4, 550
+5, 473
+6, 315
+7, 290
+8, 1752
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1616
+2, 1188
+3, 592
+4, 550
+5, 473
+6, 315
+7, 290
+8, 1752
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,6024
+2, 1415
+3, 368
+4, 138
+5, 64
+6, 32
+7, 11
+8, 7
+9, 5
+10, 1
+11, 1
+12, 1
+13, 1
+14, 1
+15, 1
+16, 1
+23, 1
+25, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 1148
+2, 528
+3, 410
+4, 244
+5, 357
+6, 134
+7, 108
+8, 448
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1148
+2, 528
+3, 410
+4, 244
+5, 357
+6, 134
+7, 108
+8, 448
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,525
+2, 153
+3, 92
+4, 25
+5, 6
+6, 4
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 163
+2, 87
+3, 76
+4, 46
+5, 40
+6, 22
+7, 4
+8, 19
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,163
+2, 87
+3, 76
+4, 46
+5, 40
+6, 22
+7, 4
+8, 19
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,14824
+2, 2757
+3, 711
+4, 164
+5, 30
+6, 28
+7, 23
+8, 7
+9, 12
+10, 4
+11, 3
+12, 5
+13, 2
+14, 6
+15, 2
+16, 3
+17, 3
+18, 2
+19, 2
+20, 2
+21, 2
+24, 1
+25, 2
+29, 1
+38, 2
+41, 1
+43, 1
+46, 1
+52, 2
+69, 1
+73, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 3506
+2, 1810
+3, 1463
+4, 1271
+5, 96
+6, 86
+7, 70
+8, 846
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,3506
+2, 1810
+3, 1463
+4, 1271
+5, 96
+6, 86
+7, 70
+8, 846
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,3298
+2, 638
+3, 189
+4, 29
+5, 2
+11, 1
+13, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 1023
+2, 326
+3, 389
+4, 326
+5, 43
+6, 24
+7, 14
+8, 86
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1023
+2, 326
+3, 389
+4, 326
+5, 43
+6, 24
+7, 14
+8, 86
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,245652
+2, 10556
+3, 6819
+4, 7033
+5, 100
+6, 73
+7, 45
+8, 69
+9, 19
+10, 15
+11, 16
+12, 13
+13, 5
+14, 8
+15, 6
+16, 5
+17, 5
+18, 8
+19, 5
+20, 6
+21, 2
+22, 2
+23, 7
+24, 4
+26, 1
+27, 2
+29, 2
+30, 5
+31, 3
+32, 1
+33, 2
+36, 2
+40, 1
+41, 1
+42, 2
+43, 2
+44, 1
+45, 2
+48, 1
+53, 1
+56, 2
+63, 2
+65, 1
+70, 1
+81, 1
+83, 1
+86, 1
+105, 1
+106, 1
+122, 1
+129, 1
+133, 1
+156, 1
+161, 1
+189, 1
+228, 1
+254, 1
+289, 1
+384, 1
+613, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 198279
+2, 12076
+3, 6858
+4, 10437
+5, 346
+6, 247
+7, 163
+8, 4296
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,245652
+2, 10556
+3, 6819
+4, 7033
+5, 100
+6, 73
+7, 45
+8, 69
+9, 19
+10, 15
+11, 16
+12, 13
+13, 5
+14, 8
+15, 6
+16, 5
+17, 5
+18, 8
+19, 5
+20, 6
+21, 2
+22, 2
+23, 7
+24, 4
+26, 1
+27, 2
+29, 2
+30, 5
+31, 3
+32, 1
+33, 2
+36, 2
+40, 1
+41, 1
+42, 2
+43, 2
+44, 1
+45, 2
+48, 1
+53, 1
+56, 2
+63, 2
+65, 1
+70, 1
+81, 1
+83, 1
+86, 1
+105, 1
+106, 1
+122, 1
+129, 1
+133, 1
+156, 1
+161, 1
+189, 1
+228, 1
+254, 1
+289, 1
+384, 1
+613, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 198279
+2, 12076
+3, 6858
+4, 10437
+5, 346
+6, 247
+7, 163
+8, 4296
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,198279
+2, 12076
+3, 6858
+4, 10437
+5, 346
+6, 247
+7, 163
+8, 4296
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,123739
+2, 17727
+3, 6375
+4, 4768
+5, 74
+6, 66
+7, 31
+8, 32
+9, 13
+10, 7
+11, 17
+12, 7
+13, 8
+14, 5
+15, 4
+16, 1
+17, 4
+18, 1
+19, 4
+20, 2
+21, 2
+22, 1
+23, 1
+24, 1
+25, 2
+26, 1
+27, 1
+28, 3
+29, 2
+32, 3
+33, 1
+34, 2
+35, 1
+37, 2
+55, 1
+66, 1
+80, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 75257
+2, 20478
+3, 7478
+4, 8939
+5, 605
+6, 362
+7, 278
+8, 2357
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,75257
+2, 20478
+3, 7478
+4, 8939
+5, 605
+6, 362
+7, 278
+8, 2357
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1430393
+2, 65162
+3, 87907
+4, 153899
+5, 1905
+6, 1924
+7, 1771
+8, 3372
+9, 681
+10, 410
+11, 480
+12, 750
+13, 172
+14, 182
+15, 248
+16, 322
+17, 99
+18, 82
+19, 107
+20, 148
+21, 62
+22, 67
+23, 66
+24, 110
+25, 35
+26, 34
+27, 50
+28, 49
+29, 36
+30, 40
+31, 52
+32, 45
+33, 35
+34, 23
+35, 33
+36, 25
+37, 26
+38, 17
+39, 21
+40, 32
+41, 19
+42, 14
+43, 11
+44, 10
+45, 15
+46, 11
+47, 13
+48, 21
+49, 8
+50, 11
+51, 9
+52, 11
+53, 11
+54, 9
+55, 12
+56, 12
+57, 2
+58, 13
+59, 11
+60, 11
+61, 7
+62, 5
+63, 7
+64, 5
+65, 5
+66, 4
+67, 5
+68, 8
+69, 9
+70, 6
+71, 6
+72, 10
+73, 5
+74, 5
+75, 2
+76, 2
+77, 3
+78, 7
+79, 2
+80, 2
+81, 5
+82, 3
+83, 4
+84, 3
+85, 4
+86, 3
+87, 4
+88, 4
+89, 2
+90, 2
+91, 4
+92, 3
+93, 7
+94, 6
+95, 4
+96, 2
+97, 6
+98, 1
+99, 4
+100, 1
+101, 1
+102, 4
+103, 2
+104, 1
+105, 2
+106, 4
+107, 5
+108, 2
+109, 1
+110, 2
+111, 2
+112, 1
+114, 1
+115, 3
+116, 5
+117, 1
+118, 2
+119, 2
+120, 2
+121, 2
+122, 2
+123, 3
+124, 5
+125, 4
+126, 2
+127, 1
+128, 2
+129, 2
+130, 3
+131, 2
+132, 4
+133, 1
+134, 1
+135, 2
+136, 2
+137, 3
+138, 3
+140, 1
+141, 2
+142, 2
+143, 1
+144, 4
+145, 1
+146, 2
+149, 1
+150, 1
+152, 1
+154, 2
+157, 1
+158, 3
+159, 1
+160, 4
+162, 1
+163, 1
+164, 1
+165, 1
+166, 3
+167, 1
+170, 1
+171, 2
+172, 2
+173, 1
+174, 1
+175, 2
+177, 3
+179, 2
+180, 2
+181, 1
+182, 1
+185, 1
+188, 1
+190, 1
+193, 1
+194, 1
+197, 1
+199, 1
+202, 1
+204, 1
+206, 1
+207, 1
+210, 1
+214, 1
+219, 1
+220, 2
+223, 1
+227, 1
+235, 1
+239, 1
+240, 1
+246, 1
+247, 2
+250, 1
+257, 1
+258, 1
+262, 2
+263, 2
+270, 1
+279, 1
+282, 1
+283, 2
+294, 1
+304, 1
+309, 1
+310, 1
+311, 1
+322, 1
+328, 1
+337, 1
+368, 1
+374, 1
+383, 1
+385, 1
+386, 1
+396, 1
+401, 1
+408, 1
+417, 1
+422, 1
+424, 1
+428, 1
+430, 3
+439, 1
+444, 1
+446, 1
+453, 1
+490, 1
+505, 1
+508, 1
+511, 1
+529, 1
+653, 1
+694, 1
+710, 1
+724, 1
+819, 1
+895, 2
+904, 1
+907, 1
+908, 1
+1634, 1
+1841, 1
+1914, 1
+2312, 1
+2377, 1
+4705, 1
+5395, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 1009159
+2, 54206
+3, 24128
+4, 141646
+5, 8537
+6, 3553
+7, 2810
+8, 103116
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1009159
+2, 54206
+3, 24128
+4, 141646
+5, 8537
+6, 3553
+7, 2810
+8, 103116
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,10186
+2, 1708
+3, 458
+4, 247
+5, 109
+6, 74
+7, 57
+8, 43
+9, 36
+10, 49
+11, 59
+12, 72
+13, 53
+14, 62
+15, 62
+16, 45
+17, 29
+18, 21
+19, 7
+20, 11
+21, 3
+22, 4
+23, 3
+25, 2
+26, 1
+28, 2
+29, 1
+30, 1
+32, 2
+38, 2
+44, 2
+45, 1
+46, 1
+54, 1
+59, 1
+67, 1
+93, 1
+94, 1
+108, 1
+112, 1
+116, 1
+127, 1
+207, 1
+410, 1
+600, 1
+685, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 3626
+2, 987
+3, 459
+4, 311
+5, 201
+6, 150
+7, 106
+8, 2131
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,3626
+2, 987
+3, 459
+4, 311
+5, 201
+6, 150
+7, 106
+8, 2131
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,16761
+2, 1934
+3, 582
+4, 314
+5, 191
+6, 208
+7, 219
+8, 275
+9, 46
+10, 32
+11, 20
+12, 29
+13, 10
+14, 12
+15, 5
+16, 7
+17, 4
+18, 5
+19, 1
+20, 3
+21, 1
+24, 1
+28, 2
+39, 2
+54, 1
+59, 1
+62, 1
+64, 1
+92, 1
+199, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 9894
+2, 2096
+3, 836
+4, 455
+5, 258
+6, 144
+7, 156
+8, 1330
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,9894
+2, 2096
+3, 836
+4, 455
+5, 258
+6, 144
+7, 156
+8, 1330
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,10915
+2, 1558
+3, 597
+4, 286
+5, 214
+6, 150
+7, 104
+8, 76
+9, 38
+10, 18
+11, 21
+12, 10
+13, 16
+14, 14
+15, 8
+16, 5
+17, 3
+18, 3
+19, 2
+20, 4
+21, 2
+24, 1
+25, 1
+27, 1
+28, 1
+29, 1
+30, 1
+31, 1
+32, 1
+34, 1
+37, 1
+39, 2
+41, 1
+42, 2
+43, 1
+56, 1
+58, 1
+69, 1
+77, 1
+83, 1
+88, 1
+212, 1
+538, 1
+1415, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 4941
+2, 1174
+3, 605
+4, 366
+5, 256
+6, 177
+7, 133
+8, 1414
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,4941
+2, 1174
+3, 605
+4, 366
+5, 256
+6, 177
+7, 133
+8, 1414
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1460
+2, 162
+3, 72
+4, 39
+5, 42
+6, 22
+7, 4
+8, 4
+10, 1
+12, 1
+25, 1
+37, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 913
+2, 174
+3, 94
+4, 32
+5, 36
+6, 38
+7, 5
+8, 66
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,913
+2, 174
+3, 94
+4, 32
+5, 36
+6, 38
+7, 5
+8, 66
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,30611
+2, 3067
+3, 2433
+4, 1327
+5, 103
+6, 96
+7, 60
+8, 30
+9, 18
+10, 19
+11, 20
+12, 11
+13, 10
+14, 7
+15, 7
+16, 9
+17, 9
+18, 6
+19, 4
+20, 5
+21, 3
+24, 2
+25, 1
+26, 2
+27, 2
+29, 3
+30, 1
+31, 3
+32, 1
+33, 1
+34, 1
+35, 2
+37, 2
+40, 1
+41, 3
+42, 2
+45, 1
+47, 1
+54, 1
+58, 1
+59, 1
+60, 1
+76, 2
+78, 1
+79, 1
+85, 1
+89, 1
+99, 1
+110, 1
+134, 1
+150, 1
+314, 1
+557, 1
+1184, 1
+1502, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 19448
+2, 2704
+3, 1311
+4, 1263
+5, 152
+6, 104
+7, 98
+8, 2826
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,19448
+2, 2704
+3, 1311
+4, 1263
+5, 152
+6, 104
+7, 98
+8, 2826
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,7626
+2, 538
+3, 324
+4, 309
+5, 12
+6, 8
+7, 4
+8, 12
+9, 4
+10, 1
+11, 1
+12, 2
+13, 1
+14, 1
+16, 1
+19, 1
+21, 1
+24, 1
+26, 1
+29, 1
+37, 2
+50, 1
+90, 1
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,0
+1, 5104
+2, 838
+3, 239
+4, 349
+5, 29
+6, 26
+7, 11
+8, 291
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,5104
+2, 838
+3, 239
+4, 349
+5, 29
+6, 26
+7, 11
+8, 291
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,198279
+2, 12076
+3, 6858
+4, 10437
+5, 346
+6, 247
+7, 163
+8, 4296
+first group size, frequency
+1,148108
+2, 2858
+3, 568
+4, 307
+5, 178
+6, 112
+7, 95
+8, 1613
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,82818
+2, 3401
+3, 554
+4, 253
+5, 123
+6, 81
+7, 68
+8, 543
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1149366
+2, 52631
+3, 12049
+4, 5674
+5, 3020
+6, 1919
+7, 1339
+8, 31389
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,148108
+2, 2858
+3, 568
+4, 307
+5, 178
+6, 112
+7, 95
+8, 1613
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,82818
+2, 3401
+3, 554
+4, 253
+5, 123
+6, 81
+7, 68
+8, 543
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1149366
+2, 52631
+3, 12049
+4, 5674
+5, 3020
+6, 1919
+7, 1339
+8, 31389
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1296
+2, 374
+3, 175
+4, 59
+5, 11
+6, 11
+7, 2
+8, 121
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,8434
+2, 1834
+3, 536
+4, 743
+5, 124
+6, 96
+7, 46
+8, 434
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,872
+2, 349
+3, 136
+4, 130
+5, 9
+6, 11
+7, 5
+8, 183
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,362
+2, 44
+3, 31
+4, 26
+5, 20
+6, 1
+7, 4
+8, 17
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,11702
+2, 509
+3, 115
+4, 57
+5, 33
+6, 22
+7, 16
+8, 709
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,4122
+2, 203
+3, 33
+4, 20
+5, 4
+6, 7
+7, 3
+8, 69
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,156559
+2, 19793
+3, 831
+4, 482
+5, 205
+6, 153
+7, 120
+8, 2545
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,72440
+2, 21608
+3, 1130
+4, 844
+5, 201
+6, 198
+7, 118
+8, 1016
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1011075
+2, 188405
+3, 15507
+4, 13033
+5, 3774
+6, 3734
+7, 1645
+8, 52758
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1626
+2, 660
+3, 311
+4, 122
+5, 96
+6, 84
+7, 22
+8, 336
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,9894
+2, 2096
+3, 836
+4, 455
+5, 258
+6, 144
+7, 156
+8, 1330
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,3358
+2, 558
+3, 235
+4, 91
+5, 65
+6, 76
+7, 77
+8, 500
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,709
+2, 97
+3, 56
+4, 32
+5, 24
+6, 2
+7, 4
+8, 31
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,16324
+2, 3248
+3, 263
+4, 213
+5, 69
+6, 64
+7, 35
+8, 1488
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,3677
+2, 696
+3, 40
+4, 39
+5, 7
+6, 7
+7, 8
+8, 139
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,198279
+2, 12076
+3, 6858
+4, 10437
+5, 346
+6, 247
+7, 163
+8, 4296
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,75257
+2, 20478
+3, 7478
+4, 8939
+5, 605
+6, 362
+7, 278
+8, 2357
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1009159
+2, 54206
+3, 24128
+4, 141646
+5, 8537
+6, 3553
+7, 2810
+8, 103116
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1845
+2, 771
+3, 350
+4, 236
+5, 177
+6, 110
+7, 108
+8, 830
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,21232
+2, 4473
+3, 2017
+4, 1285
+5, 788
+6, 572
+7, 337
+8, 3270
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,4941
+2, 1174
+3, 605
+4, 366
+5, 256
+6, 177
+7, 133
+8, 1414
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,913
+2, 174
+3, 94
+4, 32
+5, 36
+6, 38
+7, 5
+8, 66
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,19448
+2, 2704
+3, 1311
+4, 1263
+5, 152
+6, 104
+7, 98
+8, 2826
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,5104
+2, 838
+3, 239
+4, 349
+5, 29
+6, 26
+7, 11
+8, 291
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,230850
+2, 14261
+3, 5208
+4, 4386
+5, 3823
+6, 8347
+7, 235
+8, 5733
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,79018
+2, 25767
+3, 10317
+4, 5517
+5, 3475
+6, 6733
+7, 503
+8, 3879
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1013688
+2, 60730
+3, 14403
+4, 14455
+5, 21432
+6, 131273
+7, 7193
+8, 148671
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,3503
+2, 980
+3, 433
+4, 309
+5, 197
+6, 140
+7, 97
+8, 1429
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,27787
+2, 5925
+3, 2631
+4, 1863
+5, 1157
+6, 864
+7, 548
+8, 5236
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,5975
+2, 1438
+3, 829
+4, 511
+5, 350
+6, 256
+7, 212
+8, 2696
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,22744
+2, 3059
+3, 765
+4, 527
+5, 931
+6, 1049
+7, 123
+8, 4194
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,4958
+2, 1044
+3, 500
+4, 137
+5, 72
+6, 285
+7, 28
+8, 450
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,435744
+2, 36971
+3, 7893
+4, 5324
+5, 4548
+6, 9198
+7, 1073
+8, 12437
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,83808
+2, 29660
+3, 13638
+4, 7155
+5, 3949
+6, 2918
+7, 2624
+8, 10891
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,1023914
+2, 68289
+3, 15303
+4, 6857
+5, 4693
+6, 7790
+7, 25128
+8, 324589
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,3626
+2, 987
+3, 459
+4, 311
+5, 201
+6, 150
+7, 106
+8, 2131
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,34153
+2, 7369
+3, 3345
+4, 2271
+5, 1489
+6, 1157
+7, 847
+8, 7700
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,24964
+2, 3140
+3, 798
+4, 391
+5, 311
+6, 431
+7, 860
+8, 6471
+group size, logical size, compressed size, ratio
+first group size, frequency
+1,5087
+2, 1034
+3, 366
+4, 183
+5, 199
+6, 50
+7, 53
+8, 869
+group size, logical size, compressed size, ratio

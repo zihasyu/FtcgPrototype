@@ -140,8 +140,8 @@ void Dedup_HSF::ProcessOneTrace()
             }
         }
     }
-    tool::Logging(myName_.c_str(), "a Finished chunk num is %d\n", finishedChunks.size());
-    tool::Logging(myName_.c_str(), "a Unfinished chunk num is %d\n", unfinishedChunkNum);
+    tool::Logging(myName_.c_str(), "sf Finished chunk num is %d\n", finishedChunks.size());
+    tool::Logging(myName_.c_str(), "sf Unfinished chunk num is %d\n", unfinishedChunkNum);
 
     frequency_table.clear();
     for (auto it : finishedGroups)

@@ -25,7 +25,8 @@ Chunker::Chunker(int chunkType_, uint64_t ExchunkSize)
 Chunker::~Chunker()
 {
     free(readFileBuffer);
-    free(chunkBuffer);
+    if (chunkBuffer != nullptr)
+        free(chunkBuffer);
 }
 
 void Chunker::LoadChunkFile(string path)
@@ -56,8 +57,8 @@ void Chunker::Chunking()
     }
     case FASTCDC_CHUNKING:
     {
-        // FastCDC();
-        // break;
+        FastCDCChunking();
+        break;
     }
     default:
     {
@@ -77,10 +78,11 @@ void Chunker::ChunkerInit()
     case 0:
         // fixed size chunking]
         readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
-        chunkBuffer = (uint8_t *)malloc(FixedChunkSize);
+        // chunkBuffer = (uint8_t *)malloc(FixedChunkSize);
     case 1:
         // FastCDC chunking
         // FastCDC init
+        readFileBuffer = (uint8_t *)malloc(READ_FILE_SIZE);
         normalSize = CalNormalSize(minChunkSize, avgChunkSize, maxChunkSize);
         bits = (uint32_t)round(log2(static_cast<double>(avgChunkSize)));
         maskS = GenerateFastCDCMask(bits + 1);
@@ -225,3 +227,56 @@ uint64_t Chunker::CutPointFastCDC(const uint8_t *src, const uint64_t len)
     }
     return i;
 };
+
+void Chunker::FastCDCChunking()
+{
+    uint64_t fileSize = 0;
+    bool end = false;
+
+    while (!end)
+    {
+        // read file
+        memset((char *)readFileBuffer, 0, sizeof(uint8_t) * READ_FILE_SIZE);
+        chunkingFile_.read((char *)readFileBuffer, READ_FILE_SIZE);
+        //
+        end = chunkingFile_.eof();
+        size_t len = chunkingFile_.gcount();
+        size_t chunkedSize = 0;
+        if (len == 0)
+        {
+            break;
+        }
+        fileSize += len;
+
+        size_t remainSize = len;
+        while (chunkedSize < len)
+        {
+            Chunk_t chunk;
+            uint64_t cutPoint = CutPointFastCDC(readFileBuffer + chunkedSize, remainSize);
+            chunk.chunkSize = cutPoint;
+            chunk.chunkContent = (uint8_t *)malloc(chunk.chunkSize);
+            if (chunk.chunkContent == nullptr)
+            {
+                std::cerr << "Memory allocation failed" << std::endl;
+                exit(EXIT_FAILURE);
+            }
+            memcpy(chunk.chunkContent, readFileBuffer + chunkedSize, cutPoint);
+
+            chunkedSize += cutPoint;
+            remainSize -= cutPoint;
+
+            chunk.chunkID = chunkID++;
+
+            if (!outputMQ_->Push(chunk))
+            {
+                tool::Logging(myName_.c_str(), "insert chunk to output MQ error.\n");
+                exit(EXIT_FAILURE);
+            }
+        }
+    }
+
+    outputMQ_->done_ = true;
+    tool::Logging(myName_.c_str(), "chunking done.\n");
+
+    return;
+}

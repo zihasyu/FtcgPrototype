@@ -140,31 +140,42 @@ void FPLz4BaselineImplement::ProcessOneTrace()
     {
         maxGroup.push_back(id);
     }
-    uint8_t *maxGroupBuffer = (uint8_t *)malloc(maxGroup.size() * 8 * 1024);
-    uint8_t *maxGroupLZBuffer = (uint8_t *)malloc(maxGroup.size() * 8 * 1024);
-    uint64_t groupclusterSize = 0;
-    for (uint i = 0; i < maxGroup.size(); i++)
+    vector<vector<double>> deltaRatioTable(maxGroup.size(), vector<double>(maxGroup.size(), 0));
+    uint8_t *deltaMaxChunkBuffer = (uint8_t *)malloc(2 * CONTAINER_MAX_SIZE * sizeof(uint8_t));
+    for (auto id = maxGroup.begin(); id != maxGroup.end(); id++)
     {
-        std::vector<uint64_t> tmpMaxGroup;
-        groupclusterSize = 0;
-        tmpMaxGroup = maxGroup;
-        // 将vector中最后一个元素插入第i个位置
-        tmpMaxGroup.insert(tmpMaxGroup.begin() + i, maxGroup[maxGroup.size() - 1]);
-        // 删除最后一个元素
-        tmpMaxGroup.pop_back();
-        for (auto id : tmpMaxGroup)
+        Chunk_t basechunk = Get_Chunk_Info(*id);
+        for (auto id2 = id + 1; id2 != maxGroup.end(); id2++)
         {
-            memcpy(maxGroupBuffer + groupclusterSize, chunkSet[id].chunkContent, chunkSet[id].chunkSize);
-            groupclusterSize += chunkSet[id].chunkSize;
+            uint8_t *deltachunk;
+            Chunk_t tmpChunk = Get_Chunk_Info(*id2);
+            uint64_t savesize = 0;
+            deltachunk = xd3_encode(tmpChunk.chunkContent, tmpChunk.chunkSize, basechunk.chunkContent, basechunk.chunkSize, &savesize, deltaMaxChunkBuffer);
+            if (savesize > tmpChunk.chunkSize)
+            {
+                std::cerr << "delta error" << std::endl;
+                return;
+            }
+            if (savesize == 0)
+            {
+                cout << "delta error and can't to restore" << endl;
+                return;
+            }
+            double ratio = (double)tmpChunk.chunkSize / (double)savesize;
+            deltaRatioTable[distance(maxGroup.begin(), id)][distance(maxGroup.begin(), id2)] = ratio;
+            free(deltachunk);
         }
-        // do lz4 compression
-        int compressedSize = LZ4_compress_fast((char *)maxGroupBuffer, (char *)maxGroupLZBuffer, groupclusterSize, groupclusterSize, 3);
-        if (compressedSize <= 0)
-        {
-            compressedSize = groupclusterSize;
-        }
-        cout << i << " compressedSize: " << compressedSize << endl;
     }
+    // print ratio
+    for (auto it : deltaRatioTable)
+    {
+        for (auto it2 : it)
+        {
+            cout << it2 << " ";
+        }
+        cout << endl;
+    }
+    free(deltaMaxChunkBuffer);
 
     tool::Logging(myName_.c_str(), "compressed chunk num is %d\n", compressedChunkNum);
 
